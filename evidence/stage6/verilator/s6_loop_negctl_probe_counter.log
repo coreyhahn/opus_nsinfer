@@ -1,0 +1,24 @@
+# NEGATIVE CONTROL (regression): tb_s6_loop with the old s6_probe sent counter (.scratch/s6/negprobe/s6_probe.sv, counts tvalid & tready also after probe_en falls) must FAIL; host=build-host date=2026-11-03T19:07:52-07:00
+CONFIG id=53330001 diag=53360001 params=00000001 NVEC=4096 DEC_LAT=6 N_DET=24 DW=64 NL=1 TX_REG=0 RX_REG=0 LAT_UI=640 SEED=0 (MODEL wire) TIMEOUT=100000 T_NS=6.2060 corrupt_seq=2065
+LINK 01007373 after 4 polls (lock A, B)
+LINK 01007373 after soft reset
+PHIST lat=12 b->a=304 a->b=304
+RESULT case=probe period=63 a2b_sent=304 a2b_rx=304 a2b_bad=0 a2b_lat=12..12 mean=12.0000 b2a_sent=304 b2a_rx=304 b2a_bad=0 b2a_lat=12..12 mean=12.0000
+PHIST lat=12 b->a=1274 a->b=1456
+PHIST lat=13 b->a=1456 a->b=1456
+PHIST lat=14 b->a=182 a->b=0
+RESULT case=probe period=0 a2b_sent=2912 a2b_rx=2912 a2b_bad=0 a2b_lat=12..13 mean=12.5000 b2a_sent=2912 b2a_rx=2912 b2a_bad=0 b2a_lat=12..14 mean=12.6250
+PHIST lat=12 b->a=217 a->b=248
+PHIST lat=13 b->a=240 a->b=240
+PHIST lat=14 b->a=31 a->b=0
+RESULT case=probe period=0 a2b_sent=488 a2b_rx=488 a2b_bad=0 a2b_lat=12..13 mean=12.4918 b2a_sent=488 b2a_rx=488 b2a_bad=0 b2a_lat=12..14 mean=12.6189
+PHIST lat=12 b->a=213 a->b=246
+PHIST lat=13 b->a=247 a->b=245
+PHIST lat=14 b->a=31 a->b=0
+RESULT case=probe period=0 a2b_sent=492 a2b_rx=491 a2b_bad=0 a2b_lat=12..13 mean=12.4990 b2a_sent=492 b2a_rx=491 b2a_bad=0 b2a_lat=12..14 mean=12.6293
+CHECK FAILED: probe: words lost or added
+[213320000000] %Fatal: tb_s6_loop.sv:198: Assertion failed in TOP.tb_s6_loop.probe_case: FAIL in probe (1 checks)
+%Error: tb_s6_loop.sv:198: Verilog $stop
+Aborting...
+bash: line 1: 2774142 Aborted                 (core dumped) .scratch/s6/negprobe/obj/V
+exit=134

@@ -1,0 +1,317 @@
+[
+ {
+  "log": "s3_lc12_d_cable_run1",
+  "run": "echo_gap63",
+  "min": 111,
+  "p50": 118,
+  "p99": 122,
+  "max": 124,
+  "mean": 117.807,
+  "p50_ns": 732.3,
+  "b_dec": [
+   0,
+   65535
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.296,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc12_d_cable_run1",
+  "run": "decode_gap63",
+  "min": 116,
+  "p50": 123,
+  "p99": 128,
+  "max": 129,
+  "mean": 122.878,
+  "p50_ns": 763.3,
+  "b_dec": [
+   6,
+   6
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.296,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc12_d_cable_run1",
+  "run": "decode_gap7",
+  "min": 117,
+  "p50": 123,
+  "p99": 127,
+  "max": 130,
+  "mean": 122.809,
+  "p50_ns": 763.3,
+  "b_dec": [
+   6,
+   6
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.296,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc5_d_cable_run1",
+  "run": "echo_gap63",
+  "min": 112,
+  "p50": 118,
+  "p99": 124,
+  "max": 125,
+  "mean": 117.936,
+  "p50_ns": 732.3,
+  "b_dec": [
+   0,
+   65535
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.259,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc5_d_cable_run1",
+  "run": "decode_gap63",
+  "min": 120,
+  "p50": 126,
+  "p99": 132,
+  "max": 133,
+  "mean": 125.966,
+  "p50_ns": 782.0,
+  "b_dec": [
+   9,
+   9
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.259,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc5_d_cable_run1",
+  "run": "decode_gap7",
+  "min": 120,
+  "p50": 126,
+  "p99": 130,
+  "max": 134,
+  "mean": 125.918,
+  "p50_ns": 782.0,
+  "b_dec": [
+   9,
+   9
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.259,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run1",
+  "run": "echo_gap63",
+  "min": 111,
+  "p50": 118,
+  "p99": 122,
+  "max": 124,
+  "mean": 117.825,
+  "p50_ns": 732.3,
+  "b_dec": [
+   0,
+   65535
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.222,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run1",
+  "run": "decode_gap63",
+  "min": 117,
+  "p50": 124,
+  "p99": 130,
+  "max": 130,
+  "mean": 123.836,
+  "p50_ns": 769.6,
+  "b_dec": [
+   7,
+   7
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.222,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run1",
+  "run": "decode_gap7",
+  "min": 117,
+  "p50": 124,
+  "p99": 128,
+  "max": 135,
+  "mean": 123.758,
+  "p50_ns": 769.6,
+  "b_dec": [
+   7,
+   7
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.222,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run2",
+  "run": "echo_gap63",
+  "min": 111,
+  "p50": 118,
+  "p99": 124,
+  "max": 129,
+  "mean": 117.861,
+  "p50_ns": 732.3,
+  "b_dec": [
+   0,
+   65535
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.222,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run2",
+  "run": "decode_gap63",
+  "min": 117,
+  "p50": 124,
+  "p99": 128,
+  "max": 130,
+  "mean": 123.84,
+  "p50_ns": 769.6,
+  "b_dec": [
+   7,
+   7
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.222,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run2",
+  "run": "decode_gap7",
+  "min": 118,
+  "p50": 124,
+  "p99": 128,
+  "max": 135,
+  "mean": 123.748,
+  "p50_ns": 769.6,
+  "b_dec": [
+   7,
+   7
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.222,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run3",
+  "run": "echo_gap63",
+  "min": 111,
+  "p50": 118,
+  "p99": 124,
+  "max": 124,
+  "mean": 117.803,
+  "p50_ns": 732.3,
+  "b_dec": [
+   0,
+   65535
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.259,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run3",
+  "run": "decode_gap63",
+  "min": 117,
+  "p50": 124,
+  "p99": 130,
+  "max": 136,
+  "mean": 123.795,
+  "p50_ns": 769.6,
+  "b_dec": [
+   7,
+   7
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.259,
+  "t_a_ns": 6.20606,
+  "pass": true
+ },
+ {
+  "log": "s3_lc8_d_cable_run3",
+  "run": "decode_gap7",
+  "min": 117,
+  "p50": 124,
+  "p99": 129,
+  "max": 136,
+  "mean": 123.797,
+  "p50_ns": 769.6,
+  "b_dec": [
+   7,
+   7
+  ],
+  "b_echo": [
+   1,
+   1
+  ],
+  "b_ppm": 0.259,
+  "t_a_ns": 6.20606,
+  "pass": true
+ }
+]

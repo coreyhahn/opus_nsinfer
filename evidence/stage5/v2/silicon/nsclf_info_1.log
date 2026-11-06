@@ -1,0 +1,12 @@
+[INFO] [UHD] linux; GNU C++ version 13.3.0; Boost_108300; UHD_4.9.0.HEAD-0-a5d1b2ef
+[INFO] [X300] X300 initialization sequence...
+[INFO] [X300] Maximum frame size: 8000 bytes.
+[INFO] [GPS] No GPSDO found
+[INFO] [X300] Radio 1x clock: 200 MHz
+[WARNING] [RFNOC::BLOCK_FACTORY] Could not find block with Noc-ID 0x4e53c1f0, 0xffff
+[INFO] [0/Block#0] Setting default MTU forward policy.
+block 0/Block#0  ID 0x6e73636c  VERSION 0x00010000
+BUILD: cutoff 2  W 64  CORE_LAT 18  IN_REG 1  BFP_PIPE 1
+LATENCY 22 cycles (radio_rx_data port -> decision valid)
+CHAN 0  K 16  CUR 0x00000211  STATUS {'armed': 0, 'active': 0, 'done': 0, 'late': 0, 'raw': 0}
+decisions 298017509  events 27214  dropped 0  time 5390632 (block tick rate 0.0)

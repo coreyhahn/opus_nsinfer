@@ -1,0 +1,4 @@
+# Stage 4 q5p4: 1.92M probe at lc2 (23 stages), plain and with (* max_fanout = 32 *) on every stage register
+# (.scratch/d5p19/gen/qec_d5_lc2fo, attribute only). Launch with OOC_INCLUDE=/home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/d5p19
+q5p_vu9p_lc2_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/d5p19/gen/qec_d5_lc2 xcvu9p-fsgd2104-2L-e 6.206 - qec_d5 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/d5/qec_d5_top.sv IN_W=120,OUT_W=20,LOGIT_SIGNED=1
+q5p_vu9p_lc2fo_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/d5p19/gen/qec_d5_lc2fo xcvu9p-fsgd2104-2L-e 6.206 - qec_d5 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/d5/qec_d5_top.sv IN_W=120,OUT_W=20,LOGIT_SIGNED=1

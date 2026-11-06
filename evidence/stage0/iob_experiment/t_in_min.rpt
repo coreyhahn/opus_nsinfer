@@ -1,0 +1,129 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Mon Oct 19 22:35:01 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -from [get_ports {hd_in hp_in}] -max_paths 2 -nworst 1 -delay_type min -file t_in_min.rpt
+| Design            : top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -2.640ns  (arrival time - required time)
+  Source:                 hp_in
+                            (input port clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            hp_r1_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk300
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk300 rise@0.000ns - clk300 rise@0.000ns)
+  Data Path Delay:        0.458ns  (logic 0.279ns (60.913%)  route 0.179ns (39.087%))
+  Logic Levels:           2  (IBUFCTRL=1 INBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        3.058ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.058ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Net Delay (Destination): 2.059ns (routing 0.654ns, distribution 1.405ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk300 rise edge)     0.000     0.000 r  
+                         input delay                  0.000     0.000    
+    AD1                                               0.000     0.000 r  hp_in (IN)
+                         net (fo=0)                   0.000     0.000    hp_in_IBUF_inst/I
+    AD1                  INBUF (Prop_INBUF_HPIOB_S_PAD_O)
+                                                      0.279     0.279 r  hp_in_IBUF_inst/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.279    hp_in_IBUF_inst/OUT
+    AD1                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_S_I_O)
+                                                      0.000     0.279 r  hp_in_IBUF_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.179     0.458    hp_in_IBUF
+    BITSLICE_RX_TX_X0Y100
+                         FDRE                                         r  hp_r1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk300 rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.100     0.100    ib/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.489     0.589 r  ib/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.639    ib/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  ib/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.332     0.971    clk_ibuf
+    BUFGCE_X0Y1          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.999 r  bg/O
+    X3Y0 (CLOCK_ROOT)    net (fo=4, routed)           2.059     3.058    clk
+    BITSLICE_RX_TX_X0Y100
+                         FDRE                                         r  hp_r1_reg/C
+                         clock pessimism              0.000     3.058    
+    BITSLICE_RX_TX_X0Y100
+                         FDRE (Hold_IN_FF_BITSLICE_COMPONENT_RX_TX_C_D)
+                                                      0.039     3.097    hp_r1_reg
+  -------------------------------------------------------------------
+                         required time                         -3.097    
+                         arrival time                           0.458    
+  -------------------------------------------------------------------
+                         slack                                 -2.640    
+
+Slack (MET) :             0.623ns  (arrival time - required time)
+  Source:                 hd_in
+                            (input port clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            hd_r1_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk300
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk300 rise@0.000ns - clk300 rise@0.000ns)
+  Data Path Delay:        0.943ns  (logic 0.892ns (94.594%)  route 0.051ns (5.406%))
+  Logic Levels:           2  (IBUFCTRL=1 INBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.961ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Net Delay (Destination): 1.249ns (routing 0.399ns, distribution 0.850ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk300 rise edge)     0.000     0.000 r  
+                         input delay                  0.000     0.000    
+    B20                                               0.000     0.000 r  hd_in (IN)
+                         net (fo=0)                   0.000     0.000    hd_in_IBUF_inst/I
+    B20                  INBUF (Prop_INBUF_HDIOB_M_PAD_O)
+                                                      0.892     0.892 r  hd_in_IBUF_inst/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.892    hd_in_IBUF_inst/OUT
+    B20                  IBUFCTRL (Prop_IBUFCTRL_HDIOB_M_I_O)
+                                                      0.000     0.892 r  hd_in_IBUF_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.051     0.943    hd_in_IBUF
+    HDIOLOGIC_M_X0Y23    FDRE                                         r  hd_r1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk300 rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.100     0.100    ib/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.346     0.446 r  ib/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.496    ib/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.496 r  ib/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.693    clk_ibuf
+    BUFGCE_X0Y1          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.712 r  bg/O
+    X3Y0 (CLOCK_ROOT)    net (fo=4, routed)           1.249     1.961    clk
+    HDIOLOGIC_M_X0Y23    FDRE                                         r  hd_r1_reg/C
+                         clock pessimism              0.000     1.961    
+    HDIOLOGIC_M_X0Y23    FDRE (Hold_IPFF_HDIOLOGIC_M_C_D)
+                                                     -1.641     0.320    hd_r1_reg
+  -------------------------------------------------------------------
+                         required time                         -0.320    
+                         arrival time                           0.943    
+  -------------------------------------------------------------------
+                         slack                                  0.623    
+
+
+
+

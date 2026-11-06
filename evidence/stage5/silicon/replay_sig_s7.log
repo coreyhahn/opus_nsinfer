@@ -1,0 +1,6 @@
+CAPTURE sig_s7: 4210688 samples, T=117706054 tap0=117706048 (offset 6, extra 0) K=60000 window t_start=117706111 n=4210625 silicon misr=0xad82174c8eb6a794 count=4210625 hist=[1556873, 1279473, 561508, 812771] status={'armed': 0, 'active': 1, 'done': 1, 'late': 0, 'raw': 6} errors=[] tx={'seed': 7, 'n_tx': 4194304, 'amp': 0.05, 'att_db': 30.0, 'gap_us': [0.2, 2.0], 'n_pulses': 5923}
+TB # host=build-host date=2026-11-03T06:15:53-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1) replay stim=<repo>/.scratch/nsclf_replay/sig_s7 T0=7040d40 K=60000
+TB RESULT seed=0 chan=0 K=60000 ready=0 samples=4210688 decisions=4210625/4210625 mismatches=0 tau_mismatches=0 latency_mismatches=0 passthrough_mismatches=0 windows=1/1 events_received=0 axis_errors=0 reg_errors=0 cycles=4211433
+DUMP decisions=4210625 tau0=117706111 misr(recomputed from dump)=0xad82174c8eb6a794 count=4210625 hist=[1556873, 1279473, 561508, 812771] -> EQUALS the silicon read-back; saved <repo>/.scratch/nsclf_replay/sig_s7/decisions.npz
+REPLAY window count=4210625 misr=0xad82174c8eb6a794 hist=[1556873, 1279473, 561508, 812771] events compared=0 errors=0 log=<repo>/.scratch/nsclf_replay/sig_s7/replay.log
+PASS

@@ -1,0 +1,4 @@
+# d = 5 HGQ2 sweep 1 (grumpy-calf), started 2026-10-23 when float_d5_128_64 / 256_128 were stopped
+# (plateaued behind the deeper nets: val geomean 1.42 / 1.38 vs 1.16 / 1.14 at 154 / 82 / 50 / 41 epochs).
+hgq_d5_256x3_f6_b6   --d 5 --mode hgq --arch 256 256 256 --epochs 200 --steps-per-epoch 2000 --batch 8192 --lr 2e-3 --beta-end 1e-6 --input-f 6
+hgq_d5_256x3_f6_b7   --d 5 --mode hgq --arch 256 256 256 --epochs 200 --steps-per-epoch 2000 --batch 8192 --lr 2e-3 --beta-end 1e-7 --input-f 6

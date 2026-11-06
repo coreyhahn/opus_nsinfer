@@ -1,0 +1,4 @@
+DONE r4_zu9e_lc3_p3.333 {"part": "xczu9eg-ffvb1156-2-i", "period_ns": 3.333, "wns_ns": 0.058, "whs_ns": 0.048, "lut": 16709, "ff": 6493, "dsp": 0, "retime": 0, "gen_dir": "<repo>/rtl/gen/jsc_lc3", "vivado": "2024.2", "date": "2026-10-20T01:05:57"}
+DONE r4_vu9p_lc3_p3.333 {"part": "xcvu9p-fsgd2104-2L-e", "period_ns": 3.333, "wns_ns": 0.092, "whs_ns": 0.050, "lut": 16652, "ff": 6493, "dsp": 0, "retime": 0, "gen_dir": "<repo>/rtl/gen/jsc_lc3", "vivado": "2024.2", "date": "2026-10-20T01:08:10"}
+DONE r4_vu9p_lc4_p3.333 {"part": "xcvu9p-fsgd2104-2L-e", "period_ns": 3.333, "wns_ns": -0.365, "whs_ns": 0.043, "lut": 17388, "ff": 4511, "dsp": 0, "retime": 0, "gen_dir": "<repo>/rtl/gen/jsc_lc4", "vivado": "2024.2", "date": "2026-10-20T01:14:19"}
+SWEEP COMPLETE 2026-10-20T01:14:31-06:00

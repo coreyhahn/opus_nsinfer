@@ -1,0 +1,368 @@
+`timescale 1 ns / 1 ps
+
+module jsc_stage8 (
+    input [1689:0] model_inp,
+    output [1251:0] model_out
+);
+
+    // verilator lint_off UNUSEDSIGNAL
+    // Explicit quantization operation will drop bits if exists
+
+    wire [5:0] v0; assign v0[5:0] = model_inp[5:0]; // 8.0
+    wire [11:0] v1; assign v1[11:0] = model_inp[17:6]; // 8.0
+    wire [11:0] v2; shift_adder #(6, 12, 0, 1, 12, -2, 0) op_2 (v0[5:0], v1[11:0], v2[11:0]); // 9.0
+    wire [13:0] v3; assign v3[13:0] = model_inp[31:18]; // 8.0
+    wire [8:0] v4; assign v4[8:0] = model_inp[40:32]; // 8.0
+    wire [13:0] v5; shift_adder #(14, 9, 1, 1, 14, 1, 1) op_5 (v3[13:0], v4[8:0], v5[13:0]); // 9.0
+    wire [9:0] v6; assign v6[9:0] = model_inp[50:41]; // 8.0
+    wire [9:0] v7; assign v7[9:0] = model_inp[60:51]; // 8.0
+    wire [10:0] v8; shift_adder #(10, 10, 1, 1, 11, 0, 0) op_8 (v6[9:0], v7[9:0], v8[10:0]); // 9.0
+    wire [5:0] v9; assign v9[5:0] = model_inp[66:61]; // 8.0
+    wire [9:0] v10; assign v10[9:0] = model_inp[76:67]; // 8.0
+    wire [10:0] v11; shift_adder #(6, 10, 0, 1, 11, -2, 1) op_11 (v9[5:0], v10[9:0], v11[10:0]); // 9.0
+    wire [12:0] v12; assign v12[12:0] = model_inp[89:77]; // 8.0
+    wire [12:0] v13; assign v13[12:0] = model_inp[102:90]; // 8.0
+    wire [13:0] v14; shift_adder #(13, 13, 1, 1, 14, 0, 0) op_14 (v12[12:0], v13[12:0], v14[13:0]); // 9.0
+    wire [12:0] v15; assign v15[12:0] = model_inp[115:103]; // 8.0
+    wire [12:0] v16; assign v16[12:0] = model_inp[128:116]; // 8.0
+    wire [13:0] v17; shift_adder #(13, 13, 1, 1, 14, 1, 1) op_17 (v15[12:0], v16[12:0], v17[13:0]); // 9.0
+    wire [11:0] v18; assign v18[11:0] = model_inp[140:129]; // 8.0
+    wire [8:0] v19; assign v19[8:0] = model_inp[149:141]; // 8.0
+    wire [12:0] v20; shift_adder #(12, 9, 0, 0, 13, 3, 0) op_20 (v18[11:0], v19[8:0], v20[12:0]); // 9.0
+    wire [12:0] v21; assign v21[12:0] = model_inp[162:150]; // 8.0
+    wire [13:0] v22; assign v22[13:0] = model_inp[176:163]; // 8.0
+    wire [14:0] v23; shift_adder #(13, 14, 1, 1, 15, -1, 0) op_23 (v21[12:0], v22[13:0], v23[14:0]); // 9.0
+    wire [9:0] v24; assign v24[9:0] = model_inp[186:177]; // 8.0
+    wire [6:0] v25; assign v25[6:0] = model_inp[193:187]; // 8.0
+    wire [11:0] v26; shift_adder #(10, 7, 0, 1, 12, 3, 0) op_26 (v24[9:0], v25[6:0], v26[11:0]); // 9.0
+    wire [7:0] v27; assign v27[7:0] = model_inp[201:194]; // 8.0
+    wire [9:0] v28; shift_adder #(9, 8, 0, 1, 10, 2, 0) op_28 (v19[8:0], v27[7:0], v28[9:0]); // 9.0
+    wire [11:0] v29; assign v29[11:0] = model_inp[213:202]; // 8.0
+    wire [12:0] v30; assign v30[12:0] = model_inp[226:214]; // 8.0
+    wire [13:0] v31; shift_adder #(12, 13, 1, 1, 14, -1, 0) op_31 (v29[11:0], v30[12:0], v31[13:0]); // 9.0
+    wire [9:0] v32; assign v32[9:0] = model_inp[236:227]; // 8.0
+    wire [12:0] v33; assign v33[12:0] = model_inp[249:237]; // 8.0
+    wire [12:0] v34; shift_adder #(10, 13, 1, 1, 13, -1, 0) op_34 (v32[9:0], v33[12:0], v34[12:0]); // 9.0
+    wire [13:0] v35; assign v35[13:0] = model_inp[263:250]; // 8.0
+    wire [14:0] v36; shift_adder #(13, 14, 1, 1, 15, -2, 1) op_36 (v16[12:0], v35[13:0], v36[14:0]); // 9.0
+    wire [4:0] v37; assign v37[4:0] = model_inp[268:264]; // 8.0
+    wire [8:0] v38; assign v38[8:0] = model_inp[277:269]; // 8.0
+    wire [9:0] v39; shift_adder #(5, 9, 0, 0, 10, -1, 0) op_39 (v37[4:0], v38[8:0], v39[9:0]); // 9.0
+    wire [4:0] v40; assign v40[4:0] = model_inp[282:278]; // 8.0
+    wire [7:0] v41; shift_adder #(5, 7, 0, 1, 8, -1, 0) op_41 (v40[4:0], v25[6:0], v41[7:0]); // 9.0
+    wire [10:0] v42; assign v42[10:0] = model_inp[293:283]; // 8.0
+    wire [10:0] v43; assign v43[10:0] = model_inp[304:294]; // 8.0
+    wire [11:0] v44; shift_adder #(11, 11, 1, 1, 12, 0, 0) op_44 (v42[10:0], v43[10:0], v44[11:0]); // 9.0
+    wire [7:0] v45; assign v45[7:0] = model_inp[312:305]; // 8.0
+    wire [7:0] v46; assign v46[7:0] = model_inp[320:313]; // 8.0
+    wire [9:0] v47; shift_adder #(8, 8, 1, 0, 10, -1, 1) op_47 (v45[7:0], v46[7:0], v47[9:0]); // 9.0
+    wire [9:0] v48; assign v48[9:0] = model_inp[330:321]; // 8.0
+    wire [10:0] v49; assign v49[10:0] = model_inp[341:331]; // 8.0
+    wire [11:0] v50; shift_adder #(10, 11, 1, 1, 12, 1, 1) op_50 (v48[9:0], v49[10:0], v50[11:0]); // 9.0
+    wire [11:0] v51; shift_adder #(12, 6, 1, 0, 12, 0, 0) op_51 (v50[11:0], 6'b100000, v51[11:0]); // 9.0
+    wire [7:0] v52; assign v52[7:0] = v51[7:0] & {8{~v51[11]}}; // 9.0
+    wire [7:0] v53; shift_adder #(8, 5, 0, 0, 8, 0, 0) op_53 (v52[7:0], 5'b10000, v53[7:0]); // 9.0
+    wire [1:0] v54; assign v54[1:0] = v53[6:5]; // 9.0
+    wire [9:0] v55; assign v55[9:0] = model_inp[351:342]; // 8.0
+    wire [14:0] v56; assign v56[14:0] = model_inp[366:352]; // 8.0
+    wire [15:0] v57; shift_adder #(10, 15, 1, 1, 16, -4, 0) op_57 (v55[9:0], v56[14:0], v57[15:0]); // 9.0
+    wire [10:0] v58; assign v58[10:0] = model_inp[377:367]; // 8.0
+    wire [6:0] v59; assign v59[6:0] = model_inp[384:378]; // 8.0
+    wire [10:0] v60; shift_adder #(11, 7, 1, 1, 11, 0, 1) op_60 (v58[10:0], v59[6:0], v60[10:0]); // 9.0
+    wire [9:0] v61; assign v61[9:0] = model_inp[394:385]; // 8.0
+    wire [11:0] v62; shift_adder #(11, 10, 1, 1, 12, -1, 1) op_62 (v58[10:0], v61[9:0], v62[11:0]); // 9.0
+    wire [4:0] v63; assign v63[4:0] = model_inp[399:395]; // 8.0
+    wire [9:0] v64; assign v64[9:0] = model_inp[409:400]; // 8.0
+    wire [10:0] v65; shift_adder #(5, 10, 0, 1, 11, -1, 1) op_65 (v63[4:0], v64[9:0], v65[10:0]); // 9.0
+    wire [10:0] v66; assign v66[10:0] = model_inp[420:410]; // 8.0
+    wire [12:0] v67; assign v67[12:0] = model_inp[433:421]; // 8.0
+    wire [14:0] v68; shift_adder #(11, 13, 1, 0, 15, -3, 1) op_68 (v66[10:0], v67[12:0], v68[14:0]); // 9.0
+    wire [7:0] v69; assign v69[7:0] = model_inp[441:434]; // 8.0
+    wire [11:0] v70; assign v70[11:0] = model_inp[453:442]; // 8.0
+    wire [11:0] v71; shift_adder #(8, 12, 1, 1, 12, -2, 0) op_71 (v69[7:0], v70[11:0], v71[11:0]); // 9.0
+    wire [9:0] v72; assign v72[9:0] = model_inp[463:454]; // 8.0
+    wire [8:0] v73; assign v73[8:0] = model_inp[472:464]; // 8.0
+    wire [9:0] v74; shift_adder #(10, 9, 1, 1, 10, 0, 1) op_74 (v72[9:0], v73[8:0], v74[9:0]); // 9.0
+    wire [8:0] v75; assign v75[8:0] = model_inp[481:473]; // 8.0
+    wire [9:0] v76; assign v76[9:0] = model_inp[491:482]; // 8.0
+    wire [11:0] v77; shift_adder #(9, 10, 1, 1, 12, 1, 0) op_77 (v75[8:0], v76[9:0], v77[11:0]); // 9.0
+    wire [12:0] v78; assign v78[12:0] = model_inp[504:492]; // 8.0
+    wire [7:0] v79; assign v79[7:0] = model_inp[512:505]; // 8.0
+    wire [12:0] v80; shift_adder #(13, 8, 1, 1, 13, 2, 1) op_80 (v78[12:0], v79[7:0], v80[12:0]); // 9.0
+    wire [12:0] v81; assign v81[12:0] = model_inp[525:513]; // 8.0
+    wire [11:0] v82; assign v82[11:0] = model_inp[537:526]; // 8.0
+    wire [14:0] v83; shift_adder #(13, 12, 1, 0, 15, -1, 0) op_83 (v81[12:0], v82[11:0], v83[14:0]); // 9.0
+    wire [8:0] v84; assign v84[8:0] = model_inp[546:538]; // 8.0
+    wire [9:0] v85; assign v85[9:0] = model_inp[556:547]; // 8.0
+    wire [10:0] v86; shift_adder #(9, 10, 1, 1, 11, -1, 0) op_86 (v84[8:0], v85[9:0], v86[10:0]); // 9.0
+    wire [10:0] v87; assign v87[10:0] = model_inp[567:557]; // 8.0
+    wire [9:0] v88; assign v88[9:0] = model_inp[577:568]; // 8.0
+    wire [12:0] v89; shift_adder #(11, 10, 1, 1, 13, 2, 0) op_89 (v87[10:0], v88[9:0], v89[12:0]); // 9.0
+    wire [11:0] v90; assign v90[11:0] = model_inp[589:578]; // 8.0
+    wire [13:0] v91; assign v91[13:0] = model_inp[603:590]; // 8.0
+    wire [16:0] v92; shift_adder #(12, 14, 1, 0, 17, 2, 1) op_92 (v90[11:0], v91[13:0], v92[16:0]); // 9.0
+    wire [11:0] v93; assign v93[11:0] = model_inp[615:604]; // 8.0
+    wire [11:0] v94; assign v94[11:0] = model_inp[627:616]; // 8.0
+    wire [12:0] v95; shift_adder #(12, 12, 1, 1, 13, 0, 0) op_95 (v93[11:0], v94[11:0], v95[12:0]); // 9.0
+    wire [10:0] v96; assign v96[10:0] = model_inp[638:628]; // 8.0
+    wire [12:0] v97; assign v97[12:0] = model_inp[651:639]; // 8.0
+    wire [13:0] v98; shift_adder #(11, 13, 1, 1, 14, -1, 0) op_98 (v96[10:0], v97[12:0], v98[13:0]); // 9.0
+    wire [3:0] v99; assign v99[3:0] = model_inp[655:652]; // 8.0
+    wire [10:0] v100; assign v100[10:0] = model_inp[666:656]; // 8.0
+    wire [10:0] v101; shift_adder #(4, 11, 0, 1, 11, -4, 0) op_101 (v99[3:0], v100[10:0], v101[10:0]); // 9.0
+    wire [14:0] v102; assign v102[14:0] = model_inp[681:667]; // 8.0
+    wire [9:0] v103; assign v103[9:0] = model_inp[691:682]; // 8.0
+    wire [14:0] v104; shift_adder #(15, 10, 1, 1, 15, 1, 1) op_104 (v102[14:0], v103[9:0], v104[14:0]); // 9.0
+    wire [12:0] v105; assign v105[12:0] = model_inp[704:692]; // 8.0
+    wire [12:0] v106; assign v106[12:0] = model_inp[717:705]; // 8.0
+    wire [13:0] v107; shift_adder #(13, 13, 1, 1, 14, 1, 0) op_107 (v105[12:0], v106[12:0], v107[13:0]); // 9.0
+    wire [8:0] v108; assign v108[8:0] = model_inp[726:718]; // 8.0
+    wire [11:0] v109; assign v109[11:0] = model_inp[738:727]; // 8.0
+    wire [11:0] v110; shift_adder #(9, 12, 0, 1, 12, 0, 0) op_110 (v108[8:0], v109[11:0], v110[11:0]); // 9.0
+    wire [10:0] v111; assign v111[10:0] = model_inp[749:739]; // 8.0
+    wire [7:0] v112; assign v112[7:0] = model_inp[757:750]; // 8.0
+    wire [12:0] v113; shift_adder #(11, 8, 1, 0, 13, 4, 1) op_113 (v111[10:0], v112[7:0], v113[12:0]); // 9.0
+    wire [14:0] v114; assign v114[14:0] = model_inp[772:758]; // 8.0
+    wire [16:0] v115; shift_adder #(15, 10, 1, 1, 17, 6, 0) op_115 (v114[14:0], v76[9:0], v115[16:0]); // 9.0
+    wire [12:0] v116; assign v116[12:0] = model_inp[785:773]; // 8.0
+    wire [11:0] v117; assign v117[11:0] = model_inp[797:786]; // 8.0
+    wire [13:0] v118; shift_adder #(13, 12, 1, 1, 14, 1, 0) op_118 (v116[12:0], v117[11:0], v118[13:0]); // 9.0
+    wire [5:0] v119; assign v119[5:0] = model_inp[803:798]; // 8.0
+    wire [13:0] v120; assign v120[13:0] = model_inp[817:804]; // 8.0
+    wire [13:0] v121; shift_adder #(6, 14, 0, 1, 14, -3, 1) op_121 (v119[5:0], v120[13:0], v121[13:0]); // 9.0
+    wire [5:0] v122; assign v122[5:0] = model_inp[823:818]; // 8.0
+    wire [10:0] v123; assign v123[10:0] = model_inp[834:824]; // 8.0
+    wire [10:0] v124; shift_adder #(6, 11, 0, 1, 11, 0, 1) op_124 (v122[5:0], v123[10:0], v124[10:0]); // 9.0
+    wire [9:0] v125; assign v125[9:0] = model_inp[844:835]; // 8.0
+    wire [8:0] v126; assign v126[8:0] = model_inp[853:845]; // 8.0
+    wire [11:0] v127; shift_adder #(10, 9, 0, 1, 12, 1, 0) op_127 (v125[9:0], v126[8:0], v127[11:0]); // 9.0
+    wire [13:0] v128; assign v128[13:0] = model_inp[867:854]; // 8.0
+    wire [10:0] v129; assign v129[10:0] = model_inp[878:868]; // 8.0
+    wire [14:0] v130; shift_adder #(14, 11, 1, 1, 15, 2, 1) op_130 (v128[13:0], v129[10:0], v130[14:0]); // 9.0
+    wire [9:0] v131; assign v131[9:0] = model_inp[888:879]; // 8.0
+    wire [9:0] v132; assign v132[9:0] = model_inp[898:889]; // 8.0
+    wire [11:0] v133; shift_adder #(10, 10, 1, 1, 12, -1, 1) op_133 (v131[9:0], v132[9:0], v133[11:0]); // 9.0
+    wire [8:0] v134; assign v134[8:0] = model_inp[907:899]; // 8.0
+    wire [9:0] v135; assign v135[9:0] = model_inp[917:908]; // 8.0
+    wire [12:0] v136; shift_adder #(9, 10, 1, 1, 13, 2, 1) op_136 (v134[8:0], v135[9:0], v136[12:0]); // 9.0
+    wire [10:0] v137; assign v137[10:0] = model_inp[928:918]; // 8.0
+    wire [13:0] v138; shift_adder #(11, 13, 1, 1, 14, -1, 0) op_138 (v137[10:0], v21[12:0], v138[13:0]); // 9.0
+    wire [13:0] v139; assign v139[13:0] = model_inp[942:929]; // 8.0
+    wire [11:0] v140; assign v140[11:0] = model_inp[954:943]; // 8.0
+    wire [14:0] v141; shift_adder #(14, 12, 1, 1, 15, 2, 0) op_141 (v139[13:0], v140[11:0], v141[14:0]); // 9.0
+    wire [4:0] v142; assign v142[4:0] = model_inp[959:955]; // 8.0
+    wire [10:0] v143; assign v143[10:0] = model_inp[970:960]; // 8.0
+    wire [10:0] v144; shift_adder #(5, 11, 0, 1, 11, -2, 1) op_144 (v142[4:0], v143[10:0], v144[10:0]); // 9.0
+    wire [11:0] v145; assign v145[11:0] = model_inp[982:971]; // 8.0
+    wire [13:0] v146; assign v146[13:0] = model_inp[996:983]; // 8.0
+    wire [18:0] v147; shift_adder #(12, 14, 1, 0, 19, 4, 1) op_147 (v145[11:0], v146[13:0], v147[18:0]); // 9.0
+    wire [9:0] v148; assign v148[9:0] = model_inp[1006:997]; // 8.0
+    wire [11:0] v149; assign v149[11:0] = model_inp[1018:1007]; // 8.0
+    wire [11:0] v150; shift_adder #(10, 12, 0, 1, 12, 0, 0) op_150 (v148[9:0], v149[11:0], v150[11:0]); // 9.0
+    wire [10:0] v151; assign v151[10:0] = model_inp[1029:1019]; // 8.0
+    wire [10:0] v152; shift_adder #(9, 11, 1, 1, 11, -1, 1) op_152 (v4[8:0], v151[10:0], v152[10:0]); // 9.0
+    wire [10:0] v153; assign v153[10:0] = model_inp[1040:1030]; // 8.0
+    wire [9:0] v154; assign v154[9:0] = model_inp[1050:1041]; // 8.0
+    wire [12:0] v155; shift_adder #(11, 10, 1, 0, 13, 2, 1) op_155 (v153[10:0], v154[9:0], v155[12:0]); // 9.0
+    wire [10:0] v156; assign v156[10:0] = model_inp[1061:1051]; // 8.0
+    wire [10:0] v157; assign v157[10:0] = model_inp[1072:1062]; // 8.0
+    wire [11:0] v158; shift_adder #(11, 11, 1, 1, 12, 0, 0) op_158 (v156[10:0], v157[10:0], v158[11:0]); // 9.0
+    wire [12:0] v159; assign v159[12:0] = model_inp[1085:1073]; // 8.0
+    wire [7:0] v160; assign v160[7:0] = model_inp[1093:1086]; // 8.0
+    wire [12:0] v161; shift_adder #(13, 8, 1, 1, 13, 0, 1) op_161 (v159[12:0], v160[7:0], v161[12:0]); // 9.0
+    wire [9:0] v162; assign v162[9:0] = model_inp[1103:1094]; // 8.0
+    wire [10:0] v163; assign v163[10:0] = model_inp[1114:1104]; // 8.0
+    wire [12:0] v164; shift_adder #(10, 11, 1, 1, 13, 1, 1) op_164 (v162[9:0], v163[10:0], v164[12:0]); // 9.0
+    wire [12:0] v165; assign v165[12:0] = model_inp[1127:1115]; // 8.0
+    wire [13:0] v166; shift_adder #(13, 8, 1, 1, 14, 2, 1) op_166 (v165[12:0], v27[7:0], v166[13:0]); // 9.0
+    wire [12:0] v167; assign v167[12:0] = model_inp[1140:1128]; // 8.0
+    wire [10:0] v168; assign v168[10:0] = model_inp[1151:1141]; // 8.0
+    wire [13:0] v169; shift_adder #(13, 11, 1, 1, 14, 1, 1) op_169 (v167[12:0], v168[10:0], v169[13:0]); // 9.0
+    wire [7:0] v170; assign v170[7:0] = model_inp[1159:1152]; // 8.0
+    wire [10:0] v171; shift_adder #(8, 9, 1, 1, 11, -2, 0) op_171 (v170[7:0], v84[8:0], v171[10:0]); // 9.0
+    wire [10:0] v172; assign v172[10:0] = model_inp[1170:1160]; // 8.0
+    wire [6:0] v173; assign v173[6:0] = model_inp[1177:1171]; // 8.0
+    wire [10:0] v174; shift_adder #(11, 7, 1, 1, 11, 2, 1) op_174 (v172[10:0], v173[6:0], v174[10:0]); // 9.0
+    wire [11:0] v175; assign v175[11:0] = model_inp[1189:1178]; // 8.0
+    wire [12:0] v176; shift_adder #(11, 12, 1, 1, 13, -1, 0) op_176 (v49[10:0], v175[11:0], v176[12:0]); // 9.0
+    wire [9:0] v177; assign v177[9:0] = model_inp[1199:1190]; // 8.0
+    wire [10:0] v178; shift_adder #(10, 8, 1, 0, 11, 2, 1) op_178 (v177[9:0], v112[7:0], v178[10:0]); // 9.0
+    wire [11:0] v179; assign v179[11:0] = model_inp[1211:1200]; // 8.0
+    wire [12:0] v180; shift_adder #(12, 8, 1, 1, 13, 3, 1) op_180 (v179[11:0], v45[7:0], v180[12:0]); // 9.0
+    wire [8:0] v181; assign v181[8:0] = model_inp[1220:1212]; // 8.0
+    wire [11:0] v182; assign v182[11:0] = model_inp[1232:1221]; // 8.0
+    wire [11:0] v183; shift_adder #(9, 12, 1, 1, 12, -1, 0) op_183 (v181[8:0], v182[11:0], v183[11:0]); // 9.0
+    wire [10:0] v184; assign v184[10:0] = v183[10:0] & {11{~v183[11]}}; // 9.0
+    wire [10:0] v185; shift_adder #(11, 4, 0, 0, 11, 0, 0) op_185 (v184[10:0], 4'b1000, v185[10:0]); // 9.0
+    wire [5:0] v186; assign v186[5:0] = v185[9:4]; // 9.0
+    wire [10:0] v187; assign v187[10:0] = model_inp[1243:1233]; // 8.0
+    wire [8:0] v188; assign v188[8:0] = model_inp[1252:1244]; // 8.0
+    wire [10:0] v189; shift_adder #(11, 9, 1, 1, 11, 0, 1) op_189 (v187[10:0], v188[8:0], v189[10:0]); // 9.0
+    wire [8:0] v190; assign v190[8:0] = model_inp[1261:1253]; // 8.0
+    wire [13:0] v191; assign v191[13:0] = model_inp[1275:1262]; // 8.0
+    wire [13:0] v192; shift_adder #(9, 14, 1, 1, 14, -3, 0) op_192 (v190[8:0], v191[13:0], v192[13:0]); // 9.0
+    wire [10:0] v193; assign v193[10:0] = model_inp[1286:1276]; // 8.0
+    wire [11:0] v194; assign v194[11:0] = model_inp[1298:1287]; // 8.0
+    wire [12:0] v195; shift_adder #(11, 12, 1, 1, 13, 1, 1) op_195 (v193[10:0], v194[11:0], v195[12:0]); // 9.0
+    wire [10:0] v196; assign v196[10:0] = model_inp[1309:1299]; // 8.0
+    wire [12:0] v197; assign v197[12:0] = model_inp[1322:1310]; // 8.0
+    wire [13:0] v198; shift_adder #(11, 13, 1, 1, 14, -3, 0) op_198 (v196[10:0], v197[12:0], v198[13:0]); // 9.0
+    wire [9:0] v199; assign v199[9:0] = model_inp[1332:1323]; // 8.0
+    wire [9:0] v200; assign v200[9:0] = model_inp[1342:1333]; // 8.0
+    wire [10:0] v201; shift_adder #(10, 10, 1, 1, 11, 1, 1) op_201 (v199[9:0], v200[9:0], v201[10:0]); // 9.0
+    wire [13:0] v202; assign v202[13:0] = model_inp[1356:1343]; // 8.0
+    wire [13:0] v203; assign v203[13:0] = model_inp[1370:1357]; // 8.0
+    wire [14:0] v204; shift_adder #(14, 14, 1, 1, 15, 1, 0) op_204 (v202[13:0], v203[13:0], v204[14:0]); // 9.0
+    wire [8:0] v205; assign v205[8:0] = model_inp[1379:1371]; // 8.0
+    wire [9:0] v206; shift_adder #(9, 7, 1, 1, 10, 1, 0) op_206 (v205[8:0], v25[6:0], v206[9:0]); // 9.0
+    wire [11:0] v207; assign v207[11:0] = model_inp[1391:1380]; // 8.0
+    wire [15:0] v208; assign v208[15:0] = model_inp[1407:1392]; // 8.0
+    wire [15:0] v209; shift_adder #(12, 16, 1, 1, 16, -2, 0) op_209 (v207[11:0], v208[15:0], v209[15:0]); // 9.0
+    wire [10:0] v210; assign v210[10:0] = model_inp[1418:1408]; // 8.0
+    wire [12:0] v211; assign v211[12:0] = model_inp[1431:1419]; // 8.0
+    wire [13:0] v212; shift_adder #(11, 13, 1, 1, 14, 1, 0) op_212 (v210[10:0], v211[12:0], v212[13:0]); // 9.0
+    wire [12:0] v213; assign v213[12:0] = model_inp[1444:1432]; // 8.0
+    wire [14:0] v214; shift_adder #(13, 10, 1, 1, 15, -2, 1) op_214 (v213[12:0], v177[9:0], v214[14:0]); // 9.0
+    wire [8:0] v215; assign v215[8:0] = model_inp[1453:1445]; // 8.0
+    wire [6:0] v216; assign v216[6:0] = model_inp[1460:1454]; // 8.0
+    wire [9:0] v217; shift_adder #(9, 7, 1, 1, 10, 0, 1) op_217 (v215[8:0], v216[6:0], v217[9:0]); // 9.0
+    wire [10:0] v218; assign v218[10:0] = model_inp[1471:1461]; // 8.0
+    wire [13:0] v219; assign v219[13:0] = model_inp[1485:1472]; // 8.0
+    wire [13:0] v220; shift_adder #(11, 14, 1, 1, 14, 0, 0) op_220 (v218[10:0], v219[13:0], v220[13:0]); // 9.0
+    wire [12:0] v221; assign v221[12:0] = model_inp[1498:1486]; // 8.0
+    wire [11:0] v222; assign v222[11:0] = model_inp[1510:1499]; // 8.0
+    wire [15:0] v223; shift_adder #(13, 12, 0, 1, 16, -2, 0) op_223 (v221[12:0], v222[11:0], v223[15:0]); // 9.0
+    wire [12:0] v224; assign v224[12:0] = model_inp[1523:1511]; // 8.0
+    wire [8:0] v225; assign v225[8:0] = model_inp[1532:1524]; // 8.0
+    wire [13:0] v226; shift_adder #(13, 9, 1, 1, 14, 4, 0) op_226 (v224[12:0], v225[8:0], v226[13:0]); // 9.0
+    wire [14:0] v227; shift_adder #(12, 10, 1, 1, 15, -3, 1) op_227 (v117[11:0], v132[9:0], v227[14:0]); // 9.0
+    wire [8:0] v228; assign v228[8:0] = model_inp[1541:1533]; // 8.0
+    wire [11:0] v229; assign v229[11:0] = model_inp[1553:1542]; // 8.0
+    wire [12:0] v230; shift_adder #(9, 12, 0, 1, 13, -1, 0) op_230 (v228[8:0], v229[11:0], v230[12:0]); // 9.0
+    wire [11:0] v231; shift_adder #(12, 9, 1, 1, 12, 0, 0) op_231 (v109[11:0], v225[8:0], v231[11:0]); // 9.0
+    wire [9:0] v232; shift_adder #(9, 8, 1, 1, 10, 0, 0) op_232 (v188[8:0], v160[7:0], v232[9:0]); // 9.0
+    wire [3:0] v233; assign v233[3:0] = model_inp[1557:1554]; // 8.0
+    wire [12:0] v234; assign v234[12:0] = model_inp[1570:1558]; // 8.0
+    wire [10:0] v235; assign v235[10:0] = model_inp[1581:1571]; // 8.0
+    wire [11:0] v236; assign v236[11:0] = model_inp[1593:1582]; // 8.0
+    wire [9:0] v237; assign v237[9:0] = model_inp[1603:1594]; // 8.0
+    wire [4:0] v238; assign v238[4:0] = model_inp[1608:1604]; // 8.0
+    wire [2:0] v239; assign v239[2:0] = model_inp[1611:1609]; // 8.0
+    wire [5:0] v240; assign v240[5:0] = model_inp[1617:1612]; // 8.0
+    wire [9:0] v241; assign v241[9:0] = model_inp[1627:1618]; // 8.0
+    wire [15:0] v242; assign v242[15:0] = model_inp[1643:1628]; // 8.0
+    wire [13:0] v243; assign v243[13:0] = model_inp[1657:1644]; // 8.0
+    wire [8:0] v244; assign v244[8:0] = model_inp[1666:1658]; // 8.0
+    wire [11:0] v245; assign v245[11:0] = model_inp[1678:1667]; // 8.0
+    wire [8:0] v246; assign v246[8:0] = model_inp[1687:1679]; // 8.0
+    wire [1:0] v247; assign v247[1:0] = model_inp[1689:1688]; // 8.0
+
+    // verilator lint_on UNUSEDSIGNAL
+
+    assign model_out[3:0] = v99[3:0];
+    assign model_out[15:4] = v2[11:0];
+    assign model_out[26:16] = v8[10:0];
+    assign model_out[37:27] = v11[10:0];
+    assign model_out[51:38] = v14[13:0];
+    assign model_out[65:52] = v17[13:0];
+    assign model_out[78:66] = v20[12:0];
+    assign model_out[93:79] = v23[14:0];
+    assign model_out[105:94] = v26[11:0];
+    assign model_out[115:106] = v28[9:0];
+    assign model_out[129:116] = v31[13:0];
+    assign model_out[142:130] = v34[12:0];
+    assign model_out[157:143] = v36[14:0];
+    assign model_out[167:158] = v39[9:0];
+    assign model_out[171:168] = v233[3:0];
+    assign model_out[179:172] = v41[7:0];
+    assign model_out[189:180] = v47[9:0];
+    assign model_out[198:190] = v134[8:0];
+    assign model_out[211:199] = v234[12:0];
+    assign model_out[222:212] = v60[10:0];
+    assign model_out[233:223] = v235[10:0];
+    assign model_out[244:234] = v65[10:0];
+    assign model_out[256:245] = v71[11:0];
+    assign model_out[266:257] = v74[9:0];
+    assign model_out[278:267] = v77[11:0];
+    assign model_out[291:279] = v80[12:0];
+    assign model_out[302:292] = v86[10:0];
+    assign model_out[315:303] = v105[12:0];
+    assign model_out[328:316] = v89[12:0];
+    assign model_out[345:329] = v92[16:0];
+    assign model_out[358:346] = v95[12:0];
+    assign model_out[368:359] = v32[9:0];
+    assign model_out[382:369] = v98[13:0];
+    assign model_out[393:383] = v101[10:0];
+    assign model_out[408:394] = v104[14:0];
+    assign model_out[422:409] = v107[13:0];
+    assign model_out[434:423] = v236[11:0];
+    assign model_out[447:435] = v113[12:0];
+    assign model_out[457:448] = v237[9:0];
+    assign model_out[474:458] = v115[16:0];
+    assign model_out[488:475] = v118[13:0];
+    assign model_out[493:489] = v238[4:0];
+    assign model_out[507:494] = v121[13:0];
+    assign model_out[510:508] = v239[2:0];
+    assign model_out[521:511] = v124[10:0];
+    assign model_out[536:522] = v130[14:0];
+    assign model_out[549:537] = v67[12:0];
+    assign model_out[561:550] = v133[11:0];
+    assign model_out[567:562] = v240[5:0];
+    assign model_out[580:568] = v136[12:0];
+    assign model_out[594:581] = v138[13:0];
+    assign model_out[605:595] = v144[10:0];
+    assign model_out[617:606] = v150[11:0];
+    assign model_out[626:618] = v215[8:0];
+    assign model_out[637:627] = v152[10:0];
+    assign model_out[650:638] = v155[12:0];
+    assign model_out[662:651] = v158[11:0];
+    assign model_out[675:663] = v161[12:0];
+    assign model_out[687:676] = v110[11:0];
+    assign model_out[697:688] = v241[9:0];
+    assign model_out[710:698] = v164[12:0];
+    assign model_out[724:711] = v166[13:0];
+    assign model_out[738:725] = v169[13:0];
+    assign model_out[754:739] = v242[15:0];
+    assign model_out[768:755] = v243[13:0];
+    assign model_out[779:769] = v174[10:0];
+    assign model_out[788:780] = v244[8:0];
+    assign model_out[799:789] = v178[10:0];
+    assign model_out[812:800] = v180[12:0];
+    assign model_out[823:813] = v189[10:0];
+    assign model_out[837:824] = v192[13:0];
+    assign model_out[846:838] = v228[8:0];
+    assign model_out[860:847] = v198[13:0];
+    assign model_out[871:861] = v201[10:0];
+    assign model_out[879:872] = v79[7:0];
+    assign model_out[894:880] = v204[14:0];
+    assign model_out[904:895] = v206[9:0];
+    assign model_out[916:905] = v245[11:0];
+    assign model_out[932:917] = v209[15:0];
+    assign model_out[946:933] = v212[13:0];
+    assign model_out[961:947] = v214[14:0];
+    assign model_out[971:962] = v217[9:0];
+    assign model_out[980:972] = v246[8:0];
+    assign model_out[994:981] = v220[13:0];
+    assign model_out[1008:995] = v226[13:0];
+    assign model_out[1023:1009] = v227[14:0];
+    assign model_out[1035:1024] = v231[11:0];
+    assign model_out[1045:1036] = v232[9:0];
+    assign model_out[1047:1046] = v247[1:0];
+    assign model_out[1061:1048] = v5[13:0];
+    assign model_out[1073:1062] = v44[11:0];
+    assign model_out[1089:1074] = v57[15:0];
+    assign model_out[1101:1090] = v62[11:0];
+    assign model_out[1116:1102] = v68[14:0];
+    assign model_out[1131:1117] = v83[14:0];
+    assign model_out[1143:1132] = v127[11:0];
+    assign model_out[1158:1144] = v141[14:0];
+    assign model_out[1177:1159] = v147[18:0];
+    assign model_out[1188:1178] = v171[10:0];
+    assign model_out[1201:1189] = v176[12:0];
+    assign model_out[1207:1202] = v186[5:0];
+    assign model_out[1220:1208] = v195[12:0];
+    assign model_out[1236:1221] = v223[15:0];
+    assign model_out[1249:1237] = v230[12:0];
+    assign model_out[1251:1250] = v54[1:0];
+
+endmodule

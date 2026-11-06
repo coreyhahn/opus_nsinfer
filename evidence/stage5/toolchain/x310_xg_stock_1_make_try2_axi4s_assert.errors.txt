@@ -1,0 +1,15 @@
+6:START 2026-10-29T20:30:53-06:00 host=build-host args: -j 6 X310_XG BUILD_DIR=<repo>/.scratch/s5_build/x310_xg_stock_1/build-usrp_x310_fpga_XG IMAGE_CORE_NAME=usrp_x310_fpga_XG BUILD_OUTPUT_DIR=<repo>/.scratch/s5_build/x310_xg_stock_1/build BUILD_IP_DIR=<repo>/.scratch/s5_build/build-ip
+2010:WARNING: [Synth 8-7129] Port SO_START in module cmpy_4_dsp48 is either unconnected or has no load
+2048:WARNING: [Synth 8-7129] Port SO_START in module cmpy_4_dsp48 is either unconnected or has no load
+4723:WARNING: [Synth 8-7129] Port QPLLREFCLKLOST in module one_gig_eth_pcs_pma_RX_STARTUP_FSM is either unconnected or has no load
+4724:WARNING: [Synth 8-7129] Port CPLLREFCLKLOST in module one_gig_eth_pcs_pma_RX_STARTUP_FSM is either unconnected or has no load
+4725:WARNING: [Synth 8-7129] Port QPLLLOCK in module one_gig_eth_pcs_pma_RX_STARTUP_FSM is either unconnected or has no load
+4726:WARNING: [Synth 8-7129] Port QPLLREFCLKLOST in module one_gig_eth_pcs_pma_TX_STARTUP_FSM is either unconnected or has no load
+4727:WARNING: [Synth 8-7129] Port QPLLLOCK in module one_gig_eth_pcs_pma_TX_STARTUP_FSM is either unconnected or has no load
+4812:WARNING: [Synth 8-7129] Port AN_RESTART_CONFIG in module MANAGEMENT is either unconnected or has no load
+4822:WARNING: [Synth 8-7129] Port CLEAR_RESTART_AN in module MANAGEMENT is either unconnected or has no load
+5787:ERROR: [Synth 8-6058] Synth Error: TKEEP present mismatch  [<repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/axi4s_fifo.sv:38]
+5788:ERROR: [Synth 8-6156] failed synthesizing module 'axi4s_fifo__parameterized4' [<repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/axi4s_fifo.sv:14]
+5789:ERROR: [Synth 8-6156] failed synthesizing module 'eth_ipv4_chdr_adapter' [<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/xport_sv/eth_ipv4_chdr_adapter.sv:77]
+5790:ERROR: [Synth 8-6156] failed synthesizing module 'eth_ipv4_chdr_adapter_wrapper' [<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/xport_sv/eth_ipv4_chdr_adapter_wrapper.sv:18]
+5791:ERROR: [Synth 8-6156] failed synthesizing module 'x300_eth_interface' [<repo>/.scratch/uhd/fpga/usrp3/top/x300/x300_eth_interface.v:15]

@@ -1,0 +1,82 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 07:36:30 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -to [get_ports {pin_b pin_c {class_o[*]}}] -max_paths 6 -file <repo>/synth/out_s1_p200_lc5_f1/timing_to_pads_max.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.237ns  (required time - arrival time)
+  Source:                 u_harness/opff_l_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk1_o  {rise@0.000ns fall@2.500ns period=4.999ns})
+  Destination:            pin_b
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            3.400ns  (MaxDelay Path 3.400ns)
+  Data Path Delay:        3.163ns  (logic 2.659ns (84.063%)  route 0.504ns (15.937%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 3.400ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X85Y238                                     0.000     0.000 r  u_harness/opff_l_reg/C
+    SLICE_X85Y238        FDRE (Prop_AFF_SLICEM_C_Q)
+                                                      0.077     0.077 r  u_harness/opff_l_reg/Q
+                         net (fo=1, routed)           0.504     0.581    u_iob_b/I
+    A20                  OBUFT (Prop_OUTBUF_HDIOB_S_I_O)
+                                                      2.582     3.163 r  u_iob_b/OBUFT/O
+                         net (fo=1, unset)            0.000     3.163    pin_b
+    A20                                                               r  pin_b (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    3.400     3.400    
+                         output delay                -0.000     3.400    
+  -------------------------------------------------------------------
+                         required time                          3.400    
+                         arrival time                          -3.163    
+  -------------------------------------------------------------------
+                         slack                                  0.237    
+
+Slack (MET) :             0.256ns  (required time - arrival time)
+  Source:                 u_harness/opff_c_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@2.500ns period=4.999ns})
+  Destination:            pin_c
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            3.400ns  (MaxDelay Path 3.400ns)
+  Data Path Delay:        3.144ns  (logic 2.640ns (83.967%)  route 0.504ns (16.033%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 3.400ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X85Y218                                     0.000     0.000 r  u_harness/opff_c_reg/C
+    SLICE_X85Y218        FDRE (Prop_AFF_SLICEM_C_Q)
+                                                      0.077     0.077 r  u_harness/opff_c_reg/Q
+                         net (fo=1, routed)           0.504     0.581    u_iob_c/I
+    D20                  OBUFT (Prop_OUTBUF_HDIOB_S_I_O)
+                                                      2.563     3.144 r  u_iob_c/OBUFT/O
+                         net (fo=1, unset)            0.000     3.144    pin_c
+    D20                                                               r  pin_c (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    3.400     3.400    
+                         output delay                -0.000     3.400    
+  -------------------------------------------------------------------
+                         required time                          3.400    
+                         arrival time                          -3.144    
+  -------------------------------------------------------------------
+                         slack                                  0.256    
+
+
+
+

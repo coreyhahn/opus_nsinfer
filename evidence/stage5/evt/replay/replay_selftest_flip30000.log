@@ -1,0 +1,24 @@
+NEGATIVE CONTROL: capture sample 30000 I bit 13 flipped (silicon values unchanged)
+REPLAY EVENT PACKETS 22 records 339 max/packet 16
+MISMATCH window misr: silicon 0xc086b19f7a5f449b sim 0x1e3612bb9e59850c
+MISMATCH window hist: silicon [17206, 21033, 10219, 17015] sim [17245, 21024, 10189, 17015]
+MISMATCH events after the first common one: silicon 338 replay 339
+MISMATCH event 153 after sync: tau silicon 4295009642 replay 4295009690
+MISMATCH event 153 after sync: new silicon 2 replay 0
+MISMATCH event 153 after sync: run silicon 21 replay 69
+MISMATCH event 154 after sync: tau silicon 4295009881 replay 4295009732
+MISMATCH event 154 after sync: new silicon 0 replay 2
+MISMATCH event 154 after sync: old silicon 2 replay 0
+MISMATCH event 154 after sync: run silicon 239 replay 42
+MISMATCH event 155 after sync: tau silicon 4295010145 replay 4295009881
+MISMATCH event 155 after sync: new silicon 2 replay 0
+MISMATCH event 155 after sync: old silicon 0 replay 2
+MISMATCH event 155 after sync: run silicon 264 replay 149
+MISMATCH event 156 after sync: tau silicon 4295010165 replay 4295010145
+MISMATCH event 156 after sync: new silicon 3 replay 2
+MISMATCH event 156 after sync: old silicon 2 replay 0
+MISMATCH event 156 after sync: run silicon 20 replay 264
+MISMATCH event 157 after sync: tau silicon 4295010576 replay 4295010165
+MISMATCH event 157 after sync: new silicon 0 replay 3
+REPLAY window count=65473 misr=0x1e3612bb9e59850c hist=[17245, 21024, 10189, 17015] events compared=338 errors=739 log=<repo>/.scratch/nsclf_replay/selftest_flip30000/replay.log
+FAIL

@@ -1,0 +1,8 @@
+# Stage 5 HGQ2 sweep 2 (grumpy-calf), 2026-10-29, W = 64 only. h1 result: the lowest-EBOPs checkpoint
+# within 1 point of the float baseline (val 0.8579 -> limit 0.8479) is hgq_w64_128_64_32_b3e6 e0149,
+# 102,647 EBOPs (~25k LUT at the dry run's 0.24 LUT/EBOP: at the budget). Here: warm starts from the float
+# 128-64-32 (lr 1e-3), a longer from-scratch schedule, and a second seed, to move the front down.
+hgq_w64_128_64_32_ws_b3e6   --w 64 --mode hgq --arch 128 64 32 --epochs 300 --lr 1e-3 --beta-end 3e-6 --init-from ref/runs/x310/float_w64_128_64_32/best.keras
+hgq_w64_128_64_32_ws_b1e5   --w 64 --mode hgq --arch 128 64 32 --epochs 300 --lr 1e-3 --beta-end 1e-5 --init-from ref/runs/x310/float_w64_128_64_32/best.keras
+hgq_w64_128_64_32_b5e6_e300 --w 64 --mode hgq --arch 128 64 32 --epochs 300 --beta-end 5e-6
+hgq_w64_128_64_32_s2_b3e6   --w 64 --mode hgq --arch 128 64 32 --epochs 200 --beta-end 3e-6 --seed 2

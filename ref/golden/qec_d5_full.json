@@ -1,0 +1,10 @@
+{
+ "n_vectors": 17517776,
+ "vectors": "distinct detection-event vectors of the d = 5 test multisets (all p) + all-zero, sorted by packed bytes",
+ "model_sha256": "3ef9c26edee5a70e9611da4f1284083584137f46b663064f9695cd0b6a423dab",
+ "sha256": {
+  ".scratch/qec_d5_full_in.hex": "7c215a6484f454b0ce6de62c98d25434a9ab994fbc7b217e835df06ed8f686a9",
+  ".scratch/qec_d5_full_out.hex": "58fdd4d7f110d4564ffef30eb3c03ef250869e5e212f72cddcf43ef7fc904ee8",
+  ".scratch/qec_d5_full_dec.hex": "1658ed4cc2e2817cfe6b96ea02c4f29003784224559aaa1fab79f575e58b40ca"
+ }
+}

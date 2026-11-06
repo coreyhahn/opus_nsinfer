@@ -1,0 +1,8 @@
+An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+W=16: no float runs, skipped
+W=32: no float runs, skipped
+W=64: float float_w64_128_64_32 val acc 0.9402 hi 0.9916; 285 HGQ checkpoints, 95 within 1.0 pt, 95 also >= 0.95 at SNR >= 10.0
+   pick ref/runs/x310_meas/hgq_w64_96_48_24_b2e5_e300_s3/pareto/e0177_acc0.93116_hi0.98919_ebops49750.keras EBOPs 49750 val acc 0.9312 hi 0.9892
+amended pick ref/runs/x310_meas/hgq_w64_96_48_24_b2e5_e300_s3/pareto/e0260_acc0.91300_hi0.98285_ebops22727.keras: cost 21363 LUT, EBOPs 22727, val acc 0.9130 hi 0.9829
+smallest W whose pick meets both criteria: 64; amended pick under the resource bound: 69 checkpoints inside it
+chosen W=64 ref/runs/x310_meas/hgq_w64_96_48_24_b2e5_e300_s3/pareto/e0260_acc0.91300_hi0.98285_ebops22727.keras EBOPs 22727: test acc 0.9111 hi 0.9821 | float float_w64_128_64_32 test acc 0.9391 hi 0.9918

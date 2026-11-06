@@ -1,0 +1,25 @@
+make: Entering directory '<repo>/tb'
+<repo>/sw/x310/uhdsim/run_uhdsim.sh nsclf rfnoc_block_nsclf_tb
+#     puts "BUILDER: \[ERROR\]: Could not resolve the location for the compiled simulation libraries."
+RESULT uhd_flow decisions=65473 misr=c086b19f7a5f449b events_received=338 passthrough_mismatches=0
+Result: PASSED   
+make rc=0
+python3 <repo>/sw/x310/nsclf_model.py check-events --model <repo>/.scratch/nsclf_stim/lc2/seed0/events_model.json \
+  --log <repo>/evidence/stage5/v2/block/uhdsim_nsclf_rfnoc_block_nsclf_tb.log | tee <repo>/evidence/stage5/v2/block/uhdsim_nsclf_check_events.log
+Traceback (most recent call last):
+  File "<repo>/sw/x310/nsclf_model.py", line 297, in <module>
+    main()
+  File "<repo>/sw/x310/nsclf_model.py", line 293, in main
+    a.func(a)
+  File "<repo>/sw/x310/nsclf_model.py", line 230, in cmd_check_events
+    for line in Path(a.log).read_text().splitlines():
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '<repo>/evidence/stage5/v2/block/uhdsim_nsclf_rfnoc_block_nsclf_tb.log'
+make: Leaving directory '<repo>/tb'
+UHDSIM_RC=0

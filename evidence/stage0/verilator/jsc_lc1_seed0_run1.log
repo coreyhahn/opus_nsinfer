@@ -1,0 +1,7 @@
+# host=build-host date=2026-10-19T22:58:12-06:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# design=<repo>/rtl/gen/jsc_lc1 in_hex_sha256=8905d5c06da65cde9e26a6b077f8e4f1f8228fb46e57fce19a0e0de7286a3986 out_hex_sha256=383bdcdd1515bd42c467794e0d14cabce95fe424edc500f739868e1a97f88a34
+# IN_W=150 OUT_W=80 LAT=27 NVEC=166000 seed=0 run=1
+LATENCY cycles=27 (input applied before edge 1, output valid after edge 27)
+RESULT seed=0 vectors=166000 checked=166000 mismatches=0 latency=27 xor_signature=f82d0ee904a67115f121
+PASS
+- tb_jsc.sv:97: Verilog $finish

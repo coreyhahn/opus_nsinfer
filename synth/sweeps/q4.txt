@@ -1,0 +1,5 @@
+# Stage 3 prep q4: decoder at the GTY user clock for 10.3125 Gb/s 64B/66B (161.1328125 MHz, 6.206 ns)
+q4_vu9p_lc5_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc5 xcvu9p-fsgd2104-2L-e 6.206 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q4_vu9p_lc8_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc8 xcvu9p-fsgd2104-2L-e 6.206 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q4_vu9p_lc12_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc12 xcvu9p-fsgd2104-2L-e 6.206 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q4_vu9p_lc32_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc32 xcvu9p-fsgd2104-2L-e 6.206 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1

@@ -1,0 +1,51 @@
+diff --git a/fpga/usrp3/lib/axi4s_sv/axi4s_fifo.sv b/fpga/usrp3/lib/axi4s_sv/axi4s_fifo.sv
+index 3a434ce..84c85d7 100644
+--- a/fpga/usrp3/lib/axi4s_sv/axi4s_fifo.sv
++++ b/fpga/usrp3/lib/axi4s_sv/axi4s_fifo.sv
+@@ -25,6 +25,9 @@ module axi4s_fifo #(
+   `include "axi4s.vh"
+ 
+   // Parameter Checks
++  // opus_nsinfer S5: Vivado 2024.2 synthesis evaluates these and stops on the upstream
++  // TKEEP(1) -> TKEEP(0) instance in eth_ipv4_chdr_adapter.sv:548 (2021.1 did not); sim keeps them.
++  // synthesis translate_off
+   initial begin
+     assert (i.DATA_WIDTH == o.DATA_WIDTH) else
+       $fatal(1, "DATA_WIDTH mismatch");
+@@ -39,6 +42,7 @@ module axi4s_fifo #(
+     assert (i.TLAST == o.TLAST) else
+       $fatal(1, "TLAST present mismatch");
+   end
++  // synthesis translate_on
+ 
+   AxiStreamPacketIf #(.DATA_WIDTH(i.DATA_WIDTH),.USER_WIDTH(i.USER_WIDTH),
+     .TDATA(i.TDATA),.TKEEP(i.TKEEP),.TUSER(i.TUSER),.TLAST(i.TLAST),
+diff --git a/fpga/usrp3/tools/make/viv_preamble.mak b/fpga/usrp3/tools/make/viv_preamble.mak
+index f7b53bf..4fa572b 100644
+--- a/fpga/usrp3/tools/make/viv_preamble.mak
++++ b/fpga/usrp3/tools/make/viv_preamble.mak
+@@ -71,7 +71,7 @@ endif
+ 	@echo "BUILDER: Checking tools..."
+ 	@echo -n "* "; bash --version | grep bash || (echo "ERROR: Bash not found in environment. Please install it"; exit 1;)
+ 	@echo -n "* "; python3 --version || (echo "ERROR: Python not found in environment. Please install it"; exit 1;)
+-	@echo -n "* "; vivado -version 2>&1 | grep Vivado || (echo "ERROR: Vivado not found in environment. Please run setupenv.sh"; exit 1;)
++	@echo -n "* "; vivado -version 2>&1 | grep -i vivado || (echo "ERROR: Vivado not found in environment. Please run setupenv.sh"; exit 1;)
+ 
+ # -------------------------------------------------------------------
+ # Intermediate build dirs 
+diff --git a/fpga/usrp3/tools/scripts/viv_generate_ip.tcl b/fpga/usrp3/tools/scripts/viv_generate_ip.tcl
+index 8fe7693..95055ba 100644
+--- a/fpga/usrp3/tools/scripts/viv_generate_ip.tcl
++++ b/fpga/usrp3/tools/scripts/viv_generate_ip.tcl
+@@ -20,6 +20,11 @@ file delete -force "$xci_file.out"
+ create_project -part $part_name -in_memory -ip
+ set_property target_simulator XSim [current_project]
+ add_files -norecurse -force $xci_file
++# opus_nsinfer S5: the XCIs are Vivado 2021.1 cores; 2024.2 locks them, so upgrade first.
++if {[get_property IS_LOCKED [get_ips $ip_name]]} {
++    puts "BUILDER: IP is locked, upgrading to current Vivado version..."
++    upgrade_ip [get_ips $ip_name]
++}
+ reset_target all [get_files $xci_file]
+ puts "BUILDER: Generating IP Target..."
+ generate_target all [get_files $xci_file]

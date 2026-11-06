@@ -1,0 +1,68 @@
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -11.688  -123836.844                  21283                22605        0.098        0.000                      0                22605        2.828        0.000                       0                 23203  
+Slack (VIOLATED) :        -11.688ns  (required time - arrival time)
+  Source:                 u_core/stage1_inp_reg[388]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Destination:            u_core/stage2_inp_reg[9251]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.206ns  (clk rise@6.206ns - clk rise@0.000ns)
+  Data Path Delay:        17.876ns  (logic 1.569ns (8.777%)  route 16.307ns (91.223%))
+  Logic Levels:           14  (CARRY8=5 LUT2=3 LUT3=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 6.226 - 6.206 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=23202, unset)        0.028     0.028    clk
+    SLICE_X58Y457        FDRE                                         r  u_core/stage1_inp_reg[388]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y457        FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.079     0.107 r  u_core/stage1_inp_reg[388]/Q
+                         net (fo=38, routed)          0.542     0.649    u_core/stage1_inp__0[388]
+    SLICE_X59Y463        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.091     0.740 r  stage2_inp[8714]_i_1/O
+                         net (fo=170, routed)        10.158    10.898    u_core/stage1_out[8714]
+    SLICE_X17Y468        LUT5 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.150    11.048 f  stage2_inp[10744]_i_1/O
+                         net (fo=33, routed)          2.762    13.810    u_core/stage1_out[10744]
+    SLICE_X24Y592        LUT6 (Prop_G6LUT_SLICEM_I0_O)
+                                                      0.123    13.933 r  accum_carry__0_i_12__74/O
+                         net (fo=2, routed)           0.934    14.867    accum_carry__0_i_12__74_n_0
+    SLICE_X40Y558        LUT3 (Prop_D5LUT_SLICEM_I0_O)
+                                                      0.066    14.933 f  accum_carry_i_37__122/O
+                         net (fo=2, routed)           0.426    15.359    u_core/stage1/v6914[3]
+    SLICE_X42Y572        LUT6 (Prop_D6LUT_SLICEM_I5_O)
+                                                      0.145    15.504 r  accum_carry__0_i_6__323/O
+                         net (fo=4, routed)           0.614    16.119    accum_carry__0_i_6__323_n_0
+    SLICE_X43Y535        LUT2 (Prop_D6LUT_SLICEM_I1_O)
+                                                      0.037    16.156 r  accum_carry_i_20__417/O
+                         net (fo=3, routed)           0.211    16.367    u_core/stage1/v11746[5]
+    SLICE_X43Y534        LUT6 (Prop_H6LUT_SLICEM_I4_O)
+                                                      0.152    16.519 r  accum_carry_i_8__1073/O
+                         net (fo=1, routed)           0.015    16.534    accum_carry_i_8__1073_n_0
+    SLICE_X43Y534        CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.117    16.651 r  u_core/stage1/op_18887/accum_carry/CO[7]
+                         net (fo=1, routed)           0.026    16.677    u_core/stage1/op_18887/accum_carry_n_0
+    SLICE_X43Y535        CARRY8 (Prop_CARRY8_SLICEM_CI_O[0])
+                                                      0.056    16.733 r  u_core/stage1/op_18887/accum_carry__0/O[0]
+                         net (fo=1, routed)           0.252    16.985    u_core/stage1/v18887[8]
+    SLICE_X45Y534        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.150    17.135 r  accum_carry_i_9__752/O
+                         net (fo=1, routed)           0.016    17.151    accum_carry_i_9__752_n_0
+    SLICE_X45Y534        CARRY8 (Prop_CARRY8_SLICEM_S[6]_CO[7])

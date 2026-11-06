@@ -1,0 +1,19 @@
+# nsclf block sources for the UHD 4.9 FPGA build (included by the image core's Makefile.inc through
+# rfnoc/blocks/nsclf.yml fpga_includes). NSCLF_LC selects the classifier core (rtl/gen/x310_clf_lc<c>);
+# the image core YAML's CORE_LAT / LC_X10 must match it (synth/scripts/launch_x310_nsclf.sh checks).
+# The da4ml .sdc is NOT listed: viv_utils.tcl reads .sdc files as XDC.
+NSCLF_PROJ := $(abspath $(dir $(abspath $(lastword $(MAKEFILE_LIST))))/../../..)
+NSCLF_LC ?= 2
+NSCLF_GEN := $(NSCLF_PROJ)/rtl/gen/x310_clf_lc$(NSCLF_LC)
+RFNOC_BLOCK_NSCLF_SRCS := \
+$(sort $(wildcard $(NSCLF_GEN)/src/static/*.v)) \
+$(sort $(wildcard $(NSCLF_GEN)/src/x310_clf_stage*.v)) \
+$(NSCLF_GEN)/src/x310_clf.v \
+$(NSCLF_PROJ)/rtl/x310/x310_clf_top.sv \
+$(NSCLF_PROJ)/rtl/x310/x310_stream.sv \
+$(NSCLF_PROJ)/rtl/x310/nsclf_core.sv \
+$(NSCLF_PROJ)/rtl/x310/nsclf_user.sv \
+$(NSCLF_PROJ)/rtl/x310/noc_shell_nsclf.sv \
+$(NSCLF_PROJ)/rtl/x310/rfnoc_block_nsclf.sv
+# x310_clf_top.sv includes x310_clf_lanes.svh: viv_utils.tcl passes VIV_INCLUDE_DIRS to synth_design -include_dirs
+export VIV_INCLUDE_DIRS := $(NSCLF_PROJ)/rtl/gen

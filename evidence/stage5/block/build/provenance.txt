@@ -1,0 +1,13 @@
+# 2026-10-30T01:14:59-06:00 host=desk-pc name=x310_xg_nsclf_lc2_1 LC=2 CORE_LAT=15 LC_X10=20
+# git 98f4e22 dirty=13
+# uhd a5d1b2e +  3 files changed, 10 insertions(+), 1 deletion(-)
+c67a5081bc8ed2b2c810d9d88107bc4cd511c7762f013bd58cb19854fe5b89a4  <repo>/rtl/x310/noc_shell_nsclf.sv
+fb4bc1c4d2071631294ee9a2a528d577cb803a1c74f2fa5bf776270e01630b9c  <repo>/rtl/x310/nsclf_core.sv
+6b6b2bce4e7ded7c6f5efbdeba7218b03622624faed68fa3adb57d60b2dea1dc  <repo>/rtl/x310/nsclf_user.sv
+fa2831bbd89525faa182062e86a7e64433ee23a3eb292b2f62d4dedd2dfa119f  <repo>/rtl/x310/rfnoc_block_nsclf.sv
+4f46ae6636878e2ece1f2fc84a5fce87dd42f04155429e06f9dcc4c8b3dbeb42  <repo>/rtl/x310/x310_clf_top.sv
+25f217d99e33ed9a22c4cc8b7f64cf7e83ba55b10f441716f98d2009ee343432  <repo>/rtl/x310/x310_stream.sv
+849f375afedd193cd080ac4cdfc3df936ae13b4510c92774d6806951457eaebf  <repo>/rtl/gen/x310_clf_lanes.svh
+01aae5c78dfafd3ddcecb537ad68be3a0f014aeaaf35052f36d9a7540282b47c  <repo>/rfnoc/blocks/nsclf.yml
+e9df17503dfd2b358fc85bb29894ef4eef61ae5ec90b645ecf0ef0c3a2f5d361  <repo>/.scratch/s5_build/x310_xg_nsclf_lc2_1/x310_XG_nsclf.yml
+make args: -j 6 X310_XG BUILD_DIR=<repo>/.scratch/s5_build/x310_xg_nsclf_lc2_1/build-usrp_x310_fpga_XG_nsclf IMAGE_CORE_NAME=usrp_x310_fpga_XG_nsclf BUILD_OUTPUT_DIR=<repo>/.scratch/s5_build/x310_xg_nsclf_lc2_1/build BUILD_IP_DIR=<repo>/.scratch/s5_build/build-ip NSCLF_LC=2 

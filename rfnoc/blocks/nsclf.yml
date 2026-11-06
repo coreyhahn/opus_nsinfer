@@ -1,0 +1,85 @@
+# opus_nsinfer Stage 5 (PLAN.md D-S5-TAP, D-S5-OUT): nsclf, the waveform classifier on the X310's radio0
+# sample stream. Sits between the device's radio0 io_port and the stock radio block: every radio signal is
+# passed through as a wire; a ctrlport-selected channel feeds the classifier (rtl/x310/x310_stream.sv);
+# smoothed-class event records leave on CHDR output port 'evt'; MISR / counters are read over ctrlport.
+# Register map and timing definitions: evidence/stage5/block/README.md. Derived from the tap probe
+# (evidence/stage5/toolchain/tap_probe/tap.yml) that the UHD 4.9 image builder accepted.
+# Event revision (2026-11, block VERSION 2.0): events off at reset (REG_CTRL bit 2 EVT_EN), up to EVT_BATCH = 16
+# records per 'evt' CHDR packet (nsclf_user parameters EVT_BATCH / EVT_AW / EVT_FLUSH_DEFAULT, not block
+# parameters; README section 5a).
+schema: rfnoc_modtool_args
+module_name: nsclf
+version: "2.0"           # 2.0 = 2026-11 event revision (EVT_EN, batched event packets); REG_VERSION 0x00020000
+rfnoc_version: "1.0"
+chdr_width: 64
+noc_id: 0x4E53C1F0
+
+parameters:
+  NUM_PORTS: 2      # must match the device radio0 io_port (2 channels per X310 dboard slot)
+  NIPC: 1           # X310 radio io_port spc = 1
+  CORE_LAT: 18      # da4ml core latency + 1 (rtl/gen/x310_clf_lc<c>/metadata.json); 18 = cutoff 2 (v2 model; v1: 15)
+  LC_X10: 20        # cutoff x 10, reported in REG_BUILD only; must match NSCLF_LC in Makefile.srcs
+  IN_REG: 1         # 1: register the selected sample before the window shift register (+1 cycle)
+  K_DEFAULT: 16     # hysteresis K at reset (REG_K)
+
+clocks:
+  - name: rfnoc_chdr
+    freq: "[]"
+  - name: rfnoc_ctrl
+    freq: "[]"
+  - name: radio
+    freq: "[]"
+
+control:
+  fpga_iface: ctrlport
+  interface_direction: slave
+  fifo_depth: 32
+  clk_domain: radio
+  ctrlport:
+    byte_mode: False
+    timed: False
+    has_status: False
+
+data:
+  fpga_iface: axis_data
+  clk_domain: radio
+  inputs: {}
+  outputs:
+    evt:
+      index: 0
+      item_width: 64
+      nipc: 1
+      info_fifo_depth: 32
+      payload_fifo_depth: 64
+      format: u64
+      sideband_at_end: False
+
+io_ports:
+  radio_in:             # from the device (ADC side, after fe_control)
+    type: radio
+    drive: slave
+    parameters:
+      spc: "${parameters['NIPC']}"
+      num_ports: "${parameters['NUM_PORTS']}"
+    rename:             # without a rename both radio ports get identical wire names
+      pattern: (.*)
+      repl: \1_in
+    required: true
+  radio_out:            # to the stock radio block's 'radio' port
+    type: radio
+    drive: master
+    parameters:
+      spc: "${parameters['NIPC']}"
+      num_ports: "${parameters['NUM_PORTS']}"
+    rename:
+      pattern: (.*)
+      repl: \1_out
+    required: true
+  time:
+    type: timekeeper
+    drive: listener
+    required: true
+
+fpga_includes:
+  - include: "fpga/nsclf/Makefile.srcs"
+    make_var: "$(RFNOC_BLOCK_NSCLF_SRCS)"

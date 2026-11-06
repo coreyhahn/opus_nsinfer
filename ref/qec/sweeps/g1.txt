@@ -1,0 +1,9 @@
+# grumpy-calf sweep 1: HGQ2 d = 3 decoders, 300 epochs, EBOPs beta ramp 1e-8 -> beta-end
+hgq_g1_32_16_b5     --mode hgq --epochs 300 --arch 32 16 --beta-end 1e-5
+hgq_g1_32_16_b6     --mode hgq --epochs 300 --arch 32 16 --beta-end 1e-6
+hgq_g1_64_32_b6     --mode hgq --epochs 300 --arch 64 32 --beta-end 1e-6
+hgq_g1_64_32_b5_s2  --mode hgq --epochs 300 --arch 64 32 --beta-end 1e-5 --seed 2
+hgq_g1_128_64_b5    --mode hgq --epochs 300 --arch 128 64 --beta-end 1e-5
+hgq_g1_128_64_b6    --mode hgq --epochs 300 --arch 128 64 --beta-end 1e-6
+hgq_g1_128_64_32_b6 --mode hgq --epochs 300 --arch 128 64 32 --beta-end 1e-6
+hgq_g1_64_64_32_b5  --mode hgq --epochs 300 --arch 64 64 32 --beta-end 1e-5

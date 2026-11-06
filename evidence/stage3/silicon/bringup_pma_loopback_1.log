@@ -1,0 +1,4 @@
+ECHO near-end PMA loopback on both cores, pma_init pulse
+R 024 010d3333 LINK_PMA_LOOPBACK
+ECHO back to normal (cable), pma_init pulse
+R 024 010d3030 LINK_CABLE

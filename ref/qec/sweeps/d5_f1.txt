@@ -1,0 +1,5 @@
+# d = 5 float64 baselines (grumpy-calf): what an MLP reaches against PyMatching at d = 5
+float_d5_128_64        --d 5 --mode float --arch 128 64 --epochs 200 --steps-per-epoch 2000 --batch 8192 --lr 2e-3
+float_d5_256_128       --d 5 --mode float --arch 256 128 --epochs 200 --steps-per-epoch 2000 --batch 8192 --lr 2e-3
+float_d5_512_256_128   --d 5 --mode float --arch 512 256 128 --epochs 200 --steps-per-epoch 2000 --batch 8192 --lr 2e-3
+float_d5_256_256_256   --d 5 --mode float --arch 256 256 256 --epochs 200 --steps-per-epoch 2000 --batch 8192 --lr 2e-3

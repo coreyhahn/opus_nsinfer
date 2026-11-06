@@ -1,0 +1,4 @@
+<repo>/synth/out_s6d5_lc3bc_a/s3_shots.hex d11d736d0103f25199f62dd69933eea3b4b27a1c6144e83743f3332ca1f5e379
+d11d736d0103f25199f62dd69933eea3b4b27a1c6144e83743f3332ca1f5e379  <repo>/synth/out_s6d5_lc3bc_a/s3_shots.hex
+e2b7850bd02226184dde959be6be4c89a8902ddeee1e96cae3c75e504a826041  <repo>/ref/golden/qec_d5_golden_in.hex
+e2acdf88433cf7f579b51e22c61a5e50d824970fac2f610837d0b0285db17a63  <repo>/ref/golden/qec_d5_golden_dec.hex

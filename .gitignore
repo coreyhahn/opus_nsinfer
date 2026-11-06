@@ -1,0 +1,27 @@
+# Verilator and simulation outputs
+obj_dir*/
+*.vcd
+*.fst
+# Vivado
+synth/out_*/
+*.jou
+*.log
+*.str
+.Xil/
+# Python
+.venv/
+__pycache__/
+*.h5
+*.keras
+# editor
+*.swp
+ref/data/
+.scratch/
+ref/runs/
+# evidence logs and reports are committed
+!evidence/**
+!ref/golden/*.keras
+# generated IP products: regenerate from the .xci (synth/scripts/s3_gen_*.tcl; s3_build.tcl does it if missing)
+rtl/ip/*/*
+!rtl/ip/*/*.xci
+.ip_user_files/

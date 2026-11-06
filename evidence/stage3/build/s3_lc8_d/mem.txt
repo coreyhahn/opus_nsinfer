@@ -1,0 +1,4 @@
+<repo>/synth/out_s3_lc8_d/s3_shots.hex d79e7c55b75d3f0ee3483e6491f8595c9d7983b91a0b4949a7bea086421093f9
+d79e7c55b75d3f0ee3483e6491f8595c9d7983b91a0b4949a7bea086421093f9  <repo>/synth/out_s3_lc8_d/s3_shots.hex
+81976e9d532059f392ed384ed726e8a463fcb62c8ae835fb67cae55c75b5dc1f  <repo>/ref/golden/qec_d3_golden_in.hex
+f98b7d20e5acd4e2909507f79563cd9aee24c8363843ee33e2f10e03ba862eb7  <repo>/ref/golden/qec_d3_golden_dec.hex

@@ -1,0 +1,6 @@
+# d = 5 HGQ2 sweep 7 (grumpy-calf), 2026-10-28: continue the d5_h6 narrow nets (--resume) with stronger EBOPs pressure.
+# d5_h6 ended at 1.62M (192-96-96, val 1.19), 1.76-2.0M (128x4, 1.16-1.18), 1.61M (128x3, 1.23); the 1.92M 256x3
+# probe misses 6.206 ns by 3.48 ns, so points near 1M EBOPs are needed to find the routable bound B (D-S4-SEL).
+hgq_d5nr_128x4_to3e8     --d 5 --mode hgq --resume ref/runs/qec/hgq_d5n_128x4_b3e9/last.keras --epochs 40 --steps-per-epoch 2000 --batch 8192 --lr 2e-4 --beta-start 3e-9 --beta-end 3e-8
+hgq_d5nr_192_96_96_to1e8 --d 5 --mode hgq --resume ref/runs/qec/hgq_d5n_192_96_96_b9/last.keras --epochs 40 --steps-per-epoch 2000 --batch 8192 --lr 2e-4 --beta-start 1e-9 --beta-end 1e-8
+hgq_d5nr_192_96_96_to3e8 --d 5 --mode hgq --resume ref/runs/qec/hgq_d5n_192_96_96_b9/last.keras --epochs 40 --steps-per-epoch 2000 --batch 8192 --lr 2e-4 --beta-start 1e-9 --beta-end 3e-8

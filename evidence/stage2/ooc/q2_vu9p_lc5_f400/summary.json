@@ -1,0 +1,1 @@
+{"part": "xcvu9p-fsgd2104-2L-e", "period_ns": 2.5, "wns_ns": -1.064, "whs_ns": 0.055, "lut": 17320, "ff": 4514, "dsp": 0, "retime": 0, "gen_dir": "<repo>/rtl/gen/qec_d3_lc5", "top": "qec_d3_top", "vivado": "2024.2", "date": "2026-10-20T21:32:33"}

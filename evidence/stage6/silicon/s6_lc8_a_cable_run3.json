@@ -1,0 +1,449 @@
+[
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run3.log",
+  "kind": "probe",
+  "probe": "cable_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 2466391,
+    "received": 2466391,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "22": 2466371,
+     "24": 20
+    },
+    "cycles": {
+     "min": 22,
+     "p50": 22,
+     "p90": 22,
+     "max": 24,
+     "mean": 22.00001621802869
+    },
+    "ns": {
+     "min": 136.53333333333333,
+     "p50": 136.53333333333333,
+     "p90": 136.53333333333333,
+     "max": 148.94545454545454,
+     "mean": 136.5334339834023
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 2466391,
+    "received": 2466391,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "23": 2466391
+    },
+    "cycles": {
+     "min": 23,
+     "p50": 23,
+     "p90": 23,
+     "max": 23,
+     "mean": 23.0
+    },
+    "ns": {
+     "min": 142.73939393939395,
+     "p50": 142.73939393939395,
+     "p90": 142.73939393939395,
+     "max": 142.73939393939395,
+     "mean": 142.73939393939395
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run3.log",
+  "kind": "probe",
+  "probe": "cable_p63_b32",
+  "period": 63,
+  "hbase": 32,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 2457337,
+    "received": 2457337,
+    "bad": 0,
+    "hist_complete": false,
+    "hist": {},
+    "cycles": {
+     "min": 22,
+     "p50": null,
+     "p90": null,
+     "max": 22,
+     "mean": 22.0
+    },
+    "ns": {
+     "min": 136.53333333333333,
+     "p50": null,
+     "p90": null,
+     "max": 136.53333333333333,
+     "mean": 136.53333333333333
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 2457337,
+    "received": 2457337,
+    "bad": 0,
+    "hist_complete": false,
+    "hist": {},
+    "cycles": {
+     "min": 23,
+     "p50": null,
+     "p90": null,
+     "max": 23,
+     "mean": 23.0
+    },
+    "ns": {
+     "min": 142.73939393939395,
+     "p50": null,
+     "p90": null,
+     "max": 142.73939393939395,
+     "mean": 142.73939393939395
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run3.log",
+  "kind": "probe",
+  "probe": "cable_p0_b0",
+  "period": 0,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 80393753,
+    "received": 80393752,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "22": 30147660,
+     "24": 50246092
+    },
+    "cycles": {
+     "min": 22,
+     "p50": 24,
+     "p90": 24,
+     "max": 24,
+     "mean": 23.249999925367334
+    },
+    "ns": {
+     "min": 136.53333333333333,
+     "p50": 148.94545454545454,
+     "p90": 148.94545454545454,
+     "max": 148.94545454545454,
+     "mean": 144.29090862773424
+    },
+    "pass": false
+   },
+   "b_to_a": {
+    "sent": 80393753,
+    "received": 80393752,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "23": 72856837,
+     "25": 7536915
+    },
+    "cycles": {
+     "min": 23,
+     "p50": 23,
+     "p90": 23,
+     "max": 25,
+     "mean": 23.187500018658167
+    },
+    "ns": {
+     "min": 142.73939393939395,
+     "p50": 142.73939393939395,
+     "p90": 142.73939393939395,
+     "max": 155.15151515151516,
+     "mean": 143.90303041882402
+    },
+    "pass": false
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": false
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run3.log",
+  "kind": "run",
+  "run": "echo_gap63",
+  "mode": "echo",
+  "gap": 63,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5f09efeb",
+  "sim_signature": "5f09efeb",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 47,
+   "p50": 49,
+   "p90": 51,
+   "p99": 51,
+   "max": 51,
+   "mean": 48.4545160929143
+  },
+  "loop_ns": {
+   "min": 291.6848484848485,
+   "p50": 304.0969696969697,
+   "p90": 316.5090909090909,
+   "p99": 316.5090909090909,
+   "max": 316.5090909090909,
+   "mean": 300.7116635099651
+  },
+  "b_decode_path_cycles": [
+   0,
+   65535
+  ],
+  "link": 17593203,
+  "hist": {
+   "47": 182962,
+   "49": 225173,
+   "51": 56293
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run3.log",
+  "kind": "run",
+  "run": "decode_gap63",
+  "mode": "decode",
+  "gap": 63,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5e8e5270",
+  "sim_signature": "5e8e5270",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 53,
+   "p50": 55,
+   "p90": 57,
+   "p99": 57,
+   "max": 57,
+   "mean": 54.484888938651416
+  },
+  "loop_ns": {
+   "min": 328.92121212121214,
+   "p50": 341.3333333333333,
+   "p90": 353.74545454545455,
+   "p99": 353.74545454545455,
+   "max": 353.74545454545455,
+   "mean": 338.1365228677518
+  },
+  "b_decode_path_cycles": [
+   7,
+   7
+  ],
+  "link": 17593203,
+  "hist": {
+   "53": 182949,
+   "55": 211109,
+   "56": 14074,
+   "57": 56296
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run3.log",
+  "kind": "run",
+  "run": "decode_gap7",
+  "mode": "decode",
+  "gap": 7,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5e8e5270",
+  "sim_signature": "5e8e5270",
+  "flips_checked": 8192,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 53,
+   "p50": 55,
+   "p90": 57,
+   "p99": 57,
+   "max": 57,
+   "mean": 54.454550543894854
+  },
+  "loop_ns": {
+   "min": 328.92121212121214,
+   "p50": 341.3333333333333,
+   "p90": 353.74545454545455,
+   "p99": 353.74545454545455,
+   "max": 353.74545454545455,
+   "mean": 337.948240951202
+  },
+  "b_decode_path_cycles": [
+   7,
+   7
+  ],
+  "link": 17593203,
+  "hist": {
+   "53": 182955,
+   "55": 225179,
+   "57": 56294
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run3.log",
+  "kind": "probe",
+  "probe": "pmaloop_a_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pma_loopback": {
+    "sent": 2465334,
+    "received": 2465334,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "19": 2465290,
+     "21": 44
+    },
+    "cycles": {
+     "min": 19,
+     "p50": 19,
+     "p90": 19,
+     "max": 21,
+     "mean": 19.0000356949606
+    },
+    "ns": {
+     "min": 117.91515151515152,
+     "p50": 117.91515151515152,
+     "p90": 117.91515151515152,
+     "max": 130.3272727272727,
+     "mean": 117.91537304024034
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ }
+]

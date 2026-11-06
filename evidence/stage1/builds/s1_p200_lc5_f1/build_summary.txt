@@ -1,0 +1,39 @@
+# foreach r $iob_rows { puts $fh $r; puts "IOB_CHECK $r" }
+IOB_CHECK pin_b out want=opff_l PASS cell=u_harness/opff_l_reg bel=SLICEM.AFF site=SLICE_X85Y238 clk=u_harness/CLK
+IOB_CHECK u_iob_b/O in want=ipff_b PASS cell=u_harness/ipff_b_reg bel=SLICEM.EFF site=SLICE_X85Y238 clk=u_harness/clk_net
+IOB_CHECK pin_c out want=opff_c PASS cell=u_harness/opff_c_reg bel=SLICEM.AFF site=SLICE_X85Y218 clk=u_harness/clk_net
+IOB_CHECK u_iob_c/O in want=ipff_d PASS cell=u_harness/ipff_d_reg bel=SLICEM.EFF site=SLICE_X85Y218 clk=u_harness/CLK
+IOB_CHECK class_o[0] out want=class PASS cell=u_harness/class_q_reg[0]_lopt_replica bel=SLICEL.HFF2 site=SLICE_X72Y92 clk=u_harness/clk_net
+IOB_CHECK class_o[1] out want=class PASS cell=u_harness/class_q_reg[1]_lopt_replica bel=SLICEL.GFF2 site=SLICE_X72Y92 clk=u_harness/clk_net
+IOB_CHECK class_o[2] out want=class PASS cell=u_harness/class_q_reg[2]_lopt_replica bel=SLICEL.EFF site=SLICE_X71Y91 clk=u_harness/clk_net
+IOB_CHECK l_tw fabric PASS cell=u_harness/l_tw_reg bel=SLICEM.FFF site=SLICE_X70Y88 clk=u_harness/CLK
+IOB_CHECK c_tw fabric PASS cell=u_harness/c_tw_reg bel=SLICEL.AFF site=SLICE_X66Y89 clk=u_harness/clk_net
+IOB_CHECK h_ff fabric PASS cell=u_harness/h_ff_reg bel=SLICEL.HFF site=SLICE_X66Y87 clk=u_harness/clk_net
+IOB_CHECK g_ff fabric PASS cell=u_harness/g_ff_reg bel=SLICEM.EFF site=SLICE_X70Y88 clk=u_harness/CLK
+# puts $fh [expr {$iob_ok ? "IOB_CHECK PASS" : "IOB_CHECK FAIL"}]
+ANCHOR l_tw->h_ff max d_eff=1.183 slack=3.444 (src_clk -0.411 dp 1.106 dst_clk -0.514 setup -0.026)
+ANCHOR l_tw->h_ff min d_eff=0.443 slack=0.181 (src_clk -0.334 dp 0.544 dst_clk -0.278 hold 0.045)
+ANCHOR c_tw->g_ff max d_eff=1.490 slack=3.137 (src_clk -0.454 dp 1.484 dst_clk -0.486 setup -0.026)
+ANCHOR c_tw->g_ff min d_eff=0.522 slack=0.259 (src_clk -0.358 dp 0.681 dst_clk -0.244 hold 0.045)
+XING u_harness/l_tw_reg/C -> u_harness/h_ff_reg/D slack=3.444
+XING u_harness/c_tw_reg/C -> u_harness/g_ff_reg/D slack=3.137
+CLOCK clk_net=clk0_o period=4.999 WNS=0.069 WHS=0.014
+CLOCK clk_ps=clk1_o period=4.999 WNS=0.094 WHS=0.04
+CLOCK clk_axi=clk0_o period=4.999 WNS=0.069 WHS=0.014
+# puts "PULSE_WIDTH WPWS=$wpws TPWS=$tpws failing_endpoints=$pw_fail"
+PULSE_WIDTH WPWS=0.500 TPWS=0.000 failing_endpoints=0
+# foreach x [lsort -unique $pw_cells] { puts "PULSE_WIDTH_FAIL $x" }
+PAD pin_b_in max pin_b -> u_harness/ipff_b_reg/D datapath=1.950 slack=0.075
+PAD pin_b_in min pin_b -> u_harness/ipff_b_reg/D datapath=1.151 slack=
+PAD pin_c_in max pin_c -> u_harness/ipff_d_reg/D datapath=1.931 slack=0.094
+PAD pin_c_in min pin_c -> u_harness/ipff_d_reg/D datapath=1.132 slack=
+PAD pin_b_out max u_harness/opff_l_reg/C -> pin_b datapath=3.163 slack=0.237
+PAD pin_b_out min u_harness/opff_l_reg/C -> pin_b datapath=1.548 slack=
+PAD pin_c_out max u_harness/opff_c_reg/C -> pin_c datapath=3.144 slack=0.256
+PAD pin_c_out min u_harness/opff_c_reg/C -> pin_c datapath=1.529 slack=
+DTOUT max t_out_B=3.163 t_out_C=3.144 diff=-0.019
+DTOUT min t_out_B=1.548 t_out_C=1.529 diff=-0.019
+SUMMARY F_net=200 LC=5 LAT_NET=7 iob=fabric wns=0.069 whs=0.014 wpws=0.500 lut=18465 ff=5086 bram=117 dsp=0 iob=PASS
+# if {!$iob_ok} { puts "IOB_CHECK FAIL"; exit 2 }
+# puts "IOB_CHECK PASS"
+IOB_CHECK PASS

@@ -1,0 +1,3 @@
+float baseline float_128_64_32: val geomean NN/PM 0.8436 -> limit 0.8636
+546 Pareto checkpoints, 0 pass
+no checkpoint passes the rule

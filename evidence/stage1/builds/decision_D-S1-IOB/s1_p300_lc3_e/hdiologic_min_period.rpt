@@ -1,0 +1,8 @@
+Min Period        n/a     FDRE/C              n/a            8.000         3.333       -4.667     HDIOLOGIC_S_X0Y17  u_harness/class_q_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            8.000         3.333       -4.667     HDIOLOGIC_M_X0Y17  u_harness/class_q_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            8.000         3.333       -4.667     HDIOLOGIC_S_X0Y15  u_harness/class_q_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            8.000         3.333       -4.667     HDIOLOGIC_S_X0Y23  u_harness/ipff_b_reg/C
+Min Period        n/a     FDRE/C              n/a            8.000         3.333       -4.667     HDIOLOGIC_S_X0Y19  u_harness/opff_c_reg/C
+Low Pulse Width   Slow    FDRE/C              n/a            4.000         1.667       -2.333     HDIOLOGIC_S_X0Y17  u_harness/class_q_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            4.000         1.666       -2.334     HDIOLOGIC_S_X0Y17  u_harness/class_q_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            4.000         1.667       -2.333     HDIOLOGIC_M_X0Y17  u_harness/class_q_reg[1]/C

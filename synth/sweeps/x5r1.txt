@@ -1,0 +1,1 @@
+x5r1_k7_lc3_p5.0 /home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/x310/rule1/gen/x310_clf_lc3 xc7k410tffg900-2 5.0 - x310_clf /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/x310/x310_stream.sv W=64,OUT_W=75,CORE_LAT=12,BFP_PIPE=1

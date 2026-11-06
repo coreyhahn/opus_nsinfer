@@ -1,0 +1,8 @@
+# d = 5 HGQ2 sweep 4 (grumpy-calf), 2026-10-24: d5_h3 with the datalane quantizers in SAT instead of WRAP.
+# Why: all three d5_h3 runs collapsed at ~5.0M EBOPs (epoch 22-24, NN/PM geomean 0.97 -> 5+, independent of
+# beta). The last pre-collapse checkpoint already had 7 / 8 / 12 lanes into fc2 / fc3 / out whose validation
+# |x| reached the trained 2^i (WRAP folds them); when a heavily weighted lane wraps the decoder breaks and the
+# gradient cannot see why. SAT clips instead (x1 probe hgq_sat trained normally); export re-traces the ranges.
+hgq_d5s_256x3_b9     --d 5 --mode hgq --arch 256 256 256 --init-from ref/runs/qec/float_d5_256_256_256/best.keras --epochs 60 --steps-per-epoch 2000 --batch 8192 --lr 5e-4 --beta-start 1e-11 --beta-end 1e-9 --input-f 6 --dl-overflow SAT
+hgq_d5s_256x3_b3e9   --d 5 --mode hgq --arch 256 256 256 --init-from ref/runs/qec/float_d5_256_256_256/best.keras --epochs 60 --steps-per-epoch 2000 --batch 8192 --lr 5e-4 --beta-start 1e-11 --beta-end 3e-9 --input-f 6 --dl-overflow SAT
+hgq_d5s_256x3_b8     --d 5 --mode hgq --arch 256 256 256 --init-from ref/runs/qec/float_d5_256_256_256/best.keras --epochs 60 --steps-per-epoch 2000 --batch 8192 --lr 5e-4 --beta-start 1e-11 --beta-end 1e-8 --input-f 6 --dl-overflow SAT

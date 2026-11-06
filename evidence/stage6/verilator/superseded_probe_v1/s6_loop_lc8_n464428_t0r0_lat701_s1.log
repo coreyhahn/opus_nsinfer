@@ -1,0 +1,52 @@
+# host=build-host date=2026-11-03T18:07:41-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# design=<repo>/rtl/gen/qec_d3_lc8 rtl_sha256=c7b41561fc0310beae85efb895e07c8aa2d0d0961022632c6486ff908b20007b tb_sha256=faedf2945d95130e7af77b9716292a0982d176ee163f58c4d6a55550e5d4de95
+# in_hex_sha256=81976e9d532059f392ed384ed726e8a463fcb62c8ae835fb67cae55c75b5dc1f dec_hex_sha256=f98b7d20e5acd4e2909507f79563cd9aee24c8363843ee33e2f10e03ba862eb7 shot_mem_sha256=d79e7c55b75d3f0ee3483e6491f8595c9d7983b91a0b4949a7bea086421093f9 (<repo>/.scratch/s3_shots_n464428.hex, tb/s3_make_mem.py)
+# NVEC=464428 DEC_LAT=6 TX_REG=0 RX_REG=0 TIMEOUT=100000 LAT_UI=701 SEED=1
+CONFIG id=53330001 diag=53360001 params=00000001 NVEC=464428 DEC_LAT=6 N_DET=24 DW=64 NL=1 TX_REG=0 RX_REG=0 LAT_UI=701 SEED=1 (MODEL wire) TIMEOUT=100000 T_NS=6.2060 corrupt_seq=232231
+LINK 01007373 after 8 polls (lock A, B)
+LINK 01007373 after soft reset
+PHIST lat=12 b->a=0 a->b=285
+PHIST lat=13 b->a=304 a->b=19
+RESULT case=probe period=63 a2b_sent=304 a2b_rx=304 a2b_bad=0 a2b_lat=12..13 mean=12.0625 b2a_sent=304 b2a_rx=304 b2a_bad=0 b2a_lat=13..13 mean=13.0000
+PHIST lat=12 b->a=0 a->b=91
+PHIST lat=13 b->a=1365 a->b=1456
+PHIST lat=14 b->a=1456 a->b=1365
+PHIST lat=15 b->a=91 a->b=0
+RESULT case=probe period=0 a2b_sent=2912 a2b_rx=2912 a2b_bad=0 a2b_lat=12..14 mean=13.4375 b2a_sent=2912 b2a_rx=2912 b2a_bad=0 b2a_lat=13..15 mean=13.5625
+HIST dec_gap0 lat=35 n=50805
+HIST dec_gap0 lat=36 n=232198
+HIST dec_gap0 lat=37 n=181425
+RESULT case=dec_gap0 mode=decode gap=0 nvec=464428 sent=464428 rx=464428 good=464428 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=35 lat_max=37 lat_mean=36.2812 expect=[33,43] b_rx=464428 b_tx=464428 b_dec=7..7/464428 b_echo=65535..0/0 b_fifo_max=3 b_ovf=0 b_collide=0 timeout=0 sig=5e8e5270 sig_link=5e8e5270 sig_exp=5e8e5270
+FLAGS dec_gap0 hierarchical=464428/464428 axi_reads=3000 ok
+HIST dec_gap7 lat=33 n=28147
+HIST dec_gap7 lat=34 n=42220
+HIST dec_gap7 lat=35 n=323692
+HIST dec_gap7 lat=36 n=42221
+HIST dec_gap7 lat=37 n=28148
+RESULT case=dec_gap7 mode=decode gap=7 nvec=464428 sent=464428 rx=464428 good=464428 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=33 lat_max=37 lat_mean=35.0000 expect=[33,39] b_rx=464428 b_tx=464428 b_dec=7..7/464428 b_echo=65535..0/0 b_fifo_max=1 b_ovf=0 b_collide=0 timeout=0 sig=5e8e5270 sig_link=5e8e5270 sig_exp=5e8e5270
+FLAGS dec_gap7 hierarchical=464428/464428 axi_reads=3000 ok
+HIST echo_gap7 lat=27 n=28147
+HIST echo_gap7 lat=28 n=84441
+HIST echo_gap7 lat=29 n=239252
+HIST echo_gap7 lat=30 n=84442
+HIST echo_gap7 lat=31 n=28146
+RESULT case=echo_gap7 mode=  echo gap=7 nvec=464428 sent=464428 rx=464428 good=464428 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=27 lat_max=31 lat_mean=29.0000 expect=[27,33] b_rx=464428 b_tx=464428 b_dec=65535..0/0 b_echo=1..1/464428 b_fifo_max=1 b_ovf=0 b_collide=0 timeout=0 sig=5f09efeb sig_link=5f09efeb sig_exp=5f09efeb
+FLAGS echo_gap7 hierarchical=464428/464428 axi_reads=3000 ok
+HIST echo_gap0 lat=28 n=10
+HIST echo_gap0 lat=29 n=94347
+HIST echo_gap0 lat=30 n=232204
+HIST echo_gap0 lat=31 n=137867
+RESULT case=echo_gap0 mode=  echo gap=0 nvec=464428 sent=464428 rx=464428 good=464428 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=28 lat_max=31 lat_mean=30.0937 expect=[27,37] b_rx=464428 b_tx=464428 b_dec=65535..0/0 b_echo=1..1/464428 b_fifo_max=3 b_ovf=0 b_collide=0 timeout=0 sig=5f09efeb sig_link=5f09efeb sig_exp=5f09efeb
+FLAGS echo_gap0 hierarchical=464428/464428 axi_reads=3000 ok
+HIST corrupt_gap1 lat=33 n=14073
+HIST corrupt_gap1 lat=34 n=56292
+HIST corrupt_gap1 lat=35 n=309619
+HIST corrupt_gap1 lat=36 n=56296
+HIST corrupt_gap1 lat=37 n=28148
+RESULT case=corrupt_gap1 mode=decode gap=1 nvec=464428 sent=464428 rx=464428 good=464428 mism=1 first_mis=1/232231 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=33 lat_max=37 lat_mean=35.0606 expect=[33,39] b_rx=464428 b_tx=464428 b_dec=7..7/464428 b_echo=65535..0/0 b_fifo_max=2 b_ovf=0 b_collide=0 timeout=0 sig=faecb75f sig_link=faecb75f sig_exp=faecb75f
+FLAGS corrupt_gap1 hierarchical=464428/464428 axi_reads=3000 ok
+CONFIG N_DET=24 DW=64
+LINKSTAT A lock=00000001 locks=0 unlocks=0 slips=0 sh_bad=0 idle_bad=0 data=2325052 dsk_ovf=0 hv_dv=0 | B lock=00000001 locks=0 unlocks=0 slips=0 sh_bad=0 idle_bad=0 data=2325052 dsk_ovf=0 hv_dv=0 | LINK=01007373
+RESULT s6_loop nvec=464428 dec_lat=6 nl=1 tx_reg=0 rx_reg=0 lat_ui=701 seed=1 t_ns=6.2060 oneway_ab=12..14 mean 13.4375 oneway_ba=13..15 mean 13.5625 gap7 decode=33..37 mean 35.0000 echo=27..31 mean 29.0000 decode_minus_echo min=6 max=6 mean=6.0000 fails=0
+PASS
+- tb_s6_loop.sv:373: Verilog $finish

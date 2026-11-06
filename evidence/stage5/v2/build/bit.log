@@ -1,0 +1,176 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Nov  3 12:00:09 2026
+# Process ID         : 1233754
+# Current directory  : <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit
+# Command line       : vivado -mode batch -nojournal -log <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/bit.log -source <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/bit.tcl
+# Log file           : <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/bit.log
+# Journal file       : 
+# Running On         : build-host
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz
+# CPU Frequency      : 2499.755 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 48
+# Host memory        : 265784 MB
+# Swap memory        : 137438 MB
+# Total Virtual      : 403223 MB
+# Available Virtual  : 329576 MB
+#-----------------------------------------------------------
+source <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/bit.tcl
+# open_checkpoint <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold/post_fix.dcp
+Command: open_checkpoint <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold/post_fix.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 1364.602 ; gain = 2.969 ; free physical = 64842 ; free virtual = 313566
+INFO: [Device 21-403] Loading part xc7k410tffg900-2
+Netlist sorting complete. Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2444.121 ; gain = 16.000 ; free physical = 68336 ; free virtual = 317211
+INFO: [Netlist 29-17] Analyzing 17226 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 4 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2931.613 ; gain = 55.711 ; free physical = 68077 ; free virtual = 317057
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.5 . Memory (MB): peak = 4217.262 ; gain = 0.000 ; free physical = 76016 ; free virtual = 325242
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4217.262 ; gain = 0.000 ; free physical = 76016 ; free virtual = 325242
+Read PlaceDB: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 4432.840 ; gain = 215.578 ; free physical = 75670 ; free virtual = 324898
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4432.840 ; gain = 0.000 ; free physical = 75670 ; free virtual = 324898
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 4684.957 ; gain = 252.117 ; free physical = 75322 ; free virtual = 324549
+Read Physdb Files: Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 4684.957 ; gain = 467.695 ; free physical = 75305 ; free virtual = 324533
+Restored from archive | CPU: 31.470000 secs | Memory: 453.662926 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 4684.957 ; gain = 467.695 ; free physical = 75305 ; free virtual = 324533
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4684.957 ; gain = 0.000 ; free physical = 75302 ; free virtual = 324530
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2797 instances were transformed.
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS(x2)): 1 instance 
+  IOBUF => IOBUF (IBUF, OBUFT): 83 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT(x2), INV, OBUFTDS_DCIEN(x2)): 4 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 32 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 17 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1431 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1209 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 18 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 1 instance 
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2024.2 (64-bit) build 5239630
+open_checkpoint: Time (s): cpu = 00:02:49 ; elapsed = 00:02:45 . Memory (MB): peak = 4684.957 ; gain = 3323.324 ; free physical = 75301 ; free virtual = 324529
+# report_timing_summary -no_detailed_paths -file <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[2].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[1].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[3].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[4].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[5].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[6].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[7].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[8].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[2].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[1].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[3].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[4].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[5].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[6].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[7].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[8].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[2].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[1].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[3].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[4].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[5].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[6].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[7].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[8].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[1].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[0].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[2].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[5].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:04:07 ; elapsed = 00:00:56 . Memory (MB): peak = 5665.699 ; gain = 980.742 ; free physical = 73396 ; free virtual = 322625
+# set_property BITSTREAM.STARTUP.MATCH_CYCLE NoWait [get_designs *]
+# set_property BITSTREAM.GENERAL.COMPRESS    False  [get_designs *]
+# set_property BITSTREAM.CONFIG.CONFIGRATE   6      [get_designs *]
+# write_bitstream -force -bin_file <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/x300.bit
+Command: write_bitstream -force -bin_file <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/x300.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
+INFO: [Common 17-86] Your Implementation license expires in 23 day(s)
+CRITICAL WARNING: [Vivado 12-1790] Evaluation License Warning: This design contains one or more evaluation cores that will cease to function after a certain period of time. This design should NOT be used in production systems.
+
+Evaluation cores found in this design:
+    IP core 'ten_gig_eth_pcs_pma' (ten_gig_eth_pcs_pma_v6_0_28) was generated using a design_linking license.
+
+Resolution: If a new IP Core license was added, in order for the new license to be picked up, the current netlist needs to be updated by resetting and re-generating the IP output products before bitstream generation.
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '<xilinx-tools>/Vivado/2024.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/x300.bit...
+Writing bitstream <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold_bit/x300.bin...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:08:08 ; elapsed = 00:01:52 . Memory (MB): peak = 6730.496 ; gain = 1064.797 ; free physical = 79079 ; free virtual = 328407
+# puts "RESULT bitstream written"
+RESULT bitstream written
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  3 12:05:54 2026...

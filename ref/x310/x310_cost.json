@@ -1,0 +1,4322 @@
+[
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0129_acc0.84174_hi0.97752_ebops77311.keras",
+  "size": 2101464,
+  "ebops_train": 77311,
+  "ebops_calibrated": 77097,
+  "da4ml_cost_lut_est": 52300.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84174,
+  "val_acc_hi": 0.9775202037419536
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0132_acc0.84373_hi0.97694_ebops73043.keras",
+  "size": 2101464,
+  "ebops_train": 73043,
+  "ebops_calibrated": 73847,
+  "da4ml_cost_lut_est": 51245.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84373,
+  "val_acc_hi": 0.9769386568271603
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0133_acc0.84277_hi0.97419_ebops72129.keras",
+  "size": 2101464,
+  "ebops_train": 72129,
+  "ebops_calibrated": 73554,
+  "da4ml_cost_lut_est": 51152.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.84277,
+  "val_acc_hi": 0.974191348988309
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0135_acc0.84187_hi0.97726_ebops70308.keras",
+  "size": 2101464,
+  "ebops_train": 70308,
+  "ebops_calibrated": 70885,
+  "da4ml_cost_lut_est": 50151.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.84187,
+  "val_acc_hi": 0.9772595102973911
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0143_acc0.84123_hi0.97836_ebops61967.keras",
+  "size": 2101464,
+  "ebops_train": 61967,
+  "ebops_calibrated": 61720,
+  "da4ml_cost_lut_est": 45947.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84123,
+  "val_acc_hi": 0.9783624441013095
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0144_acc0.84060_hi0.97740_ebops60937.keras",
+  "size": 2101464,
+  "ebops_train": 60937,
+  "ebops_calibrated": 60463,
+  "da4ml_cost_lut_est": 45327.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.8406,
+  "val_acc_hi": 0.977399883690617
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0145_acc0.84073_hi0.97505_ebops60817.keras",
+  "size": 2101464,
+  "ebops_train": 60817,
+  "ebops_calibrated": 60451,
+  "da4ml_cost_lut_est": 45615.0,
+  "da4ml_comb_latency": 40.0,
+  "val_acc": 0.84073,
+  "val_acc_hi": 0.9750536426895542
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0146_acc0.84014_hi0.97533_ebops59688.keras",
+  "size": 2101464,
+  "ebops_train": 59688,
+  "ebops_calibrated": 59672,
+  "da4ml_cost_lut_est": 44967.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84014,
+  "val_acc_hi": 0.9753343894760061
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0147_acc0.83977_hi0.97357_ebops57818.keras",
+  "size": 2101464,
+  "ebops_train": 57818,
+  "ebops_calibrated": 57588,
+  "da4ml_cost_lut_est": 43967.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83977,
+  "val_acc_hi": 0.9735696953897367
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0149_acc0.83979_hi0.97191_ebops57267.keras",
+  "size": 2101464,
+  "ebops_train": 57267,
+  "ebops_calibrated": 56761,
+  "da4ml_cost_lut_est": 43091.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83979,
+  "val_acc_hi": 0.9719052680129143
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0150_acc0.83902_hi0.96910_ebops55410.keras",
+  "size": 2101464,
+  "ebops_train": 55410,
+  "ebops_calibrated": 55470,
+  "da4ml_cost_lut_est": 43078.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83902,
+  "val_acc_hi": 0.9690978001483948
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0151_acc0.83865_hi0.97349_ebops54890.keras",
+  "size": 2101464,
+  "ebops_train": 54890,
+  "ebops_calibrated": 55546,
+  "da4ml_cost_lut_est": 43025.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.83865,
+  "val_acc_hi": 0.973489482022179
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0153_acc0.83776_hi0.97331_ebops54772.keras",
+  "size": 2101464,
+  "ebops_train": 54772,
+  "ebops_calibrated": 54670,
+  "da4ml_cost_lut_est": 42401.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83776,
+  "val_acc_hi": 0.9733090019451741
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0154_acc0.83823_hi0.97189_ebops52776.keras",
+  "size": 2101464,
+  "ebops_train": 52776,
+  "ebops_calibrated": 52924,
+  "da4ml_cost_lut_est": 41588.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.83823,
+  "val_acc_hi": 0.971885214671025
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0157_acc0.83755_hi0.97521_ebops50685.keras",
+  "size": 2101464,
+  "ebops_train": 50685,
+  "ebops_calibrated": 50729,
+  "da4ml_cost_lut_est": 40554.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83755,
+  "val_acc_hi": 0.9752140694246696
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0159_acc0.83739_hi0.97545_ebops49972.keras",
+  "size": 2101464,
+  "ebops_train": 49972,
+  "ebops_calibrated": 49396,
+  "da4ml_cost_lut_est": 39922.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83739,
+  "val_acc_hi": 0.9754547095273427
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0161_acc0.83446_hi0.97628_ebops49641.keras",
+  "size": 2101464,
+  "ebops_train": 49641,
+  "ebops_calibrated": 49623,
+  "da4ml_cost_lut_est": 40010.0,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.83446,
+  "val_acc_hi": 0.9762768965448092
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0162_acc0.83681_hi0.97154_ebops48628.keras",
+  "size": 2101464,
+  "ebops_train": 48628,
+  "ebops_calibrated": 48401,
+  "da4ml_cost_lut_est": 39447.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83681,
+  "val_acc_hi": 0.9715443078589047
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0163_acc0.83559_hi0.97485_ebops48415.keras",
+  "size": 2101464,
+  "ebops_train": 48415,
+  "ebops_calibrated": 48671,
+  "da4ml_cost_lut_est": 39108.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83559,
+  "val_acc_hi": 0.9748531092706599
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0164_acc0.83553_hi0.97026_ebops47940.keras",
+  "size": 2101464,
+  "ebops_train": 47940,
+  "ebops_calibrated": 47559,
+  "da4ml_cost_lut_est": 38816.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83553,
+  "val_acc_hi": 0.9702608939779814
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0165_acc0.83476_hi0.96679_ebops47835.keras",
+  "size": 2101464,
+  "ebops_train": 47835,
+  "ebops_calibrated": 47651,
+  "da4ml_cost_lut_est": 38830.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83476,
+  "val_acc_hi": 0.9667916658311108
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0168_acc0.83376_hi0.97297_ebops45241.keras",
+  "size": 2101464,
+  "ebops_train": 45241,
+  "ebops_calibrated": 44639,
+  "da4ml_cost_lut_est": 37052.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83376,
+  "val_acc_hi": 0.9729680951330539
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0174_acc0.83116_hi0.97433_ebops42245.keras",
+  "size": 2101464,
+  "ebops_train": 42245,
+  "ebops_calibrated": 42241,
+  "da4ml_cost_lut_est": 35618.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.83116,
+  "val_acc_hi": 0.9743317223815349
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0176_acc0.83451_hi0.97197_ebops42258.keras",
+  "size": 2101464,
+  "ebops_train": 42258,
+  "ebops_calibrated": 42105,
+  "da4ml_cost_lut_est": 35344.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83451,
+  "val_acc_hi": 0.9719654280385827
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0177_acc0.83181_hi0.97257_ebops41125.keras",
+  "size": 2101464,
+  "ebops_train": 41125,
+  "ebops_calibrated": 40931,
+  "da4ml_cost_lut_est": 34716.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83181,
+  "val_acc_hi": 0.9725670282952654
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0179_acc0.83015_hi0.97299_ebops40946.keras",
+  "size": 2101464,
+  "ebops_train": 40946,
+  "ebops_calibrated": 41156,
+  "da4ml_cost_lut_est": 34895.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83015,
+  "val_acc_hi": 0.9729881484749433
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0184_acc0.83078_hi0.97170_ebops39136.keras",
+  "size": 2101464,
+  "ebops_train": 39136,
+  "ebops_calibrated": 38986,
+  "da4ml_cost_lut_est": 33342.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83078,
+  "val_acc_hi": 0.9717047345940201
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0185_acc0.82903_hi0.96826_ebops39016.keras",
+  "size": 2101464,
+  "ebops_train": 39016,
+  "ebops_calibrated": 38555,
+  "da4ml_cost_lut_est": 33373.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82903,
+  "val_acc_hi": 0.9682555597890389
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0187_acc0.82868_hi0.96972_ebops37728.keras",
+  "size": 2101464,
+  "ebops_train": 37728,
+  "ebops_calibrated": 37431,
+  "da4ml_cost_lut_est": 32469.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82868,
+  "val_acc_hi": 0.9697194537469669
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0192_acc0.82810_hi0.96874_ebops36336.keras",
+  "size": 2101464,
+  "ebops_train": 36336,
+  "ebops_calibrated": 35793,
+  "da4ml_cost_lut_est": 31619.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.8281,
+  "val_acc_hi": 0.9687368399943851
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0193_acc0.82425_hi0.96060_ebops35976.keras",
+  "size": 2101464,
+  "ebops_train": 35976,
+  "ebops_calibrated": 36173,
+  "da4ml_cost_lut_est": 31586.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82425,
+  "val_acc_hi": 0.9605951831872782
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0194_acc0.82384_hi0.96455_ebops36205.keras",
+  "size": 2101464,
+  "ebops_train": 36205,
+  "ebops_calibrated": 36204,
+  "da4ml_cost_lut_est": 31558.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.82384,
+  "val_acc_hi": 0.9645456915394951
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0197_acc0.82337_hi0.96527_ebops35089.keras",
+  "size": 2101464,
+  "ebops_train": 35089,
+  "ebops_calibrated": 35386,
+  "da4ml_cost_lut_est": 31040.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82337,
+  "val_acc_hi": 0.9652676118475144
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0198_acc0.82299_hi0.96557_ebops35012.keras",
+  "size": 2101464,
+  "ebops_train": 35012,
+  "ebops_calibrated": 35176,
+  "da4ml_cost_lut_est": 30628.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82299,
+  "val_acc_hi": 0.9655684119758557
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b1e5/pareto/e0199_acc0.82234_hi0.96290_ebops34054.keras",
+  "size": 2101464,
+  "ebops_train": 34054,
+  "ebops_calibrated": 34044,
+  "da4ml_cost_lut_est": 30237.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82234,
+  "val_acc_hi": 0.9629013175045621
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0186_acc0.84068_hi0.97656_ebops49522.keras",
+  "size": 2101465,
+  "ebops_train": 49522,
+  "ebops_calibrated": 49464,
+  "da4ml_cost_lut_est": 42805.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84068,
+  "val_acc_hi": 0.9765576433312612
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0187_acc0.84282_hi0.97417_ebops49438.keras",
+  "size": 2101465,
+  "ebops_train": 49438,
+  "ebops_calibrated": 49005,
+  "da4ml_cost_lut_est": 42711.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84282,
+  "val_acc_hi": 0.9741712956464195
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0190_acc0.84247_hi0.97568_ebops47661.keras",
+  "size": 2101465,
+  "ebops_train": 47661,
+  "ebops_calibrated": 47658,
+  "da4ml_cost_lut_est": 41837.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.84247,
+  "val_acc_hi": 0.9756752962881264
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0194_acc0.84197_hi0.97624_ebops45067.keras",
+  "size": 2101465,
+  "ebops_train": 45067,
+  "ebops_calibrated": 45214,
+  "da4ml_cost_lut_est": 40274.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84197,
+  "val_acc_hi": 0.9762367898610304
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0198_acc0.84091_hi0.97221_ebops43307.keras",
+  "size": 2101465,
+  "ebops_train": 43307,
+  "ebops_calibrated": 42888,
+  "da4ml_cost_lut_est": 38429.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84091,
+  "val_acc_hi": 0.9722060681412558
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0200_acc0.84023_hi0.97471_ebops42000.keras",
+  "size": 2101465,
+  "ebops_train": 42000,
+  "ebops_calibrated": 42184,
+  "da4ml_cost_lut_est": 37875.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.84023,
+  "val_acc_hi": 0.974712735877434
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0206_acc0.83942_hi0.97612_ebops39957.keras",
+  "size": 2101465,
+  "ebops_train": 39957,
+  "ebops_calibrated": 39582,
+  "da4ml_cost_lut_est": 36153.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83942,
+  "val_acc_hi": 0.9761164698096938
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0208_acc0.83799_hi0.97686_ebops39727.keras",
+  "size": 2101465,
+  "ebops_train": 39727,
+  "ebops_calibrated": 39437,
+  "da4ml_cost_lut_est": 35845.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83799,
+  "val_acc_hi": 0.9768584434596025
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0210_acc0.83779_hi0.97449_ebops38452.keras",
+  "size": 2101465,
+  "ebops_train": 38452,
+  "ebops_calibrated": 38246,
+  "da4ml_cost_lut_est": 35029.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83779,
+  "val_acc_hi": 0.9744921491166503
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0211_acc0.83774_hi0.97271_ebops37956.keras",
+  "size": 2101465,
+  "ebops_train": 37956,
+  "ebops_calibrated": 38199,
+  "da4ml_cost_lut_est": 35105.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83774,
+  "val_acc_hi": 0.9727074016884913
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0215_acc0.83454_hi0.97309_ebops35995.keras",
+  "size": 2101465,
+  "ebops_train": 35995,
+  "ebops_calibrated": 36034,
+  "da4ml_cost_lut_est": 33603.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83454,
+  "val_acc_hi": 0.9730884151843905
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0216_acc0.83537_hi0.97455_ebops36298.keras",
+  "size": 2101465,
+  "ebops_train": 36298,
+  "ebops_calibrated": 36426,
+  "da4ml_cost_lut_est": 33964.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83537,
+  "val_acc_hi": 0.9745523091423186
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0217_acc0.83420_hi0.97624_ebops35874.keras",
+  "size": 2101465,
+  "ebops_train": 35874,
+  "ebops_calibrated": 35548,
+  "da4ml_cost_lut_est": 32955.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.8342,
+  "val_acc_hi": 0.9762367898610304
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0218_acc0.83449_hi0.97509_ebops35776.keras",
+  "size": 2101465,
+  "ebops_train": 35776,
+  "ebops_calibrated": 35502,
+  "da4ml_cost_lut_est": 33146.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83449,
+  "val_acc_hi": 0.975093749373333
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0219_acc0.83564_hi0.97253_ebops35494.keras",
+  "size": 2101465,
+  "ebops_train": 35494,
+  "ebops_calibrated": 35491,
+  "da4ml_cost_lut_est": 33152.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83564,
+  "val_acc_hi": 0.9725269216114866
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0220_acc0.83398_hi0.96826_ebops34623.keras",
+  "size": 2101465,
+  "ebops_train": 34623,
+  "ebops_calibrated": 35008,
+  "da4ml_cost_lut_est": 32683.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83398,
+  "val_acc_hi": 0.9682555597890389
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0221_acc0.83349_hi0.97596_ebops34697.keras",
+  "size": 2101465,
+  "ebops_train": 34697,
+  "ebops_calibrated": 33990,
+  "da4ml_cost_lut_est": 31828.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83349,
+  "val_acc_hi": 0.9759560430745784
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0227_acc0.83287_hi0.97024_ebops32657.keras",
+  "size": 2101465,
+  "ebops_train": 32657,
+  "ebops_calibrated": 32699,
+  "da4ml_cost_lut_est": 31000.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83287,
+  "val_acc_hi": 0.970240840636092
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0228_acc0.83111_hi0.96998_ebops32184.keras",
+  "size": 2101465,
+  "ebops_train": 32184,
+  "ebops_calibrated": 31522,
+  "da4ml_cost_lut_est": 29895.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83111,
+  "val_acc_hi": 0.9699801471915295
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0231_acc0.83219_hi0.96755_ebops31467.keras",
+  "size": 2101465,
+  "ebops_train": 31467,
+  "ebops_calibrated": 31394,
+  "da4ml_cost_lut_est": 29871.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83219,
+  "val_acc_hi": 0.9675536928229089
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0236_acc0.82925_hi0.97305_ebops30062.keras",
+  "size": 2101465,
+  "ebops_train": 30062,
+  "ebops_calibrated": 30484,
+  "da4ml_cost_lut_est": 29407.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82925,
+  "val_acc_hi": 0.9730483085006116
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0238_acc0.83075_hi0.97275_ebops29588.keras",
+  "size": 2101465,
+  "ebops_train": 29588,
+  "ebops_calibrated": 29324,
+  "da4ml_cost_lut_est": 28517.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83075,
+  "val_acc_hi": 0.9727475083722702
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0242_acc0.82835_hi0.96725_ebops28403.keras",
+  "size": 2101465,
+  "ebops_train": 28403,
+  "ebops_calibrated": 28236,
+  "da4ml_cost_lut_est": 27683.0,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.82835,
+  "val_acc_hi": 0.9672528926945676
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0243_acc0.82619_hi0.96872_ebops28704.keras",
+  "size": 2101465,
+  "ebops_train": 28704,
+  "ebops_calibrated": 28529,
+  "da4ml_cost_lut_est": 27933.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82619,
+  "val_acc_hi": 0.9687167866524956
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0245_acc0.82607_hi0.96378_ebops27823.keras",
+  "size": 2101465,
+  "ebops_train": 27823,
+  "ebops_calibrated": 27587,
+  "da4ml_cost_lut_est": 27236.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82607,
+  "val_acc_hi": 0.9637836645476969
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0247_acc0.82747_hi0.96483_ebops28197.keras",
+  "size": 2101465,
+  "ebops_train": 28197,
+  "ebops_calibrated": 28273,
+  "da4ml_cost_lut_est": 27327.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82747,
+  "val_acc_hi": 0.9648264383259471
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0249_acc0.82216_hi0.96791_ebops27065.keras",
+  "size": 2101465,
+  "ebops_train": 27065,
+  "ebops_calibrated": 26704,
+  "da4ml_cost_lut_est": 26467.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82216,
+  "val_acc_hi": 0.9679146529769186
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0250_acc0.82318_hi0.96820_ebops27143.keras",
+  "size": 2101465,
+  "ebops_train": 27143,
+  "ebops_calibrated": 27371,
+  "da4ml_cost_lut_est": 26689.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82318,
+  "val_acc_hi": 0.9681953997633705
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0251_acc0.82450_hi0.96625_ebops26676.keras",
+  "size": 2101465,
+  "ebops_train": 26676,
+  "ebops_calibrated": 26258,
+  "da4ml_cost_lut_est": 26223.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.8245,
+  "val_acc_hi": 0.9662502256000962
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0252_acc0.82699_hi0.96344_ebops26424.keras",
+  "size": 2101465,
+  "ebops_train": 26424,
+  "ebops_calibrated": 26323,
+  "da4ml_cost_lut_est": 26228.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.82699,
+  "val_acc_hi": 0.9634427577355766
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0255_acc0.82516_hi0.96615_ebops26114.keras",
+  "size": 2101465,
+  "ebops_train": 26114,
+  "ebops_calibrated": 25669,
+  "da4ml_cost_lut_est": 25389.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82516,
+  "val_acc_hi": 0.9661499588906491
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0256_acc0.82567_hi0.96571_ebops25381.keras",
+  "size": 2101465,
+  "ebops_train": 25381,
+  "ebops_calibrated": 25081,
+  "da4ml_cost_lut_est": 24870.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82567,
+  "val_acc_hi": 0.9657087853690818
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0265_acc0.82365_hi0.96561_ebops24141.keras",
+  "size": 2101465,
+  "ebops_train": 24141,
+  "ebops_calibrated": 24355,
+  "da4ml_cost_lut_est": 24294.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.82365,
+  "val_acc_hi": 0.9656085186596346
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0267_acc0.81903_hi0.95709_ebops23981.keras",
+  "size": 2101465,
+  "ebops_train": 23981,
+  "ebops_calibrated": 23896,
+  "da4ml_cost_lut_est": 23928.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.81903,
+  "val_acc_hi": 0.9570858483566286
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0269_acc0.81780_hi0.96184_ebops23082.keras",
+  "size": 2101465,
+  "ebops_train": 23082,
+  "ebops_calibrated": 22400,
+  "da4ml_cost_lut_est": 22888.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.8178,
+  "val_acc_hi": 0.9618384903844226
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0272_acc0.81665_hi0.95879_ebops22575.keras",
+  "size": 2101465,
+  "ebops_train": 22575,
+  "ebops_calibrated": 22320,
+  "da4ml_cost_lut_est": 22941.0,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.81665,
+  "val_acc_hi": 0.9587903824172298
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0276_acc0.81622_hi0.95586_ebops22072.keras",
+  "size": 2101465,
+  "ebops_train": 22072,
+  "ebops_calibrated": 22286,
+  "da4ml_cost_lut_est": 22618.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.81622,
+  "val_acc_hi": 0.9558625945013737
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0281_acc0.81547_hi0.96130_ebops21411.keras",
+  "size": 2101465,
+  "ebops_train": 21411,
+  "ebops_calibrated": 21189,
+  "da4ml_cost_lut_est": 21902.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81547,
+  "val_acc_hi": 0.961297050153408
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0282_acc0.81193_hi0.95372_ebops20701.keras",
+  "size": 2101465,
+  "ebops_train": 20701,
+  "ebops_calibrated": 20747,
+  "da4ml_cost_lut_est": 21477.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81193,
+  "val_acc_hi": 0.9537168869192051
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0283_acc0.81209_hi0.95923_ebops20945.keras",
+  "size": 2101465,
+  "ebops_train": 20945,
+  "ebops_calibrated": 20527,
+  "da4ml_cost_lut_est": 21373.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81209,
+  "val_acc_hi": 0.9592315559387972
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0284_acc0.81168_hi0.95554_ebops20560.keras",
+  "size": 2101465,
+  "ebops_train": 20560,
+  "ebops_calibrated": 20512,
+  "da4ml_cost_lut_est": 21174.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.81168,
+  "val_acc_hi": 0.9555417410311429
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0285_acc0.80933_hi0.95384_ebops20302.keras",
+  "size": 2101465,
+  "ebops_train": 20302,
+  "ebops_calibrated": 19904,
+  "da4ml_cost_lut_est": 20533.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.80933,
+  "val_acc_hi": 0.9538372069705416
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0288_acc0.81019_hi0.96058_ebops20354.keras",
+  "size": 2101465,
+  "ebops_train": 20354,
+  "ebops_calibrated": 20414,
+  "da4ml_cost_lut_est": 21299.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.81019,
+  "val_acc_hi": 0.9605751298453887
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0290_acc0.80544_hi0.95751_ebops20050.keras",
+  "size": 2101465,
+  "ebops_train": 20050,
+  "ebops_calibrated": 19879,
+  "da4ml_cost_lut_est": 20647.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.80544,
+  "val_acc_hi": 0.9575069685363066
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0291_acc0.80679_hi0.95460_ebops19651.keras",
+  "size": 2101465,
+  "ebops_train": 19651,
+  "ebops_calibrated": 19437,
+  "da4ml_cost_lut_est": 20462.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.80679,
+  "val_acc_hi": 0.9545992339623398
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0292_acc0.80771_hi0.95035_ebops19616.keras",
+  "size": 2101465,
+  "ebops_train": 19616,
+  "ebops_calibrated": 19210,
+  "da4ml_cost_lut_est": 19972.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.80771,
+  "val_acc_hi": 0.9503479254817815
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b2e5_e300/pareto/e0296_acc0.80630_hi0.95514_ebops18734.keras",
+  "size": 2101465,
+  "ebops_train": 18734,
+  "ebops_calibrated": 18432,
+  "da4ml_cost_lut_est": 19703.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.8063,
+  "val_acc_hi": 0.9551406741933544
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0109_acc0.84326_hi0.97570_ebops75428.keras",
+  "size": 2101464,
+  "ebops_train": 75428,
+  "ebops_calibrated": 74201,
+  "da4ml_cost_lut_est": 49378.5,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.84326,
+  "val_acc_hi": 0.9756953496300158
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0110_acc0.84243_hi0.97782_ebops73078.keras",
+  "size": 2101464,
+  "ebops_train": 73078,
+  "ebops_calibrated": 73419,
+  "da4ml_cost_lut_est": 49830.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84243,
+  "val_acc_hi": 0.977821003870295
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0111_acc0.84125_hi0.97547_ebops71497.keras",
+  "size": 2101464,
+  "ebops_train": 71497,
+  "ebops_calibrated": 71540,
+  "da4ml_cost_lut_est": 48881.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84125,
+  "val_acc_hi": 0.9754747628692322
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0112_acc0.84089_hi0.96920_ebops70770.keras",
+  "size": 2101464,
+  "ebops_train": 70770,
+  "ebops_calibrated": 71255,
+  "da4ml_cost_lut_est": 48591.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84089,
+  "val_acc_hi": 0.9691980668578418
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0113_acc0.84007_hi0.96854_ebops68607.keras",
+  "size": 2101464,
+  "ebops_train": 68607,
+  "ebops_calibrated": 68812,
+  "da4ml_cost_lut_est": 47627.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84007,
+  "val_acc_hi": 0.9685363065754908
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0115_acc0.83964_hi0.97066_ebops65945.keras",
+  "size": 2101464,
+  "ebops_train": 65945,
+  "ebops_calibrated": 66628,
+  "da4ml_cost_lut_est": 47153.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83964,
+  "val_acc_hi": 0.9706619608157699
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0116_acc0.83896_hi0.97199_ebops64686.keras",
+  "size": 2101464,
+  "ebops_train": 64686,
+  "ebops_calibrated": 64506,
+  "da4ml_cost_lut_est": 46057.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83896,
+  "val_acc_hi": 0.971985481380472
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0122_acc0.83886_hi0.97868_ebops56923.keras",
+  "size": 2101464,
+  "ebops_train": 56923,
+  "ebops_calibrated": 57153,
+  "da4ml_cost_lut_est": 42784.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83886,
+  "val_acc_hi": 0.9786832975715403
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0123_acc0.83546_hi0.97660_ebops55126.keras",
+  "size": 2101464,
+  "ebops_train": 55126,
+  "ebops_calibrated": 55169,
+  "da4ml_cost_lut_est": 41830.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83546,
+  "val_acc_hi": 0.97659775001504
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0125_acc0.83728_hi0.97162_ebops52699.keras",
+  "size": 2101464,
+  "ebops_train": 52699,
+  "ebops_calibrated": 52283,
+  "da4ml_cost_lut_est": 40172.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83728,
+  "val_acc_hi": 0.9716245212264624
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0128_acc0.83506_hi0.96781_ebops49814.keras",
+  "size": 2101464,
+  "ebops_train": 49814,
+  "ebops_calibrated": 49092,
+  "da4ml_cost_lut_est": 38547.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83506,
+  "val_acc_hi": 0.9678143862674715
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0129_acc0.83643_hi0.97487_ebops49980.keras",
+  "size": 2101464,
+  "ebops_train": 49980,
+  "ebops_calibrated": 49936,
+  "da4ml_cost_lut_est": 39137.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83643,
+  "val_acc_hi": 0.9748731626125494
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0130_acc0.83477_hi0.97098_ebops49140.keras",
+  "size": 2101464,
+  "ebops_train": 49140,
+  "ebops_calibrated": 49200,
+  "da4ml_cost_lut_est": 38723.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83477,
+  "val_acc_hi": 0.9709828142860008
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0132_acc0.83501_hi0.97000_ebops46673.keras",
+  "size": 2101464,
+  "ebops_train": 46673,
+  "ebops_calibrated": 46202,
+  "da4ml_cost_lut_est": 37196.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83501,
+  "val_acc_hi": 0.9700002005334188
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0133_acc0.83402_hi0.96878_ebops45879.keras",
+  "size": 2101464,
+  "ebops_train": 45879,
+  "ebops_calibrated": 45973,
+  "da4ml_cost_lut_est": 37038.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83402,
+  "val_acc_hi": 0.9687769466781639
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0135_acc0.83225_hi0.97473_ebops43185.keras",
+  "size": 2101464,
+  "ebops_train": 43185,
+  "ebops_calibrated": 43376,
+  "da4ml_cost_lut_est": 35647.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83225,
+  "val_acc_hi": 0.9747327892193234
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0136_acc0.83361_hi0.97495_ebops43578.keras",
+  "size": 2101464,
+  "ebops_train": 43578,
+  "ebops_calibrated": 44545,
+  "da4ml_cost_lut_est": 36540.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83361,
+  "val_acc_hi": 0.9749533759801071
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0137_acc0.83202_hi0.97227_ebops42889.keras",
+  "size": 2101464,
+  "ebops_train": 42889,
+  "ebops_calibrated": 41571,
+  "da4ml_cost_lut_est": 34598.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83202,
+  "val_acc_hi": 0.972266228166924
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0138_acc0.83249_hi0.97020_ebops41837.keras",
+  "size": 2101464,
+  "ebops_train": 41837,
+  "ebops_calibrated": 42247,
+  "da4ml_cost_lut_est": 35065.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83249,
+  "val_acc_hi": 0.9702007339523131
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0140_acc0.82993_hi0.97309_ebops39897.keras",
+  "size": 2101464,
+  "ebops_train": 39897,
+  "ebops_calibrated": 39859,
+  "da4ml_cost_lut_est": 33871.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82993,
+  "val_acc_hi": 0.9730884151843905
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0141_acc0.83155_hi0.96781_ebops39442.keras",
+  "size": 2101464,
+  "ebops_train": 39442,
+  "ebops_calibrated": 40471,
+  "da4ml_cost_lut_est": 34015.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.83155,
+  "val_acc_hi": 0.9678143862674715
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0144_acc0.82948_hi0.96272_ebops38419.keras",
+  "size": 2101464,
+  "ebops_train": 38419,
+  "ebops_calibrated": 38619,
+  "da4ml_cost_lut_est": 32815.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.82948,
+  "val_acc_hi": 0.9627208374275573
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0147_acc0.82607_hi0.97036_ebops36050.keras",
+  "size": 2101464,
+  "ebops_train": 36050,
+  "ebops_calibrated": 35692,
+  "da4ml_cost_lut_est": 31199.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82607,
+  "val_acc_hi": 0.9703611606874286
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0148_acc0.82929_hi0.96914_ebops35498.keras",
+  "size": 2101464,
+  "ebops_train": 35498,
+  "ebops_calibrated": 35688,
+  "da4ml_cost_lut_est": 31494.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82929,
+  "val_acc_hi": 0.9691379068321736
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0155_acc0.82570_hi0.96840_ebops31665.keras",
+  "size": 2101464,
+  "ebops_train": 31665,
+  "ebops_calibrated": 31481,
+  "da4ml_cost_lut_est": 28607.0,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.8257,
+  "val_acc_hi": 0.9683959331822648
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0157_acc0.82378_hi0.97038_ebops30791.keras",
+  "size": 2101464,
+  "ebops_train": 30791,
+  "ebops_calibrated": 30945,
+  "da4ml_cost_lut_est": 28476.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82378,
+  "val_acc_hi": 0.970381214029318
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0158_acc0.82120_hi0.96481_ebops30734.keras",
+  "size": 2101464,
+  "ebops_train": 30734,
+  "ebops_calibrated": 30849,
+  "da4ml_cost_lut_est": 28098.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.8212,
+  "val_acc_hi": 0.9648063849840576
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0159_acc0.82307_hi0.96308_ebops30085.keras",
+  "size": 2101464,
+  "ebops_train": 30085,
+  "ebops_calibrated": 29603,
+  "da4ml_cost_lut_est": 27550.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82307,
+  "val_acc_hi": 0.963081797581567
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0166_acc0.81878_hi0.95993_ebops26971.keras",
+  "size": 2101464,
+  "ebops_train": 26971,
+  "ebops_calibrated": 26677,
+  "da4ml_cost_lut_est": 25516.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.81878,
+  "val_acc_hi": 0.9599334229049271
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0167_acc0.81168_hi0.96479_ebops26570.keras",
+  "size": 2101464,
+  "ebops_train": 26570,
+  "ebops_calibrated": 26424,
+  "da4ml_cost_lut_est": 25147.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.81168,
+  "val_acc_hi": 0.9647863316421682
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0168_acc0.81868_hi0.96120_ebops26315.keras",
+  "size": 2101464,
+  "ebops_train": 26315,
+  "ebops_calibrated": 26491,
+  "da4ml_cost_lut_est": 25260.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81868,
+  "val_acc_hi": 0.961196783443961
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0171_acc0.81670_hi0.96264_ebops25465.keras",
+  "size": 2101464,
+  "ebops_train": 25465,
+  "ebops_calibrated": 25218,
+  "da4ml_cost_lut_est": 24289.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.8167,
+  "val_acc_hi": 0.9626406240599996
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0173_acc0.81290_hi0.95444_ebops24416.keras",
+  "size": 2101464,
+  "ebops_train": 24416,
+  "ebops_calibrated": 23873,
+  "da4ml_cost_lut_est": 23446.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.8129,
+  "val_acc_hi": 0.9544388072272244
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0175_acc0.81103_hi0.95406_ebops23589.keras",
+  "size": 2101464,
+  "ebops_train": 23589,
+  "ebops_calibrated": 23229,
+  "da4ml_cost_lut_est": 22928.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.81103,
+  "val_acc_hi": 0.9540577937313254
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0176_acc0.80846_hi0.95624_ebops23723.keras",
+  "size": 2101464,
+  "ebops_train": 23723,
+  "ebops_calibrated": 23348,
+  "da4ml_cost_lut_est": 23022.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.80846,
+  "val_acc_hi": 0.9562436079972727
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0178_acc0.80721_hi0.95516_ebops23101.keras",
+  "size": 2101464,
+  "ebops_train": 23101,
+  "ebops_calibrated": 22483,
+  "da4ml_cost_lut_est": 22235.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.80721,
+  "val_acc_hi": 0.9551607275352437
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0179_acc0.80526_hi0.95584_ebops22315.keras",
+  "size": 2101464,
+  "ebops_train": 22315,
+  "ebops_calibrated": 22259,
+  "da4ml_cost_lut_est": 21972.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.80526,
+  "val_acc_hi": 0.9558425411594842
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0180_acc0.80651_hi0.95314_ebops22446.keras",
+  "size": 2101464,
+  "ebops_train": 22446,
+  "ebops_calibrated": 22247,
+  "da4ml_cost_lut_est": 22142.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.80651,
+  "val_acc_hi": 0.9531353400044117
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5/pareto/e0187_acc0.79959_hi0.95075_ebops20679.keras",
+  "size": 2101464,
+  "ebops_train": 20679,
+  "ebops_calibrated": 20120,
+  "da4ml_cost_lut_est": 20398.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.79959,
+  "val_acc_hi": 0.9507489923195701
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0174_acc0.84256_hi0.97483_ebops49843.keras",
+  "size": 2101465,
+  "ebops_train": 49843,
+  "ebops_calibrated": 49732,
+  "da4ml_cost_lut_est": 42986.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84256,
+  "val_acc_hi": 0.9748330559287706
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0175_acc0.84068_hi0.97720_ebops48413.keras",
+  "size": 2101465,
+  "ebops_train": 48413,
+  "ebops_calibrated": 48390,
+  "da4ml_cost_lut_est": 41868.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84068,
+  "val_acc_hi": 0.9771993502717228
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0180_acc0.84056_hi0.97525_ebops46010.keras",
+  "size": 2101465,
+  "ebops_train": 46010,
+  "ebops_calibrated": 45953,
+  "da4ml_cost_lut_est": 40827.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84056,
+  "val_acc_hi": 0.9752541761084484
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0181_acc0.84040_hi0.97233_ebops44974.keras",
+  "size": 2101465,
+  "ebops_train": 44974,
+  "ebops_calibrated": 45013,
+  "da4ml_cost_lut_est": 39910.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.8404,
+  "val_acc_hi": 0.9723263881925923
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0182_acc0.83952_hi0.97439_ebops44767.keras",
+  "size": 2101465,
+  "ebops_train": 44767,
+  "ebops_calibrated": 45656,
+  "da4ml_cost_lut_est": 40260.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83952,
+  "val_acc_hi": 0.9743918824072032
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0184_acc0.83968_hi0.97397_ebops43701.keras",
+  "size": 2101465,
+  "ebops_train": 43701,
+  "ebops_calibrated": 43761,
+  "da4ml_cost_lut_est": 39157.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83968,
+  "val_acc_hi": 0.9739707622275252
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0189_acc0.83926_hi0.97836_ebops41496.keras",
+  "size": 2101465,
+  "ebops_train": 41496,
+  "ebops_calibrated": 41436,
+  "da4ml_cost_lut_est": 37278.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83926,
+  "val_acc_hi": 0.9783624441013095
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0191_acc0.83878_hi0.97495_ebops40577.keras",
+  "size": 2101465,
+  "ebops_train": 40577,
+  "ebops_calibrated": 39702,
+  "da4ml_cost_lut_est": 36142.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83878,
+  "val_acc_hi": 0.9749533759801071
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0196_acc0.83728_hi0.97277_ebops38395.keras",
+  "size": 2101465,
+  "ebops_train": 38395,
+  "ebops_calibrated": 38469,
+  "da4ml_cost_lut_est": 35144.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83728,
+  "val_acc_hi": 0.9727675617141597
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0198_acc0.83542_hi0.97243_ebops37175.keras",
+  "size": 2101465,
+  "ebops_train": 37175,
+  "ebops_calibrated": 36942,
+  "da4ml_cost_lut_est": 33982.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83542,
+  "val_acc_hi": 0.9724266549020394
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0199_acc0.83472_hi0.97457_ebops36610.keras",
+  "size": 2101465,
+  "ebops_train": 36610,
+  "ebops_calibrated": 36011,
+  "da4ml_cost_lut_est": 33538.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83472,
+  "val_acc_hi": 0.974572362484208
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0204_acc0.83710_hi0.97207_ebops34434.keras",
+  "size": 2101465,
+  "ebops_train": 34434,
+  "ebops_calibrated": 34579,
+  "da4ml_cost_lut_est": 32477.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.8371,
+  "val_acc_hi": 0.9720656947480297
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0210_acc0.83445_hi0.97185_ebops32759.keras",
+  "size": 2101465,
+  "ebops_train": 32759,
+  "ebops_calibrated": 32751,
+  "da4ml_cost_lut_est": 31170.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83445,
+  "val_acc_hi": 0.9718451079872461
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0211_acc0.83226_hi0.97423_ebops32830.keras",
+  "size": 2101465,
+  "ebops_train": 32830,
+  "ebops_calibrated": 33189,
+  "da4ml_cost_lut_est": 31319.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83226,
+  "val_acc_hi": 0.9742314556720878
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0212_acc0.83116_hi0.97515_ebops31507.keras",
+  "size": 2101465,
+  "ebops_train": 31507,
+  "ebops_calibrated": 31504,
+  "da4ml_cost_lut_est": 30317.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83116,
+  "val_acc_hi": 0.9751539093990014
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0217_acc0.83419_hi0.97309_ebops30848.keras",
+  "size": 2101465,
+  "ebops_train": 30848,
+  "ebops_calibrated": 30555,
+  "da4ml_cost_lut_est": 29442.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83419,
+  "val_acc_hi": 0.9730884151843905
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0218_acc0.83080_hi0.97152_ebops30421.keras",
+  "size": 2101465,
+  "ebops_train": 30421,
+  "ebops_calibrated": 29809,
+  "da4ml_cost_lut_est": 28814.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.8308,
+  "val_acc_hi": 0.9715242545170153
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0223_acc0.82789_hi0.97010_ebops28583.keras",
+  "size": 2101465,
+  "ebops_train": 28583,
+  "ebops_calibrated": 28728,
+  "da4ml_cost_lut_est": 28060.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.82789,
+  "val_acc_hi": 0.970100467242866
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0225_acc0.83107_hi0.96681_ebops28065.keras",
+  "size": 2101465,
+  "ebops_train": 28065,
+  "ebops_calibrated": 27931,
+  "da4ml_cost_lut_est": 27389.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.83107,
+  "val_acc_hi": 0.9668117191730001
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0227_acc0.82903_hi0.96727_ebops27355.keras",
+  "size": 2101465,
+  "ebops_train": 27355,
+  "ebops_calibrated": 26790,
+  "da4ml_cost_lut_est": 26700.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82903,
+  "val_acc_hi": 0.967272946036457
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0228_acc0.82754_hi0.97084_ebops27156.keras",
+  "size": 2101465,
+  "ebops_train": 27156,
+  "ebops_calibrated": 26977,
+  "da4ml_cost_lut_est": 26687.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82754,
+  "val_acc_hi": 0.9708424408927748
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0229_acc0.82726_hi0.96970_ebops26593.keras",
+  "size": 2101465,
+  "ebops_train": 26593,
+  "ebops_calibrated": 26412,
+  "da4ml_cost_lut_est": 26243.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82726,
+  "val_acc_hi": 0.9696994004050775
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0230_acc0.82433_hi0.97150_ebops26942.keras",
+  "size": 2101465,
+  "ebops_train": 26942,
+  "ebops_calibrated": 26446,
+  "da4ml_cost_lut_est": 26158.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82433,
+  "val_acc_hi": 0.9715042011751258
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0231_acc0.82514_hi0.96834_ebops26336.keras",
+  "size": 2101465,
+  "ebops_train": 26336,
+  "ebops_calibrated": 26320,
+  "da4ml_cost_lut_est": 25770.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82514,
+  "val_acc_hi": 0.9683357731565966
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0232_acc0.82314_hi0.96888_ebops26082.keras",
+  "size": 2101465,
+  "ebops_train": 26082,
+  "ebops_calibrated": 25637,
+  "da4ml_cost_lut_est": 25485.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82314,
+  "val_acc_hi": 0.968877213387611
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0238_acc0.82558_hi0.96826_ebops24559.keras",
+  "size": 2101465,
+  "ebops_train": 24559,
+  "ebops_calibrated": 25167,
+  "da4ml_cost_lut_est": 25030.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82558,
+  "val_acc_hi": 0.9682555597890389
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0239_acc0.82147_hi0.96982_ebops24146.keras",
+  "size": 2101465,
+  "ebops_train": 24146,
+  "ebops_calibrated": 23619,
+  "da4ml_cost_lut_est": 23962.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82147,
+  "val_acc_hi": 0.9698197204564141
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0240_acc0.82330_hi0.96196_ebops24394.keras",
+  "size": 2101465,
+  "ebops_train": 24394,
+  "ebops_calibrated": 23654,
+  "da4ml_cost_lut_est": 23973.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.8233,
+  "val_acc_hi": 0.9619588104357591
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0243_acc0.82288_hi0.96747_ebops23638.keras",
+  "size": 2101465,
+  "ebops_train": 23638,
+  "ebops_calibrated": 23532,
+  "da4ml_cost_lut_est": 23775.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82288,
+  "val_acc_hi": 0.9674734794553512
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0248_acc0.81697_hi0.96826_ebops22855.keras",
+  "size": 2101465,
+  "ebops_train": 22855,
+  "ebops_calibrated": 22396,
+  "da4ml_cost_lut_est": 22666.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81697,
+  "val_acc_hi": 0.9682555597890389
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0249_acc0.81989_hi0.96529_ebops22487.keras",
+  "size": 2101465,
+  "ebops_train": 22487,
+  "ebops_calibrated": 22483,
+  "da4ml_cost_lut_est": 22889.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.81989,
+  "val_acc_hi": 0.9652876651894038
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0250_acc0.81744_hi0.96003_ebops22481.keras",
+  "size": 2101465,
+  "ebops_train": 22481,
+  "ebops_calibrated": 22029,
+  "da4ml_cost_lut_est": 22671.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.81744,
+  "val_acc_hi": 0.9600336896143742
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0254_acc0.81553_hi0.95598_ebops21238.keras",
+  "size": 2101465,
+  "ebops_train": 21238,
+  "ebops_calibrated": 21198,
+  "da4ml_cost_lut_est": 21910.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.81553,
+  "val_acc_hi": 0.9559829145527102
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0255_acc0.81587_hi0.96356_ebops21462.keras",
+  "size": 2101465,
+  "ebops_train": 21462,
+  "ebops_calibrated": 21407,
+  "da4ml_cost_lut_est": 22107.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.81587,
+  "val_acc_hi": 0.9635630777869132
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0259_acc0.81376_hi0.96043_ebops19983.keras",
+  "size": 2101465,
+  "ebops_train": 19983,
+  "ebops_calibrated": 19821,
+  "da4ml_cost_lut_est": 20965.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81376,
+  "val_acc_hi": 0.9604347564521628
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0261_acc0.81143_hi0.95891_ebops19757.keras",
+  "size": 2101465,
+  "ebops_train": 19757,
+  "ebops_calibrated": 19287,
+  "da4ml_cost_lut_est": 20415.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.81143,
+  "val_acc_hi": 0.9589107024685664
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0264_acc0.80688_hi0.95147_ebops19226.keras",
+  "size": 2101465,
+  "ebops_train": 19226,
+  "ebops_calibrated": 18688,
+  "da4ml_cost_lut_est": 19818.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.80688,
+  "val_acc_hi": 0.9514709126275894
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0271_acc0.80529_hi0.95171_ebops18167.keras",
+  "size": 2101465,
+  "ebops_train": 18167,
+  "ebops_calibrated": 17858,
+  "da4ml_cost_lut_est": 19125.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.80529,
+  "val_acc_hi": 0.9517115527302625
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0272_acc0.80548_hi0.95047_ebops18141.keras",
+  "size": 2101465,
+  "ebops_train": 18141,
+  "ebops_calibrated": 17801,
+  "da4ml_cost_lut_est": 18836.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.80548,
+  "val_acc_hi": 0.950468245533118
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0274_acc0.80833_hi0.95009_ebops17851.keras",
+  "size": 2101465,
+  "ebops_train": 17851,
+  "ebops_calibrated": 17798,
+  "da4ml_cost_lut_est": 18981.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.80833,
+  "val_acc_hi": 0.950087232037219
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_e300/pareto/e0280_acc0.79893_hi0.95350_ebops16825.keras",
+  "size": 2101465,
+  "ebops_train": 16825,
+  "ebops_calibrated": 16212,
+  "da4ml_cost_lut_est": 17543.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.79893,
+  "val_acc_hi": 0.9534963001584214
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0132_acc0.83188_hi0.97241_ebops48111.keras",
+  "size": 2101464,
+  "ebops_train": 48111,
+  "ebops_calibrated": 47745,
+  "da4ml_cost_lut_est": 37859.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83188,
+  "val_acc_hi": 0.97240660156015
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0133_acc0.83260_hi0.97138_ebops46837.keras",
+  "size": 2101464,
+  "ebops_train": 46837,
+  "ebops_calibrated": 47110,
+  "da4ml_cost_lut_est": 37744.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.8326,
+  "val_acc_hi": 0.9713838811237893
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0134_acc0.83175_hi0.97130_ebops45958.keras",
+  "size": 2101464,
+  "ebops_train": 45958,
+  "ebops_calibrated": 45692,
+  "da4ml_cost_lut_est": 37245.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83175,
+  "val_acc_hi": 0.9713036677562316
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0135_acc0.83262_hi0.96872_ebops44355.keras",
+  "size": 2101464,
+  "ebops_train": 44355,
+  "ebops_calibrated": 44726,
+  "da4ml_cost_lut_est": 36507.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.83262,
+  "val_acc_hi": 0.9687167866524956
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0139_acc0.82971_hi0.97423_ebops41800.keras",
+  "size": 2101464,
+  "ebops_train": 41800,
+  "ebops_calibrated": 41274,
+  "da4ml_cost_lut_est": 34482.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.82971,
+  "val_acc_hi": 0.9742314556720878
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0143_acc0.82918_hi0.97273_ebops38246.keras",
+  "size": 2101464,
+  "ebops_train": 38246,
+  "ebops_calibrated": 39044,
+  "da4ml_cost_lut_est": 33096.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.82918,
+  "val_acc_hi": 0.9727274550303808
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0146_acc0.82861_hi0.97010_ebops37047.keras",
+  "size": 2101464,
+  "ebops_train": 37047,
+  "ebops_calibrated": 36187,
+  "da4ml_cost_lut_est": 31333.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.82861,
+  "val_acc_hi": 0.970100467242866
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0150_acc0.82727_hi0.97213_ebops34452.keras",
+  "size": 2101464,
+  "ebops_train": 34452,
+  "ebops_calibrated": 34976,
+  "da4ml_cost_lut_est": 30815.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82727,
+  "val_acc_hi": 0.9721258547736981
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0152_acc0.82576_hi0.97008_ebops33995.keras",
+  "size": 2101464,
+  "ebops_train": 33995,
+  "ebops_calibrated": 34462,
+  "da4ml_cost_lut_est": 30419.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.82576,
+  "val_acc_hi": 0.9700804139009765
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0153_acc0.82317_hi0.96384_ebops33330.keras",
+  "size": 2101464,
+  "ebops_train": 33330,
+  "ebops_calibrated": 33900,
+  "da4ml_cost_lut_est": 30030.5,
+  "da4ml_comb_latency": 38.0,
+  "val_acc": 0.82317,
+  "val_acc_hi": 0.9638438245733651
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0155_acc0.82165_hi0.96485_ebops32297.keras",
+  "size": 2101464,
+  "ebops_train": 32297,
+  "ebops_calibrated": 32410,
+  "da4ml_cost_lut_est": 28829.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.82165,
+  "val_acc_hi": 0.9648464916678364
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0158_acc0.82221_hi0.96410_ebops30797.keras",
+  "size": 2101464,
+  "ebops_train": 30797,
+  "ebops_calibrated": 30279,
+  "da4ml_cost_lut_est": 27644.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82221,
+  "val_acc_hi": 0.9641045180179277
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0159_acc0.81954_hi0.96234_ebops30264.keras",
+  "size": 2101464,
+  "ebops_train": 30264,
+  "ebops_calibrated": 30819,
+  "da4ml_cost_lut_est": 27760.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.81954,
+  "val_acc_hi": 0.9623398239316582
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0167_acc0.81712_hi0.96587_ebops26558.keras",
+  "size": 2101464,
+  "ebops_train": 26558,
+  "ebops_calibrated": 26528,
+  "da4ml_cost_lut_est": 25175.5,
+  "da4ml_comb_latency": 39.0,
+  "val_acc": 0.81712,
+  "val_acc_hi": 0.9658692121041972
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0170_acc0.80863_hi0.96021_ebops26087.keras",
+  "size": 2101464,
+  "ebops_train": 26087,
+  "ebops_calibrated": 25950,
+  "da4ml_cost_lut_est": 24640.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.80863,
+  "val_acc_hi": 0.9602141696913791
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0171_acc0.81031_hi0.95725_ebops24739.keras",
+  "size": 2101464,
+  "ebops_train": 24739,
+  "ebops_calibrated": 24603,
+  "da4ml_cost_lut_est": 23854.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.81031,
+  "val_acc_hi": 0.9572462750917441
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0176_acc0.80504_hi0.95903_ebops23244.keras",
+  "size": 2101464,
+  "ebops_train": 23244,
+  "ebops_calibrated": 23098,
+  "da4ml_cost_lut_est": 22625.0,
+  "da4ml_comb_latency": 38.0,
+  "val_acc": 0.80504,
+  "val_acc_hi": 0.9590310225199029
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0178_acc0.80531_hi0.95169_ebops23100.keras",
+  "size": 2101464,
+  "ebops_train": 23100,
+  "ebops_calibrated": 22862,
+  "da4ml_cost_lut_est": 22530.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.80531,
+  "val_acc_hi": 0.951691499388373
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0184_acc0.79666_hi0.95436_ebops21695.keras",
+  "size": 2101464,
+  "ebops_train": 21695,
+  "ebops_calibrated": 21453,
+  "da4ml_cost_lut_est": 21276.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.79666,
+  "val_acc_hi": 0.9543585938596667
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e5_s2/pareto/e0187_acc0.79394_hi0.95027_ebops20703.keras",
+  "size": 2101464,
+  "ebops_train": 20703,
+  "ebops_calibrated": 20849,
+  "da4ml_cost_lut_est": 20673.0,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.79394,
+  "val_acc_hi": 0.9502677121142238
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e6/pareto/e0177_acc0.84306_hi0.98061_ebops79248.keras",
+  "size": 2101464,
+  "ebops_train": 79248,
+  "ebops_calibrated": 79052,
+  "da4ml_cost_lut_est": 54077.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84306,
+  "val_acc_hi": 0.9806084183929252
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e6/pareto/e0179_acc0.84453_hi0.97760_ebops78245.keras",
+  "size": 2101464,
+  "ebops_train": 78245,
+  "ebops_calibrated": 76678,
+  "da4ml_cost_lut_est": 53166.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84453,
+  "val_acc_hi": 0.9776004171095113
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e6/pareto/e0182_acc0.84448_hi0.97622_ebops77410.keras",
+  "size": 2101464,
+  "ebops_train": 77410,
+  "ebops_calibrated": 77009,
+  "da4ml_cost_lut_est": 53101.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84448,
+  "val_acc_hi": 0.9762167365191409
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e6/pareto/e0185_acc0.84419_hi0.97926_ebops76813.keras",
+  "size": 2101464,
+  "ebops_train": 76813,
+  "ebops_calibrated": 76937,
+  "da4ml_cost_lut_est": 53220.5,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.84419,
+  "val_acc_hi": 0.9792648444863337
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e6/pareto/e0187_acc0.84455_hi0.97289_ebops75520.keras",
+  "size": 2101464,
+  "ebops_train": 75520,
+  "ebops_calibrated": 75442,
+  "da4ml_cost_lut_est": 52266.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84455,
+  "val_acc_hi": 0.9728878817654962
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e6/pareto/e0194_acc0.84436_hi0.97658_ebops71957.keras",
+  "size": 2101464,
+  "ebops_train": 71957,
+  "ebops_calibrated": 72785,
+  "da4ml_cost_lut_est": 50847.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84436,
+  "val_acc_hi": 0.9765776966731505
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b3e6/pareto/e0199_acc0.84256_hi0.97894_ebops70797.keras",
+  "size": 2101464,
+  "ebops_train": 70797,
+  "ebops_calibrated": 71895,
+  "da4ml_cost_lut_est": 50174.0,
+  "da4ml_comb_latency": 39.0,
+  "val_acc": 0.84256,
+  "val_acc_hi": 0.9789439910161029
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0187_acc0.85045_hi0.97818_ebops79850.keras",
+  "size": 2101465,
+  "ebops_train": 79850,
+  "ebops_calibrated": 80848,
+  "da4ml_cost_lut_est": 62047.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.85045,
+  "val_acc_hi": 0.9781819640243047
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0188_acc0.84938_hi0.97782_ebops79629.keras",
+  "size": 2101465,
+  "ebops_train": 79629,
+  "ebops_calibrated": 79413,
+  "da4ml_cost_lut_est": 61212.5,
+  "da4ml_comb_latency": 38.0,
+  "val_acc": 0.84938,
+  "val_acc_hi": 0.977821003870295
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0189_acc0.85069_hi0.97519_ebops78633.keras",
+  "size": 2101465,
+  "ebops_train": 78633,
+  "ebops_calibrated": 79321,
+  "da4ml_cost_lut_est": 61097.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.85069,
+  "val_acc_hi": 0.9751940160827802
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0192_acc0.84840_hi0.98047_ebops76268.keras",
+  "size": 2101465,
+  "ebops_train": 76268,
+  "ebops_calibrated": 75761,
+  "da4ml_cost_lut_est": 59618.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.8484,
+  "val_acc_hi": 0.9804680449996992
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0196_acc0.84878_hi0.97896_ebops74138.keras",
+  "size": 2101465,
+  "ebops_train": 74138,
+  "ebops_calibrated": 75099,
+  "da4ml_cost_lut_est": 59067.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84878,
+  "val_acc_hi": 0.9789640443579922
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0198_acc0.84938_hi0.97786_ebops72442.keras",
+  "size": 2101465,
+  "ebops_train": 72442,
+  "ebops_calibrated": 72562,
+  "da4ml_cost_lut_est": 57622.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84938,
+  "val_acc_hi": 0.9778611105540739
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0200_acc0.84763_hi0.98007_ebops71664.keras",
+  "size": 2101465,
+  "ebops_train": 71664,
+  "ebops_calibrated": 72092,
+  "da4ml_cost_lut_est": 57689.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84763,
+  "val_acc_hi": 0.9800669781619107
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0201_acc0.84776_hi0.97894_ebops71326.keras",
+  "size": 2101465,
+  "ebops_train": 71326,
+  "ebops_calibrated": 70981,
+  "da4ml_cost_lut_est": 56915.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84776,
+  "val_acc_hi": 0.9789439910161029
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0204_acc0.84902_hi0.97499_ebops69990.keras",
+  "size": 2101465,
+  "ebops_train": 69990,
+  "ebops_calibrated": 70533,
+  "da4ml_cost_lut_est": 56224.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84902,
+  "val_acc_hi": 0.974993482663886
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0206_acc0.84868_hi0.97704_ebops68161.keras",
+  "size": 2101465,
+  "ebops_train": 68161,
+  "ebops_calibrated": 68056,
+  "da4ml_cost_lut_est": 55020.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84868,
+  "val_acc_hi": 0.9770389235366074
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0207_acc0.84824_hi0.97457_ebops68026.keras",
+  "size": 2101465,
+  "ebops_train": 68026,
+  "ebops_calibrated": 68818,
+  "da4ml_cost_lut_est": 55350.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84824,
+  "val_acc_hi": 0.974572362484208
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0208_acc0.84565_hi0.98069_ebops66164.keras",
+  "size": 2101465,
+  "ebops_train": 66164,
+  "ebops_calibrated": 65769,
+  "da4ml_cost_lut_est": 53651.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.84565,
+  "val_acc_hi": 0.9806886317604829
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0209_acc0.84814_hi0.97459_ebops67027.keras",
+  "size": 2101465,
+  "ebops_train": 67027,
+  "ebops_calibrated": 67459,
+  "da4ml_cost_lut_est": 54778.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.84814,
+  "val_acc_hi": 0.9745924158260975
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0213_acc0.84743_hi0.98003_ebops65515.keras",
+  "size": 2101465,
+  "ebops_train": 65515,
+  "ebops_calibrated": 65639,
+  "da4ml_cost_lut_est": 53409.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84743,
+  "val_acc_hi": 0.9800268714781318
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0217_acc0.84654_hi0.98001_ebops63419.keras",
+  "size": 2101465,
+  "ebops_train": 63419,
+  "ebops_calibrated": 63502,
+  "da4ml_cost_lut_est": 52394.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84654,
+  "val_acc_hi": 0.9800068181362424
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0219_acc0.84797_hi0.97734_ebops61468.keras",
+  "size": 2101465,
+  "ebops_train": 61468,
+  "ebops_calibrated": 61172,
+  "da4ml_cost_lut_est": 50784.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84797,
+  "val_acc_hi": 0.9773397236649488
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0222_acc0.84728_hi0.97437_ebops60926.keras",
+  "size": 2101465,
+  "ebops_train": 60926,
+  "ebops_calibrated": 61049,
+  "da4ml_cost_lut_est": 50456.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84728,
+  "val_acc_hi": 0.9743718290653137
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0224_acc0.84617_hi0.97872_ebops59389.keras",
+  "size": 2101465,
+  "ebops_train": 59389,
+  "ebops_calibrated": 60195,
+  "da4ml_cost_lut_est": 49896.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84617,
+  "val_acc_hi": 0.9787234042553191
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0227_acc0.84518_hi0.97894_ebops58173.keras",
+  "size": 2101465,
+  "ebops_train": 58173,
+  "ebops_calibrated": 57976,
+  "da4ml_cost_lut_est": 49111.0,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.84518,
+  "val_acc_hi": 0.9789439910161029
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0230_acc0.84693_hi0.97846_ebops56853.keras",
+  "size": 2101465,
+  "ebops_train": 56853,
+  "ebops_calibrated": 56422,
+  "da4ml_cost_lut_est": 47786.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.84693,
+  "val_acc_hi": 0.9784627108107566
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0232_acc0.84559_hi0.97437_ebops56034.keras",
+  "size": 2101465,
+  "ebops_train": 56034,
+  "ebops_calibrated": 56476,
+  "da4ml_cost_lut_est": 47922.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84559,
+  "val_acc_hi": 0.9743718290653137
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0233_acc0.84514_hi0.97433_ebops55581.keras",
+  "size": 2101465,
+  "ebops_train": 55581,
+  "ebops_calibrated": 55941,
+  "da4ml_cost_lut_est": 47632.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84514,
+  "val_acc_hi": 0.9743317223815349
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0235_acc0.84508_hi0.97684_ebops55504.keras",
+  "size": 2101465,
+  "ebops_train": 55504,
+  "ebops_calibrated": 55706,
+  "da4ml_cost_lut_est": 47472.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84508,
+  "val_acc_hi": 0.9768383901177131
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0238_acc0.84507_hi0.98053_ebops54034.keras",
+  "size": 2101465,
+  "ebops_train": 54034,
+  "ebops_calibrated": 53515,
+  "da4ml_cost_lut_est": 46308.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84507,
+  "val_acc_hi": 0.9805282050253675
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0243_acc0.84429_hi0.97830_ebops52559.keras",
+  "size": 2101465,
+  "ebops_train": 52559,
+  "ebops_calibrated": 53078,
+  "da4ml_cost_lut_est": 45663.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84429,
+  "val_acc_hi": 0.9783022840756412
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0245_acc0.84375_hi0.98041_ebops51641.keras",
+  "size": 2101465,
+  "ebops_train": 51641,
+  "ebops_calibrated": 51974,
+  "da4ml_cost_lut_est": 45055.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84375,
+  "val_acc_hi": 0.980407884974031
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0246_acc0.84467_hi0.97728_ebops51309.keras",
+  "size": 2101465,
+  "ebops_train": 51309,
+  "ebops_calibrated": 51268,
+  "da4ml_cost_lut_est": 44649.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84467,
+  "val_acc_hi": 0.9772795636392805
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0247_acc0.84247_hi0.97848_ebops50563.keras",
+  "size": 2101465,
+  "ebops_train": 50563,
+  "ebops_calibrated": 50447,
+  "da4ml_cost_lut_est": 44394.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84247,
+  "val_acc_hi": 0.978482764152646
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0248_acc0.84487_hi0.97614_ebops50499.keras",
+  "size": 2101465,
+  "ebops_train": 50499,
+  "ebops_calibrated": 50451,
+  "da4ml_cost_lut_est": 44338.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84487,
+  "val_acc_hi": 0.9761365231515832
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0249_acc0.84450_hi0.97696_ebops50460.keras",
+  "size": 2101465,
+  "ebops_train": 50460,
+  "ebops_calibrated": 50686,
+  "da4ml_cost_lut_est": 44156.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.8445,
+  "val_acc_hi": 0.9769587101690497
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0251_acc0.84384_hi0.97431_ebops49224.keras",
+  "size": 2101465,
+  "ebops_train": 49224,
+  "ebops_calibrated": 49542,
+  "da4ml_cost_lut_est": 43486.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84384,
+  "val_acc_hi": 0.9743116690396455
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0252_acc0.84399_hi0.97253_ebops49860.keras",
+  "size": 2101465,
+  "ebops_train": 49860,
+  "ebops_calibrated": 50049,
+  "da4ml_cost_lut_est": 43402.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84399,
+  "val_acc_hi": 0.9725269216114866
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0255_acc0.84182_hi0.97596_ebops48604.keras",
+  "size": 2101465,
+  "ebops_train": 48604,
+  "ebops_calibrated": 48402,
+  "da4ml_cost_lut_est": 42770.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84182,
+  "val_acc_hi": 0.9759560430745784
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0256_acc0.84371_hi0.97549_ebops48000.keras",
+  "size": 2101465,
+  "ebops_train": 48000,
+  "ebops_calibrated": 48333,
+  "da4ml_cost_lut_est": 42621.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.84371,
+  "val_acc_hi": 0.9754948162111216
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0261_acc0.84245_hi0.97451_ebops47136.keras",
+  "size": 2101465,
+  "ebops_train": 47136,
+  "ebops_calibrated": 47253,
+  "da4ml_cost_lut_est": 41615.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84245,
+  "val_acc_hi": 0.9745122024585398
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0262_acc0.84241_hi0.97405_ebops46714.keras",
+  "size": 2101465,
+  "ebops_train": 46714,
+  "ebops_calibrated": 46625,
+  "da4ml_cost_lut_est": 41433.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84241,
+  "val_acc_hi": 0.9740509755950829
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0263_acc0.84182_hi0.97405_ebops45879.keras",
+  "size": 2101465,
+  "ebops_train": 45879,
+  "ebops_calibrated": 46511,
+  "da4ml_cost_lut_est": 41279.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.84182,
+  "val_acc_hi": 0.9740509755950829
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0265_acc0.83989_hi0.97838_ebops44740.keras",
+  "size": 2101465,
+  "ebops_train": 44740,
+  "ebops_calibrated": 44786,
+  "da4ml_cost_lut_est": 40368.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83989,
+  "val_acc_hi": 0.9783824974431989
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0266_acc0.84148_hi0.97844_ebops46389.keras",
+  "size": 2101465,
+  "ebops_train": 46389,
+  "ebops_calibrated": 46811,
+  "da4ml_cost_lut_est": 41488.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84148,
+  "val_acc_hi": 0.9784426574688672
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0270_acc0.84035_hi0.97650_ebops45036.keras",
+  "size": 2101465,
+  "ebops_train": 45036,
+  "ebops_calibrated": 44921,
+  "da4ml_cost_lut_est": 40080.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.84035,
+  "val_acc_hi": 0.9764974833055928
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0277_acc0.84157_hi0.97509_ebops43051.keras",
+  "size": 2101465,
+  "ebops_train": 43051,
+  "ebops_calibrated": 43719,
+  "da4ml_cost_lut_est": 39221.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.84157,
+  "val_acc_hi": 0.975093749373333
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0280_acc0.83818_hi0.97864_ebops42850.keras",
+  "size": 2101465,
+  "ebops_train": 42850,
+  "ebops_calibrated": 42086,
+  "da4ml_cost_lut_est": 38142.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83818,
+  "val_acc_hi": 0.9786431908877614
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0281_acc0.84129_hi0.97564_ebops42124.keras",
+  "size": 2101465,
+  "ebops_train": 42124,
+  "ebops_calibrated": 42925,
+  "da4ml_cost_lut_est": 38622.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.84129,
+  "val_acc_hi": 0.9756351896043476
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0291_acc0.84027_hi0.97830_ebops40383.keras",
+  "size": 2101465,
+  "ebops_train": 40383,
+  "ebops_calibrated": 40720,
+  "da4ml_cost_lut_est": 37192.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.84027,
+  "val_acc_hi": 0.9783022840756412
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0297_acc0.83828_hi0.97463_ebops38879.keras",
+  "size": 2101465,
+  "ebops_train": 38879,
+  "ebops_calibrated": 38588,
+  "da4ml_cost_lut_est": 35798.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83828,
+  "val_acc_hi": 0.9746325225098763
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0181_acc0.84241_hi0.97933_ebops79639.keras",
+  "size": 2101464,
+  "ebops_train": 79639,
+  "ebops_calibrated": 79542,
+  "da4ml_cost_lut_est": 54121.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.84241,
+  "val_acc_hi": 0.9793250045120019
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0184_acc0.84265_hi0.97736_ebops77274.keras",
+  "size": 2101464,
+  "ebops_train": 77274,
+  "ebops_calibrated": 77194,
+  "da4ml_cost_lut_est": 53020.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84265,
+  "val_acc_hi": 0.9773597770068382
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0185_acc0.84040_hi0.97840_ebops77388.keras",
+  "size": 2101464,
+  "ebops_train": 77388,
+  "ebops_calibrated": 76602,
+  "da4ml_cost_lut_est": 52606.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.8404,
+  "val_acc_hi": 0.9784025507850883
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0188_acc0.84140_hi0.97786_ebops75830.keras",
+  "size": 2101464,
+  "ebops_train": 75830,
+  "ebops_calibrated": 75966,
+  "da4ml_cost_lut_est": 52735.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.8414,
+  "val_acc_hi": 0.9778611105540739
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0189_acc0.84106_hi0.97714_ebops74860.keras",
+  "size": 2101464,
+  "ebops_train": 74860,
+  "ebops_calibrated": 74871,
+  "da4ml_cost_lut_est": 51998.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84106,
+  "val_acc_hi": 0.9771391902460546
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0190_acc0.84216_hi0.97690_ebops74151.keras",
+  "size": 2101464,
+  "ebops_train": 74151,
+  "ebops_calibrated": 74344,
+  "da4ml_cost_lut_est": 51975.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84216,
+  "val_acc_hi": 0.9768985501433815
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0192_acc0.83975_hi0.97880_ebops72863.keras",
+  "size": 2101464,
+  "ebops_train": 72863,
+  "ebops_calibrated": 73117,
+  "da4ml_cost_lut_est": 51756.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.83975,
+  "val_acc_hi": 0.9788036176228768
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0193_acc0.84007_hi0.97718_ebops73015.keras",
+  "size": 2101464,
+  "ebops_train": 73015,
+  "ebops_calibrated": 73404,
+  "da4ml_cost_lut_est": 51333.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84007,
+  "val_acc_hi": 0.9771792969298334
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0195_acc0.84021_hi0.97969_ebops74581.keras",
+  "size": 2101464,
+  "ebops_train": 74581,
+  "ebops_calibrated": 73968,
+  "da4ml_cost_lut_est": 51600.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.84021,
+  "val_acc_hi": 0.9796859646660115
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0197_acc0.83933_hi0.97676_ebops72625.keras",
+  "size": 2101464,
+  "ebops_train": 72625,
+  "ebops_calibrated": 72883,
+  "da4ml_cost_lut_est": 51005.5,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.83933,
+  "val_acc_hi": 0.9767581767501554
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0198_acc0.84079_hi0.97612_ebops71207.keras",
+  "size": 2101464,
+  "ebops_train": 71207,
+  "ebops_calibrated": 71893,
+  "da4ml_cost_lut_est": 50933.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.84079,
+  "val_acc_hi": 0.9761164698096938
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_s2_b3e6/pareto/e0199_acc0.83884_hi0.97513_ebops70797.keras",
+  "size": 2101464,
+  "ebops_train": 70797,
+  "ebops_calibrated": 71603,
+  "da4ml_cost_lut_est": 50656.0,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.83884,
+  "val_acc_hi": 0.9751338560571119
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0272_acc0.81790_hi0.96467_ebops79073.keras",
+  "size": 2101465,
+  "ebops_train": 79073,
+  "ebops_calibrated": 79093,
+  "da4ml_cost_lut_est": 38826.5,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.8179,
+  "val_acc_hi": 0.9646660115908317
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0275_acc0.81490_hi0.96609_ebops77098.keras",
+  "size": 2101465,
+  "ebops_train": 77098,
+  "ebops_calibrated": 77361,
+  "da4ml_cost_lut_est": 38268.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.8149,
+  "val_acc_hi": 0.9660897988649808
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0276_acc0.81833_hi0.95999_ebops78150.keras",
+  "size": 2101465,
+  "ebops_train": 78150,
+  "ebops_calibrated": 79321,
+  "da4ml_cost_lut_est": 38039.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.81833,
+  "val_acc_hi": 0.9599935829305953
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0284_acc0.81639_hi0.96461_ebops73783.keras",
+  "size": 2101465,
+  "ebops_train": 73783,
+  "ebops_calibrated": 73194,
+  "da4ml_cost_lut_est": 36307.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.81639,
+  "val_acc_hi": 0.9646058515651633
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0285_acc0.80952_hi0.96306_ebops73216.keras",
+  "size": 2101465,
+  "ebops_train": 73216,
+  "ebops_calibrated": 74025,
+  "da4ml_cost_lut_est": 36950.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.80952,
+  "val_acc_hi": 0.9630617442396775
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0286_acc0.81435_hi0.95895_ebops72138.keras",
+  "size": 2101465,
+  "ebops_train": 72138,
+  "ebops_calibrated": 71118,
+  "da4ml_cost_lut_est": 35855.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.81435,
+  "val_acc_hi": 0.9589508091523452
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0288_acc0.81004_hi0.96174_ebops73246.keras",
+  "size": 2101465,
+  "ebops_train": 73246,
+  "ebops_calibrated": 73958,
+  "da4ml_cost_lut_est": 36240.0,
+  "da4ml_comb_latency": 35.0,
+  "val_acc": 0.81004,
+  "val_acc_hi": 0.9617382236749754
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0293_acc0.81066_hi0.95745_ebops71432.keras",
+  "size": 2101465,
+  "ebops_train": 71432,
+  "ebops_calibrated": 70606,
+  "da4ml_cost_lut_est": 36018.0,
+  "da4ml_comb_latency": 38.0,
+  "val_acc": 0.81066,
+  "val_acc_hi": 0.9574468085106383
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0296_acc0.81027_hi0.95492_ebops70037.keras",
+  "size": 2101465,
+  "ebops_train": 70037,
+  "ebops_calibrated": 69270,
+  "da4ml_cost_lut_est": 35322.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.81027,
+  "val_acc_hi": 0.9549200874325706
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0298_acc0.81019_hi0.95701_ebops68959.keras",
+  "size": 2101465,
+  "ebops_train": 68959,
+  "ebops_calibrated": 69966,
+  "da4ml_cost_lut_est": 35419.5,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.81019,
+  "val_acc_hi": 0.9570056349890709
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b1e5/pareto/e0299_acc0.81350_hi0.95281_ebops70709.keras",
+  "size": 2101465,
+  "ebops_train": 70709,
+  "ebops_calibrated": 71769,
+  "da4ml_cost_lut_est": 35858.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.8135,
+  "val_acc_hi": 0.9528144865341809
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b3e5/pareto/e0244_acc0.80729_hi0.95530_ebops49621.keras",
+  "size": 2101465,
+  "ebops_train": 49621,
+  "ebops_calibrated": 49041,
+  "da4ml_cost_lut_est": 28745.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.80729,
+  "val_acc_hi": 0.9553011009284698
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b3e5/pareto/e0247_acc0.80791_hi0.95398_ebops47859.keras",
+  "size": 2101465,
+  "ebops_train": 47859,
+  "ebops_calibrated": 49242,
+  "da4ml_cost_lut_est": 29167.0,
+  "da4ml_comb_latency": 38.0,
+  "val_acc": 0.80791,
+  "val_acc_hi": 0.9539775803637677
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b3e5/pareto/e0248_acc0.80793_hi0.95105_ebops47376.keras",
+  "size": 2101465,
+  "ebops_train": 47376,
+  "ebops_calibrated": 46530,
+  "da4ml_cost_lut_est": 28556.0,
+  "da4ml_comb_latency": 40.0,
+  "val_acc": 0.80793,
+  "val_acc_hi": 0.9510497924479114
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b3e5/pareto/e0252_acc0.80473_hi0.95245_ebops46492.keras",
+  "size": 2101465,
+  "ebops_train": 46492,
+  "ebops_calibrated": 46642,
+  "da4ml_cost_lut_est": 28285.5,
+  "da4ml_comb_latency": 45.0,
+  "val_acc": 0.80473,
+  "val_acc_hi": 0.9524535263801712
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b3e5/pareto/e0254_acc0.80435_hi0.95582_ebops45792.keras",
+  "size": 2101465,
+  "ebops_train": 45792,
+  "ebops_calibrated": 46139,
+  "da4ml_cost_lut_est": 27997.5,
+  "da4ml_comb_latency": 41.0,
+  "val_acc": 0.80435,
+  "val_acc_hi": 0.9558224878175948
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b3e5/pareto/e0255_acc0.79852_hi0.95257_ebops44074.keras",
+  "size": 2101465,
+  "ebops_train": 44074,
+  "ebops_calibrated": 44156,
+  "da4ml_cost_lut_est": 27069.5,
+  "da4ml_comb_latency": 38.0,
+  "val_acc": 0.79852,
+  "val_acc_hi": 0.9525738464315078
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b3e5/pareto/e0269_acc0.80291_hi0.95213_ebops40832.keras",
+  "size": 2101465,
+  "ebops_train": 40832,
+  "ebops_calibrated": 41466,
+  "da4ml_cost_lut_est": 26401.5,
+  "da4ml_comb_latency": 47.0,
+  "val_acc": 0.80291,
+  "val_acc_hi": 0.9521326729099404
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0213_acc0.81233_hi0.96031_ebops49119.keras",
+  "size": 2101465,
+  "ebops_train": 49119,
+  "ebops_calibrated": 48367,
+  "da4ml_cost_lut_est": 29243.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.81233,
+  "val_acc_hi": 0.9603144364008261
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0214_acc0.81048_hi0.96266_ebops48502.keras",
+  "size": 2101465,
+  "ebops_train": 48502,
+  "ebops_calibrated": 48277,
+  "da4ml_cost_lut_est": 28677.5,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.81048,
+  "val_acc_hi": 0.962660677401889
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0217_acc0.80431_hi0.95875_ebops46092.keras",
+  "size": 2101465,
+  "ebops_train": 46092,
+  "ebops_calibrated": 46521,
+  "da4ml_cost_lut_est": 28338.0,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.80431,
+  "val_acc_hi": 0.958750275733451
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0219_acc0.80625_hi0.95715_ebops45311.keras",
+  "size": 2101465,
+  "ebops_train": 45311,
+  "ebops_calibrated": 44907,
+  "da4ml_cost_lut_est": 27477.5,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.80625,
+  "val_acc_hi": 0.9571460083822969
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0220_acc0.81007_hi0.95470_ebops44362.keras",
+  "size": 2101465,
+  "ebops_train": 44362,
+  "ebops_calibrated": 44302,
+  "da4ml_cost_lut_est": 27447.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81007,
+  "val_acc_hi": 0.954699500671787
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0223_acc0.80238_hi0.95580_ebops42541.keras",
+  "size": 2101465,
+  "ebops_train": 42541,
+  "ebops_calibrated": 41242,
+  "da4ml_cost_lut_est": 26089.5,
+  "da4ml_comb_latency": 44.0,
+  "val_acc": 0.80238,
+  "val_acc_hi": 0.9558024344757053
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0228_acc0.80059_hi0.95745_ebops39624.keras",
+  "size": 2101465,
+  "ebops_train": 39624,
+  "ebops_calibrated": 39455,
+  "da4ml_cost_lut_est": 25530.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.80059,
+  "val_acc_hi": 0.9574468085106383
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0233_acc0.79982_hi0.95961_ebops37341.keras",
+  "size": 2101465,
+  "ebops_train": 37341,
+  "ebops_calibrated": 37966,
+  "da4ml_cost_lut_est": 25187.0,
+  "da4ml_comb_latency": 41.0,
+  "val_acc": 0.79982,
+  "val_acc_hi": 0.9596125694346963
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0237_acc0.79733_hi0.95705_ebops36020.keras",
+  "size": 2101465,
+  "ebops_train": 36020,
+  "ebops_calibrated": 35212,
+  "da4ml_cost_lut_est": 24232.0,
+  "da4ml_comb_latency": 36.0,
+  "val_acc": 0.79733,
+  "val_acc_hi": 0.9570457416728497
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_32_ws_b6e5/pareto/e0243_acc0.79592_hi0.95031_ebops33282.keras",
+  "size": 2101465,
+  "ebops_train": 33282,
+  "ebops_calibrated": 32464,
+  "da4ml_cost_lut_est": 22643.0,
+  "da4ml_comb_latency": 37.0,
+  "val_acc": 0.79592,
+  "val_acc_hi": 0.9503078187980026
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0137_acc0.82948_hi0.97080_ebops79010.keras",
+  "size": 1931702,
+  "ebops_train": 79010,
+  "ebops_calibrated": 78614,
+  "da4ml_cost_lut_est": 54342.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82948,
+  "val_acc_hi": 0.970802334208996
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0138_acc0.82953_hi0.97004_ebops77815.keras",
+  "size": 1931702,
+  "ebops_train": 77815,
+  "ebops_calibrated": 78032,
+  "da4ml_cost_lut_est": 53905.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82953,
+  "val_acc_hi": 0.9700403072171977
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0139_acc0.82948_hi0.96808_ebops76337.keras",
+  "size": 1931702,
+  "ebops_train": 76337,
+  "ebops_calibrated": 76701,
+  "da4ml_cost_lut_est": 53668.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82948,
+  "val_acc_hi": 0.968075079712034
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0140_acc0.82841_hi0.96649_ebops74948.keras",
+  "size": 1931702,
+  "ebops_train": 74948,
+  "ebops_calibrated": 74691,
+  "da4ml_cost_lut_est": 52443.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82841,
+  "val_acc_hi": 0.9664908657027693
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0143_acc0.82840_hi0.96888_ebops72542.keras",
+  "size": 1931702,
+  "ebops_train": 72542,
+  "ebops_calibrated": 73674,
+  "da4ml_cost_lut_est": 52358.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.8284,
+  "val_acc_hi": 0.968877213387611
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0147_acc0.82770_hi0.96834_ebops67628.keras",
+  "size": 1931702,
+  "ebops_train": 67628,
+  "ebops_calibrated": 68695,
+  "da4ml_cost_lut_est": 50463.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.8277,
+  "val_acc_hi": 0.9683357731565966
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0148_acc0.82672_hi0.96962_ebops66755.keras",
+  "size": 1931702,
+  "ebops_train": 66755,
+  "ebops_calibrated": 66042,
+  "da4ml_cost_lut_est": 48969.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82672,
+  "val_acc_hi": 0.9696191870375198
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0150_acc0.82641_hi0.96661_ebops65524.keras",
+  "size": 1931702,
+  "ebops_train": 65524,
+  "ebops_calibrated": 65355,
+  "da4ml_cost_lut_est": 48788.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82641,
+  "val_acc_hi": 0.9666111857541059
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0154_acc0.82431_hi0.96519_ebops61000.keras",
+  "size": 1931702,
+  "ebops_train": 61000,
+  "ebops_calibrated": 61602,
+  "da4ml_cost_lut_est": 47254.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.82431,
+  "val_acc_hi": 0.9651873984799567
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0158_acc0.82376_hi0.96818_ebops59260.keras",
+  "size": 1931702,
+  "ebops_train": 59260,
+  "ebops_calibrated": 58777,
+  "da4ml_cost_lut_est": 45125.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82376,
+  "val_acc_hi": 0.9681753464214812
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0159_acc0.82438_hi0.96418_ebops57568.keras",
+  "size": 1931702,
+  "ebops_train": 57568,
+  "ebops_calibrated": 58248,
+  "da4ml_cost_lut_est": 45386.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.82438,
+  "val_acc_hi": 0.9641847313854854
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0161_acc0.82289_hi0.96497_ebops55690.keras",
+  "size": 1931702,
+  "ebops_train": 55690,
+  "ebops_calibrated": 55410,
+  "da4ml_cost_lut_est": 43842.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82289,
+  "val_acc_hi": 0.964966811719173
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0163_acc0.82082_hi0.96220_ebops55390.keras",
+  "size": 1931702,
+  "ebops_train": 55390,
+  "ebops_calibrated": 55337,
+  "da4ml_cost_lut_est": 43723.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.82082,
+  "val_acc_hi": 0.9621994505384323
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0170_acc0.82035_hi0.96437_ebops49650.keras",
+  "size": 1931702,
+  "ebops_train": 49650,
+  "ebops_calibrated": 50071,
+  "da4ml_cost_lut_est": 40842.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.82035,
+  "val_acc_hi": 0.9643652114624902
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0171_acc0.82032_hi0.96629_ebops51083.keras",
+  "size": 1931702,
+  "ebops_train": 51083,
+  "ebops_calibrated": 50834,
+  "da4ml_cost_lut_est": 41048.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.82032,
+  "val_acc_hi": 0.9662903322838751
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0172_acc0.82062_hi0.96296_ebops49563.keras",
+  "size": 1931702,
+  "ebops_train": 49563,
+  "ebops_calibrated": 49714,
+  "da4ml_cost_lut_est": 40291.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.82062,
+  "val_acc_hi": 0.9629614775302304
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0174_acc0.82228_hi0.96047_ebops50180.keras",
+  "size": 1931702,
+  "ebops_train": 50180,
+  "ebops_calibrated": 50506,
+  "da4ml_cost_lut_est": 40540.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.82228,
+  "val_acc_hi": 0.9604748631359417
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0175_acc0.81773_hi0.96226_ebops47862.keras",
+  "size": 1931702,
+  "ebops_train": 47862,
+  "ebops_calibrated": 48114,
+  "da4ml_cost_lut_est": 40063.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.81773,
+  "val_acc_hi": 0.9622596105641005
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0177_acc0.81752_hi0.96320_ebops48072.keras",
+  "size": 1931702,
+  "ebops_train": 48072,
+  "ebops_calibrated": 47670,
+  "da4ml_cost_lut_est": 39171.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81752,
+  "val_acc_hi": 0.9632021176329035
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0178_acc0.81719_hi0.95695_ebops46618.keras",
+  "size": 1931702,
+  "ebops_train": 46618,
+  "ebops_calibrated": 46629,
+  "da4ml_cost_lut_est": 38478.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.81719,
+  "val_acc_hi": 0.9569454749634027
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0179_acc0.81690_hi0.96587_ebops46578.keras",
+  "size": 1931702,
+  "ebops_train": 46578,
+  "ebops_calibrated": 46032,
+  "da4ml_cost_lut_est": 38531.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.8169,
+  "val_acc_hi": 0.9658692121041972
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0180_acc0.81662_hi0.95751_ebops46061.keras",
+  "size": 1931702,
+  "ebops_train": 46061,
+  "ebops_calibrated": 45870,
+  "da4ml_cost_lut_est": 37861.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81662,
+  "val_acc_hi": 0.9575069685363066
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0184_acc0.81577_hi0.96136_ebops45390.keras",
+  "size": 1931702,
+  "ebops_train": 45390,
+  "ebops_calibrated": 45374,
+  "da4ml_cost_lut_est": 37854.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.81577,
+  "val_acc_hi": 0.9613572101790764
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0186_acc0.81224_hi0.95767_ebops43283.keras",
+  "size": 1931702,
+  "ebops_train": 43283,
+  "ebops_calibrated": 43735,
+  "da4ml_cost_lut_est": 37061.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81224,
+  "val_acc_hi": 0.957667395271422
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0188_acc0.81492_hi0.95941_ebops43920.keras",
+  "size": 1931702,
+  "ebops_train": 43920,
+  "ebops_calibrated": 43940,
+  "da4ml_cost_lut_est": 37059.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.81492,
+  "val_acc_hi": 0.959412036015802
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0190_acc0.81073_hi0.95654_ebops42605.keras",
+  "size": 1931702,
+  "ebops_train": 42605,
+  "ebops_calibrated": 42068,
+  "da4ml_cost_lut_est": 35878.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81073,
+  "val_acc_hi": 0.9565444081256141
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0192_acc0.81175_hi0.95646_ebops42087.keras",
+  "size": 1931702,
+  "ebops_train": 42087,
+  "ebops_calibrated": 42008,
+  "da4ml_cost_lut_est": 35820.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81175,
+  "val_acc_hi": 0.9564641947580564
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0194_acc0.80823_hi0.95602_ebops40559.keras",
+  "size": 1931702,
+  "ebops_train": 40559,
+  "ebops_calibrated": 40968,
+  "da4ml_cost_lut_est": 35107.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.80823,
+  "val_acc_hi": 0.9560230212364891
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b1e5/pareto/e0196_acc0.81132_hi0.95594_ebops39688.keras",
+  "size": 1931702,
+  "ebops_train": 39688,
+  "ebops_calibrated": 39359,
+  "da4ml_cost_lut_est": 34056.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81132,
+  "val_acc_hi": 0.9559428078689314
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0115_acc0.82941_hi0.96966_ebops74511.keras",
+  "size": 1931702,
+  "ebops_train": 74511,
+  "ebops_calibrated": 75820,
+  "da4ml_cost_lut_est": 52473.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.82941,
+  "val_acc_hi": 0.9696592937212987
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0116_acc0.82756_hi0.96960_ebops74508.keras",
+  "size": 1931702,
+  "ebops_train": 74508,
+  "ebops_calibrated": 74729,
+  "da4ml_cost_lut_est": 52286.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82756,
+  "val_acc_hi": 0.9695991336956303
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0117_acc0.82727_hi0.96793_ebops72536.keras",
+  "size": 1931702,
+  "ebops_train": 72536,
+  "ebops_calibrated": 71766,
+  "da4ml_cost_lut_est": 50868.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82727,
+  "val_acc_hi": 0.9679347063188081
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0122_acc0.82725_hi0.96970_ebops64011.keras",
+  "size": 1931702,
+  "ebops_train": 64011,
+  "ebops_calibrated": 63610,
+  "da4ml_cost_lut_est": 47956.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82725,
+  "val_acc_hi": 0.9696994004050775
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0123_acc0.82457_hi0.96810_ebops62829.keras",
+  "size": 1931702,
+  "ebops_train": 62829,
+  "ebops_calibrated": 63223,
+  "da4ml_cost_lut_est": 47436.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82457,
+  "val_acc_hi": 0.9680951330539235
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0124_acc0.82487_hi0.96180_ebops62987.keras",
+  "size": 1931702,
+  "ebops_train": 62987,
+  "ebops_calibrated": 62602,
+  "da4ml_cost_lut_est": 46798.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82487,
+  "val_acc_hi": 0.9617983837006437
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0127_acc0.82342_hi0.96348_ebops58066.keras",
+  "size": 1931702,
+  "ebops_train": 58066,
+  "ebops_calibrated": 58008,
+  "da4ml_cost_lut_est": 45149.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82342,
+  "val_acc_hi": 0.9634828644193555
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0129_acc0.82147_hi0.96382_ebops56173.keras",
+  "size": 1931702,
+  "ebops_train": 56173,
+  "ebops_calibrated": 55623,
+  "da4ml_cost_lut_est": 44107.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82147,
+  "val_acc_hi": 0.9638237712314758
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0130_acc0.82163_hi0.95546_ebops54350.keras",
+  "size": 1931702,
+  "ebops_train": 54350,
+  "ebops_calibrated": 54439,
+  "da4ml_cost_lut_est": 43415.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.82163,
+  "val_acc_hi": 0.9554615276635852
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0133_acc0.82161_hi0.96220_ebops52215.keras",
+  "size": 1931702,
+  "ebops_train": 52215,
+  "ebops_calibrated": 51792,
+  "da4ml_cost_lut_est": 41861.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.82161,
+  "val_acc_hi": 0.9621994505384323
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0135_acc0.82111_hi0.96665_ebops49662.keras",
+  "size": 1931702,
+  "ebops_train": 49662,
+  "ebops_calibrated": 49794,
+  "da4ml_cost_lut_est": 40988.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.82111,
+  "val_acc_hi": 0.9666512924378847
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0136_acc0.82043_hi0.96603_ebops48100.keras",
+  "size": 1931702,
+  "ebops_train": 48100,
+  "ebops_calibrated": 48612,
+  "da4ml_cost_lut_est": 39980.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82043,
+  "val_acc_hi": 0.9660296388393126
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0137_acc0.81781_hi0.95560_ebops47043.keras",
+  "size": 1931702,
+  "ebops_train": 47043,
+  "ebops_calibrated": 48289,
+  "da4ml_cost_lut_est": 39985.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81781,
+  "val_acc_hi": 0.9556019010568111
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0138_acc0.81708_hi0.95849_ebops45877.keras",
+  "size": 1931702,
+  "ebops_train": 45877,
+  "ebops_calibrated": 46974,
+  "da4ml_cost_lut_est": 39256.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81708,
+  "val_acc_hi": 0.9584895822888885
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0142_acc0.81529_hi0.95999_ebops42718.keras",
+  "size": 1931702,
+  "ebops_train": 42718,
+  "ebops_calibrated": 42429,
+  "da4ml_cost_lut_est": 36539.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81529,
+  "val_acc_hi": 0.9599935829305953
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0143_acc0.81677_hi0.96441_ebops43198.keras",
+  "size": 1931702,
+  "ebops_train": 43198,
+  "ebops_calibrated": 42900,
+  "da4ml_cost_lut_est": 36837.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.81677,
+  "val_acc_hi": 0.9644053181462691
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0146_acc0.81624_hi0.95779_ebops40661.keras",
+  "size": 1931702,
+  "ebops_train": 40661,
+  "ebops_calibrated": 39949,
+  "da4ml_cost_lut_est": 35196.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.81624,
+  "val_acc_hi": 0.9577877153227585
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0147_acc0.81209_hi0.95436_ebops38194.keras",
+  "size": 1931702,
+  "ebops_train": 38194,
+  "ebops_calibrated": 39174,
+  "da4ml_cost_lut_est": 34911.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.81209,
+  "val_acc_hi": 0.9543585938596667
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0148_acc0.81369_hi0.95839_ebops38355.keras",
+  "size": 1931702,
+  "ebops_train": 38355,
+  "ebops_calibrated": 37571,
+  "da4ml_cost_lut_est": 33831.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81369,
+  "val_acc_hi": 0.9583893155794413
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0149_acc0.81106_hi0.95542_ebops37056.keras",
+  "size": 1931702,
+  "ebops_train": 37056,
+  "ebops_calibrated": 36966,
+  "da4ml_cost_lut_est": 33602.5,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.81106,
+  "val_acc_hi": 0.9554214209798063
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0150_acc0.81121_hi0.95476_ebops37246.keras",
+  "size": 1931702,
+  "ebops_train": 37246,
+  "ebops_calibrated": 37083,
+  "da4ml_cost_lut_est": 33358.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81121,
+  "val_acc_hi": 0.9547596606974552
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0151_acc0.81025_hi0.95508_ebops36627.keras",
+  "size": 1931702,
+  "ebops_train": 36627,
+  "ebops_calibrated": 37092,
+  "da4ml_cost_lut_est": 33478.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.81025,
+  "val_acc_hi": 0.955080514167686
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0153_acc0.80946_hi0.95103_ebops35010.keras",
+  "size": 1931702,
+  "ebops_train": 35010,
+  "ebops_calibrated": 34606,
+  "da4ml_cost_lut_est": 31669.5,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80946,
+  "val_acc_hi": 0.9510297391060221
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0155_acc0.80748_hi0.95646_ebops34312.keras",
+  "size": 1931702,
+  "ebops_train": 34312,
+  "ebops_calibrated": 34692,
+  "da4ml_cost_lut_est": 31764.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80748,
+  "val_acc_hi": 0.9564641947580564
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0156_acc0.80845_hi0.95155_ebops33581.keras",
+  "size": 1931702,
+  "ebops_train": 33581,
+  "ebops_calibrated": 33519,
+  "da4ml_cost_lut_est": 31039.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.80845,
+  "val_acc_hi": 0.9515511259951471
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0157_acc0.80599_hi0.95783_ebops32434.keras",
+  "size": 1931702,
+  "ebops_train": 32434,
+  "ebops_calibrated": 32540,
+  "da4ml_cost_lut_est": 30488.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80599,
+  "val_acc_hi": 0.9578278220065374
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_128_64_b3e5/pareto/e0158_acc0.80684_hi0.95504_ebops32142.keras",
+  "size": 1931702,
+  "ebops_train": 32142,
+  "ebops_calibrated": 32344,
+  "da4ml_cost_lut_est": 30237.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80684,
+  "val_acc_hi": 0.9550404074839072
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0208_acc0.82573_hi0.97195_ebops48061.keras",
+  "size": 970007,
+  "ebops_train": 48061,
+  "ebops_calibrated": 48064,
+  "da4ml_cost_lut_est": 36406.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.82573,
+  "val_acc_hi": 0.9719453746966932
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0217_acc0.82746_hi0.97080_ebops44703.keras",
+  "size": 970007,
+  "ebops_train": 44703,
+  "ebops_calibrated": 44716,
+  "da4ml_cost_lut_est": 34784.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82746,
+  "val_acc_hi": 0.970802334208996
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0228_acc0.82491_hi0.97106_ebops40841.keras",
+  "size": 970007,
+  "ebops_train": 40841,
+  "ebops_calibrated": 40975,
+  "da4ml_cost_lut_est": 32769.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.82491,
+  "val_acc_hi": 0.9710630276535585
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0229_acc0.82238_hi0.96443_ebops40831.keras",
+  "size": 970007,
+  "ebops_train": 40831,
+  "ebops_calibrated": 40789,
+  "da4ml_cost_lut_est": 32560.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82238,
+  "val_acc_hi": 0.9644253714881585
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0234_acc0.82214_hi0.96182_ebops39587.keras",
+  "size": 970007,
+  "ebops_train": 39587,
+  "ebops_calibrated": 40118,
+  "da4ml_cost_lut_est": 32258.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.82214,
+  "val_acc_hi": 0.9618184370425331
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0242_acc0.82214_hi0.96828_ebops36897.keras",
+  "size": 970007,
+  "ebops_train": 36897,
+  "ebops_calibrated": 36688,
+  "da4ml_cost_lut_est": 30579.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82214,
+  "val_acc_hi": 0.9682756131309282
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0248_acc0.82066_hi0.96663_ebops35781.keras",
+  "size": 970007,
+  "ebops_train": 35781,
+  "ebops_calibrated": 35874,
+  "da4ml_cost_lut_est": 29833.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82066,
+  "val_acc_hi": 0.9666312390959954
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0259_acc0.82086_hi0.96519_ebops32971.keras",
+  "size": 970007,
+  "ebops_train": 32971,
+  "ebops_calibrated": 33312,
+  "da4ml_cost_lut_est": 28187.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.82086,
+  "val_acc_hi": 0.9651873984799567
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0268_acc0.81886_hi0.96308_ebops31447.keras",
+  "size": 970007,
+  "ebops_train": 31447,
+  "ebops_calibrated": 31481,
+  "da4ml_cost_lut_est": 27175.0,
+  "da4ml_comb_latency": 34.0,
+  "val_acc": 0.81886,
+  "val_acc_hi": 0.963081797581567
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0269_acc0.81859_hi0.96667_ebops31582.keras",
+  "size": 970007,
+  "ebops_train": 31582,
+  "ebops_calibrated": 31266,
+  "da4ml_cost_lut_est": 26961.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.81859,
+  "val_acc_hi": 0.9666713457797742
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0272_acc0.81807_hi0.95811_ebops31302.keras",
+  "size": 970007,
+  "ebops_train": 31302,
+  "ebops_calibrated": 31461,
+  "da4ml_cost_lut_est": 27134.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.81807,
+  "val_acc_hi": 0.9581085687929893
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0275_acc0.81711_hi0.96868_ebops30325.keras",
+  "size": 970007,
+  "ebops_train": 30325,
+  "ebops_calibrated": 30388,
+  "da4ml_cost_lut_est": 26434.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81711,
+  "val_acc_hi": 0.9686766799687168
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0283_acc0.81456_hi0.96120_ebops29067.keras",
+  "size": 970007,
+  "ebops_train": 29067,
+  "ebops_calibrated": 29140,
+  "da4ml_cost_lut_est": 25516.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.81456,
+  "val_acc_hi": 0.961196783443961
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0286_acc0.81529_hi0.95452_ebops29256.keras",
+  "size": 970007,
+  "ebops_train": 29256,
+  "ebops_calibrated": 29221,
+  "da4ml_cost_lut_est": 25625.5,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.81529,
+  "val_acc_hi": 0.9545190205947821
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0287_acc0.81410_hi0.95865_ebops28566.keras",
+  "size": 970007,
+  "ebops_train": 28566,
+  "ebops_calibrated": 28871,
+  "da4ml_cost_lut_est": 25537.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.8141,
+  "val_acc_hi": 0.9586500090240039
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0291_acc0.81147_hi0.95957_ebops28358.keras",
+  "size": 970007,
+  "ebops_train": 28358,
+  "ebops_calibrated": 28092,
+  "da4ml_cost_lut_est": 24978.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.81147,
+  "val_acc_hi": 0.9595724627509175
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0296_acc0.81019_hi0.96060_ebops27612.keras",
+  "size": 970007,
+  "ebops_train": 27612,
+  "ebops_calibrated": 27515,
+  "da4ml_cost_lut_est": 24759.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.81019,
+  "val_acc_hi": 0.9605951831872782
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_32_b1e5_e300/pareto/e0299_acc0.80858_hi0.95773_ebops26752.keras",
+  "size": 970007,
+  "ebops_train": 26752,
+  "ebops_calibrated": 27124,
+  "da4ml_cost_lut_est": 24443.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.80858,
+  "val_acc_hi": 0.9577275552970903
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0120_acc0.81102_hi0.95989_ebops79246.keras",
+  "size": 865652,
+  "ebops_train": 79246,
+  "ebops_calibrated": 80524,
+  "da4ml_cost_lut_est": 41474.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81102,
+  "val_acc_hi": 0.9598933162211483
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0121_acc0.80795_hi0.95841_ebops78653.keras",
+  "size": 865652,
+  "ebops_train": 78653,
+  "ebops_calibrated": 78431,
+  "da4ml_cost_lut_est": 41196.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80795,
+  "val_acc_hi": 0.9584093689213308
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0122_acc0.81045_hi0.95666_ebops77428.keras",
+  "size": 865652,
+  "ebops_train": 77428,
+  "ebops_calibrated": 77446,
+  "da4ml_cost_lut_est": 41075.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81045,
+  "val_acc_hi": 0.9566647281769507
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0123_acc0.81068_hi0.95470_ebops75208.keras",
+  "size": 865652,
+  "ebops_train": 75208,
+  "ebops_calibrated": 76226,
+  "da4ml_cost_lut_est": 40326.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.81068,
+  "val_acc_hi": 0.954699500671787
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0128_acc0.80885_hi0.95658_ebops71259.keras",
+  "size": 865652,
+  "ebops_train": 71259,
+  "ebops_calibrated": 71409,
+  "da4ml_cost_lut_est": 39575.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80885,
+  "val_acc_hi": 0.956584514809393
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0129_acc0.80702_hi0.95568_ebops71079.keras",
+  "size": 865652,
+  "ebops_train": 71079,
+  "ebops_calibrated": 71574,
+  "da4ml_cost_lut_est": 39519.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80702,
+  "val_acc_hi": 0.9556821144243688
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0138_acc0.80683_hi0.96116_ebops63291.keras",
+  "size": 865652,
+  "ebops_train": 63291,
+  "ebops_calibrated": 64384,
+  "da4ml_cost_lut_est": 37660.5,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80683,
+  "val_acc_hi": 0.9611566767601821
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0139_acc0.80721_hi0.95420_ebops63809.keras",
+  "size": 865652,
+  "ebops_train": 63809,
+  "ebops_calibrated": 62940,
+  "da4ml_cost_lut_est": 37268.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80721,
+  "val_acc_hi": 0.9541981671245513
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0146_acc0.80483_hi0.95727_ebops59251.keras",
+  "size": 865652,
+  "ebops_train": 59251,
+  "ebops_calibrated": 59099,
+  "da4ml_cost_lut_est": 35952.5,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80483,
+  "val_acc_hi": 0.9572663284336335
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0148_acc0.80567_hi0.95093_ebops56548.keras",
+  "size": 865652,
+  "ebops_train": 56548,
+  "ebops_calibrated": 56865,
+  "da4ml_cost_lut_est": 35402.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.80567,
+  "val_acc_hi": 0.9509294723965749
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0149_acc0.80458_hi0.95137_ebops57309.keras",
+  "size": 865652,
+  "ebops_train": 57309,
+  "ebops_calibrated": 56677,
+  "da4ml_cost_lut_est": 34972.5,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80458,
+  "val_acc_hi": 0.9513706459181422
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0155_acc0.80162_hi0.95127_ebops52678.keras",
+  "size": 865652,
+  "ebops_train": 52678,
+  "ebops_calibrated": 52822,
+  "da4ml_cost_lut_est": 34085.5,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80162,
+  "val_acc_hi": 0.9512703792086952
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0160_acc0.80080_hi0.95033_ebops50151.keras",
+  "size": 865652,
+  "ebops_train": 50151,
+  "ebops_calibrated": 50163,
+  "da4ml_cost_lut_est": 32911.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.8008,
+  "val_acc_hi": 0.9503278721398921
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b1e5/pareto/e0172_acc0.79900_hi0.95047_ebops45004.keras",
+  "size": 865652,
+  "ebops_train": 45004,
+  "ebops_calibrated": 45439,
+  "da4ml_cost_lut_est": 30970.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.799,
+  "val_acc_hi": 0.950468245533118
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0101_acc0.80820_hi0.95925_ebops78567.keras",
+  "size": 865652,
+  "ebops_train": 78567,
+  "ebops_calibrated": 79383,
+  "da4ml_cost_lut_est": 40071.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.8082,
+  "val_acc_hi": 0.9592516092806866
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0102_acc0.80796_hi0.95025_ebops78003.keras",
+  "size": 865652,
+  "ebops_train": 78003,
+  "ebops_calibrated": 78631,
+  "da4ml_cost_lut_est": 39778.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.80796,
+  "val_acc_hi": 0.9502476587723344
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0103_acc0.80790_hi0.96248_ebops77467.keras",
+  "size": 865652,
+  "ebops_train": 77467,
+  "ebops_calibrated": 77463,
+  "da4ml_cost_lut_est": 39236.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.8079,
+  "val_acc_hi": 0.9624801973248842
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0105_acc0.80543_hi0.95981_ebops75131.keras",
+  "size": 865652,
+  "ebops_train": 75131,
+  "ebops_calibrated": 74996,
+  "da4ml_cost_lut_est": 39109.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80543,
+  "val_acc_hi": 0.9598131028535906
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0106_acc0.80718_hi0.95514_ebops73361.keras",
+  "size": 865652,
+  "ebops_train": 73361,
+  "ebops_calibrated": 74601,
+  "da4ml_cost_lut_est": 39214.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.80718,
+  "val_acc_hi": 0.9551406741933544
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0111_acc0.80686_hi0.95446_ebops67063.keras",
+  "size": 865652,
+  "ebops_train": 67063,
+  "ebops_calibrated": 68160,
+  "da4ml_cost_lut_est": 38178.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.80686,
+  "val_acc_hi": 0.9544588605691139
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0112_acc0.80624_hi0.95542_ebops65387.keras",
+  "size": 865652,
+  "ebops_train": 65387,
+  "ebops_calibrated": 66306,
+  "da4ml_cost_lut_est": 37286.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80624,
+  "val_acc_hi": 0.9554214209798063
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0115_acc0.80494_hi0.95304_ebops60506.keras",
+  "size": 865652,
+  "ebops_train": 60506,
+  "ebops_calibrated": 61353,
+  "da4ml_cost_lut_est": 35972.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.80494,
+  "val_acc_hi": 0.9530350732949646
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0120_acc0.80407_hi0.95348_ebops57801.keras",
+  "size": 865652,
+  "ebops_train": 57801,
+  "ebops_calibrated": 58675,
+  "da4ml_cost_lut_est": 35336.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.80407,
+  "val_acc_hi": 0.953476246816532
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0123_acc0.80157_hi0.95117_ebops53824.keras",
+  "size": 865652,
+  "ebops_train": 53824,
+  "ebops_calibrated": 53818,
+  "da4ml_cost_lut_est": 33747.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80157,
+  "val_acc_hi": 0.951170112499248
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0127_acc0.80134_hi0.95129_ebops51496.keras",
+  "size": 865652,
+  "ebops_train": 51496,
+  "ebops_calibrated": 52188,
+  "da4ml_cost_lut_est": 33324.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80134,
+  "val_acc_hi": 0.9512904325505845
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0132_acc0.80123_hi0.95364_ebops46291.keras",
+  "size": 865652,
+  "ebops_train": 46291,
+  "ebops_calibrated": 47198,
+  "da4ml_cost_lut_est": 31335.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.80123,
+  "val_acc_hi": 0.9536366735516474
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0135_acc0.79766_hi0.95017_ebops44697.keras",
+  "size": 865652,
+  "ebops_train": 44697,
+  "ebops_calibrated": 45504,
+  "da4ml_cost_lut_est": 31039.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.79766,
+  "val_acc_hi": 0.9501674454047767
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e5/pareto/e0138_acc0.79323_hi0.95017_ebops40886.keras",
+  "size": 865652,
+  "ebops_train": 40886,
+  "ebops_calibrated": 41452,
+  "da4ml_cost_lut_est": 29341.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.79323,
+  "val_acc_hi": 0.9501674454047767
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0161_acc0.81223_hi0.95897_ebops76098.keras",
+  "size": 865652,
+  "ebops_train": 76098,
+  "ebops_calibrated": 76869,
+  "da4ml_cost_lut_est": 40613.0,
+  "da4ml_comb_latency": 25.0,
+  "val_acc": 0.81223,
+  "val_acc_hi": 0.9589708624942347
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0167_acc0.81222_hi0.96144_ebops74406.keras",
+  "size": 865652,
+  "ebops_train": 74406,
+  "ebops_calibrated": 75886,
+  "da4ml_cost_lut_est": 40165.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81222,
+  "val_acc_hi": 0.9614374235466341
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0170_acc0.81142_hi0.95987_ebops74177.keras",
+  "size": 865652,
+  "ebops_train": 74177,
+  "ebops_calibrated": 74170,
+  "da4ml_cost_lut_est": 39763.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81142,
+  "val_acc_hi": 0.9598732628792588
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0175_acc0.81067_hi0.95891_ebops72853.keras",
+  "size": 865652,
+  "ebops_train": 72853,
+  "ebops_calibrated": 72964,
+  "da4ml_cost_lut_est": 39424.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.81067,
+  "val_acc_hi": 0.9589107024685664
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0177_acc0.80957_hi0.96029_ebops71095.keras",
+  "size": 865652,
+  "ebops_train": 71095,
+  "ebops_calibrated": 71077,
+  "da4ml_cost_lut_est": 38532.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.80957,
+  "val_acc_hi": 0.9602943830589368
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0184_acc0.80924_hi0.95767_ebops69743.keras",
+  "size": 865652,
+  "ebops_train": 69743,
+  "ebops_calibrated": 69022,
+  "da4ml_cost_lut_est": 37775.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80924,
+  "val_acc_hi": 0.957667395271422
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0190_acc0.80925_hi0.95580_ebops68082.keras",
+  "size": 865652,
+  "ebops_train": 68082,
+  "ebops_calibrated": 67850,
+  "da4ml_cost_lut_est": 37707.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80925,
+  "val_acc_hi": 0.9558024344757053
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0192_acc0.80633_hi0.95652_ebops67703.keras",
+  "size": 865652,
+  "ebops_train": 67703,
+  "ebops_calibrated": 67181,
+  "da4ml_cost_lut_est": 37115.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80633,
+  "val_acc_hi": 0.9565243547837247
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0193_acc0.80703_hi0.95703_ebops68130.keras",
+  "size": 865652,
+  "ebops_train": 68130,
+  "ebops_calibrated": 68914,
+  "da4ml_cost_lut_est": 37797.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80703,
+  "val_acc_hi": 0.9570256883309604
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0196_acc0.80498_hi0.95422_ebops65950.keras",
+  "size": 865652,
+  "ebops_train": 65950,
+  "ebops_calibrated": 65866,
+  "da4ml_cost_lut_est": 37075.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.80498,
+  "val_acc_hi": 0.9542182204664408
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_64_32_b3e6/pareto/e0199_acc0.80784_hi0.95414_ebops65444.keras",
+  "size": 865652,
+  "ebops_train": 65444,
+  "ebops_calibrated": 65625,
+  "da4ml_cost_lut_est": 36777.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80784,
+  "val_acc_hi": 0.9541380070988831
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0185_acc0.83876_hi0.97920_ebops46424.keras",
+  "size": 1467143,
+  "ebops_train": 46424,
+  "ebops_calibrated": 46630,
+  "da4ml_cost_lut_est": 38740.0,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83876,
+  "val_acc_hi": 0.9792046844606653
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0186_acc0.84035_hi0.97770_ebops45607.keras",
+  "size": 1467143,
+  "ebops_train": 45607,
+  "ebops_calibrated": 45462,
+  "da4ml_cost_lut_est": 38212.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.84035,
+  "val_acc_hi": 0.9777006838189585
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0187_acc0.83976_hi0.97562_ebops45354.keras",
+  "size": 1467143,
+  "ebops_train": 45354,
+  "ebops_calibrated": 45819,
+  "da4ml_cost_lut_est": 38473.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.83976,
+  "val_acc_hi": 0.9756151362624581
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0188_acc0.83839_hi0.97046_ebops44743.keras",
+  "size": 1467143,
+  "ebops_train": 44743,
+  "ebops_calibrated": 44601,
+  "da4ml_cost_lut_est": 37545.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.83839,
+  "val_acc_hi": 0.9704614273968757
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0189_acc0.83857_hi0.97754_ebops45019.keras",
+  "size": 1467143,
+  "ebops_train": 45019,
+  "ebops_calibrated": 44931,
+  "da4ml_cost_lut_est": 37689.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83857,
+  "val_acc_hi": 0.9775402570838431
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0192_acc0.83684_hi0.98053_ebops43117.keras",
+  "size": 1467143,
+  "ebops_train": 43117,
+  "ebops_calibrated": 43240,
+  "da4ml_cost_lut_est": 36668.5,
+  "da4ml_comb_latency": 32.0,
+  "val_acc": 0.83684,
+  "val_acc_hi": 0.9805282050253675
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0194_acc0.83821_hi0.97531_ebops41562.keras",
+  "size": 1467143,
+  "ebops_train": 41562,
+  "ebops_calibrated": 41151,
+  "da4ml_cost_lut_est": 35811.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83821,
+  "val_acc_hi": 0.9753143361341168
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0200_acc0.83694_hi0.97560_ebops39372.keras",
+  "size": 1467143,
+  "ebops_train": 39372,
+  "ebops_calibrated": 39368,
+  "da4ml_cost_lut_est": 34487.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83694,
+  "val_acc_hi": 0.9755950829205687
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0202_acc0.83521_hi0.97439_ebops38283.keras",
+  "size": 1467143,
+  "ebops_train": 38283,
+  "ebops_calibrated": 38145,
+  "da4ml_cost_lut_est": 33799.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.83521,
+  "val_acc_hi": 0.9743918824072032
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0205_acc0.83624_hi0.97351_ebops37442.keras",
+  "size": 1467143,
+  "ebops_train": 37442,
+  "ebops_calibrated": 37421,
+  "da4ml_cost_lut_est": 33087.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.83624,
+  "val_acc_hi": 0.9735095353640684
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0206_acc0.83517_hi0.97686_ebops37493.keras",
+  "size": 1467143,
+  "ebops_train": 37493,
+  "ebops_calibrated": 37082,
+  "da4ml_cost_lut_est": 33218.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.83517,
+  "val_acc_hi": 0.9768584434596025
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0207_acc0.83534_hi0.96681_ebops36706.keras",
+  "size": 1467143,
+  "ebops_train": 36706,
+  "ebops_calibrated": 36277,
+  "da4ml_cost_lut_est": 32598.0,
+  "da4ml_comb_latency": 33.0,
+  "val_acc": 0.83534,
+  "val_acc_hi": 0.9668117191730001
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0213_acc0.83463_hi0.97738_ebops35354.keras",
+  "size": 1467143,
+  "ebops_train": 35354,
+  "ebops_calibrated": 35389,
+  "da4ml_cost_lut_est": 31754.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.83463,
+  "val_acc_hi": 0.9773798303487277
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0214_acc0.83362_hi0.97549_ebops33966.keras",
+  "size": 1467143,
+  "ebops_train": 33966,
+  "ebops_calibrated": 34409,
+  "da4ml_cost_lut_est": 31307.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.83362,
+  "val_acc_hi": 0.9754948162111216
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0218_acc0.83286_hi0.96753_ebops33396.keras",
+  "size": 1467143,
+  "ebops_train": 33396,
+  "ebops_calibrated": 33537,
+  "da4ml_cost_lut_est": 30463.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.83286,
+  "val_acc_hi": 0.9675336394810196
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0229_acc0.83265_hi0.97497_ebops29753.keras",
+  "size": 1467143,
+  "ebops_train": 29753,
+  "ebops_calibrated": 29857,
+  "da4ml_cost_lut_est": 27975.5,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83265,
+  "val_acc_hi": 0.9749734293219965
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0232_acc0.83113_hi0.96832_ebops29137.keras",
+  "size": 1467143,
+  "ebops_train": 29137,
+  "ebops_calibrated": 29766,
+  "da4ml_cost_lut_est": 27957.0,
+  "da4ml_comb_latency": 31.0,
+  "val_acc": 0.83113,
+  "val_acc_hi": 0.9683157198147071
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0233_acc0.82883_hi0.97050_ebops28708.keras",
+  "size": 1467143,
+  "ebops_train": 28708,
+  "ebops_calibrated": 28630,
+  "da4ml_cost_lut_est": 26971.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82883,
+  "val_acc_hi": 0.9705015340806545
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0236_acc0.82884_hi0.96639_ebops28095.keras",
+  "size": 1467143,
+  "ebops_train": 28095,
+  "ebops_calibrated": 28033,
+  "da4ml_cost_lut_est": 26598.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82884,
+  "val_acc_hi": 0.9663905989933222
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0237_acc0.82862_hi0.97010_ebops27657.keras",
+  "size": 1467143,
+  "ebops_train": 27657,
+  "ebops_calibrated": 27748,
+  "da4ml_cost_lut_est": 26458.0,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82862,
+  "val_acc_hi": 0.970100467242866
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0238_acc0.82579_hi0.97185_ebops27966.keras",
+  "size": 1467143,
+  "ebops_train": 27966,
+  "ebops_calibrated": 27746,
+  "da4ml_cost_lut_est": 26652.5,
+  "da4ml_comb_latency": 30.0,
+  "val_acc": 0.82579,
+  "val_acc_hi": 0.9718451079872461
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0239_acc0.82787_hi0.96613_ebops27391.keras",
+  "size": 1467143,
+  "ebops_train": 27391,
+  "ebops_calibrated": 27400,
+  "da4ml_cost_lut_est": 26283.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82787,
+  "val_acc_hi": 0.9661299055487597
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0241_acc0.82714_hi0.97185_ebops27097.keras",
+  "size": 1467143,
+  "ebops_train": 27097,
+  "ebops_calibrated": 27404,
+  "da4ml_cost_lut_est": 26160.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82714,
+  "val_acc_hi": 0.9718451079872461
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0243_acc0.82699_hi0.96797_ebops26861.keras",
+  "size": 1467143,
+  "ebops_train": 26861,
+  "ebops_calibrated": 26978,
+  "da4ml_cost_lut_est": 25838.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82699,
+  "val_acc_hi": 0.9679748130025869
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0244_acc0.82573_hi0.96761_ebops26562.keras",
+  "size": 1467143,
+  "ebops_train": 26562,
+  "ebops_calibrated": 26555,
+  "da4ml_cost_lut_est": 25524.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82573,
+  "val_acc_hi": 0.9676138528485773
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0250_acc0.82478_hi0.96998_ebops25363.keras",
+  "size": 1467143,
+  "ebops_train": 25363,
+  "ebops_calibrated": 25431,
+  "da4ml_cost_lut_est": 24883.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82478,
+  "val_acc_hi": 0.9699801471915295
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0251_acc0.82229_hi0.96240_ebops25090.keras",
+  "size": 1467143,
+  "ebops_train": 25090,
+  "ebops_calibrated": 24782,
+  "da4ml_cost_lut_est": 24203.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82229,
+  "val_acc_hi": 0.9623999839573265
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0252_acc0.82497_hi0.96433_ebops25236.keras",
+  "size": 1467143,
+  "ebops_train": 25236,
+  "ebops_calibrated": 25305,
+  "da4ml_cost_lut_est": 24487.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.82497,
+  "val_acc_hi": 0.9643251047787114
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0260_acc0.81990_hi0.96041_ebops23024.keras",
+  "size": 1467143,
+  "ebops_train": 23024,
+  "ebops_calibrated": 23048,
+  "da4ml_cost_lut_est": 22882.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.8199,
+  "val_acc_hi": 0.9604147031102733
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0263_acc0.82138_hi0.96517_ebops23209.keras",
+  "size": 1467143,
+  "ebops_train": 23209,
+  "ebops_calibrated": 23086,
+  "da4ml_cost_lut_est": 22867.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.82138,
+  "val_acc_hi": 0.9651673451380672
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0266_acc0.81976_hi0.96547_ebops22196.keras",
+  "size": 1467143,
+  "ebops_train": 22196,
+  "ebops_calibrated": 22452,
+  "da4ml_cost_lut_est": 22585.5,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.81976,
+  "val_acc_hi": 0.9654681452664087
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0267_acc0.81685_hi0.96840_ebops22165.keras",
+  "size": 1467143,
+  "ebops_train": 22165,
+  "ebops_calibrated": 22098,
+  "da4ml_cost_lut_est": 22008.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81685,
+  "val_acc_hi": 0.9683959331822648
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0270_acc0.81753_hi0.96541_ebops22176.keras",
+  "size": 1467143,
+  "ebops_train": 22176,
+  "ebops_calibrated": 22466,
+  "da4ml_cost_lut_est": 22256.5,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.81753,
+  "val_acc_hi": 0.9654079852407403
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0271_acc0.81856_hi0.96208_ebops21747.keras",
+  "size": 1467143,
+  "ebops_train": 21747,
+  "ebops_calibrated": 21439,
+  "da4ml_cost_lut_est": 21424.5,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81856,
+  "val_acc_hi": 0.9620791304870957
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0275_acc0.81330_hi0.96027_ebops20936.keras",
+  "size": 1467143,
+  "ebops_train": 20936,
+  "ebops_calibrated": 20883,
+  "da4ml_cost_lut_est": 21204.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.8133,
+  "val_acc_hi": 0.9602743297170473
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0276_acc0.81625_hi0.95959_ebops20987.keras",
+  "size": 1467143,
+  "ebops_train": 20987,
+  "ebops_calibrated": 21046,
+  "da4ml_cost_lut_est": 21098.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81625,
+  "val_acc_hi": 0.9595925160928068
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0279_acc0.81100_hi0.95554_ebops20857.keras",
+  "size": 1467143,
+  "ebops_train": 20857,
+  "ebops_calibrated": 20530,
+  "da4ml_cost_lut_est": 20859.0,
+  "da4ml_comb_latency": 29.0,
+  "val_acc": 0.811,
+  "val_acc_hi": 0.9555417410311429
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0280_acc0.81273_hi0.95504_ebops20082.keras",
+  "size": 1467143,
+  "ebops_train": 20082,
+  "ebops_calibrated": 20227,
+  "da4ml_cost_lut_est": 20373.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81273,
+  "val_acc_hi": 0.9550404074839072
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0282_acc0.81461_hi0.95291_ebops19984.keras",
+  "size": 1467143,
+  "ebops_train": 19984,
+  "ebops_calibrated": 20379,
+  "da4ml_cost_lut_est": 20489.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.81461,
+  "val_acc_hi": 0.9529147532436281
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0283_acc0.81043_hi0.95652_ebops20164.keras",
+  "size": 1467143,
+  "ebops_train": 20164,
+  "ebops_calibrated": 20084,
+  "da4ml_cost_lut_est": 20225.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.81043,
+  "val_acc_hi": 0.9565243547837247
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0292_acc0.80926_hi0.96266_ebops18953.keras",
+  "size": 1467143,
+  "ebops_train": 18953,
+  "ebops_calibrated": 19067,
+  "da4ml_cost_lut_est": 19512.5,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80926,
+  "val_acc_hi": 0.962660677401889
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0294_acc0.80597_hi0.95444_ebops18721.keras",
+  "size": 1467143,
+  "ebops_train": 18721,
+  "ebops_calibrated": 18380,
+  "da4ml_cost_lut_est": 18876.0,
+  "da4ml_comb_latency": 27.0,
+  "val_acc": 0.80597,
+  "val_acc_hi": 0.9544388072272244
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0295_acc0.80750_hi0.95271_ebops18912.keras",
+  "size": 1467143,
+  "ebops_train": 18912,
+  "ebops_calibrated": 19172,
+  "da4ml_cost_lut_est": 19718.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.8075,
+  "val_acc_hi": 0.9527142198247338
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0296_acc0.80704_hi0.95165_ebops18347.keras",
+  "size": 1467143,
+  "ebops_train": 18347,
+  "ebops_calibrated": 17975,
+  "da4ml_cost_lut_est": 18667.0,
+  "da4ml_comb_latency": 28.0,
+  "val_acc": 0.80704,
+  "val_acc_hi": 0.9516513927045942
+ },
+ {
+  "file": "ref/runs/x310/hgq_w64_96_48_24_b2e5_e300/pareto/e0298_acc0.80931_hi0.95027_ebops18725.keras",
+  "size": 1467143,
+  "ebops_train": 18725,
+  "ebops_calibrated": 18931,
+  "da4ml_cost_lut_est": 19280.0,
+  "da4ml_comb_latency": 26.0,
+  "val_acc": 0.80931,
+  "val_acc_hi": 0.9502677121142238
+ }
+]

@@ -1,0 +1,3 @@
+DONE q5b_vu9p_lc3bc_f161 {"part": "xcvu9p-fsgd2104-2L-e", "period_ns": 6.206, "wns_ns": -8.075, "whs_ns": 0.025, "lut": 250401, "ff": 136004, "dsp": 0, "retime": 0, "gen_dir": "<repo>/.scratch/d5p19/gen/qec_d5_lc3bc", "top": "qec_d5_top", "vivado": "2024.2", "date": "2026-10-28T17:02:38"}
+FAILED q5b_vu9p_lc3bc32_f161
+SWEEP COMPLETE 2026-10-28T19:05:28-06:00

@@ -1,0 +1,15 @@
+6:START 2026-10-29T20:29:17-06:00 host=build-host args: -j 6 X310_XG BUILD_DIR=<repo>/.scratch/s5_build/x310_xg_stock_1/build-usrp_x310_fpga_XG IMAGE_CORE_NAME=usrp_x310_fpga_XG BUILD_OUTPUT_DIR=<repo>/.scratch/s5_build/x310_xg_stock_1/build BUILD_IP_DIR=<repo>/.scratch/s5_build/build-ip
+122:ERROR: [Synth 8-439] module 'bootram' not found
+123:ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+124:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+125:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+126:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+127:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+128:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+129:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+140:ERROR: [Vivado 12-398] No designs are open
+155:ERROR: [Synth 8-439] module 'axi64_4k_2clk_fifo' not found
+156:ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+157:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+158:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+159:ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.

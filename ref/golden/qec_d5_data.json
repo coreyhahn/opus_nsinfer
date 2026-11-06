@@ -1,0 +1,219 @@
+{
+ "circuit": "surface_code:rotated_memory_z",
+ "distance": 5,
+ "rounds": 5,
+ "noise": "uniform circuit-level p, as qec_data.py",
+ "packing": "np.packbits(bitorder=little), 15 bytes",
+ "stim": "1.16.0",
+ "pymatching": "2.4.0",
+ "seed_base": {
+  "train": 100000,
+  "val": 200000,
+  "test": 300000
+ },
+ "shots": {
+  "test": 5000000,
+  "val": 2000000,
+  "train": 30000000
+ },
+ "p": {
+  "1e-3": {
+   "p": 0.001,
+   "num_detectors": 120,
+   "circuit_file": "ref/qec/circuits/d5_p1e-3.stim",
+   "circuit_sha256": "340de2731f9148b8da891541644047f316658f0df4ba6067cf99b4f9b90fa380",
+   "test": {
+    "seed": 300000,
+    "shots": 5000000,
+    "distinct": 542119,
+    "pm_errors": 652,
+    "pm_ler": 0.0001304,
+    "file": "ref/data/qec/d5_test_p1e-3.npz",
+    "sha256": "c3e087a321f35826b94bef1a528eabe873628162cfba4627a5054abc07e92ef3"
+   },
+   "val": {
+    "seed": 200000,
+    "shots": 2000000,
+    "distinct": 264559,
+    "pm_errors": 287,
+    "pm_ler": 0.0001435,
+    "file": "ref/data/qec/d5_val_p1e-3.npz",
+    "sha256": "8f44a37d0557d9d2b4c2e32bd8a9ca96a7a8ff69f61856ddbab6764a2e076cd3"
+   },
+   "train": {
+    "seed": 100000,
+    "shots": 30000000,
+    "distinct": 2168488,
+    "pm_errors": 3935,
+    "pm_ler": 0.00013116666666666667,
+    "file": "ref/data/qec/d5_train_p1e-3.npz",
+    "sha256": "cc5985703a047d93cf951b6ed25006aa592ea163169acc32d3aaaa555bfa1436"
+   }
+  },
+  "2e-3": {
+   "p": 0.002,
+   "num_detectors": 120,
+   "circuit_file": "ref/qec/circuits/d5_p2e-3.stim",
+   "circuit_sha256": "f1d0cee06c20282432759e74aacf50da25287f02b906c21efe95024a457f7eb7",
+   "test": {
+    "seed": 300001,
+    "shots": 5000000,
+    "distinct": 1536374,
+    "pm_errors": 5235,
+    "pm_ler": 0.001047,
+    "file": "ref/data/qec/d5_test_p2e-3.npz",
+    "sha256": "f82a5d1ad008b4a55c6a9920e2c75c905cb1fd7ede87351670840f7cfc184d6d"
+   },
+   "val": {
+    "seed": 200001,
+    "shots": 2000000,
+    "distinct": 694467,
+    "pm_errors": 2043,
+    "pm_ler": 0.0010215,
+    "file": "ref/data/qec/d5_val_p2e-3.npz",
+    "sha256": "9c96bfde5aafa3b4a82fd7eaebd0d3d7b34140d8635c3691de78afdc5c4f758b"
+   },
+   "train": {
+    "seed": 100001,
+    "shots": 30000000,
+    "distinct": 7276530,
+    "pm_errors": 30505,
+    "pm_ler": 0.0010168333333333333,
+    "file": "ref/data/qec/d5_train_p2e-3.npz",
+    "sha256": "767f6c232b25c01f32764e021c6a784ad46e562161b765d0f00341578b0ab548"
+   }
+  },
+  "3e-3": {
+   "p": 0.003,
+   "num_detectors": 120,
+   "circuit_file": "ref/qec/circuits/d5_p3e-3.stim",
+   "circuit_sha256": "735e2258df24a60b4e7c88790fb76910eb8b6cb463c6b831e9a3f973cf17d815",
+   "test": {
+    "seed": 300002,
+    "shots": 5000000,
+    "distinct": 2627573,
+    "pm_errors": 16584,
+    "pm_ler": 0.0033168,
+    "file": "ref/data/qec/d5_test_p3e-3.npz",
+    "sha256": "f0b4773a609642035fbe096b3d6a4536d4b17d0c9d2fadd1d34c5a820c1e6197"
+   },
+   "val": {
+    "seed": 200002,
+    "shots": 2000000,
+    "distinct": 1136722,
+    "pm_errors": 6572,
+    "pm_ler": 0.003286,
+    "file": "ref/data/qec/d5_val_p3e-3.npz",
+    "sha256": "b58b00298e8f9c72a9a48bda91f0f2c7ffb90dbe5dcbd47111db284c990d0d19"
+   },
+   "train": {
+    "seed": 100002,
+    "shots": 30000000,
+    "distinct": 13436943,
+    "pm_errors": 99773,
+    "pm_ler": 0.0033257666666666667,
+    "file": "ref/data/qec/d5_train_p3e-3.npz",
+    "sha256": "a24c69eb3dc87e457cf45d3bbe50f23d0a057ab450e69e18fac0161a6a6e3a0b"
+   }
+  },
+  "5e-3": {
+   "p": 0.005,
+   "num_detectors": 120,
+   "circuit_file": "ref/qec/circuits/d5_p5e-3.stim",
+   "circuit_sha256": "25c753d013b1e496d894ff07f15ac5c1602d3d12624da0bf1588652acce47e5f",
+   "test": {
+    "seed": 300003,
+    "shots": 5000000,
+    "distinct": 4171676,
+    "pm_errors": 70108,
+    "pm_ler": 0.0140216,
+    "file": "ref/data/qec/d5_test_p5e-3.npz",
+    "sha256": "ba045eea8cc5bb9e2775d8439d5967867c2caa99e75b45e988d6300dcdb378ac"
+   },
+   "val": {
+    "seed": 200003,
+    "shots": 2000000,
+    "distinct": 1721175,
+    "pm_errors": 28066,
+    "pm_ler": 0.014033,
+    "file": "ref/data/qec/d5_val_p5e-3.npz",
+    "sha256": "70e32becbd74a4aae38ebd777518fa4aee0a7ee6f2e93d913121844d06650f2b"
+   },
+   "train": {
+    "seed": 100003,
+    "shots": 30000000,
+    "distinct": 23373442,
+    "pm_errors": 423508,
+    "pm_ler": 0.014116933333333333,
+    "file": "ref/data/qec/d5_train_p5e-3.npz",
+    "sha256": "fa9a999f5a14109e78cc833e90d9adf8037b4812b6489df9da5035db6fe6b07a"
+   }
+  },
+  "7e-3": {
+   "p": 0.007,
+   "num_detectors": 120,
+   "circuit_file": "ref/qec/circuits/d5_p7e-3.stim",
+   "circuit_sha256": "a548e4b791140bcc9a343d3b11a0f80da7cf4c6022db8d4061bd43eb6748f6f4",
+   "test": {
+    "seed": 300004,
+    "shots": 5000000,
+    "distinct": 4791029,
+    "pm_errors": 174088,
+    "pm_ler": 0.0348176,
+    "file": "ref/data/qec/d5_test_p7e-3.npz",
+    "sha256": "8736f21ea8c304a50c4522b886f06377334b4c6d62c36e38408db0dda48f6f1a"
+   },
+   "val": {
+    "seed": 200004,
+    "shots": 2000000,
+    "distinct": 1935074,
+    "pm_errors": 69737,
+    "pm_ler": 0.0348685,
+    "file": "ref/data/qec/d5_val_p7e-3.npz",
+    "sha256": "dc5a94d69f436dbbd56f9ab09192e97f87ea51ae50312ba7bbdeb7df945bc87b"
+   },
+   "train": {
+    "seed": 100004,
+    "shots": 30000000,
+    "distinct": 28067052,
+    "pm_errors": 1046809,
+    "pm_ler": 0.03489363333333333,
+    "file": "ref/data/qec/d5_train_p7e-3.npz",
+    "sha256": "87439bcc7fe865ff9f64d3975e75bb01323648b25eb0f753d339f1ba3c8bf7dc"
+   }
+  },
+  "10e-3": {
+   "p": 0.01,
+   "num_detectors": 120,
+   "circuit_file": "ref/qec/circuits/d5_p10e-3.stim",
+   "circuit_sha256": "e459a9e41b11923ada45ab44f7a84621956cf24a4b188a6b00401b5869d8efe0",
+   "test": {
+    "seed": 300005,
+    "shots": 5000000,
+    "distinct": 4984674,
+    "pm_errors": 419291,
+    "pm_ler": 0.0838582,
+    "file": "ref/data/qec/d5_test_p10e-3.npz",
+    "sha256": "eb40b0f1b305b66bb27e1fb7f4be5b6a933c714f954036ba0984ceffc21da941"
+   },
+   "val": {
+    "seed": 200005,
+    "shots": 2000000,
+    "distinct": 1995763,
+    "pm_errors": 167212,
+    "pm_ler": 0.083606,
+    "file": "ref/data/qec/d5_val_p10e-3.npz",
+    "sha256": "e1af7f354ff0bfa8a348af9311e2f3bdca55056e7d64c4284a391c799f1b23f0"
+   },
+   "train": {
+    "seed": 100005,
+    "shots": 30000000,
+    "distinct": 29815281,
+    "pm_errors": 2514055,
+    "pm_ler": 0.08380183333333334,
+    "file": "ref/data/qec/d5_train_p10e-3.npz",
+    "sha256": "dd498f29ed1794831d4f3a04783421844fbe420498cd8cbb9b757f8574c8eff8"
+   }
+  }
+ }
+}

@@ -1,0 +1,446 @@
+[
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "cable_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 2455259,
+    "received": 2455259,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "21": 2455239,
+     "23": 20
+    },
+    "cycles": {
+     "min": 21,
+     "p50": 21,
+     "p90": 21,
+     "max": 23,
+     "mean": 21.00001629156028
+    },
+    "ns": {
+     "min": 130.3272727272727,
+     "p50": 130.3272727272727,
+     "p90": 130.3272727272727,
+     "max": 142.73939393939395,
+     "mean": 130.3273738336832
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 2455259,
+    "received": 2455259,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "20": 2455232,
+     "22": 27
+    },
+    "cycles": {
+     "min": 20,
+     "p50": 20,
+     "p90": 20,
+     "max": 22,
+     "mean": 20.000021993606378
+    },
+    "ns": {
+     "min": 124.12121212121212,
+     "p50": 124.12121212121212,
+     "p90": 124.12121212121212,
+     "max": 136.53333333333333,
+     "mean": 124.12134861486625
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "cable_p63_b32",
+  "period": 63,
+  "hbase": 32,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 2454297,
+    "received": 2454297,
+    "bad": 0,
+    "hist_complete": false,
+    "hist": {},
+    "cycles": {
+     "min": 21,
+     "p50": null,
+     "p90": null,
+     "max": 21,
+     "mean": 21.0
+    },
+    "ns": {
+     "min": 130.3272727272727,
+     "p50": null,
+     "p90": null,
+     "max": 130.3272727272727,
+     "mean": 130.3272727272727
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 2454297,
+    "received": 2454297,
+    "bad": 0,
+    "hist_complete": false,
+    "hist": {},
+    "cycles": {
+     "min": 20,
+     "p50": null,
+     "p90": null,
+     "max": 20,
+     "mean": 20.0
+    },
+    "ns": {
+     "min": 124.12121212121212,
+     "p50": null,
+     "p90": null,
+     "max": 124.12121212121212,
+     "mean": 124.12121212121212
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "cable_p0_b0",
+  "period": 0,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 78578756,
+    "received": 78578756,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "21": 24555860,
+     "23": 54022896
+    },
+    "cycles": {
+     "min": 21,
+     "p50": 23,
+     "p90": 23,
+     "max": 23,
+     "mean": 22.375000031815215
+    },
+    "ns": {
+     "min": 130.3272727272727,
+     "p50": 142.73939393939395,
+     "p90": 142.73939393939395,
+     "max": 142.73939393939395,
+     "mean": 138.86060625805322
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 78578756,
+    "received": 78578756,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "20": 17189102,
+     "22": 61389654
+    },
+    "cycles": {
+     "min": 20,
+     "p50": 22,
+     "p90": 22,
+     "max": 22,
+     "mean": 21.56250002227065
+    },
+    "ns": {
+     "min": 124.12121212121212,
+     "p50": 136.53333333333333,
+     "p90": 136.53333333333333,
+     "max": 136.53333333333333,
+     "mean": 133.81818195639482
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run2.log",
+  "kind": "run",
+  "run": "echo_gap63",
+  "mode": "echo",
+  "gap": 63,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5f09efeb",
+  "sim_signature": "5f09efeb",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 45,
+   "p50": 45,
+   "p90": 47,
+   "p99": 47,
+   "max": 47,
+   "mean": 45.90909678141714
+  },
+  "loop_ns": {
+   "min": 279.27272727272725,
+   "p50": 279.27272727272725,
+   "p90": 291.6848484848485,
+   "p99": 291.6848484848485,
+   "max": 291.6848484848485,
+   "mean": 284.91463699497666
+  },
+  "b_decode_path_cycles": [
+   0,
+   65535
+  ],
+  "link": 17593203,
+  "hist": {
+   "45": 253323,
+   "47": 211105
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run2.log",
+  "kind": "run",
+  "run": "decode_gap63",
+  "mode": "decode",
+  "gap": 63,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5e8e5270",
+  "sim_signature": "5e8e5270",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 51,
+   "p50": 51,
+   "p90": 53,
+   "p99": 53,
+   "max": 53,
+   "mean": 51.909092475044574
+  },
+  "loop_ns": {
+   "min": 316.5090909090909,
+   "p50": 316.5090909090909,
+   "p90": 328.92121212121214,
+   "p99": 328.92121212121214,
+   "max": 328.92121212121214,
+   "mean": 322.1509739057312
+  },
+  "b_decode_path_cycles": [
+   7,
+   7
+  ],
+  "link": 17593203,
+  "hist": {
+   "51": 253324,
+   "53": 211104
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run2.log",
+  "kind": "run",
+  "run": "decode_gap7",
+  "mode": "decode",
+  "gap": 7,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5e8e5270",
+  "sim_signature": "5e8e5270",
+  "flips_checked": 8192,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 51,
+   "p50": 51,
+   "p90": 53,
+   "p99": 53,
+   "max": 53,
+   "mean": 51.93939857200686
+  },
+  "loop_ns": {
+   "min": 316.5090909090909,
+   "p50": 316.5090909090909,
+   "p90": 328.92121212121214,
+   "p99": 328.92121212121214,
+   "max": 328.92121212121214,
+   "mean": 322.33905538021224
+  },
+  "b_decode_path_cycles": [
+   7,
+   7
+  ],
+  "link": 17593203,
+  "hist": {
+   "51": 239250,
+   "52": 14073,
+   "53": 211105
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "pmaloop_a_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pma_loopback": {
+    "sent": 2455804,
+    "received": 2455804,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "19": 2455804
+    },
+    "cycles": {
+     "min": 19,
+     "p50": 19,
+     "p90": 19,
+     "max": 19,
+     "mean": 19.0
+    },
+    "ns": {
+     "min": 117.91515151515152,
+     "p50": 117.91515151515152,
+     "p90": 117.91515151515152,
+     "max": 117.91515151515152,
+     "mean": 117.91515151515152
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ }
+]

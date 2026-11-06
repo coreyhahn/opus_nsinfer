@@ -1,0 +1,28 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Nov  3 19:38:55 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_clock_networks -file <repo>/synth/out_s6_lc8_b/clock_networks.rpt
+| Design            : s6_top
+| Device            : xcvu9p-fsgd2104
+| Speed File        : -2L  PRODUCTION 1.28 03-30-2022
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Networks Report
+
+
+Constrained Clocks
+-------------------
+
+Clock clk_300 (300.03MHz)(endpoints: 3427 clock, 0 nonclock)
+Port clk_300_p
+
+Clock qsfp0_refclk (161.134MHz)(endpoints: 0 clock, 2 nonclock)
+Port qsfp0_refclk_p
+
+Clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK (20MHz)(endpoints: 1 clock, 0 nonclock)
+BSCANE2/INTERNAL_TCK (dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst)
+

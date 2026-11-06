@@ -1,0 +1,78 @@
+An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+{
+ "model_source": "<repo>/ref/runs/x310_meas/chosen.keras",
+ "selection": "ref/x310/x310_meas_selection.json",
+ "w": 64,
+ "bfp": 1,
+ "n_vectors": 8192,
+ "n_full": 100000,
+ "subset": "numpy default_rng(20261029).choice(n_full, 8192), sorted",
+ "decision_rule": "np.argmax over the logits (first maximum wins)",
+ "ebops_calibrated": 22121,
+ "ebops_train": 22727,
+ "in_kif": [
+  1,
+  0,
+  15
+ ],
+ "in_lanes": 128,
+ "in_width_bits": 2048,
+ "core_in_width_bits": 2048,
+ "pruned_input_lanes": [],
+ "out_width_bits": 65,
+ "out_lane_widths": [
+  15,
+  17,
+  17,
+  16
+ ],
+ "da4ml_comb_cost_lut_est": 21363.0,
+ "da4ml_comb_latency": [
+  33.0,
+  34.0
+ ],
+ "keras_vs_dais_interp_mismatching_vectors_full": 0,
+ "keras_vs_dais_interp_mismatching_vectors_stream": 0,
+ "test_accuracy_quantized_calibrated": 0.91109,
+ "test_accuracy_quantized_calibrated_snr_ge_10": 0.98212,
+ "golden_subset_accuracy": 0.909912109375,
+ "sha256": {
+  "x310_golden.npz": "4b931b402d798a6bfc1bad6c83803caa611e07d3e1f60866b44955ec50adab1d",
+  "x310_golden_in.hex": "1f0af188ef15cea1067ea107943b3061db84563fae1168415fae145221366ee0",
+  "x310_golden_out.hex": "dc755910c671c228b49ff2f66f4f4a16da7280f52d8b75c6696e7127794b1b36",
+  "x310_golden_dec.hex": "4fb310c953c009eedb8cae0e5a0554e6ec5246eb3fc9f09c6d860909ebe5dcb4",
+  "x310_hgq.keras": "f91a108df4a9319bc24109ffd5b7ab32d281d78d6d9886d36cc6d858f9315f2a"
+ }
+}
+{
+ "n_samples": 65536,
+ "n_windows": 65473,
+ "generator": "x310_data.make_stream(65536, seed=0)",
+ "sample_label_counts": [
+  20637,
+  17097,
+  8396,
+  19406
+ ],
+ "pure_windows": 54182,
+ "pure_window_accuracy": 0.8983057103835222,
+ "pure_window_accuracy_by_class": [
+  0.9887453383058071,
+  0.9819908316961362,
+  0.886412542268675,
+  0.7511788384128809
+ ],
+ "straddling_windows": 11291,
+ "decision_counts": [
+  17206,
+  21033,
+  10219,
+  17015
+ ],
+ "keras_vs_dais_interp_mismatching_vectors": 0
+}
+x310_clf_lc1.5: 23 stages, est 21363 LUT, 23907 FF
+x310_clf_lc2: 17 stages, est 21363 LUT, 17178 FF
+x310_clf_lc2.5: 14 stages, est 21363 LUT, 13748 FF
+x310_clf_lc3: 12 stages, est 21363 LUT, 12462 FF
+EXPORT_RC=0

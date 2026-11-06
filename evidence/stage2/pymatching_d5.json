@@ -1,0 +1,63 @@
+{
+ "distance": 5,
+ "rounds": 5,
+ "stim": "1.16.0",
+ "pymatching": "2.4.0",
+ "noise": "uniform circuit-level p (qec_data.py)",
+ "p": {
+  "1e-3": {
+   "p": 0.001,
+   "num_detectors": 120,
+   "shots": 10000000,
+   "pm_errors": 1320,
+   "pm_ler": 0.000132,
+   "pm_ler_per_round": 2.640278828169862e-05,
+   "decode_s_per_shot": 1.1099847912788391e-05
+  },
+  "2e-3": {
+   "p": 0.002,
+   "num_detectors": 120,
+   "shots": 10000000,
+   "pm_errors": 10336,
+   "pm_ler": 0.0010336,
+   "pm_ler_per_round": 0.0002068911449520372,
+   "decode_s_per_shot": 1.1538109159469604e-05
+  },
+  "3e-3": {
+   "p": 0.003,
+   "num_detectors": 120,
+   "shots": 10000000,
+   "pm_errors": 33307,
+   "pm_ler": 0.0033307,
+   "pm_ler_per_round": 0.0006679220975183142,
+   "decode_s_per_shot": 1.2290975046157837e-05
+  },
+  "5e-3": {
+   "p": 0.005,
+   "num_detectors": 120,
+   "shots": 10000000,
+   "pm_errors": 140645,
+   "pm_ler": 0.0140645,
+   "pm_ler_per_round": 0.0028450945369006275,
+   "decode_s_per_shot": 1.3819821310043336e-05
+  },
+  "7e-3": {
+   "p": 0.007,
+   "num_detectors": 120,
+   "shots": 10000000,
+   "pm_errors": 348413,
+   "pm_ler": 0.0348413,
+   "pm_ler_per_round": 0.00717102543785364,
+   "decode_s_per_shot": 1.5413872456550598e-05
+  },
+  "10e-3": {
+   "p": 0.01,
+   "num_detectors": 120,
+   "shots": 10000000,
+   "pm_errors": 838497,
+   "pm_ler": 0.0838497,
+   "pm_ler_per_round": 0.018023297724253595,
+   "decode_s_per_shot": 1.826087634563446e-05
+  }
+ }
+}

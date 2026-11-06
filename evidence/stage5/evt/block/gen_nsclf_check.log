@@ -1,0 +1,1 @@
+CHECK: rtl/x310 noc_shell_nsclf.sv and rfnoc_block_nsclf.sv match a fresh generation

@@ -1,0 +1,73 @@
+{
+ "model_source": "<repo>/ref/runs/x310/chosen.keras",
+ "selection": "ref/x310/x310_selection.json",
+ "w": 64,
+ "bfp": 1,
+ "n_vectors": 8192,
+ "n_full": 100000,
+ "subset": "numpy default_rng(20261029).choice(n_full, 8192), sorted",
+ "decision_rule": "np.argmax over the logits (first maximum wins)",
+ "ebops_calibrated": 61172,
+ "ebops_train": 61468,
+ "in_kif": [
+  1,
+  0,
+  15
+ ],
+ "in_lanes": 128,
+ "in_width_bits": 2048,
+ "out_width_bits": 75,
+ "out_lane_widths": [
+  18,
+  20,
+  19,
+  18
+ ],
+ "da4ml_comb_cost_lut_est": 50784.0,
+ "da4ml_comb_latency": [
+  31.0,
+  32.0
+ ],
+ "keras_vs_dais_interp_mismatching_vectors_full": 0,
+ "keras_vs_dais_interp_mismatching_vectors_stream": 0,
+ "test_accuracy_quantized_calibrated": 0.84565,
+ "test_accuracy_quantized_calibrated_snr_ge_10": 0.97696,
+ "golden_subset_accuracy": 0.845947265625,
+ "sha256": {
+  "x310_golden.npz": "230e8c2db891a9a325c06d1e2d3e78d53f0a2695bb6af73ceb48b43bb0e4cee7",
+  "x310_golden_in.hex": "9c2541d344c1aa5fe965da2de876d776754befa935817bcb433f32c8c5103aec",
+  "x310_golden_out.hex": "fa60695cc1d60533314a3cac077370939e9377f292da9b2fb302ff2bfb9d8092",
+  "x310_golden_dec.hex": "2ab5a3cf383d1c847e90f20e743a736ef65e15b9405a5dc5373b17163368e315",
+  "x310_hgq.keras": "1a66e0205c580fc7eebf3d126a421df1333650b914237f07070e30065c3e6fdc"
+ }
+}
+{
+ "n_samples": 65536,
+ "n_windows": 65473,
+ "generator": "x310_data.make_stream(65536, seed=0)",
+ "sample_label_counts": [
+  20637,
+  17097,
+  8396,
+  19406
+ ],
+ "pure_windows": 54182,
+ "pure_window_accuracy": 0.7994536931084124,
+ "pure_window_accuracy_by_class": [
+  0.9405301012253596,
+  0.9225933202357564,
+  0.6916692284045497,
+  0.6098332374928119
+ ],
+ "straddling_windows": 11291,
+ "decision_counts": [
+  21772,
+  20747,
+  8087,
+  14867
+ ],
+ "keras_vs_dais_interp_mismatching_vectors": 0
+}
+x310_clf_lc2: 16 stages, est 50784 LUT, 36244 FF
+x310_clf_lc2.5: 13 stages, est 50784 LUT, 29631 FF
+x310_clf_lc3: 11 stages, est 50784 LUT, 24714 FF

@@ -1,0 +1,62 @@
+float baseline float_d5_512_256_128: val geomean NN/PM 0.9323 -> limit 0.9523
+routability bound: EBOPs <= 1018201, best val geomean wins
+175 Pareto checkpoints, 30 pass
+   154698 geomean 8.6710 max 55.9408  ref/runs/qec/hgq_d5_256x3_f6_b6/pareto/e0058_r8.67105_ebops154698.keras
+   156009 geomean 3.1644 max 4.1429  ref/runs/qec/hgq_d5_256x3_f6_b6/pareto/e0059_r3.16437_ebops156009.keras
+   159156 geomean 2.9721 max 3.4650  ref/runs/qec/hgq_d5_256x3_f6_b6/pareto/e0057_r2.97213_ebops159156.keras
+   174881 geomean 2.9719 max 3.5993  ref/runs/qec/hgq_d5_256x3_f6_b6/pareto/e0054_r2.97190_ebops174881.keras
+   186917 geomean 2.9251 max 3.4216  ref/runs/qec/hgq_d5_256x3_f6_b7/pareto/e0055_r2.92511_ebops186917.keras
+   208330 geomean 2.9002 max 3.2986  ref/runs/qec/hgq_d5_256x3_f6_b7/pareto/e0051_r2.90021_ebops208330.keras
+   801868 geomean 1.6327 max 1.7596  ref/runs/qec/hgq_d5nr_128x4_to3e8/pareto/e0038_r1.63274_ebops801868.keras
+   812413 geomean 1.6266 max 1.7049  ref/runs/qec/hgq_d5nr_128x4_to3e8/pareto/e0033_r1.62662_ebops812413.keras
+   813061 geomean 1.5531 max 1.6955  ref/runs/qec/hgq_d5nr_128x4_to3e8/pareto/e0036_r1.55311_ebops813061.keras
+   842087 geomean 1.4176 max 1.5451  ref/runs/qec/hgq_d5nr_192_96_96_to3e8/pareto/e0039_r1.41756_ebops842087.keras
+{
+ "rule": "best val geomean NN/PM with EBOPs <= 1018201 (routability bound) and every val p <= 100.0",
+ "chosen": {
+  "file": "ref/runs/qec/hgq_d5nr_192_96_96_to1e8/pareto/e0023_r1.26458_ebops1018201.keras",
+  "size": 3879351,
+  "epoch": 23,
+  "ebops": 1018201,
+  "val_geomean": 1.264583941197131,
+  "val_max": 1.4596739468459201,
+  "val_ratio": {
+   "1e-3": 0.975609756097561,
+   "2e-3": 1.1350954478707782,
+   "3e-3": 1.2522824102251977,
+   "5e-3": 1.392325233378465,
+   "7e-3": 1.451037469349126,
+   "10e-3": 1.4596739468459201
+  },
+  "test_geomean": 1.2573597205888283,
+  "test_ratio": {
+   "1e-3": 0.9739263803680982,
+   "2e-3": 1.1203438395415473,
+   "3e-3": 1.2290762180414858,
+   "5e-3": 1.3931363039881326,
+   "7e-3": 1.4504560911722806,
+   "10e-3": 1.4581519755969006
+  }
+ },
+ "float_baseline": {
+  "run": "float_d5_512_256_128",
+  "val_geomean": 0.9322990136656861,
+  "val_ratio": {
+   "1e-3": 0.6724738675958188,
+   "2e-3": 0.8095937347038669,
+   "3e-3": 0.9062690200852099,
+   "5e-3": 1.0228390223045678,
+   "7e-3": 1.1095401293431033,
+   "10e-3": 1.172684974762577
+  },
+  "test_geomean": 0.939383199514585,
+  "test_ratio": {
+   "1e-3": 0.74079754601227,
+   "2e-3": 0.7938872970391595,
+   "3e-3": 0.8844669561022672,
+   "5e-3": 1.0215809893307468,
+   "7e-3": 1.1036946831487524,
+   "10e-3": 1.1716421292133625
+  }
+ }
+}

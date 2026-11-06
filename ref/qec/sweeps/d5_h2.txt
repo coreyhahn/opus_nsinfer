@@ -1,0 +1,5 @@
+# d = 5 HGQ2 sweep 2 (grumpy-calf), 2026-10-24. d5_h1 (beta 1e-8 -> 1e-6 / 1e-7) stopped at epoch 60 / 57:
+# the d = 5 BCE is ~0.002 (float 256x3), so beta * EBOPs (1.5e-8 * 1.9e5 = 0.003) outweighed it;
+# val geomean NN/PM stalled at 2.9 with EBOPs pushed to 1.6e5-2e5. Here beta is ~100x smaller.
+hgq_d5_256x3_f6_b9    --d 5 --mode hgq --arch 256 256 256 --epochs 150 --steps-per-epoch 2000 --batch 8192 --lr 2e-3 --beta-start 1e-11 --beta-end 1e-9 --input-f 6
+hgq_d5_256x3_f6_b10   --d 5 --mode hgq --arch 256 256 256 --epochs 150 --steps-per-epoch 2000 --batch 8192 --lr 2e-3 --beta-start 1e-11 --beta-end 1e-10 --input-f 6

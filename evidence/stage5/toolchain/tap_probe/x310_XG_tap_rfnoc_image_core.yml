@@ -1,0 +1,92 @@
+# opus_nsinfer Stage 5 probe: x310_XG_rfnoc_image_core.yml + yaml_include/x3xx_radio_base.yml
+# (UHD 4.9 a5d1b2e) inlined, with a "tap" block inserted between _device_.radio0 and radio0.radio.
+# Only differences from stock: noc_blocks.tap0, ep6 (tap event stream), the radio0 io_port path,
+# tap0 clock/time connections.
+schema: rfnoc_imagebuilder_args
+copyright: >-
+  Copyright 2023 Ettus Research, a National Instruments Brand
+license: >-
+  SPDX-License-Identifier: LGPL-3.0-or-later
+version: '1.0'
+chdr_width: 64
+device: 'x310'
+image_core_name: 'usrp_x310_fpga_XG_tap'
+default_target: 'X310_XG'
+
+stream_endpoints:
+  ep0: { ctrl: True,  data: True, buff_size: 65536 }
+  ep1: { ctrl: False, data: True, buff_size: 0 }
+  ep2: { ctrl: False, data: True, buff_size: 65536 }
+  ep3: { ctrl: False, data: True, buff_size: 0 }
+  ep4: { ctrl: False, data: True, buff_size: 4096 }
+  ep5: { ctrl: False, data: True, buff_size: 4096 }
+  ep6: { ctrl: False, data: True, buff_size: 0 }     # tap0 event records -> host
+
+noc_blocks:
+  duc0:  { block_desc: 'duc.yml',   parameters: { NUM_PORTS: 1 } }
+  ddc0:  { block_desc: 'ddc.yml',   parameters: { NUM_PORTS: 2 } }
+  radio0:
+    block_desc: 'radio.yml'
+    parameters: { NUM_PORTS: 2, EN_COMP_GAIN_TX: 1, EN_COMP_GAIN_RX: 1 }
+  duc1:  { block_desc: 'duc.yml',   parameters: { NUM_PORTS: 1 } }
+  ddc1:  { block_desc: 'ddc.yml',   parameters: { NUM_PORTS: 2 } }
+  radio1:
+    block_desc: 'radio.yml'
+    parameters: { NUM_PORTS: 2, EN_COMP_GAIN_TX: 1, EN_COMP_GAIN_RX: 1 }
+  replay0:
+    block_desc: 'replay.yml'
+    parameters: { NUM_PORTS: 2, MEM_DATA_W: 64, MEM_ADDR_W: 30 }
+    priority: 99
+  tap0:
+    block_desc: 'tap.yml'
+    parameters: { NUM_PORTS: 2, NIPC: 1 }
+
+connections:
+  # RF A TX
+  - { srcblk: ep0,    srcport: out0,  dstblk: duc0,   dstport: in_0 }
+  - { srcblk: duc0,   srcport: out_0, dstblk: radio0, dstport: in_0 }
+  - { srcblk: _device_,  srcport: _none_, dstblk: radio0, dstport: in_1 }
+  # RF A RX
+  - { srcblk: radio0, srcport: out_0, dstblk: ddc0,   dstport: in_0 }
+  - { srcblk: ddc0,   srcport: out_0, dstblk: ep0,    dstport: in0  }
+  - { srcblk: radio0, srcport: out_1, dstblk: ddc0,   dstport: in_1 }
+  - { srcblk: ddc0,   srcport: out_1, dstblk: ep1,    dstport: in0  }
+  # RF B TX
+  - { srcblk: ep2,    srcport: out0,  dstblk: duc1,   dstport: in_0 }
+  - { srcblk: duc1,   srcport: out_0, dstblk: radio1, dstport: in_0 }
+  - { srcblk: _device_,  srcport: _none_, dstblk: radio1, dstport: in_1 }
+  # RF B RX
+  - { srcblk: radio1, srcport: out_0, dstblk: ddc1,   dstport: in_0 }
+  - { srcblk: ddc1,   srcport: out_0, dstblk: ep2,    dstport: in0  }
+  - { srcblk: radio1, srcport: out_1, dstblk: ddc1,   dstport: in_1 }
+  - { srcblk: ddc1,   srcport: out_1, dstblk: ep3,    dstport: in0  }
+  # Replay
+  - { srcblk: ep4,     srcport: out0,  dstblk: replay0, dstport: in_0 }
+  - { srcblk: replay0, srcport: out_0, dstblk: ep4,     dstport: in0  }
+  - { srcblk: ep5,     srcport: out0,  dstblk: replay0, dstport: in_1 }
+  - { srcblk: replay0, srcport: out_1, dstblk: ep5,     dstport: in0  }
+  # tap0 event stream
+  - { srcblk: tap0,    srcport: evt,   dstblk: ep6,     dstport: in0  }
+  # BSP connections
+  - { srcblk: radio0,   srcport: ctrlport,  dstblk: _device_, dstport: ctrlport_radio0 }
+  - { srcblk: radio1,   srcport: ctrlport,  dstblk: _device_, dstport: ctrlport_radio1 }
+  # --- the tap (PLAN D-S5-TAP): device radio0 -> tap0 -> radio0 ---
+  - { srcblk: _device_, srcport: radio0,    dstblk: tap0,     dstport: radio_in  }
+  - { srcblk: tap0,     srcport: radio_out, dstblk: radio0,   dstport: radio     }
+  # ---
+  - { srcblk: _device_, srcport: radio1,    dstblk: radio1,   dstport: radio     }
+  - { srcblk: _device_, srcport: time,      dstblk: radio0,   dstport: time      }
+  - { srcblk: _device_, srcport: time,      dstblk: radio1,   dstport: time      }
+  - { srcblk: _device_, srcport: time,      dstblk: tap0,     dstport: time      }
+  - { srcblk: replay0,  srcport: axi_ram,   dstblk: _device_, dstport: dram      }
+  - { srcblk: _device_, srcport: _none_,    dstblk: _device_, dstport: fp_gpio   }
+
+clk_domains:
+  - { srcblk: _device_, srcport: radio, dstblk: radio0,  dstport: radio }
+  - { srcblk: _device_, srcport: ce,    dstblk: ddc0,    dstport: ce    }
+  - { srcblk: _device_, srcport: ce,    dstblk: duc0,    dstport: ce    }
+  - { srcblk: _device_, srcport: radio, dstblk: radio1,  dstport: radio }
+  - { srcblk: _device_, srcport: ce,    dstblk: ddc1,    dstport: ce    }
+  - { srcblk: _device_, srcport: ce,    dstblk: duc1,    dstport: ce    }
+  - { srcblk: _device_, srcport: dram,  dstblk: replay0, dstport: mem   }
+  - { srcblk: _device_, srcport: radio, dstblk: tap0,    dstport: radio }

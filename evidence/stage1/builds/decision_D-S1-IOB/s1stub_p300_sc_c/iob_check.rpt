@@ -1,0 +1,9 @@
+IOB packing check 2026-10-20T05:43:51 (2024.2, xczu9eg-ffvb1156-2-i)
+pin_b out want=opff_l PASS cell=u_harness/opff_l_reg bel=HDIOLOGIC_S.OPFF site=HDIOLOGIC_S_X0Y23 clk=clk_ps
+pin_b in want=ipff_b FAIL: 0 sequential cells adjacent ()
+pin_c out want=opff_c PASS cell=u_harness/opff_c_reg bel=HDIOLOGIC_S.OPFF site=HDIOLOGIC_S_X0Y19 clk=clk_net
+pin_c in want=ipff_d FAIL: 0 sequential cells adjacent ()
+class_o[0] out want=class PASS cell=u_harness/class_q_reg[0] bel=HDIOLOGIC_S.OPFF site=HDIOLOGIC_S_X0Y17 clk=clk_net
+class_o[1] out want=class PASS cell=u_harness/class_q_reg[1] bel=HDIOLOGIC_M.OPFF site=HDIOLOGIC_M_X0Y17 clk=clk_net
+class_o[2] out want=class PASS cell=u_harness/class_q_reg[2] bel=HDIOLOGIC_S.OPFF site=HDIOLOGIC_S_X0Y15 clk=clk_net
+IOB_CHECK FAIL

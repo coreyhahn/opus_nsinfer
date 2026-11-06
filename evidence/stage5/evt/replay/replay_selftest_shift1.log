@@ -1,0 +1,9 @@
+NEGATIVE CONTROL: replay tap time shifted by 1 sample(s) against the silicon window
+REPLAY EVENT PACKETS 22 records 338 max/packet 16
+MISMATCH window misr: silicon 0xc086b19f7a5f449b sim 0xa2134a23b8bfa3bc
+MISMATCH window count: silicon 0xffc1 sim 0xffc0
+MISMATCH window hist: silicon [17206, 21033, 10219, 17015] sim [17206, 21033, 10218, 17015]
+MISMATCH window tfirst: silicon 0x100003072 sim 0x100003073
+MISMATCH no common event between silicon and replay
+REPLAY window count=65472 misr=0xa2134a23b8bfa3bc hist=[17206, 21033, 10218, 17015] events compared=0 errors=5 log=<repo>/.scratch/nsclf_replay/selftest_shift1/replay.log
+FAIL

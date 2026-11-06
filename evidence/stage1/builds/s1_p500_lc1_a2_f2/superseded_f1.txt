@@ -1,0 +1,1 @@
+timing fails (WNS -0.111, t_vec -> BRAM enables); superseded by s1_p500_lc1_a2_f2 (T_VEC multicycle)

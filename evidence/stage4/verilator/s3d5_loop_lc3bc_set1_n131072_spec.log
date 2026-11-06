@@ -1,0 +1,66 @@
+# host=build-host date=2026-10-29T06:50:08-06:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# core=lc3bc_set1 (<repo>/rtl/gen/qec_d5_lc3bc/src/static/binop.v <repo>/rtl/gen/qec_d5_lc3bc/src/static/lookup_table.v <repo>/rtl/gen/qec_d5_lc3bc/src/static/multiplier.v <repo>/rtl/gen/qec_d5_lc3bc/src/static/mux.v <repo>/rtl/gen/qec_d5_lc3bc/src/static/negative.v <repo>/rtl/gen/qec_d5_lc3bc/src/static/shift_adder.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage0.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage10.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage11.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage12.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage1.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage2.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage3.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage4.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage5.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage6.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage7.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage8.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5_stage9.v <repo>/rtl/gen/qec_d5_lc3bc/src/qec_d5.v <repo>/rtl/d5/qec_d5_top.sv) rtl_sha256=fa924e85d2f8388541d7cc3d0d22d2b20fb2143045e12d0bf52c506779a1f2f5 tb_sha256=9d004ba2431b05c25e51272d3d13a0a4aa0bef07b4ee9c7de611edbef806a789
+# in_hex_sha256=90973feea4b14f5932c1a80da3f5f6029a49743223658447fae24ef3768ba643 dec_hex_sha256=a516ea9b86848c1dd35bff88dd093ddd09ac003157f07aa6843fcc6fddb0a0e2 shot_mem_sha256=3e1141822c25079418e108118d0aa037902f4c821fc9db3ab94566ed22a46b99 (<repo>/.scratch/s3d5_shots_lc3bc_set1_n131072.hex, tb/s3_make_mem.py --d 5)
+# N_DET=120 DW=192 NVEC=131072 DEC_LAT=19 OUT_W=22 LINK_CYC=40 CC_PERIOD=1000 TIMEOUT=100000 TA_NS=6.206 TB_NS=6.207 clocks=spec
+CONFIG id=53330001 NVEC=131072 DEC_LAT=19 LINK_CYC=40 CC_PERIOD=1000 TIMEOUT=100000 TA_NS=6.2060 TB_NS=6.2070 (B/A-1 = 161.1 ppm) corrupt_seq=65553
+PATHS side B: RX register -> FIFO write = 20 edges (decode), 1 edge (echo); framing = 2 edges (RX register + FIFO entry)
+HIST dec_gap0 lat=103 n=1103
+HIST dec_gap0 lat=104 n=4027
+HIST dec_gap0 lat=105 n=6070
+HIST dec_gap0 lat=106 n=6200
+HIST dec_gap0 lat=107 n=6370
+HIST dec_gap0 lat=108 n=6236
+HIST dec_gap0 lat=109 n=6093
+HIST dec_gap0 lat=110 n=6100
+HIST dec_gap0 lat=111 n=6200
+HIST dec_gap0 lat=112 n=6400
+HIST dec_gap0 lat=113 n=6206
+HIST dec_gap0 lat=114 n=6063
+HIST dec_gap0 lat=115 n=6130
+HIST dec_gap0 lat=116 n=24385
+HIST dec_gap0 lat=117 n=29727
+HIST dec_gap0 lat=118 n=3754
+RESULT case=dec_gap0 mode=decode gap=0 nvec=131072 sent=131072 rx=131064 good=131064 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=103 lat_max=118 lat_mean=112.6876 expect=[102,131] b_rx=131072 b_tx=131064 b_dec=20..20/131072 b_echo=65535..0/0 b_fifo_max=16 b_ovf=8 b_collide=0 timeout=1 sig=6e9d9bfd sig_link=6e9d9bfd sig_exp=149e1a8e
+NOTE dec_gap0: GAP=0 with clk_a faster than clk_b, expected B FIFO backlog 21.1 words: overflow path checked
+LINKQ dec_gap0 a->b q_max=42 b->a q_max=42
+HIST dec_gap7 lat=103 n=129628
+HIST dec_gap7 lat=104 n=1443
+HIST dec_gap7 lat=105 n=1
+RESULT case=dec_gap7 mode=decode gap=7 nvec=131072 sent=131072 rx=131072 good=131072 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=103 lat_max=105 lat_mean=103.0110 expect=[102,105] b_rx=131072 b_tx=131072 b_dec=20..20/131072 b_echo=65535..0/0 b_fifo_max=1 b_ovf=0 b_collide=0 timeout=0 sig=149e1a8e sig_link=149e1a8e sig_exp=149e1a8e
+FLAGS dec_gap7 hierarchical=131072/131072 axi_reads=3000 ok
+LINKQ dec_gap7 a->b q_max=6 b->a q_max=6
+HIST echo_gap7 lat=84 n=130025
+HIST echo_gap7 lat=85 n=1046
+HIST echo_gap7 lat=86 n=1
+RESULT case=echo_gap7 mode=  echo gap=7 nvec=131072 sent=131072 rx=131072 good=131072 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=84 lat_max=86 lat_mean=84.0080 expect=[83,86] b_rx=131072 b_tx=131072 b_dec=65535..0/0 b_echo=1..1/131072 b_fifo_max=1 b_ovf=0 b_collide=0 timeout=0 sig=ebffc69c sig_link=ebffc69c sig_exp=ebffc69c
+FLAGS echo_gap7 hierarchical=131072/131072 axi_reads=3000 ok
+LINKQ echo_gap7 a->b q_max=6 b->a q_max=6
+HIST echo_gap0 lat=84 n=2269
+HIST echo_gap0 lat=85 n=6020
+HIST echo_gap0 lat=86 n=6157
+HIST echo_gap0 lat=87 n=6239
+HIST echo_gap0 lat=88 n=6203
+HIST echo_gap0 lat=89 n=6200
+HIST echo_gap0 lat=90 n=6200
+HIST echo_gap0 lat=91 n=6154
+HIST echo_gap0 lat=92 n=6245
+HIST echo_gap0 lat=93 n=6200
+HIST echo_gap0 lat=94 n=6200
+HIST echo_gap0 lat=95 n=6200
+HIST echo_gap0 lat=96 n=6154
+HIST echo_gap0 lat=97 n=40977
+HIST echo_gap0 lat=98 n=13186
+HIST echo_gap0 lat=99 n=460
+RESULT case=echo_gap0 mode=  echo gap=0 nvec=131072 sent=131072 rx=131064 good=131064 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=84 lat_max=99 lat_mean=93.2104 expect=[83,112] b_rx=131072 b_tx=131064 b_dec=65535..0/0 b_echo=1..1/131072 b_fifo_max=16 b_ovf=8 b_collide=0 timeout=1 sig=eba731eb sig_link=eba731eb sig_exp=ebffc69c
+NOTE echo_gap0: GAP=0 with clk_a faster than clk_b, expected B FIFO backlog 21.1 words: overflow path checked
+LINKQ echo_gap0 a->b q_max=42 b->a q_max=42
+HIST corrupt_gap1 lat=103 n=129633
+HIST corrupt_gap1 lat=104 n=1437
+HIST corrupt_gap1 lat=105 n=2
+RESULT case=corrupt_gap1 mode=decode gap=1 nvec=131072 sent=131072 rx=131072 good=131072 mism=1 first_mis=1/65553 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=103 lat_max=105 lat_mean=103.0110 expect=[102,105] b_rx=131072 b_tx=131072 b_dec=20..20/131072 b_echo=65535..0/0 b_fifo_max=2 b_ovf=0 b_collide=0 timeout=0 sig=3f9516b8 sig_link=3f9516b8 sig_exp=3f9516b8
+FLAGS corrupt_gap1 hierarchical=131072/131072 axi_reads=3000 ok
+LINKQ corrupt_gap1 a->b q_max=22 b->a q_max=22
+CONFIG N_DET=120 DW=192
+RESULT s3_loop nvec=131072 dec_lat=19 link_cyc=40 ta_ns=6.2060 tb_ns=6.2070 gap7 decode=103..105 mean 103.0110 echo=84..86 mean 84.0080 decode_minus_echo min=19 max=19 mean=19.0030 fails=0
+PASS
+- tb_s3_loop.sv:361: Verilog $finish

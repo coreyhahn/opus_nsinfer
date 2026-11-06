@@ -1,0 +1,7 @@
+CAPTURE evt_s101: 4210688 samples, T=116773847 tap0=116773841 (offset 6, extra 0) K=16 window t_start=116773904 n=4210625 silicon misr=0x1a82a71523d79b7d count=4210625 hist=[3563051, 439531, 166190, 41853] status={'armed': 0, 'active': 1, 'done': 1, 'late': 0, 'raw': 6} errors=[] tx={'seed': 101, 'n_tx': 4194304, 'amp': 0.05, 'att_db': 30.0, 'gap_us': [50.0, 200.0], 'n_pulses': 161}
+TB # host=build-host date=2026-11-03T06:19:55-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1) replay stim=<repo>/.scratch/nsclf_replay/evt_s101 T0=6f5d3d1 K=16
+TB RESULT seed=0 chan=0 K=16 ready=0 samples=4210688 decisions=4210625/4210625 mismatches=0 tau_mismatches=0 latency_mismatches=0 passthrough_mismatches=0 windows=1/1 events_received=502 axis_errors=0 reg_errors=0 cycles=4211433
+SILICON EVENTS received=581 seq 20678..21258 seq gaps=0 nonzero drop fields=0 EVT_SEQ=21259 EVT_DROP=0 host ts!=word0 count=10
+DUMP decisions=4210625 tau0=116773904 misr(recomputed from dump)=0x1a82a71523d79b7d count=4210625 hist=[3563051, 439531, 166190, 41853] -> EQUALS the silicon read-back; saved <repo>/.scratch/nsclf_replay/evt_s101/decisions.npz
+REPLAY window count=4210625 misr=0x1a82a71523d79b7d hist=[3563051, 439531, 166190, 41853] events compared=502 errors=0 log=<repo>/.scratch/nsclf_replay/evt_s101/replay.log
+PASS

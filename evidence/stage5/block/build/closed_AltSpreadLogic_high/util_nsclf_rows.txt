@@ -1,0 +1,6 @@
+| b_nsclf0_6 | rfnoc_block_nsclf | 24748 | 24374 | 270 | 104 | 21914 | 1 | 0 | 0 |
+| noc_shell_nsclf_i | noc_shell_nsclf | 1362 | 1176 | 150 | 36 | 2155 | 1 | 0 | 0 |
+| nsclf_user_i | nsclf_user | 23386 | 23198 | 120 | 68 | 19759 | 0 | 0 | 0 |
+| u_core | nsclf_core | 23386 | 23198 | 120 | 68 | 19759 | 0 | 0 | 0 |
+| u_stream | x310_stream | 22591 | 22587 | 0 | 4 | 18408 | 0 | 0 | 0 |
+| u_clf | x310_clf_top | 22582 | 22578 | 0 | 4 | 16352 | 0 | 0 | 0 |

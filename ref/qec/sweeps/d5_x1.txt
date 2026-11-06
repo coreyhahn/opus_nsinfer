@@ -1,0 +1,6 @@
+# d = 5 HGQ diagnosis (2026-10-24): HGQ loss 0.0105 vs float 0.0016 even at beta ~1e-11 (d5_h2).
+# Short identical schedules (12 epochs x 500 steps), beta fixed 1e-12: which quantizer costs the loss?
+x_d5_float      --d 5 --mode float --arch 256 256 256 --epochs 12 --steps-per-epoch 500 --batch 8192 --lr 2e-3
+x_d5_hgq_base   --d 5 --mode hgq --arch 256 256 256 --epochs 12 --steps-per-epoch 500 --batch 8192 --lr 2e-3 --beta-start 1e-12 --beta-end 1e-12 --input-f 6
+x_d5_hgq_sat    --d 5 --mode hgq --arch 256 256 256 --epochs 12 --steps-per-epoch 500 --batch 8192 --lr 2e-3 --beta-start 1e-12 --beta-end 1e-12 --input-f 6 --dl-overflow SAT
+x_d5_hgq_wb12   --d 5 --mode hgq --arch 256 256 256 --epochs 12 --steps-per-epoch 500 --batch 8192 --lr 2e-3 --beta-start 1e-12 --beta-end 1e-12 --input-f 6 --w-b0 12

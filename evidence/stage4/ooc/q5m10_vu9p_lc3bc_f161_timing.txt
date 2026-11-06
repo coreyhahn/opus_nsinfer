@@ -1,0 +1,72 @@
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -0.966    -2218.849                   6643                70280        0.050        0.000                      0                70280        2.828        0.000                       0                 70536  
+
+
+Timing constraints are not met.
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.966ns  (required time - arrival time)
+  Source:                 u_core/stage7_inp_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Destination:            u_core/stage8_inp_reg[4280]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.206ns  (clk rise@6.206ns - clk rise@0.000ns)
+  Data Path Delay:        7.152ns  (logic 0.628ns (8.780%)  route 6.524ns (91.220%))
+  Logic Levels:           6  (CARRY8=3 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 6.226 - 6.206 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=70535, unset)        0.029     0.029    clk
+    SLICE_X58Y256        FDSE                                         r  u_core/stage7_inp_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y256        FDSE (Prop_EFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  u_core/stage7_inp_reg[2]/Q
+                         net (fo=180, routed)         4.779     4.887    u_core/stage7_inp[2]
+    SLICE_X41Y133        LUT4 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.035     4.922 r  accum_carry_i_14__843/O
+                         net (fo=10, routed)          1.381     6.303    u_core/stage7/v608_0[3]
+    SLICE_X34Y219        LUT3 (Prop_C6LUT_SLICEL_I0_O)
+                                                      0.035     6.338 r  op_2703/accum_carry_i_21/O
+                         net (fo=1, routed)           0.010     6.348    op_2703/accum_carry_i_21_n_0
+    SLICE_X34Y219        CARRY8 (Prop_CARRY8_SLICEL_S[2]_O[7])
+                                                      0.198     6.546 r  accum_carry_i_1__3558/O[7]
+                         net (fo=2, routed)           0.293     6.839    accum_carry_i_1__3558_n_8
+    SLICE_X32Y220        LUT6 (Prop_H6LUT_SLICEL_I5_O)
+                                                      0.090     6.929 r  accum_carry_i_2__4501/O
+                         net (fo=1, routed)           0.010     6.939    accum_carry_i_2__4501_n_0
+    SLICE_X32Y220        CARRY8 (Prop_CARRY8_SLICEL_S[7]_CO[7])
+                                                      0.115     7.054 r  u_core/stage7/op_3528/accum_carry/CO[7]
+                         net (fo=1, routed)           0.026     7.080    u_core/stage7/op_3528/accum_carry_n_0
+    SLICE_X32Y221        CARRY8 (Prop_CARRY8_SLICEL_CI_O[1])
+--
+                         slack                                 -0.966    
+
+Slack (VIOLATED) :        -0.958ns  (required time - arrival time)
+  Source:                 u_core/stage7_inp_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Destination:            u_core/stage8_inp_reg[4281]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.206ns  (clk rise@6.206ns - clk rise@0.000ns)
+  Data Path Delay:        7.144ns  (logic 0.619ns (8.664%)  route 6.525ns (91.336%))

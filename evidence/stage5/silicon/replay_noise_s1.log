@@ -1,0 +1,6 @@
+CAPTURE noise_s1: 4210688 samples, T=108253648 tap0=108253642 (offset 6, extra 0) K=60000 window t_start=108253705 n=4210625 silicon misr=0x9c8b7ceff935b1b8 count=4210625 hist=[4204525, 3159, 1402, 1539] status={'armed': 0, 'active': 1, 'done': 1, 'late': 0, 'raw': 6} errors=[] tx=None
+TB # host=build-host date=2026-11-03T06:24:00-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1) replay stim=<repo>/.scratch/nsclf_replay/noise_s1 T0=673d1ca K=60000
+TB RESULT seed=0 chan=0 K=60000 ready=0 samples=4210688 decisions=4210625/4210625 mismatches=0 tau_mismatches=0 latency_mismatches=0 passthrough_mismatches=0 windows=1/1 events_received=0 axis_errors=0 reg_errors=0 cycles=4211433
+DUMP decisions=4210625 tau0=108253705 misr(recomputed from dump)=0x9c8b7ceff935b1b8 count=4210625 hist=[4204525, 3159, 1402, 1539] -> EQUALS the silicon read-back; saved <repo>/.scratch/nsclf_replay/noise_s1/decisions.npz
+REPLAY window count=4210625 misr=0x9c8b7ceff935b1b8 hist=[4204525, 3159, 1402, 1539] events compared=0 errors=0 log=<repo>/.scratch/nsclf_replay/noise_s1/replay.log
+PASS

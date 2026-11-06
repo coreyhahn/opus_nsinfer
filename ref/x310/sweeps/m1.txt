@@ -1,0 +1,6 @@
+# measured-channel retrain (PLAN.md D-S5-CH), W = 64 only (the nsclf block is built for W = 64); the chosen recipe
+# of the first set (hgq_w64_96_48_24_b2e5_e300) with two seeds, one stronger EBOPs penalty, and the float reference
+float_w64_128_64_32           --w 64 --mode float --arch 128 64 32 --epochs 100
+hgq_w64_96_48_24_b2e5_e300    --w 64 --mode hgq --arch 96 48 24 --epochs 300 --beta-end 2e-5
+hgq_w64_96_48_24_b2e5_e300_s2 --w 64 --mode hgq --arch 96 48 24 --epochs 300 --beta-end 2e-5 --seed 2
+hgq_w64_96_48_24_b3e5_e300    --w 64 --mode hgq --arch 96 48 24 --epochs 300 --beta-end 3e-5

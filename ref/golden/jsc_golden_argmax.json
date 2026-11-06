@@ -1,0 +1,16 @@
+{
+ "source": "ref/golden/jsc_golden.npz",
+ "source_sha256": "252853e8b3b17715aaabeaf1229a30e11688b13126e87e57a63b1a0329d5941a",
+ "rule": "np.argmax over logit values (first maximum wins)",
+ "n": 166000,
+ "accuracy": 0.7673614457831325,
+ "vectors_with_tied_maximum": 45,
+ "class_counts": [
+  35518,
+  39711,
+  33272,
+  30756,
+  26743
+ ],
+ "jsc_golden_argmax.hex_sha256": "493b9691ea42139eabb33adacc590ed928b3d6b2437334bda0682df661ed2fd1"
+}

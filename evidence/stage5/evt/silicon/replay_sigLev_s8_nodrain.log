@@ -1,0 +1,9 @@
+CAPTURE sigLev_s8: 4210688 samples, T=135481403 tap0=135481397 (offset 6, extra 0) K=16 window t_start=135481460 n=4210625 silicon misr=0xcf01035a5337178f count=4210625 hist=[1206796, 1253843, 657635, 1092351] status={'armed': 0, 'active': 1, 'done': 1, 'late': 0, 'raw': 6} errors=[] tx={'seed': 8, 'n_tx': 4194304, 'amp': 0.05, 'att_db': 30.0, 'gap_us': [0.2, 2.0], 'n_pulses': 5954}
+TB # host=build-host date=2026-11-03T20:09:54-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1) replay stim=<repo>/.scratch/nsclf_replay_evt/sigLev_s8 T0=8134835 K=16
+TB RESULT seed=0 chan=0 K=16 ready=0 flush=4096 samples=4210688 decisions=4210625/4210625 mismatches=0 tau_mismatches=0 latency_mismatches=0 passthrough_mismatches=0 windows=1/1 events_received=20082 packets=1283 axis_errors=0 framer_errors=0 reg_errors=0 cycles=4215638
+REPLAY EVENT PACKETS 1283 records 20082 max/packet 16
+SILICON EVENTS received=12544 seq 0..12543 seq gaps=0 nonzero drop fields=0 EVT_SEQ=22009 EVT_DROP=0 EVT_PKTS=1638 host ts!=word0 count=43
+DUMP decisions=4210625 tau0=135481460 misr(recomputed from dump)=0xcf01035a5337178f count=4210625 hist=[1206796, 1253843, 657635, 1092351] -> EQUALS the silicon read-back; saved <repo>/.scratch/nsclf_replay_evt/sigLev_s8/decisions.npz
+MISMATCH events after the first common one: silicon 11444 replay 20082
+REPLAY window count=4210625 misr=0xcf01035a5337178f hist=[1206796, 1253843, 657635, 1092351] events compared=11444 errors=1 log=<repo>/.scratch/nsclf_replay_evt/sigLev_s8/replay.log
+FAIL

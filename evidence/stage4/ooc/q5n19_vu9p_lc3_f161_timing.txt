@@ -1,0 +1,72 @@
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -11.733  -138568.594                  42720                95473        0.048        0.000                      0                95473        2.828        0.000                       0                 96663  
+
+
+Timing constraints are not met.
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -11.733ns  (required time - arrival time)
+  Source:                 u_core/stage3_inp_reg[1005]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Destination:            u_core/stage4_inp_reg[18257]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.206ns  (clk rise@6.206ns - clk rise@0.000ns)
+  Data Path Delay:        17.920ns  (logic 0.646ns (3.605%)  route 17.274ns (96.395%))
+  Logic Levels:           6  (CARRY8=2 LUT3=1 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 6.227 - 6.206 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=96662, unset)        0.030     0.030    clk
+    SLICE_X95Y468        FDRE                                         r  u_core/stage3_inp_reg[1005]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X95Y468        FDRE (Prop_EFF_SLICEM_C_Q)
+                                                      0.076     0.106 r  u_core/stage3_inp_reg[1005]/Q
+                         net (fo=126, routed)        10.339    10.445    u_core/stage3_inp[1005]
+    SLICE_X66Y428        LUT6 (Prop_H6LUT_SLICEM_I5_O)
+                                                      0.125    10.570 r  accum_carry_i_14__923/O
+                         net (fo=4, routed)           0.490    11.060    accum_carry_i_14__923_n_0
+    SLICE_X59Y429        LUT3 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.123    11.183 r  accum_carry_i_3__3996/O
+                         net (fo=24, routed)          5.349    16.532    u_core/stage3/v758_0[5]
+    SLICE_X70Y568        LUT5 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.090    16.622 r  accum_carry_i_17__613/O
+                         net (fo=6, routed)           1.029    17.652    accum_carry_i_17__613_n_0
+    SLICE_X108Y572       LUT4 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.039    17.691 r  op_5658/accum__0_carry_i_2/O
+--
+                         slack                                -11.733    
+
+Slack (VIOLATED) :        -11.725ns  (required time - arrival time)
+  Source:                 u_core/stage3_inp_reg[1005]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Destination:            u_core/stage4_inp_reg[18258]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.103ns period=6.206ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.206ns  (clk rise@6.206ns - clk rise@0.000ns)
+  Data Path Delay:        17.912ns  (logic 0.637ns (3.556%)  route 17.275ns (96.444%))
+  Logic Levels:           6  (CARRY8=2 LUT3=1 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 6.227 - 6.206 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns

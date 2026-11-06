@@ -1,0 +1,3 @@
+# 2026-10-30T01:46:52-06:00 host=desk-pc python3 sw/x310/nsclf_replay.py selftest
+REPLAY window count=65473 misr=0xb7761c4cde1360f3 hist=[21961, 20217, 8423, 14872] events compared=264 errors=0 log=<repo>/.scratch/nsclf_replay/selftest/replay.log
+PASS

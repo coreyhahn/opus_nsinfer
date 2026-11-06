@@ -1,0 +1,3 @@
+W=64 train: 800000 windows, 86 s, sha256 6eb28535b2892d1c
+W=64 val: 100000 windows, 11 s, sha256 37cb657abdafb18e
+W=64 test: 100000 windows, 11 s, sha256 27f0bf0a2ecc33b9

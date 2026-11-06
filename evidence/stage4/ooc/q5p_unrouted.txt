@@ -1,0 +1,24 @@
+== q5p_vu9p_lc2fo_f161 (synth max_fanout 32, lc2)
+| CLB LUTs*               | 299176 |     0 |          0 |   1182240 | 25.31 |
+| CLB Registers           | 218609 |     0 |          0 |   2364480 |  9.25 |
+CRITICAL WARNING: [Route 35-162] 39609 signals failed to route due to routing congestion. Please run report_route_status to get a full summary of the design's routing.
+ERROR: [Route 35-2] Design is not legally routed. There are 37452 node overlaps.
+== q5p_vu9p_lc8_f161_slr1_xto
+CRITICAL WARNING: [Route 35-162] 122325 signals failed to route due to routing congestion. Please run report_route_status to get a full summary of the design's routing.
+ERROR: [Route 35-2] Design is not legally routed. There are 237446 node overlaps.
+== q5p_vu9p_lc8_f161_fanout
+CRITICAL WARNING: [Route 35-162] 128159 signals failed to route due to routing congestion. Please run report_route_status to get a full summary of the design's routing.
+ERROR: [Route 35-2] Design is not legally routed. There are 251671 node overlaps.
+== q5p_vu9p_lc3_f161_rep (lc3 post_synth; place ExtraNetDelay_high; phys_opt -force_replication_on_nets on 3199 register-driven nets > 40 pins)
+rep: force-replicating 3199 register-driven nets
+CRITICAL WARNING: [Route 35-162] 111334 signals failed to route due to routing congestion. Please run report_route_status to get a full summary of the design's routing.
+ERROR: [Route 35-2] Design is not legally routed. There are 170521 node overlaps.
+== q5n17_vu9p_lc3_f161 (narrow 128x4, 1.71M EBOPs, lc3, default flow)
+| CLB LUTs*               | 249090 |     0 |          0 |   1182240 | 21.07 |
+| CLB Registers           | 111034 |     0 |          0 |   2364480 |  4.70 |
+CRITICAL WARNING: [Route 35-162] 90599 signals failed to route due to routing congestion. Please run report_route_status to get a full summary of the design's routing.
+ERROR: [Route 35-2] Design is not legally routed. There are 163892 node overlaps.
+== q5b_vu9p_lc3bc32_f161 (1.92M lc3, broadcast regs 0,3,8 with max_fanout 32)
+CRITICAL WARNING: [Route 35-162] 36590 signals failed to route due to routing congestion. Please run report_route_status to get a full summary of the design's routing.
+ERROR: [Route 35-2] Design is not legally routed. There are 39649 node overlaps.
+ERROR: [Common 17-39] 'route_design' failed due to earlier errors.

@@ -1,0 +1,92 @@
+Using FPGA directory <repo>/.scratch/uhd/fpga
+[debug] Include paths: <repo>/.scratch/s5_tap_probe/rfnoc-s5tap/rfnoc;<repo>/.scratch/pyuhd/share/uhd/rfnoc
+[debug] Looking for block descriptors in:
+[debug]     <repo>/.scratch/s5_tap_probe/rfnoc-s5tap/rfnoc/blocks
+[debug]     <repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks
+[debug] Adding file tap.yml (<repo>/.scratch/s5_tap_probe/rfnoc-s5tap/rfnoc/blocks).
+[debug] Adding file fft.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file duc.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file switchboard.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file ddc.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file license_check.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file fosphor.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file addsub.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file moving_avg.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file null_src_sink.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file window.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file keep_one_in_n.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file vector_iir.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file fir_filter.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file split_stream.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file logpwr.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file replay.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file axi_ram_fifo.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file siggen.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Adding file radio.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/blocks).
+[debug] Looking for module descriptors in:
+[debug]     <repo>/.scratch/s5_tap_probe/rfnoc-s5tap/rfnoc/modules
+[debug]     <repo>/.scratch/pyuhd/share/uhd/rfnoc/modules
+[debug] Adding file device_dna.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/modules).
+[debug] Looking for transport_adapter descriptors in:
+[debug]     <repo>/.scratch/s5_tap_probe/rfnoc-s5tap/rfnoc/transport_adapters
+[debug]     <repo>/.scratch/pyuhd/share/uhd/rfnoc/transport_adapters
+[debug] Adding file chdr_dma.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/transport_adapters).
+[debug] Adding file x4xx_eth.yml (<repo>/.scratch/pyuhd/share/uhd/rfnoc/transport_adapters).
+[debug] Looking for include descriptors in:
+[debug]     <repo>/.scratch/s5_tap_probe/rfnoc-s5tap/rfnoc/includes
+[debug]     <repo>/.scratch/pyuhd/share/uhd/rfnoc/includes
+[debug] Using io_signatures.yml from <repo>/.scratch/pyuhd/share/uhd/rfnoc/core.
+[debug] Loaded 11 IO signatures
+[debug] 	ctrlport [core]
+[debug] 	timekeeper [core]
+[debug] 	radio [core]
+[debug] 	axi4_mm [core]
+[debug] 	axis_chdr [core]
+[debug] 	pps [core]
+[debug] 	gpio [core]
+[debug] 	radio_state [core]
+[debug] 	device_dna [device_dna.yml]
+[debug] 	x4xx_qsfp [x4xx_eth.yml]
+[debug] 	license_enable [license_check.yml]
+[debug] Loading configuration <repo>/.scratch/s5_tap_probe/rfnoc-s5tap/icores/x310_XG_tap_rfnoc_image_core.yml...
+[debug] Configuration successful loaded.
+[debug] Validating against schema rfnoc_imagebuilder_args...
+[debug] Using schema file <repo>/.scratch/pyuhd/share/uhd/rfnoc/core/rfnoc_imagebuilder_args.json.
+[debug] Configuration successful validated.
+Selected device: x310
+[debug] Image core name: usrp_x310_fpga_XG_tap
+[debug] Using base directory: <repo>/.scratch/s5_tap_probe
+[debug] Using build artifacts directory: <repo>/.scratch/s5_tap_probe/build-usrp_x310_fpga_XG_tap
+Build artifacts directory already exists (contents will be overwritten).
+[debug] Using x310_bsp.yml from <repo>/.scratch/pyuhd/share/uhd/rfnoc/core.
+[debug] Populating config with default secure core.
+[debug] Block tap has no data inputs.
+[debug] Assigning clock index 11 to clock _device_.radio.
+[debug] Assigning clock index 12 to clock _device_.ce.
+[debug] Assigning clock index 13 to clock _device_.dram.
+[debug] Inferring clock connection: _device_:rfnoc_ctrl → device_dna:clk
+[debug] Generating edge table...
+[debug]   ep0-out0 (1,0) => duc0-in_0 (8,0)
+[debug]   duc0-out_0 (8,0) => radio0-in_0 (10,0)
+[debug]   radio0-out_0 (10,0) => ddc0-in_0 (9,0)
+[debug]   ddc0-out_0 (9,0) => ep0-in0 (1,0)
+[debug]   radio0-out_1 (10,1) => ddc0-in_1 (9,1)
+[debug]   ddc0-out_1 (9,1) => ep1-in0 (2,0)
+[debug]   ep2-out0 (3,0) => duc1-in_0 (11,0)
+[debug]   duc1-out_0 (11,0) => radio1-in_0 (13,0)
+[debug]   radio1-out_0 (13,0) => ddc1-in_0 (12,0)
+[debug]   ddc1-out_0 (12,0) => ep2-in0 (3,0)
+[debug]   radio1-out_1 (13,1) => ddc1-in_1 (12,1)
+[debug]   ddc1-out_1 (12,1) => ep3-in0 (4,0)
+[debug]   ep4-out0 (5,0) => replay0-in_0 (15,0)
+[debug]   replay0-out_0 (15,0) => ep4-in0 (5,0)
+[debug]   ep5-out0 (6,0) => replay0-in_1 (15,1)
+[debug]   replay0-out_1 (15,1) => ep5-in0 (6,0)
+[debug]   tap0-evt (14,0) => ep6-in0 (7,0)
+[debug] Running checks on the current configuration...
+[debug] Generating default crossbar routes...
+[debug] Writing output to <repo>/.scratch/s5_tap_probe/build-usrp_x310_fpga_XG_tap/rfnoc_image_core.sv
+[debug] Writing output to <repo>/.scratch/s5_tap_probe/build-usrp_x310_fpga_XG_tap/rfnoc_image_core.vh
+[debug] Writing output to <repo>/.scratch/s5_tap_probe/build-usrp_x310_fpga_XG_tap/Makefile.inc
+Skipping build (--generate-only option given)!
+Use the following command to manually build the image: make X310_XG BUILD_DIR=<repo>/.scratch/s5_tap_probe/build-usrp_x310_fpga_XG_tap IMAGE_CORE_NAME=usrp_x310_fpga_XG_tap RFNOC_OOT_MAKEFILE_SRCS=<repo>/.scratch/s5_tap_probe/rfnoc-s5tap/rfnoc/fpga/Makefile.srcs BUILD_OUTPUT_DIR=<repo>/.scratch/s5_tap_probe/build BUILD_IP_DIR=<repo>/.scratch/s5_tap_probe/build-ip

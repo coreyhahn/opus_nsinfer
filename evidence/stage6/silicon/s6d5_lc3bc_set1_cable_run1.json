@@ -1,0 +1,594 @@
+[
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "probe",
+  "probe": "cable_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 2455440,
+    "received": 2455440,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "22": 2455402,
+     "23": 38
+    },
+    "cycles": {
+     "min": 22,
+     "p50": 22,
+     "p90": 22,
+     "max": 23,
+     "mean": 22.000015475841398
+    },
+    "ns": {
+     "min": 136.53333333333333,
+     "p50": 136.53333333333333,
+     "p90": 136.53333333333333,
+     "max": 142.73939393939395,
+     "mean": 136.53342937734297
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 2455440,
+    "received": 2455440,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "20": 2455388,
+     "22": 52
+    },
+    "cycles": {
+     "min": 20,
+     "p50": 20,
+     "p90": 20,
+     "max": 22,
+     "mean": 20.00004235493435
+    },
+    "ns": {
+     "min": 124.12121212121212,
+     "p50": 124.12121212121212,
+     "p90": 124.12121212121212,
+     "max": 136.53333333333333,
+     "mean": 124.12147497850167
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "probe",
+  "probe": "cable_p63_b32",
+  "period": 63,
+  "hbase": 32,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 2456083,
+    "received": 2456083,
+    "bad": 0,
+    "hist_complete": false,
+    "hist": {},
+    "cycles": {
+     "min": 22,
+     "p50": null,
+     "p90": null,
+     "max": 23,
+     "mean": 22.00001669324693
+    },
+    "ns": {
+     "min": 136.53333333333333,
+     "p50": null,
+     "p90": null,
+     "max": 142.73939393939395,
+     "mean": 136.5334369326355
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 2456083,
+    "received": 2456083,
+    "bad": 0,
+    "hist_complete": false,
+    "hist": {},
+    "cycles": {
+     "min": 20,
+     "p50": null,
+     "p90": null,
+     "max": 22,
+     "mean": 20.000044786760057
+    },
+    "ns": {
+     "min": 124.12121212121212,
+     "p50": null,
+     "p90": null,
+     "max": 136.53333333333333,
+     "mean": 124.12149007055939
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "probe",
+  "probe": "cable_p0_b0",
+  "period": 0,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 80956022,
+    "received": 80956022,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "22": 20239000,
+     "23": 55657269,
+     "24": 5059753
+    },
+    "cycles": {
+     "min": 22,
+     "p50": 23,
+     "p90": 23,
+     "max": 24,
+     "mean": 22.812500088010747
+    },
+    "ns": {
+     "min": 136.53333333333333,
+     "p50": 142.73939393939395,
+     "p90": 142.73939393939395,
+     "max": 148.94545454545454,
+     "mean": 141.57575812195762
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 80956022,
+    "received": 80956022,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "20": 2529875,
+     "22": 78426147
+    },
+    "cycles": {
+     "min": 20,
+     "p50": 22,
+     "p90": 22,
+     "max": 22,
+     "mean": 21.93750001698453
+    },
+    "ns": {
+     "min": 124.12121212121212,
+     "p50": 136.53333333333333,
+     "p90": 136.53333333333333,
+     "max": 136.53333333333333,
+     "mean": 136.14545465086155
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "run",
+  "run": "echo_gap63",
+  "mode": "echo",
+  "gap": 63,
+  "nvec": 131072,
+  "n_good": 131072,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "ebffc69c",
+  "sim_signature": "ebffc69c",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 46,
+   "p50": 47,
+   "p90": 47,
+   "p99": 48,
+   "max": 48,
+   "mean": 46.757568359375
+  },
+  "loop_ns": {
+   "min": 285.4787878787879,
+   "p50": 291.6848484848485,
+   "p90": 291.6848484848485,
+   "p99": 297.8909090909091,
+   "max": 297.8909090909091,
+   "mean": 290.18030303030304
+  },
+  "b_decode_path_cycles": [
+   0,
+   65535
+  ],
+  "link": 2131522419,
+  "hist": {
+   "46": 39720,
+   "47": 83408,
+   "48": 7944
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "run",
+  "run": "decode_gap63",
+  "mode": "decode",
+  "gap": 63,
+  "nvec": 131072,
+  "n_good": 131072,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "149e1a8e",
+  "sim_signature": "149e1a8e",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 65,
+   "p50": 66,
+   "p90": 66,
+   "p99": 67,
+   "max": 67,
+   "mean": 65.81817626953125
+  },
+  "loop_ns": {
+   "min": 403.3939393939394,
+   "p50": 409.6,
+   "p90": 409.6,
+   "p99": 415.8060606060606,
+   "max": 415.8060606060606,
+   "mean": 408.47159090909093
+  },
+  "b_decode_path_cycles": [
+   20,
+   20
+  ],
+  "link": 2131522419,
+  "hist": {
+   "65": 35748,
+   "66": 83408,
+   "67": 11916
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "run",
+  "run": "decode_gap7",
+  "mode": "decode",
+  "gap": 7,
+  "nvec": 131072,
+  "n_good": 131072,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "149e1a8e",
+  "sim_signature": "149e1a8e",
+  "flips_checked": 8192,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 64,
+   "p50": 66,
+   "p90": 66,
+   "p99": 67,
+   "max": 67,
+   "mean": 65.72726440429688
+  },
+  "loop_ns": {
+   "min": 397.1878787878788,
+   "p50": 409.6,
+   "p90": 409.6,
+   "p99": 415.8060606060606,
+   "max": 415.8060606060606,
+   "mean": 407.90738636363636
+  },
+  "b_decode_path_cycles": [
+   20,
+   20
+  ],
+  "link": 2131522419,
+  "hist": {
+   "64": 3972,
+   "65": 35748,
+   "66": 83408,
+   "67": 7944
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "probe",
+  "probe": "pmaloop_a_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pma_loopback": {
+    "sent": 2455728,
+    "received": 2455728,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "19": 2455726,
+     "20": 2
+    },
+    "cycles": {
+     "min": 19,
+     "p50": 19,
+     "p90": 19,
+     "max": 20,
+     "mean": 19.000000814422446
+    },
+    "ns": {
+     "min": 117.91515151515152,
+     "p50": 117.91515151515152,
+     "p90": 117.91515151515152,
+     "max": 124.12121212121212,
+     "mean": 117.91515656950658
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "probe",
+  "probe": "pmaloop_a_p0_b0",
+  "period": 0,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pma_loopback": {
+    "sent": 79059330,
+    "received": 79059330,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "19": 24706040,
+     "20": 9882416,
+     "21": 44470874
+    },
+    "cycles": {
+     "min": 19,
+     "p50": 21,
+     "p90": 21,
+     "max": 21,
+     "mean": 20.250000018973093
+    },
+    "ns": {
+     "min": 117.91515151515152,
+     "p50": 130.3272727272727,
+     "p90": 130.3272727272727,
+     "max": 130.3272727272727,
+     "mean": 125.67272739047544
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "probe",
+  "probe": "pcsloop_a_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pcs_loopback": {
+    "sent": 2454439,
+    "received": 2454439,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "18": 2454439
+    },
+    "cycles": {
+     "min": 18,
+     "p50": 18,
+     "p90": 18,
+     "max": 18,
+     "mean": 18.0
+    },
+    "ns": {
+     "min": 111.7090909090909,
+     "p50": 111.7090909090909,
+     "p90": 111.7090909090909,
+     "max": 111.7090909090909,
+     "mean": 111.7090909090909
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6d5_lc3bc_set1_cable_run1.log",
+  "kind": "probe",
+  "probe": "pcsloop_a_p0_b0",
+  "period": 0,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pcs_loopback": {
+    "sent": 78581861,
+    "received": 78581861,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "18": 78581861
+    },
+    "cycles": {
+     "min": 18,
+     "p50": 18,
+     "p90": 18,
+     "max": 18,
+     "mean": 18.0
+    },
+    "ns": {
+     "min": 111.7090909090909,
+     "p50": 111.7090909090909,
+     "p90": 111.7090909090909,
+     "max": 111.7090909090909,
+     "mean": 111.7090909090909
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0
+  },
+  "pass": true
+ }
+]

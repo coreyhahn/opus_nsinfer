@@ -1,0 +1,238 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 07:36:30 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -to [get_ports {pin_b pin_c {class_o[*]}}] -max_paths 6 -delay_type min -file <repo>/synth/out_s1_p200_lc5_f1/timing_to_pads_min.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 u_harness/opff_c_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@2.500ns period=4.999ns})
+  Destination:            pin_c
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.529ns  (logic 1.324ns (86.593%)  route 0.205ns (13.407%))
+  Logic Levels:           1  (OBUFT=1)
+  Clock Uncertainty:      0.129ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.088ns
+    Phase Error              (PE):    0.078ns
+  Clock Net Delay (Source):      1.260ns (routing 0.554ns, distribution 0.706ns)
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk0_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    u_ibufds/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.203     0.571    clk_in
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.235    -1.664 r  u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.146    -1.518    clk0_o
+    BUFGCE_X0Y23         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017    -1.501 r  u_bufg_net/O
+    X1Y1 (CLOCK_ROOT)    net (fo=5216, routed)        1.260    -0.241    u_harness/clk_net
+    SLICE_X85Y218        FDRE                                         r  u_harness/opff_c_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X85Y218        FDRE (Prop_AFF_SLICEM_C_Q)
+                                                      0.038    -0.203 r  u_harness/opff_c_reg/Q
+                         net (fo=1, routed)           0.205     0.002    u_iob_c/I
+    D20                  OBUFT (Prop_OUTBUF_HDIOB_S_I_O)
+                                                      1.286     1.288 r  u_iob_c/OBUFT/O
+                         net (fo=1, unset)            0.000     1.288    pin_c
+    D20                                                               r  pin_c (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_harness/opff_l_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk1_o  {rise@0.000ns fall@2.500ns period=4.999ns})
+  Destination:            pin_b
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.548ns  (logic 1.343ns (86.756%)  route 0.205ns (13.244%))
+  Logic Levels:           1  (OBUFT=1)
+  Clock Uncertainty:      0.129ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.088ns
+    Phase Error              (PE):    0.078ns
+  Clock Net Delay (Source):      1.243ns (routing 0.603ns, distribution 0.640ns)
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk1_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    u_ibufds/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.203     0.571    clk_in
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT1)
+                                                     -2.235    -1.664 r  u_mmcm/CLKOUT1
+                         net (fo=1, routed)           0.149    -1.515    clk1_o
+    BUFGCE_X0Y11         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017    -1.498 r  u_bufg_ps/O
+    X2Y2 (CLOCK_ROOT)    net (fo=107, routed)         1.243    -0.255    u_harness/CLK
+    SLICE_X85Y238        FDRE                                         r  u_harness/opff_l_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X85Y238        FDRE (Prop_AFF_SLICEM_C_Q)
+                                                      0.038    -0.217 r  u_harness/opff_l_reg/Q
+                         net (fo=1, routed)           0.205    -0.012    u_iob_b/I
+    A20                  OBUFT (Prop_OUTBUF_HDIOB_S_I_O)
+                                                      1.305     1.292 r  u_iob_b/OBUFT/O
+                         net (fo=1, unset)            0.000     1.292    pin_b
+    A20                                                               r  pin_b (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_harness/class_q_reg[1]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@2.500ns period=4.999ns})
+  Destination:            class_o[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.168ns  (logic 1.313ns (60.559%)  route 0.855ns (39.441%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.129ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.088ns
+    Phase Error              (PE):    0.078ns
+  Clock Net Delay (Source):      1.150ns (routing 0.554ns, distribution 0.596ns)
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk0_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    u_ibufds/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.203     0.571    clk_in
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.235    -1.664 r  u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.146    -1.518    clk0_o
+    BUFGCE_X0Y23         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017    -1.501 r  u_bufg_net/O
+    X1Y1 (CLOCK_ROOT)    net (fo=5216, routed)        1.150    -0.351    u_harness/clk_net
+    SLICE_X72Y92         FDRE                                         r  u_harness/class_q_reg[1]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X72Y92         FDRE (Prop_GFF2_SLICEL_C_Q)
+                                                      0.040    -0.311 r  u_harness/class_q_reg[1]_lopt_replica/Q
+                         net (fo=1, routed)           0.855     0.544    lopt_1
+    G20                  OBUF (Prop_OUTBUF_HDIOB_M_I_O)
+                                                      1.273     1.816 r  g_class[1].u_obuf/O
+                         net (fo=0)                   0.000     1.816    class_o[1]
+    G20                                                               r  class_o[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_harness/class_q_reg[2]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@2.500ns period=4.999ns})
+  Destination:            class_o[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.206ns  (logic 1.301ns (58.975%)  route 0.905ns (41.025%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.129ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.088ns
+    Phase Error              (PE):    0.078ns
+  Clock Net Delay (Source):      1.150ns (routing 0.554ns, distribution 0.596ns)
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk0_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    u_ibufds/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.203     0.571    clk_in
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.235    -1.664 r  u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.146    -1.518    clk0_o
+    BUFGCE_X0Y23         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017    -1.501 r  u_bufg_net/O
+    X1Y1 (CLOCK_ROOT)    net (fo=5216, routed)        1.150    -0.352    u_harness/clk_net
+    SLICE_X71Y91         FDRE                                         r  u_harness/class_q_reg[2]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X71Y91         FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.039    -0.313 r  u_harness/class_q_reg[2]_lopt_replica/Q
+                         net (fo=1, routed)           0.905     0.592    lopt_2
+    J20                  OBUF (Prop_OUTBUF_HDIOB_S_I_O)
+                                                      1.262     1.854 r  g_class[2].u_obuf/O
+                         net (fo=0)                   0.000     1.854    class_o[2]
+    J20                                                               r  class_o[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_harness/class_q_reg[0]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@2.500ns period=4.999ns})
+  Destination:            class_o[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.330ns  (logic 1.313ns (56.346%)  route 1.017ns (43.654%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.129ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.088ns
+    Phase Error              (PE):    0.078ns
+  Clock Net Delay (Source):      1.150ns (routing 0.554ns, distribution 0.596ns)
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk0_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    u_ibufds/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.203     0.571    clk_in
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.235    -1.664 r  u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.146    -1.518    clk0_o
+    BUFGCE_X0Y23         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017    -1.501 r  u_bufg_net/O
+    X1Y1 (CLOCK_ROOT)    net (fo=5216, routed)        1.150    -0.351    u_harness/clk_net
+    SLICE_X72Y92         FDRE                                         r  u_harness/class_q_reg[0]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X72Y92         FDRE (Prop_HFF2_SLICEL_C_Q)
+                                                      0.039    -0.312 r  u_harness/class_q_reg[0]_lopt_replica/Q
+                         net (fo=1, routed)           1.017     0.705    lopt
+    F20                  OBUF (Prop_OUTBUF_HDIOB_S_I_O)
+                                                      1.274     1.978 r  g_class[0].u_obuf/O
+                         net (fo=0)                   0.000     1.978    class_o[0]
+    F20                                                               r  class_o[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

@@ -1,0 +1,8 @@
+# grumpy-calf sweep 2: datalane f0 = 6 / 8 (g1 used f0 = 0: hidden activations started integer-only)
+hgq_g2_64_32_f6_b6      --mode hgq --epochs 300 --arch 64 32 --beta-end 1e-6 --input-f 6
+hgq_g2_64_32_f6_b5      --mode hgq --epochs 300 --arch 64 32 --beta-end 1e-5 --input-f 6
+hgq_g2_128_64_f6_b6     --mode hgq --epochs 300 --arch 128 64 --beta-end 1e-6 --input-f 6
+hgq_g2_128_64_f6_b5     --mode hgq --epochs 300 --arch 128 64 --beta-end 1e-5 --input-f 6
+hgq_g2_128_64_32_f6_b6  --mode hgq --epochs 300 --arch 128 64 32 --beta-end 1e-6 --input-f 6
+hgq_g2_128_64_32_f8_b6  --mode hgq --epochs 300 --arch 128 64 32 --beta-end 1e-6 --input-f 8
+hgq_g2_64_32_f8_b6      --mode hgq --epochs 300 --arch 64 32 --beta-end 1e-6 --input-f 8

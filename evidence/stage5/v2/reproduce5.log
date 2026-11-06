@@ -1,0 +1,40 @@
+== 2026-11-03T14:02:03-07:00 stage 5: data hashes (v2 'meas' set; the v1 'lpf' set) and the channel calibration
+CHECK x310_w64_train.npz: MATCH 6eb28535b2892d1c88c13298cdf579fd32edde6ab7610feb219060fdea9919cb
+CHECK x310_w64_val.npz: MATCH 37cb657abdafb18e6597a2471169a11b887c8a3d7c0ec6cb17c5c78e54aad4f8
+CHECK x310_w64_test.npz: MATCH 27f0bf0a2ecc33b907b93f90949983c1736da65f1c436d3610b76717155cbb73
+CHECK x310_w64_train.npz: MATCH 32fdd2b4c56bd458817fb24f2d45c67cb88d6ce8495248c429694e8fd15ce8c0
+CHECK x310_w64_val.npz: MATCH f4dad4b187582991ff9142708ccc10543f306934cead6dd76583fe899c947946
+CHECK x310_w64_test.npz: MATCH c45f7380af1df914f9320658ac432ee82113129a032bf560bbc9c5cf30b56704
+== 2026-11-03T14:04:50-07:00 stage 5: Verilator (build-host): classifier full set + stream 4x2, nsclf block 4x2 + negatives
+== 2026-11-03T14:08:48-07:00 stage 5: v2 silicon captures (not committed) and their hashes
+sigL_s8 PASS
+sigL_s9 PASS
+sigL_s10 PASS
+sigL_s11 PASS
+sigL_s12 PASS
+sigL_s13 PASS
+sigL_s14 PASS
+sigL_s15 PASS
+noise_s2 PASS
+noise_s3 PASS
+evt_s102 PASS
+evt_s103 PASS
+sigL_s8: D=133.704 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=2964960 straddle=962414 acc 92.40 / bal 91.75 / >=10 bal 98.34 per class [98.3, 92.7, 87.6, 88.5]; settled bal 91.75 / >=10 bal 98.34 per class [98.3, 92.7, 87.6, 88.5]
+sigL_s9: D=133.706 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=2957747 straddle=956456 acc 92.28 / bal 91.60 / >=10 bal 98.38 per class [98.4, 92.4, 86.9, 88.7]; settled bal 91.60 / >=10 bal 98.38 per class [98.4, 92.4, 86.9, 88.7]
+sigL_s10: D=133.705 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=2972098 straddle=945996 acc 92.13 / bal 91.39 / >=10 bal 98.41 per class [98.4, 92.6, 86.6, 87.9]; settled bal 91.39 / >=10 bal 98.41 per class [98.4, 92.6, 86.6, 87.9]
+sigL_s11: D=133.706 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=2984110 straddle=958150 acc 92.26 / bal 91.52 / >=10 bal 98.35 per class [98.3, 92.6, 86.9, 88.3]; settled bal 91.52 / >=10 bal 98.35 per class [98.3, 92.6, 86.9, 88.3]
+sigL_s12: D=133.705 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=2967924 straddle=954505 acc 92.34 / bal 91.56 / >=10 bal 98.34 per class [98.3, 93.0, 86.9, 88.1]; settled bal 91.56 / >=10 bal 98.34 per class [98.3, 93.0, 86.9, 88.1]
+sigL_s13: D=133.705 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=2971655 straddle=953602 acc 92.26 / bal 91.51 / >=10 bal 98.36 per class [98.4, 92.5, 86.7, 88.5]; settled bal 91.51 / >=10 bal 98.36 per class [98.4, 92.5, 86.7, 88.5]
+sigL_s14: D=133.704 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=2964889 straddle=958001 acc 92.03 / bal 91.43 / >=10 bal 98.33 per class [98.3, 92.0, 87.4, 88.0]; settled bal 91.43 / >=10 bal 98.33 per class [98.3, 92.0, 87.4, 88.0]
+sigL_s15: D=133.706 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=2972292 straddle=945923 acc 91.95 / bal 91.13 / >=10 bal 98.33 per class [98.4, 92.7, 86.0, 87.4]; settled bal 91.13 / >=10 bal 98.33 per class [98.4, 92.7, 86.0, 87.4]
+evt_s102: D=133.706 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=4159629 straddle=26732 acc 75.74 / bal 81.63 / >=10 bal 92.79 per class [75.6, 88.5, 77.0, 85.4]; settled bal 89.94 / >=10 bal 98.26 per class [98.2, 94.6, 84.7, 82.3]
+evt_s103: D=133.706 (int 134, xcorr 133) span [132,151] N=-51.5 dBFS peakSNR~25.1 dB pure=4156885 straddle=27880 acc 98.21 / bal 91.12 / >=10 bal 98.10 per class [98.3, 92.9, 83.5, 89.8]; settled bal 91.12 / >=10 bal 98.10 per class [98.3, 92.9, 83.5, 89.8]
+noise_s2: noise-only, FA/decision 1.698 %, per class [98.3017, 0.4271, 0.4487, 0.8226], K=16 events (derived) 4 = 190/s
+noise_s3: noise-only, FA/decision 1.709 %, per class [98.291, 0.4343, 0.4526, 0.822], K=16 events (derived) 2 = 95/s
+wrote <repo>/.scratch/repro_20261103_140203/v2/summary.json and <repo>/.scratch/repro_20261103_140203/v2/analysis.md
+stage 5 v2 analysis identical to the committed summary
+stage 5 silicon (X310 by build-host; volatile JTAG only, never uhd_image_loader):
+  sw/x310/program_x310_jtag.sh <v2 x300.bit, evidence/stage5/v2/README.md> X310-JTAG
+  (root, build-host) nmcli dev set enp132s0f0 managed no; ip addr add 10.0.40.1/24 dev enp132s0f0; ip link set enp132s0f0 mtu 9000
+  sw/x310/s5v2_campaign.sh     # dense seeds 8-15 and 0-7, noise, events -> .scratch/s5_cap_v2, evidence/stage5/v2/silicon
+reproduce rc=0

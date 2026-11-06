@@ -1,0 +1,10 @@
+FA per decision % 1.7089624461926676 per class [np.float64(98.291), np.float64(0.434), np.float64(0.453), np.float64(0.822)]
+non-noise runs 56787 median 1.0 p90 2.0 max 29
+K=16: events 2 = 95/s
+K=32: events 0 = 0/s
+K=64: events 0 = 0/s
+K=96: events 0 = 0/s
+K=128: events 0 = 0/s
+K=192: events 0 = 0/s
+K=256: events 0 = 0/s
+K=512: events 0 = 0/s

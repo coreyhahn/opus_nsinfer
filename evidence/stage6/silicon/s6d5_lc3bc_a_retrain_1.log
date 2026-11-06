@@ -1,0 +1,213 @@
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Nov  5 22:16:34 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source <repo>/sw/bcu/desk_jtag.tcl
+# set PCIE_SERIAL PCIE-BCU-JTAG
+# lassign $argv cmd serial arg1 arg2
+# proc targets {} {
+#     set out {}
+#     foreach t [get_hw_targets -quiet] { lappend out $t }
+#     return $out
+# }
+# proc open_desk {serial} {
+#     global PCIE_SERIAL
+#     if {$serial eq "" || [string match "*$PCIE_SERIAL*" $serial]} {
+#         puts "ERROR: refusing target serial '$serial' (empty or the PCIe card)"; exit 2
+#     }
+#     set hits {}
+#     foreach t [targets] { if {[string match "*$serial*" $t]} { lappend hits $t } }
+#     if {[llength $hits] != 1} { puts "ERROR: serial $serial matches [llength $hits] targets: [targets]"; exit 2 }
+#     set t [lindex $hits 0]
+#     if {[string match "*$PCIE_SERIAL*" $t]} { puts "ERROR: $t is the PCIe card"; exit 2 }
+#     puts "TARGET $t"
+#     open_hw_target $t
+#     set dev [lindex [get_hw_devices -quiet xcvu9p*] 0]
+#     if {$dev eq ""} { puts "ERROR: no xcvu9p on $t"; close_hw_target; exit 3 }
+#     current_hw_device $dev
+#     refresh_hw_device -quiet $dev
+#     puts "DEVICE $dev"
+#     return $dev
+# }
+# proc axi {} {
+#     set a [lindex [get_hw_axis -quiet] 0]
+#     if {$a eq ""} { puts "ERROR: no JTAG-AXI master (bitstream loaded? probes refreshed?)"; exit 4 }
+#     return $a
+# }
+# set ::txn 0
+# proc rd {addr} {
+#     set n t[incr ::txn]
+#     create_hw_axi_txn $n [axi] -type read -address [format %08x $addr] -len 1 -force
+#     run_hw_axi -quiet [get_hw_axi_txns $n]
+#     set v [get_property DATA [get_hw_axi_txns $n]]
+#     delete_hw_axi_txn [get_hw_axi_txns $n]
+#     return [expr {"0x$v"}]
+# }
+# proc wr {addr data} {
+#     set n t[incr ::txn]
+#     create_hw_axi_txn $n [axi] -type write -address [format %08x $addr] -len 1 -data [format %08x $data] -force
+#     run_hw_axi -quiet [get_hw_axi_txns $n]
+#     delete_hw_axi_txn [get_hw_axi_txns $n]
+# }
+# proc rd_cmd {sel addr} {
+#     wr 0x014 [expr {($sel << 31) | $addr}]
+#     for {set i 0} {$i < 1000} {incr i} { if {!([rd 0x010] & 4)} { return [rd 0x018] } }
+#     puts "ERROR: RD_CMD $sel $addr never completed"; exit 5
+# }
+# open_hw_manager
+open_hw_manager: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1519.574 ; gain = 105.918 ; free physical = 11218 ; free virtual = 277384
+# connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.2
+  **** Build date : Oct 29 2024 at 10:16:47
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-12:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+# switch -- $cmd {
+#     list {
+#         foreach t [targets] { puts "TARGETLIST $t" }
+#     }
+#     program {
+#         set dev [open_desk $serial]
+#         set bit [file normalize $arg1]
+#         if {![file exists $bit]} { puts "ERROR: $bit missing"; exit 1 }
+#         set_property PROGRAM.FILE $bit $dev
+#         if {$arg2 ne "" && $arg2 ne "-"} { set_property PROBES.FILE [file normalize $arg2] $dev }
+#         program_hw_devices $dev
+#         refresh_hw_device $dev
+#         puts "PROGRAM_OK $bit"
+#         puts [format "R 000 %08x ID" [rd 0x000]]
+#         puts [format "R 024 %08x LINK" [rd 0x024]]
+#     }
+#     run {
+#         set dev [open_desk $serial]
+#         set fh [open $arg1 r]
+#         while {[gets $fh line] >= 0} {
+#             set f [regexp -all -inline {\S+} $line]
+#             if {[llength $f] == 0 || [string index [lindex $f 0] 0] eq "#"} continue
+#             switch -- [lindex $f 0] {
+#                 w     { wr [lindex $f 1] [lindex $f 2] }
+#                 r     { puts [format "R %03x %08x %s" [lindex $f 1] [rd [lindex $f 1]] [lindex $f 2]] }
+#                 sleep { after [expr {int([lindex $f 1] * 1000)}] }
+#                 echo  { puts "ECHO [lrange $f 1 end]" }
+#                 wait  {
+#                     lassign [lrange $f 1 end] a m v to
+#                     set t0 [clock milliseconds]; set ok 0
+#                     while {[clock milliseconds] - $t0 < $to * 1000} {
+#                         set x [rd $a]
+#                         if {($x & $m) == $v} { set ok 1; break }
+#                         after 50
+#                     }
+#                     puts [format "WAIT %03x mask %08x want %08x got %08x %s" $a $m $v $x [expr {$ok ? "OK" : "TIMEOUT"}]]
+#                     if {!$ok} { puts "ERROR: wait timed out"; exit 6 }
+#                 }
+#                 @stats {
+#                     foreach {a l} {0x010 STATUS 0x040 n_sent 0x044 n_rx_words 0x048 n_good 0x04C lat_min 0x050 lat_max
+#                                    0x054 lat_sum_lo 0x058 lat_sum_hi 0x05C mism 0x060 first_mis 0x064 err_tag
+#                                    0x068 err_range 0x06C err_overrun 0x070 err_dup 0x074 err_echo 0x078 hist_under
+#                                    0x07C hist_over 0x080 sig 0x0C0 b_n_rx 0x0C4 b_n_tx 0x0C8 b_err_tag 0x0CC b_fifo_ovf
+#                                    0x0D0 b_collide 0x0D4 b_fifo_max 0x0D8 b_dec 0x0DC b_dec_cnt 0x0E0 b_echo 0x0E4 b_echo_cnt
+#                                    0x008 GAP 0x00C HIST_BASE 0x024 LINK} {
+#                         puts [format "R %03x %08x %s" $a [rd $a] $l]
+#                     }
+#                 }
+#                 hist  { for {set b 0} {$b < [lindex $f 1]} {incr b} { puts "HIST $b [rd_cmd 0 $b]" } }
+#                 flips {
+#                     for {set s [lindex $f 1]} {$s < [lindex $f 1] + [lindex $f 2]} {incr s} {
+#                         set v [rd_cmd 1 $s]; puts "FLIP $s [expr {($v >> 1) & 1}] [expr {$v & 1}]"
+#                     }
+#                 }
+#                 default { puts "ERROR: bad command '$line'"; exit 1 }
+#             }
+#         }
+#         close $fh
+#     }
+#     default { puts "ERROR: unknown command $cmd"; exit 1 }
+# }
+TARGET localhost:3121/xilinx_tcf/Xilinx/DESK-BCU-JTAGA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/DESK-BCU-JTAGA
+DEVICE xcvu9p_0
+ECHO board
+R 000 53330001 ID
+R 0f0 00020000 NVEC
+R 0f4 00000013 DEC_LAT
+R 0fc 00000078 N_DET
+R 100 000000c0 DW
+R 020 00000000 BOARD
+R 024 7f0c7373 LINK
+R 028 019c8000 FREQ_A
+R 02c 019c8000 FREQ_B
+R 1000 53360001 D_ID
+R 1014 00000003 D_PARAMS
+ECHO retrain
+WAIT 024 mask 00000101 want 00000101 got 7f0c7777 OK
+R 024 7f0c7777 LINK
+R 024 7f0c7373 LINK_CLEAN
+ECHO diag
+R 1010 00000000 d_snap_busy
+R 1400 00000007 a_lock
+R 1404 00000006 a_n_lock
+R 1408 00000002 a_n_unlock
+R 140c 00000074 a_n_slip
+R 1410 00000000 a_n_sh_bad
+R 1414 00000000 a_n_idle_bad
+R 1418 04afa945 a_n_data
+R 141c 00000000 a_n_dsk_ovf
+R 1420 00000000 a_n_hv_dv
+R 1424 00000000 a_n_bufrst
+R 1428 00070000 a_bufstat
+R 1440 00000007 b_lock
+R 1444 00000006 b_n_lock
+R 1448 00000002 b_n_unlock
+R 144c 000000e3 b_n_slip
+R 1450 00000000 b_n_sh_bad
+R 1454 00000000 b_n_idle_bad
+R 1458 04afa945 b_n_data
+R 145c 00000000 b_n_dsk_ovf
+R 1460 00000001 b_n_hv_dv
+R 1464 00000000 b_n_bufrst
+R 1468 00070000 b_bufstat
+R 1480 00000000 pa_n_tx
+R 1484 00000000 pa_n_rx
+R 1488 00000000 pa_n_bad
+R 148c ffffffff pa_lat_min
+R 1490 00000000 pa_lat_max
+R 1494 00000000 pa_lat_sum_lo
+R 1498 00000000 pa_lat_sum_hi
+R 14a0 00000000 pb_n_tx
+R 14a4 00000000 pb_n_rx
+R 14a8 00000000 pb_n_bad
+R 14ac ffffffff pb_lat_min
+R 14b0 00000000 pb_lat_max
+R 14b4 00000000 pb_lat_sum_lo
+R 14b8 00000000 pb_lat_sum_hi
+R 14c0 1d1671c6 tsc
+# catch {close_hw_target}
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Xilinx/DESK-BCU-JTAGA
+# disconnect_hw_server
+# puts "DESK_JTAG_DONE"
+DESK_JTAG_DONE
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  5 22:17:02 2026...
+  board lock HELD: <lab-share>/fpga/.opus_nsinfer_desk_bcu.lock (opus_nsinfer desk run s6_retrain.cmd)
+  board lock released (opus_nsinfer desk run s6_retrain.cmd)

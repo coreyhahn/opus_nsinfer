@@ -1,0 +1,11 @@
+# synth/out_q5_vu9p_lc8_f161 (q5, chosen d=5 core, 6.206 ns)
+| CLB LUTs*               | 505325 |     0 |          0 |   1182240 | 42.74 |
+| CLB Registers           |  38761 |     0 |          0 |   2364480 |  1.64 |
+Effective congestion level: 7 Aspect Ratio: 0.333333 Sparse Ratio: 0.75
+Effective congestion level: 7 Aspect Ratio: 0.428571 Sparse Ratio: 1.1875
+Effective congestion level: 7 Aspect Ratio: 0.25 Sparse Ratio: 1
+Effective congestion level: 7 Aspect Ratio: 0.25 Sparse Ratio: 1
+CRITICAL WARNING: [Route 35-162] 339957 signals failed to route due to routing congestion. Please run report_route_status to get a full summary of the design's routing.
+ERROR: [Route 35-2] Design is not legally routed. There are 1022922 node overlaps.
+route_design: Time (s): cpu = 19:46:20 ; elapsed = 09:40:28 . Memory (MB): peak = 13289.402 ; gain = 0.000 ; free physical = 42996 ; free virtual = 339194
+ERROR: [Common 17-39] 'route_design' failed due to earlier errors.

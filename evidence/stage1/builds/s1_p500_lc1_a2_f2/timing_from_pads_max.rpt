@@ -1,0 +1,86 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 08:01:57 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -from [get_ports {pin_b pin_c}] -max_paths 4 -file <repo>/synth/out_s1_p500_lc1_a2_f2/timing_from_pads_max.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.034ns  (required time - arrival time)
+  Source:                 pin_b
+                            (input port)
+  Destination:            u_harness/ipff_b_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk0_o
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (MaxDelay Path 2.000ns)
+  Data Path Delay:        1.991ns  (logic 1.321ns (66.341%)  route 0.670ns (33.659%))
+  Logic Levels:           2  (IBUFCTRL=1 INBUF=1)
+  Timing Exception:       MaxDelay Path 2.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A20                                               0.000     0.000 r  pin_b (INOUT)
+                         net (fo=1, unset)            0.000     0.000    u_iob_b/IO
+    A20                  INBUF (Prop_INBUF_HDIOB_S_PAD_O)
+                                                      1.321     1.321 r  u_iob_b/INBUF_INST/O
+                         net (fo=1, routed)           0.000     1.321    u_iob_b/OUT
+    A20                  IBUFCTRL (Prop_IBUFCTRL_HDIOB_S_I_O)
+                                                      0.000     1.321 r  u_iob_b/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.670     1.991    u_harness/pin_b_i
+    SLICE_X84Y230        FDRE                                         r  u_harness/ipff_b_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.000     2.000    
+    SLICE_X84Y230        FDRE (Setup_BFF2_SLICEL_C_D)
+                                                      0.025     2.025    u_harness/ipff_b_reg
+  -------------------------------------------------------------------
+                         required time                          2.025    
+                         arrival time                          -1.991    
+  -------------------------------------------------------------------
+                         slack                                  0.034    
+
+Slack (MET) :             0.065ns  (required time - arrival time)
+  Source:                 pin_c
+                            (input port)
+  Destination:            u_harness/ipff_d_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk1_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk1_o
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (MaxDelay Path 2.000ns)
+  Data Path Delay:        1.960ns  (logic 1.302ns (66.421%)  route 0.658ns (33.579%))
+  Logic Levels:           2  (IBUFCTRL=1 INBUF=1)
+  Timing Exception:       MaxDelay Path 2.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 r  pin_c (INOUT)
+                         net (fo=1, unset)            0.000     0.000    u_iob_c/IO
+    D20                  INBUF (Prop_INBUF_HDIOB_S_PAD_O)
+                                                      1.302     1.302 r  u_iob_c/INBUF_INST/O
+                         net (fo=1, routed)           0.000     1.302    u_iob_c/OUT
+    D20                  IBUFCTRL (Prop_IBUFCTRL_HDIOB_S_I_O)
+                                                      0.000     1.302 r  u_iob_c/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.658     1.960    u_harness/pin_c_i
+    SLICE_X84Y217        FDRE                                         r  u_harness/ipff_d_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.000     2.000    
+    SLICE_X84Y217        FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     2.025    u_harness/ipff_d_reg
+  -------------------------------------------------------------------
+                         required time                          2.025    
+                         arrival time                          -1.960    
+  -------------------------------------------------------------------
+                         slack                                  0.065    
+
+
+
+

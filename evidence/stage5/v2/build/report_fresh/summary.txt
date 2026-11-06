@@ -1,0 +1,77 @@
+# checkpoint <repo>/.scratch/s5_build/x310_xg_nsclf_v2_lc2_1_holdfix_physopt_hold/post_fix.dcp (2026-11-03T11:55:27), report 2026-11-03T12:08:32
+overall WNS 0.011 WHS 0.003
+clock DB0_ADC_DCLK                 period   5.000  WNS    1.867  WHS    0.131
+clock DB0_DAC_DCI                  period   2.500  WNS    0.066  WHS    0.003
+clock DB1_ADC_DCLK                 period   5.000  WNS    1.676  WHS    0.068
+clock DB1_DAC_DCI                  period   2.500  WNS    0.016  WHS    0.009
+clock FPGA_REFCLK                  period  32.563  WNS    0.478  WHS    0.085
+clock IoPort2Wrapperx/RxLowSpeedClk period   8.000  WNS    3.206  WHS    0.064
+clock IoPort2Wrapperx/TxClockGenx/TxUseMmcm.ClkOut1Mmcm period   8.000  WNS    3.120  WHS    0.096
+clock IoRxClock                    period   4.000  WNS    0.031  WHS    0.066
+clock IoTxClock                    period   4.000  WNS    0.032  WHS    0.124
+clock VIRT_DAC_CLK                 period   2.500  WNS    0.043  WHS    0.028
+clock XG_CLK                       period   6.400  WNS    1.575  WHS    0.006
+clock bus_clk                      period   5.333  WNS    0.130  WHS    0.050
+clock bus_clk_div2                 period  10.667  WNS    0.206  WHS    0.051
+clock ce_clk                       period   4.667  WNS    0.395  WHS    0.051
+clock dclk_buf                     period  12.800  WNS    2.182  WHS    0.054
+clock ddr3_axi_clk                 period   6.664  WNS    0.408  WHS    0.050
+clock ddr3_axi_clk_x2              period   3.332  WNS    0.159  WHS    0.054
+clock ioport2_clk                  period   8.000  WNS    0.135  WHS    0.051
+clock iserdes_clkdiv               period   3.332  WNS    1.808  WHS    0.070
+clock iserdes_clkdiv_1             period   3.332  WNS    1.764  WHS    0.070
+clock iserdes_clkdiv_2             period   3.332  WNS    1.816  WHS    0.070
+clock iserdes_clkdiv_3             period   3.332  WNS    1.814  WHS    0.070
+clock mem_refclk                   period   1.666  WNS    0.443  WHS    0.252
+clock mmcm_clkout1                 period   4.998  WNS    4.073  WHS    0.143
+clock mmcm_ps_clk_bufg_in          period  13.328  WNS    4.201  WHS    0.095
+clock oserdes_clk                  period   1.666  WNS    0.605  WHS    0.369
+clock oserdes_clk_1                period   1.666  WNS    0.592  WHS    0.375
+clock oserdes_clk_2                period   1.666  WNS    0.600  WHS    0.371
+clock oserdes_clk_3                period   1.666  WNS    0.612  WHS    0.364
+clock oserdes_clkdiv               period   3.332  WNS    0.914  WHS    0.064
+clock oserdes_clkdiv_1             period   3.332  WNS    0.914  WHS    0.068
+clock oserdes_clkdiv_2             period   3.332  WNS    0.914  WHS    0.066
+clock oserdes_clkdiv_3             period   3.332  WNS    0.748  WHS    0.061
+clock oserdes_clkdiv_4             period   6.664  WNS    0.914  WHS    0.075
+clock oserdes_clkdiv_5             period   6.664  WNS    0.914  WHS    0.066
+clock oserdes_clkdiv_6             period   6.664  WNS    0.722  WHS    0.061
+clock radio_clk                    period   5.000  WNS    0.011  WHS    0.050
+clock radio_clk_2x                 period   2.500  WNS    0.215  WHS    0.069
+clock rio40_clk                    period  25.000  WNS   23.042  WHS    0.111
+clock sfpp_io_i0/ten_gige_phy_i/ten_gig_eth_pcs_pma_i/inst/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_10gbaser_i/gtxe2_i/RXOUTCLK period   3.103  WNS    0.297  WHS    0.065
+clock sfpp_io_i0/ten_gige_phy_i/ten_gig_eth_pcs_pma_i/inst/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_10gbaser_i/gtxe2_i/TXOUTCLK period   3.103  WNS    0.898  WHS    0.105
+clock sfpp_io_i1/ten_gige_phy_i/ten_gig_eth_pcs_pma_i/inst/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_10gbaser_i/gtxe2_i/RXOUTCLK period   3.103  WNS    0.330  WHS    0.054
+clock sfpp_io_i1/ten_gige_phy_i/ten_gig_eth_pcs_pma_i/inst/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_10gbaser_i/gtxe2_i/TXOUTCLK period   3.103  WNS    0.948  WHS    0.054
+clock u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk period   1.666  WNS    5.651  WHS   25.130
+clock u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk period   1.666  WNS    4.456  WHS   25.719
+clock u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk period   1.666  WNS    3.425  WHS   26.215
+clock u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk period   1.666  WNS    2.482  WHS   26.757
+nsclf0 cell: x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6
+nsclf0 sequential cells: 23191
+nsclf setup    0.011  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[230]/D  levels 15  group radio_clk
+nsclf setup    0.015  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[233]/D  levels 16  group radio_clk
+nsclf setup    0.025  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[232]/D  levels 15  group radio_clk
+nsclf setup    0.064  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[231]/D  levels 15  group radio_clk
+nsclf setup    0.068  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[229]/D  levels 15  group radio_clk
+nsclf setup    0.124  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[228]/D  levels 14  group radio_clk
+nsclf setup    0.154  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[227]/D  levels 14  group radio_clk
+nsclf setup    0.177  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/axis_data_to_chdr_out_evt/start_of_packet_reg/S  levels 0  group radio_clk
+nsclf setup    0.311  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/axis_data_to_chdr_out_evt/gating_reg/R  levels 0  group radio_clk
+nsclf setup    0.311  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/axis_data_to_chdr_out_evt/gen_sample_sop.in_pkt_info_tvalid_reg/R  levels 0  group radio_clk
+nsclf setup    0.011  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[230]/D  levels 15  group radio_clk
+nsclf setup    0.015  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[233]/D  levels 16  group radio_clk
+nsclf setup    0.025  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage11_inp_reg[2]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage12_inp_reg[232]/D  levels 15  group radio_clk
+nsclf hold     0.055  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/win_reg[1504]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/g_p1.win_b_reg[1504]/D  group radio_clk
+nsclf hold     0.057  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/backend_iface_i/sync_ctrl_i/synchronizer_false_path/stages[1].value_reg[1][3]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/axis_data_to_chdr_out_evt/chdr_flusher_i/cyc_to_go_reg[3]/D  group bus_clk
+nsclf hold     0.057  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/win_reg[1468]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/g_p1.win_b_reg[1468]/D  group radio_clk
+nsclf hold     0.058  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[181]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[2126]/D  group radio_clk
+nsclf hold     0.058  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/ev_tau_reg[4]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/fifo_reg_0_31_120_125/RAMA/I  group radio_clk
+nsclf hold     0.059  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_async_fifos.in_fifo_i/in_pipe_i/o_tdata_reg[13]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_async_fifos.in_fifo_i/fifo_section[0].impl_srl_i/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_31_12_17/RAMA_D1/I  group bus_clk_div2
+nsclf hold     0.059  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/g_inreg.s_data_reg[21]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/win_reg[2021]/D  group radio_clk
+nsclf hold     0.060  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/reg_t_start_reg[58]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/t_last_l_reg[59]/D  group radio_clk
+nsclf hold     0.062  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/hist_reg[3][26]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/hist_reg[0][29]/D  group radio_clk
+nsclf hold     0.063  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/d1_tau_reg[19]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/tfirst_reg[19]/D  group radio_clk
+nsclf hold     0.055  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/win_reg[1504]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/g_p1.win_b_reg[1504]/D  group radio_clk
+nsclf hold     0.057  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/backend_iface_i/sync_ctrl_i/synchronizer_false_path/stages[1].value_reg[1][3]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/axis_data_to_chdr_out_evt/chdr_flusher_i/cyc_to_go_reg[3]/D  group bus_clk
+nsclf hold     0.057  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/win_reg[1468]/C -> x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/g_p1.win_b_reg[1468]/D  group radio_clk

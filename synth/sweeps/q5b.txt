@@ -1,0 +1,6 @@
+# Stage 4 q5b: 1.92M probe lc3 (best so far, WNS -3.48 ns) with a pure broadcast register before stages 0, 3, 8 (the
+# stages whose output is > 5x their input: the all-to-all layer inputs), latency 15 -> 18, arithmetic unchanged
+# (synth/scripts/add_bcast.py). bc: no attribute (phys_opt replicates placement-aware); bc32: max_fanout 32 on the
+# broadcast registers only. Launch with OOC_INCLUDE=/home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/d5p19
+q5b_vu9p_lc3bc_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/d5p19/gen/qec_d5_lc3bc xcvu9p-fsgd2104-2L-e 6.206 - qec_d5 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/d5/qec_d5_top.sv IN_W=120,OUT_W=20,LOGIT_SIGNED=1
+q5b_vu9p_lc3bc32_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/d5p19/gen/qec_d5_lc3bc32 xcvu9p-fsgd2104-2L-e 6.206 - qec_d5 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/d5/qec_d5_top.sv IN_W=120,OUT_W=20,LOGIT_SIGNED=1

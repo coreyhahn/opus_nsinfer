@@ -1,0 +1,120 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Mon Oct 19 22:35:01 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -to [get_ports {hd_out hp_out}] -max_paths 2 -nworst 1 -delay_type min -file t_out_min.rpt
+| Design            : top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.305ns  (arrival time - required time)
+  Source:                 hp_r2_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            hp_out
+                            (output port clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk300
+  Path Type:              Min at Fast Process Corner
+  Requirement:            0.000ns  (clk300 rise@0.000ns - clk300 rise@0.000ns)
+  Data Path Delay:        0.660ns  (logic 0.557ns (84.394%)  route 0.103ns (15.606%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -1.646ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.000ns
+    Source Clock Delay      (SCD):    1.646ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Net Delay (Source):      1.105ns (routing 0.359ns, distribution 0.746ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk300 rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.079     0.079    ib/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  ib/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    ib/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  ib/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.524    clk_ibuf
+    BUFGCE_X0Y1          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.541 r  bg/O
+    X3Y0 (CLOCK_ROOT)    net (fo=4, routed)           1.105     1.646    clk
+    BITSLICE_RX_TX_X0Y99 FDRE                                         r  hp_r2_reg/C
+  -------------------------------------------------------------------    -------------------
+    BITSLICE_RX_TX_X0Y99 FDRE (Prop_OUT_FF_BITSLICE_COMPONENT_RX_TX_C_Q)
+                                                      0.208     1.854 r  hp_r2_reg/Q
+                         net (fo=1, routed)           0.103     1.957    hp_out_OBUF
+    AD2                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.349     2.305 r  hp_out_OBUF_inst/O
+                         net (fo=0)                   0.000     2.305    hp_out
+    AD2                                                               r  hp_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk300 rise edge)     0.000     0.000 r  
+                         clock pessimism              0.000     0.000    
+                         output delay                -0.000     0.000    
+  -------------------------------------------------------------------
+                         required time                         -0.000    
+                         arrival time                           2.305    
+  -------------------------------------------------------------------
+                         slack                                  2.305    
+
+Slack (MET) :             3.108ns  (arrival time - required time)
+  Source:                 hd_r2_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            hd_out
+                            (output port clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk300
+  Path Type:              Min at Fast Process Corner
+  Requirement:            0.000ns  (clk300 rise@0.000ns - clk300 rise@0.000ns)
+  Data Path Delay:        1.480ns  (logic 1.478ns (99.865%)  route 0.002ns (0.135%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -1.629ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.000ns
+    Source Clock Delay      (SCD):    1.629ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Net Delay (Source):      1.088ns (routing 0.359ns, distribution 0.729ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk300 rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.079     0.079    ib/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  ib/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    ib/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  ib/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.524    clk_ibuf
+    BUFGCE_X0Y1          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.541 r  bg/O
+    X3Y0 (CLOCK_ROOT)    net (fo=4, routed)           1.088     1.629    clk
+    HDIOLOGIC_S_X0Y23    FDRE                                         r  hd_r2_reg/C
+  -------------------------------------------------------------------    -------------------
+    HDIOLOGIC_S_X0Y23    FDRE (Prop_OPFF_HDIOLOGIC_S_C_Q)
+                                                      0.173     1.802 r  hd_r2_reg/Q
+                         net (fo=1, routed)           0.002     1.804    hd_out_OBUF
+    A20                  OBUF (Prop_OUTBUF_HDIOB_S_I_O)
+                                                      1.305     3.108 r  hd_out_OBUF_inst/O
+                         net (fo=0)                   0.000     3.108    hd_out
+    A20                                                               r  hd_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk300 rise edge)     0.000     0.000 r  
+                         clock pessimism              0.000     0.000    
+                         output delay                -0.000     0.000    
+  -------------------------------------------------------------------
+                         required time                         -0.000    
+                         arrival time                           3.108    
+  -------------------------------------------------------------------
+                         slack                                  3.108    
+
+
+
+

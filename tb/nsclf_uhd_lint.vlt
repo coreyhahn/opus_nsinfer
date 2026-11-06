@@ -1,0 +1,5 @@
+`verilator_config
+// nsclf_block_lint: -Wall applies to this repo's RTL (rtl/x310, rtl/gen); the UHD 4.9 library (.scratch/uhd) and
+// the lint stubs are framework code and are not ours to clean, so their warnings are off. Errors still stop.
+lint_off -file "*/.scratch/uhd/*"
+lint_off -file "*/tb/nsclf_lint_stubs.sv"

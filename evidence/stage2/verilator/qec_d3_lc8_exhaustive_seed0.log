@@ -1,0 +1,7 @@
+# host=build-host date=2026-10-21T05:31:38-06:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# design=<repo>/rtl/gen/qec_d3_lc8 exh_in_sha256=c814528d94b7e6732fdf69d891993f2173e3af22c509226d3664cd89e5cf56d2 exh_out_sha256=35f09cb61e5e00b9a110783aeae83d7d4832e9cdd9ed3b95f26d1f19a9020031 (must equal ref/golden/qec_d3_exhaustive.json)
+# IN_W=24 OUT_W=18 LAT=5 NVEC=16777216 seed=0
+LATENCY cycles=5 logit, 6 flip (vector 1; input applied before edge 1)
+RESULT seed=0 vectors=16777216 checked=16777216 mismatches=0 flip_checked=0 flip_mismatches=0 flips=0 latency=5 xor_signature=07a75
+PASS
+- tb_qec.sv:109: Verilog $finish

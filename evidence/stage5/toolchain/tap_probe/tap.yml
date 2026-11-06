@@ -1,0 +1,74 @@
+# opus_nsinfer Stage 5 feasibility probe (PLAN D-S5-TAP): a pass-through "tap" between the
+# device's radio io_port and the stock radio block. Stub only: no classifier logic.
+schema: rfnoc_modtool_args
+module_name: tap
+version: "1.0"
+rfnoc_version: "1.0"
+chdr_width: 64
+noc_id: 0x5A5E0001
+
+parameters:
+  NUM_PORTS: 2      # must match the device radio0 io_port (2 channels per X310 dboard slot)
+  NIPC: 1           # X310 radio io_port spc = 1
+
+clocks:
+  - name: rfnoc_chdr
+    freq: "[]"
+  - name: rfnoc_ctrl
+    freq: "[]"
+  - name: radio
+    freq: "[]"
+
+control:
+  fpga_iface: ctrlport
+  interface_direction: slave
+  fifo_depth: 32
+  clk_domain: radio
+  ctrlport:
+    byte_mode: False
+    timed: False
+    has_status: False
+
+data:
+  fpga_iface: axis_data
+  clk_domain: radio
+  inputs: {}
+  outputs:
+    evt:
+      index: 0
+      item_width: 64
+      nipc: 1
+      info_fifo_depth: 32
+      payload_fifo_depth: 64
+      format: u64
+      sideband_at_end: False
+
+io_ports:
+  radio_in:             # from the device (ADC side)
+    type: radio
+    drive: slave
+    parameters:
+      spc: "${parameters['NIPC']}"
+      num_ports: "${parameters['NUM_PORTS']}"
+    rename:             # without a rename both radio ports get identical wire names
+      pattern: (.*)
+      repl: \1_in
+    required: true
+  radio_out:            # to the stock radio block's 'radio' port
+    type: radio
+    drive: master
+    parameters:
+      spc: "${parameters['NIPC']}"
+      num_ports: "${parameters['NUM_PORTS']}"
+    rename:
+      pattern: (.*)
+      repl: \1_out
+    required: true
+  time:
+    type: timekeeper
+    drive: listener
+    required: true
+
+fpga_includes:
+  - include: "fpga/s5tap/rfnoc_block_tap/Makefile.srcs"
+    make_var: "$(RFNOC_BLOCK_TAP_SRCS)"

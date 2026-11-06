@@ -1,0 +1,6 @@
+# synth/out_q5_vu9p_lc3_f161 (q5, chosen d=5 core, 6.206 ns)
+| CLB LUTs*                  | 500266 |     0 |          0 |   1182240 | 42.32 |
+| CLB Registers              | 232270 |     0 |          0 |   2364480 |  9.82 |
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+ Number of Nodes with overlaps = 1353330
+ Number of Nodes with overlaps = 1534991

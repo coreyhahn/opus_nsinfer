@@ -1,0 +1,8 @@
+W=16: float float_w16_128_64_32 val acc 0.6631 hi 0.7901; 241 HGQ checkpoints, 29 within 1.0 pt, 0 also >= 0.95 at SNR >= 10.0
+   pick ref/runs/x310/hgq_w16_128_64_32_ws_b3e6/pareto/e0131_acc0.65365_hi0.77546_ebops290444.keras EBOPs 290444 val acc 0.6536 hi 0.7755  (SNR >= 10 dB criterion NOT met)
+W=32: float float_w32_128_64_32 val acc 0.7587 hi 0.9208; 303 HGQ checkpoints, 22 within 1.0 pt, 0 also >= 0.95 at SNR >= 10.0
+   pick ref/runs/x310/hgq_w32_128_64_32_ws_b3e6/pareto/e0093_acc0.74877_hi0.91047_ebops476864.keras EBOPs 476864 val acc 0.7488 hi 0.9105  (SNR >= 10 dB criterion NOT met)
+W=64: float float_w64_128_64_32 val acc 0.8579 hi 0.9823; 813 HGQ checkpoints, 178 within 1.0 pt, 178 also >= 0.95 at SNR >= 10.0
+   pick ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0219_acc0.84797_hi0.97734_ebops61468.keras EBOPs 61468 val acc 0.8480 hi 0.9773
+smallest W whose pick meets both criteria: 64
+chosen W=64 ref/runs/x310/hgq_w64_128_64_32_b5e6_e300/pareto/e0219_acc0.84797_hi0.97734_ebops61468.keras EBOPs 61468: test acc 0.8457 hi 0.9770 | float float_w64_128_64_32 test acc 0.8573 hi 0.9826

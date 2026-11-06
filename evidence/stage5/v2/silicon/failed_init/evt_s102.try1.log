@@ -1,0 +1,25 @@
+[INFO] [UHD] linux; GNU C++ version 13.3.0; Boost_108300; UHD_4.9.0.HEAD-0-a5d1b2ef
+[INFO] [X300] X300 initialization sequence...
+[INFO] [X300] Maximum frame size: 8000 bytes.
+[INFO] [X300] Radio 1x clock: 200 MHz
+[ERROR] [0/Radio#0::CTRLEP] Control operation timed out waiting for ACK. Request sent: ctrl_payload{dst_port:4, src_port:4, seq_num:10, timestamp:<not present>, is_ack:false, src_epid:1, address:0x80080, byte_enable:0xf, op_code:2, status:0, num_data:1 data[0]:0x00000000}
+
+[ERROR] [RFNOC::GRAPH] Error during initialization of block 0/Radio#0!
+[ERROR] [RFNOC::GRAPH] Caught exception while initializing graph: RfnocError: OpTimeout: Control operation timed out waiting for ACK. Request sent: ctrl_payload{dst_port:4, src_port:4, seq_num:10, timestamp:<not present>, is_ack:false, src_epid:1, address:0x80080, byte_enable:0xf, op_code:2, status:0, num_data:1 data[0]:0x00000000}
+
+Traceback (most recent call last):
+  File "<repo>/sw/x310/nsclf_txrx.py", line 294, in <module>
+    main()
+  File "<repo>/sw/x310/nsclf_txrx.py", line 290, in main
+    sys.exit(a.func(a) or 0)
+             ^^^^^^^^^
+  File "<repo>/sw/x310/nsclf_txrx.py", line 242, in cmd_run
+    g, n, radio, dram, rx, ev = setup(a, uhd)
+                                ^^^^^^^^^^^^^
+  File "<repo>/sw/x310/nsclf_txrx.py", line 106, in setup
+    g = nh.open_graph(a.args)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/sw/x310/nsclf_host.py", line 80, in open_graph
+    return uhd.rfnoc.RfnocGraph(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: RuntimeError: Failure to create rfnoc_graph.

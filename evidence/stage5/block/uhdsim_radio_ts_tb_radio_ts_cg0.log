@@ -1,0 +1,655 @@
+# host=build-host date=2026-10-30T01:23:21-06:00 vivado v2024.2 (64-bit) uhd=a5d1b2e top=tb_radio_ts_cg0
+BUILDER: Checking tools...
+* GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)
+* Python 3.12.3
+* vivado v2024.2 (64-bit)
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri Oct 30 01:23:30 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source <repo>/.scratch/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl
+# set simulator       $::env(VIV_SIMULATOR)
+# set design_srcs     $::env(VIV_DESIGN_SRCS)
+# set sim_srcs        $::env(VIV_SIM_SRCS)
+# set inc_srcs        $::env(VIV_INC_SRCS)
+# set sim_top         $::env(VIV_SIM_TOP)
+# set part_name       $::env(VIV_PART_NAME)
+# set sim_runtime     $::env(VIV_SIM_RUNTIME)
+# set sim_fast        $::env(VIV_SIM_FAST)
+# set vivado_mode     $::env(VIV_MODE)
+# set verilog_defs    $::env(VIV_VERILOG_DEFS)
+# set working_dir     [pwd]
+# set sim_fileset "sim_1"
+# set project_name "[string tolower $simulator]_proj"
+# if [info exists ::env(VIV_SIM_COMPLIBDIR) ] {
+#     set sim_complibdir  $::env(VIV_SIM_COMPLIBDIR)
+#     if [expr [file isdirectory $sim_complibdir] == 0] {
+#         set sim_complibdir  ""
+#     }
+# } else {
+#     set sim_complibdir  ""
+# }
+# if [expr ([string equal $simulator "XSim"] == 0) && ([string length $sim_complibdir] == 0)] {
+#     puts "BUILDER: \[ERROR\]: Could not resolve the location for the compiled simulation libraries."
+#     puts "                  Please build libraries for chosen simulator and set the env or"
+#     puts "                  makefile variable SIM_COMPLIBDIR to point to the location."
+#     exit 1
+# }
+# puts "BUILDER: Creating Vivado simulation project part $part_name"
+BUILDER: Creating Vivado simulation project part xc7k410tffg900-2
+# create_project -part $part_name -force $project_name/$project_name
+create_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1500.684 ; gain = 103.918 ; free physical = 17354 ; free virtual = 145661
+# foreach src_file $design_srcs {
+#     if [expr [file isdirectory $src_file] == 1] {
+#         puts "BUILDER: Expanding Directory : $src_file"
+#         set dir_contents [glob $src_file/*.*]
+#         append design_srcs " " $dir_contents
+#     }
+# }
+# foreach src_file $design_srcs {
+#     set src_ext [file extension $src_file ]
+#     if [expr [lsearch {.vhd .vhdl} $src_ext] >= 0] {
+#         puts "BUILDER: Adding VHDL    : $src_file"
+#         read_vhdl $src_file
+#     } elseif [expr [lsearch {.v .vh} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Verilog : $src_file"
+#         read_verilog $src_file
+#     } elseif [expr [lsearch {.sv .svh} $src_ext] >= 0] {
+#         puts "BUILDER: Adding SVerilog: $src_file"
+#         read_verilog -sv $src_file
+#     } elseif [expr [lsearch {.xdc} $src_ext] >= 0] {
+#         puts "BUILDER: Adding XDC     : $src_file"
+#         read_xdc $src_file
+#     } elseif [expr [lsearch {.xci} $src_ext] >= 0] {
+#         puts "BUILDER: Adding IP      : $src_file"
+#         read_ip $src_file
+#     } elseif [expr [lsearch {.ngc .edif} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Netlist : $src_file"
+#         read_edif $src_file
+#     } elseif [expr [lsearch {.dat} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Data File : $src_file"
+#         add_files -fileset $sim_fileset -norecurse $src_file
+#     } elseif [expr [lsearch {.bd} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Block Diagram: $src_file"
+#         add_files -norecurse $src_file
+#     } elseif [expr [lsearch {.bxml} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Block Diagram XML: $src_file"
+#         add_files -norecurse $src_file
+#     } else {
+#         puts "BUILDER: \[WARNING\] File ignored!!!: $src_file"
+#     }
+# }
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_demux4.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_demux8.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_demux.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo32_to_fifo64.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo64_to_fifo32.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo32_to_fifo16.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo16_to_fifo32.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_cascade.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop2.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_short.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_filter_mux4.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_loopback.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_mux4.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_mux8.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_mux_select.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_mux.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_packet_gate.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/fifo64_to_axi4lite.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/shortfifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axis_fifo_monitor.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axis_strm_monitor.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/sim/fifo/axi_fifo_2clk_sim.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_chdr_header_trigger.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_chdr_test_pattern.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_defs.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_dma_fifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_dma_master.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_embed_tlast.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_extract_tlast.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_fast_extract_tlast.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_embed_tlast_tkeep.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_extract_tlast_tkeep.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_fast_fifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_to_strobed.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_data_swap.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_dummy.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/strobed_to_axi.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_add_preamble.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axi_strip_preamble.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/crc_xnor.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_shift_register.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_upsizer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_downsizer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_width_conv.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_split.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_split_bus.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_combine.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_load_split.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_load_merge.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packetize.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_pkt_throttle.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_data_if_packetize.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_sideband_tuser.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_monitor.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/ad5662_auto_spi.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/arb_qualify_master.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axi_crossbar.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axi_crossbar_regport.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axi_fifo_header.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axi_forwarding_cam.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axi_setting_reg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axi_slave_mux.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axi_test_vfifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/bin2gray.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/binary_encoder.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/clock_div.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/db_control.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/fe_control.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/filter_bad_sid.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/gearbox_2x1.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/gpio_atr_io.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/gpio_atr.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/gray2bin.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/por_gen.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/priority_encoder_one_hot.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/priority_encoder.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port_impl.vh
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/reset_sync.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/s7_icap_wb.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/serial_to_settings.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/setting_reg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/settings_bus_mux.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/settings_bus_timed_2clk.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/simple_i2c_core.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/simple_spi_core.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/simple_spi_core_64bit.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/synchronizer_impl.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/synchronizer.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/control/synchronizer_sync_in.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/pulse_synchronizer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/user_settings.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axil_regport_master.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axil_to_ni_regport.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/regport_resp_mux.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/regport_to_xbar_settingsbus.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/regport_to_settingsbus.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/pulse_stretch.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/pulse_stretch_min.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/mdio_master.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/map/cam_priority_encoder.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/map/cam_bram.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/map/cam_srl.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/map/cam.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/map/kv_map.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/map/axis_muxed_kv_map.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/axil_ctrlport_master.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/handshake.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/control/handshake_latch.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/ctrlport_to_regport.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/control/glitch_free_mux.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/control/regport_if.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/timing/time_compare.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/timing/timekeeper_legacy.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/timing/pps_generator.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/timing/pps_synchronizer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/timing/pulse_generator.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/packet_proc/chdr_chunker.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/packet_proc/chdr_dechunker.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/packet_proc/cvita_dest_lookup.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/packet_proc/ip_hdr_checksum.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/packet_proc/arm_deframer.v
+BUILDER: Adding VHDL    : <repo>/.scratch/uhd/fpga/usrp3/lib/packet_proc/arp_responder/arp_responder.vhd
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/acc.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/add2_and_clip_reg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/add2_and_clip.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/add2_and_round_reg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/add2_and_round.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/add2_reg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/add2.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/add_then_mac.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/cic_decim.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/cic_dec_shifter.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/cic_interp.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/cic_int_shifter.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/cic_strober.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/clip_reg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/clip.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/cordic_stage.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/cordic_z24.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/ddc_chain.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/duc_chain.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/hb47_int.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/hb_dec.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/hb_interp.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/mult_add_clip.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/round_reg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/round_sd.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/round.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/rx_dcoffset.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/rx_frontend.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/sign_extend.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/small_hb_dec.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/small_hb_int.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/srl.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/tx_frontend.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/variable_delay_line.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/axi_fir_multisample_filter.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/complex_multiply.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/complex_multiply_iq.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/complex_multiply_stb.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/timed_complex_gain_regs.svh
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/dsp/timed_complex_gain.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/chdr_fifo_large.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_bit_reduce.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/null_source.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/split_stream.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/split_stream_fifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/conj.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/delay_fifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/delay_type2.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/delay_type3.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/delay_type4.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/complex_to_magsq.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/phase_accum.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/complex_invert.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/periodic_framer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/moving_sum.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/counter.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/ram_to_fifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/const.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/const_sreg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/cmul.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/cadd.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/keep_one_in_n.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/vector_iir.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/addsub.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_pipe.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/multiply.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/mult.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/mult_add.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/mult_rc.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/mult_add_rc.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fft_shift.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_pipe_join.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_pipe_mac.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_round_and_clip_complex.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_round_complex.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_clip_complex.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_join.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_sync.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/split_complex.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_round_and_clip.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/join_complex.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_round.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_clip.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_clip_unsigned.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_serializer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_deserializer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_packer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/complex_to_mag_approx.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/file_source.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/delay.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/fifo_srl.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/rng.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_avg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_binmap.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_core.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_eoseq.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_histo_mem.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_line_mem.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_logpwr.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_maxhold.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_packetizer.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_rise_decay.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_wf_agg.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fosphor/axi_logpwr.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/cvita_hdr_parser.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/cvita_hdr_encoder.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/cvita_hdr_decoder.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/cvita_hdr_modify.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_async_stream.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_rate_change.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_tag_time.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_drop_partial_packet.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/ddc.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/duc.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/cic_decimate.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/cic_interpolate.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/sine_tone.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_fir_filter.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/fir_filter_slice.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/axi_fir_filter_dec.v
+BUILDER: Adding VHDL    : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/addsub.vhd
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/dds_freq_tune.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/dds_freq_tune_duc.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/dds_timed.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/dds_wrapper.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/datapath_gatekeeper.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_pkg.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_if.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/rfnoc_chdr_utils_pkg.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_endpoint.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_master.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_slave.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_compute_tkeep.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_chdr_data.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_axis_pyld_ctxt.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_axis_data.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_pyld_ctxt_to_chdr.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_ingress_fifo.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_mgmt_pkt_handler.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_data_swapper.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_stream_endpoint.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_stream_input.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_stream_output.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_axis_ctrl.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/backend_iface.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/rfnoc_core_kernel.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_trim_payload.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_pad_packet.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_resize.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_convert_up.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_convert_down.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_monitor.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_channel_mux.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_channel_demux.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/context_handler_sync.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/context_builder.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/context_parser.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_timer.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_combiner.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_decoder.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_decoder_param.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_window.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_splitter.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_resp_combine.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_clk_cross.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_reg_rw.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_reg_ro.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_to_settings_bus.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/noc_shell_generic_ctrlport_pyld_chdr.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/timekeeper.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_terminator.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_strip_header.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_clk_cross.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_combiner.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_decoder.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_splitter.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_terminator.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_window.sv
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/rfnoc_block_radio_regs.vh
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/radio_rx_core.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/radio_tx_core.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/radio_core.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/noc_shell_radio.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/rfnoc_block_radio.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/rx_frontend_gen3.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/tx_frontend_gen3.v
+BUILDER: Adding Verilog : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/quarter_rate_downconverter.v
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/align_samples.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/axi4s_remove_bytes.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/axi4s_remove_bytes_start.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/axi4s_add_bytes.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/axi4s_fifo.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/axi4s_packet_gate.sv
+BUILDER: Adding SVerilog: <repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/axi4s_width_conv.sv
+# foreach sim_src $sim_srcs {
+#     puts "BUILDER: Adding Sim Src : $sim_src"
+#     add_files -fileset $sim_fileset -norecurse $sim_src
+# }
+BUILDER: Adding Sim Src : <repo>/tb/tb_radio_ts.sv
+BUILDER: Adding Sim Src : <repo>/tb/tb_radio_ts_tops.sv
+# foreach inc_src $inc_srcs {
+#     puts "BUILDER: Adding Inc Src : $inc_src"
+#     add_files -fileset $sim_fileset -norecurse $inc_src
+# }
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/general/sim_clks_rsts.vh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/general/sim_exec_report.vh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/general/sim_math.vh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/general/sim_file_io.svh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/axi/sim_axi4_lib.svh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/axi/sim_axis_lib.svh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/axi/sim_cvita_lib.svh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/control/sim_set_rb_lib.svh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/lib/axi4lite_sv/PkgAxiLite.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/lib/axi4lite_sv/AxiLiteIf.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_pkg.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/test_exec.svh
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/sim_clock_gen.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgAxiLiteBfm.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgEthernet.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgChdrData.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/rfnoc_chdr_utils_pkg.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgAxisCtrlBfm.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgRfnocItemUtils.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgCtrlIfaceBfm.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgChdrIfaceBfm.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/rfnoc/ctrlport_bfm_pkg.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/packages/PkgMath.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/packages/PkgComplex.sv
+BUILDER: Adding Inc Src : <repo>/.scratch/uhd/fpga/usrp3/sim/packages/PkgRandom.sv
+# set_property top $sim_top [get_filesets $sim_fileset]
+# set_property default_lib xil_defaultlib [current_project]
+# update_compile_order -fileset sim_1 -quiet
+# set_property target_simulator $simulator [current_project]
+# if [expr [string equal $simulator "XSim"] == 1] {
+#     append verilog_defs " WORKING_DIR=\"$working_dir\""
+# } else {
+#     append verilog_defs " WORKING_DIR=$working_dir"
+# }
+# set_property verilog_define $verilog_defs [get_filesets $sim_fileset]
+# set_property xsim.simulate.runtime "${sim_runtime}us" -objects [get_filesets $sim_fileset]
+# set_property xsim.elaborate.debug_level "all" -objects [get_filesets $sim_fileset]
+# set_property xsim.elaborate.unifast $sim_fast -objects [get_filesets $sim_fileset]
+# set_property xsim.elaborate.xelab.more_options -value {-timescale 1ns/1ns} -objects [get_filesets $sim_fileset]
+# if [expr [string equal $simulator "Modelsim"] == 1] {
+#     set sim_64bit       $::env(VIV_SIM_64BIT)
+# 
+#     set_property compxlib.modelsim_compiled_library_dir $sim_complibdir [current_project]
+#     # Does not work yet (as of Vivado 2015.2), but will be useful for 32-bit support
+#     # See: http://www.xilinx.com/support/answers/62210.html
+#     set_property modelsim.64bit $sim_64bit -objects [get_filesets $sim_fileset]
+#     set_property modelsim.simulate.runtime "${sim_runtime}ns" -objects [get_filesets $sim_fileset]
+#     set_property modelsim.elaborate.acc "true" -objects [get_filesets $sim_fileset]
+#     set_property modelsim.simulate.log_all_signals "true" -objects [get_filesets $sim_fileset]
+#     set_property modelsim.simulate.vsim.more_options -value "-c" -objects [get_filesets $sim_fileset]
+#     set_property modelsim.elaborate.unifast $sim_fast -objects [get_filesets $sim_fileset]
+#     if [info exists ::env(VIV_SIM_USER_DO) ] {
+#         set_property modelsim.simulate.custom_udo -value "$::env(VIV_SIM_USER_DO)" -objects [get_filesets $sim_fileset]
+#     }
+# }
+# launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_radio_ts_cg0'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '<repo>/.scratch/s5_uhdsim/radio_ts_tb_radio_ts_cg0/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '<xilinx-tools>/Vivado/2024.2/tps/boost_1_72_0'
+get_xpm_libraries: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1543.945 ; gain = 0.000 ; free physical = 16863 ; free virtual = 144911
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_radio_ts_cg0' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '<repo>/.scratch/s5_uhdsim/radio_ts_tb_radio_ts_cg0/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj tb_radio_ts_cg0_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_flop
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_flop2
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_short.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_short
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/dsp/clip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clip
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/radio_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module radio_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/radio_rx_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module radio_rx_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/radio_tx_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module radio_tx_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_auto
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_reg
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_lutram
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_bram
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_uram
+INFO: [VRFC 10-311] analyzing module ram_2port
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/dsp/round.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module round
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/rfnoc_chdr_utils_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/align_samples.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module align_samples
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/dsp/complex_multiply.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module complex_multiply
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/dsp/complex_multiply_stb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module complex_multiply_stb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_combiner.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrlport_combiner
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrlport_decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_combiner.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrlport_if_combiner
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrlport_if_decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_if_splitter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrlport_if_splitter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_splitter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrlport_splitter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/tb/tb_radio_ts.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_radio_ts
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/.scratch/uhd/fpga/usrp3/lib/dsp/timed_complex_gain.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timed_complex_gain
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<repo>/tb/tb_radio_ts_tops.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_radio_ts_cg1
+INFO: [VRFC 10-311] analyzing module tb_radio_ts_cg0
+INFO: [VRFC 10-2263] Analyzing Verilog file "<repo>/.scratch/s5_uhdsim/radio_ts_tb_radio_ts_cg0/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '<repo>/.scratch/s5_uhdsim/radio_ts_tb_radio_ts_cg0/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+xelab --incr --debug all --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_radio_ts_cg0_behav xil_defaultlib.tb_radio_ts_cg0 xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: <xilinx-tools>/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug all --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_radio_ts_cg0_behav xil_defaultlib.tb_radio_ts_cg0 xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.ctrlport_pkg
+Compiling module xil_defaultlib.ctrlport_if_default
+Compiling module xil_defaultlib.ctrlport_if_decoder(NUM_SLAVES=4...
+Compiling module xil_defaultlib.ctrlport_decoder(NUM_SLAVES=4)
+Compiling module xil_defaultlib.ctrlport_if_combiner(PRIORITY=1'...
+Compiling module xil_defaultlib.ctrlport_combiner_default
+Compiling module unisims_ver.SRLC32E_default
+Compiling module xil_defaultlib.axi_fifo_short(WIDTH=66)
+Compiling module xil_defaultlib.radio_tx_core_default
+Compiling module xil_defaultlib.axi_fifo_short(WIDTH=115)
+Compiling module xil_defaultlib.axi_fifo(WIDTH=115)
+Compiling module xil_defaultlib.axi_fifo(WIDTH=115,SIZE=-1)
+Compiling module xil_defaultlib.axi_fifo_short(WIDTH=98)
+Compiling module xil_defaultlib.axi_fifo(WIDTH=98)
+Compiling module xil_defaultlib.radio_rx_core_default
+Compiling module xil_defaultlib.radio_core(EN_COMP_GAIN_TX=0,EN_...
+tput: No value for $TERM and no -T specified
+WARNING: [VRFC 10-8809] cannot index into scalar type parameter/localparam 'COMP_GAIN_TX_PRESENT' [<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/radio_core.v:392]
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+WARNING: [VRFC 10-8809] cannot index into scalar type parameter/localparam 'COMP_GAIN_RX_PRESENT' [<repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/blocks/rfnoc_block_radio/radio_core.v:391]
+tput: No value for $TERM and no -T specified
+Compiling module xil_defaultlib.tb_radio_ts(EN_CG=0,OFFSET_EXP=0...
+Compiling module xil_defaultlib.tb_radio_ts_cg0
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_radio_ts_cg0_behav
+execute_script: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1552.445 ; gain = 0.000 ; free physical = 16767 ; free virtual = 144865
+INFO: [USF-XSim-69] 'elaborate' step finished in '16' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '<repo>/.scratch/s5_uhdsim/radio_ts_tb_radio_ts_cg0/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_radio_ts_cg0_behav -key {Behavioral:sim_1:Functional:tb_radio_ts_cg0} -tclbatch {tb_radio_ts_cg0.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_radio_ts_cg0.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+tput: No value for $TERM and no -T specified
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+tput: No value for $TERM and no -T specified
+## run 1000000000us
+FIRST packet ttimestamp=0000000000003000 has_time=1 first sample (its tap time)=00003000 -> host timestamp - tap time = 0
+RESULT EN_COMP_GAIN_RX=0 words=1000/1000 packets=10 offset(host ts - tap time)=0 expected=0 mismatches=0
+PASS
+$finish called at time : 46215 ns : File "<repo>/tb/tb_radio_ts.sv" Line 128
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_radio_ts_cg0_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000000us
+launch_simulation: Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1600.656 ; gain = 56.711 ; free physical = 16667 ; free virtual = 144773
+# if { [info exists ::env(VIV_SYNTH_TOP)] } {
+#    puts "BUILDER: Synthesizing"
+#    # Synthesize requested modules
+#    foreach synth_top "$::env(VIV_SYNTH_TOP)" {
+#       set_property top $synth_top [current_fileset]
+#       synth_design -mode out_of_context
+#       # Perform a simple regex-based search for all clock signals and constrain
+#       # them to 500 MHz for the timing report.
+#       set clk_regexp "(?i)^(?!.*en.*).*(clk|clock).*"
+#       foreach clk_inst [get_ports -regexp $clk_regexp] {
+#          create_clock -name $clk_inst -period 2.0 [get_ports $clk_inst]
+#       }
+#       report_utilization -no_primitives -file ${working_dir}/${synth_top}_synth.rpt
+#       report_timing_summary -setup -max_paths 3 -unique_pins -no_header -append -file ${working_dir}/${synth_top}_synth.rpt
+#       write_checkpoint -force ${working_dir}/${synth_top}_synth.dcp
+#    }
+# } else {
+#    puts "BUILDER: Skipping resource report because VIV_SYNTH_TOP is not set"
+# }
+BUILDER: Synthesizing
+# if [string equal $vivado_mode "batch"] {
+#     puts "BUILDER: Closing project"
+#     close_project
+# } else {
+#     puts "BUILDER: In GUI mode. Leaving project open."
+# }
+BUILDER: Closing project
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 01:25:03 2026...
+make rc=0

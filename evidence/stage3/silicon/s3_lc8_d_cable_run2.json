@@ -1,0 +1,239 @@
+[
+ {
+  "log": "evidence/stage3/silicon/s3_lc8_d_cable_run2.log",
+  "run": "echo_gap63",
+  "mode": "echo",
+  "gap": 63,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5f09efeb",
+  "sim_signature": "5f09efeb",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_a_period_ns": 6.206060606060606,
+  "freq_a_counts": 27033600,
+  "freq_b_counts": 27033606,
+  "b_ppm_vs_a": 0.22194602267155972,
+  "loop_cycles": {
+   "min": 111,
+   "p50": 118,
+   "p99": 124,
+   "max": 129,
+   "mean": 117.86135848829097
+  },
+  "b_decode_path_cycles": [
+   0,
+   65535
+  ],
+  "b_echo_path_cycles": [
+   1,
+   1
+  ],
+  "hist": {
+   "111": 535,
+   "112": 7598,
+   "113": 5162,
+   "114": 43396,
+   "115": 13393,
+   "116": 94107,
+   "117": 18071,
+   "118": 121454,
+   "119": 14821,
+   "120": 90766,
+   "121": 6046,
+   "122": 40151,
+   "123": 1257,
+   "124": 6377,
+   "125": 250,
+   "126": 397,
+   "127": 292,
+   "128": 299,
+   "129": 56
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true,
+  "loop_ns": {
+   "min": 688.8727272727273,
+   "p50": 732.3151515151516,
+   "p99": 769.5515151515151,
+   "max": 800.5818181818182,
+   "mean": 731.4547338909695
+  }
+ },
+ {
+  "log": "evidence/stage3/silicon/s3_lc8_d_cable_run2.log",
+  "run": "decode_gap63",
+  "mode": "decode",
+  "gap": 63,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5e8e5270",
+  "sim_signature": "5e8e5270",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_a_period_ns": 6.206060606060606,
+  "freq_a_counts": 27033600,
+  "freq_b_counts": 27033606,
+  "b_ppm_vs_a": 0.22194602267155972,
+  "loop_cycles": {
+   "min": 117,
+   "p50": 124,
+   "p99": 128,
+   "max": 130,
+   "mean": 123.84035630926645
+  },
+  "b_decode_path_cycles": [
+   7,
+   7
+  ],
+  "b_echo_path_cycles": [
+   1,
+   1
+  ],
+  "hist": {
+   "117": 529,
+   "118": 3790,
+   "119": 3028,
+   "120": 33296,
+   "121": 14916,
+   "122": 103608,
+   "123": 18404,
+   "124": 133174,
+   "125": 15660,
+   "126": 100047,
+   "127": 4051,
+   "128": 29689,
+   "129": 1087,
+   "130": 3149
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true,
+  "loop_ns": {
+   "min": 726.1090909090909,
+   "p50": 769.5515151515151,
+   "p99": 794.3757575757576,
+   "max": 806.7878787878788,
+   "mean": 768.5607567314476
+  }
+ },
+ {
+  "log": "evidence/stage3/silicon/s3_lc8_d_cable_run2.log",
+  "run": "decode_gap7",
+  "mode": "decode",
+  "gap": 7,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5e8e5270",
+  "sim_signature": "5e8e5270",
+  "flips_checked": 8192,
+  "flip_mismatches": 0,
+  "clk_a_period_ns": 6.206060606060606,
+  "freq_a_counts": 27033600,
+  "freq_b_counts": 27033606,
+  "b_ppm_vs_a": 0.22194602267155972,
+  "loop_cycles": {
+   "min": 118,
+   "p50": 124,
+   "p99": 128,
+   "max": 135,
+   "mean": 123.74829467646222
+  },
+  "b_decode_path_cycles": [
+   7,
+   7
+  ],
+  "b_echo_path_cycles": [
+   1,
+   1
+  ],
+  "hist": {
+   "118": 34,
+   "119": 4248,
+   "120": 31245,
+   "121": 19122,
+   "122": 107228,
+   "123": 25465,
+   "124": 126657,
+   "125": 19212,
+   "126": 107033,
+   "127": 4462,
+   "128": 19431,
+   "129": 64,
+   "130": 23,
+   "131": 24,
+   "132": 7,
+   "133": 21,
+   "134": 119,
+   "135": 33
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true,
+  "loop_ns": {
+   "min": 732.3151515151516,
+   "p50": 769.5515151515151,
+   "p99": 794.3757575757576,
+   "max": 837.8181818181819,
+   "mean": 767.9894166587716
+  }
+ }
+]

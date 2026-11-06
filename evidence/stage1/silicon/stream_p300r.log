@@ -1,0 +1,12 @@
+# host=zcu102 date=2026-10-20T13:47:39+00:00 kernel=6.12.40-xilinx-g31626ef92ff1 bin=s1_p300_lc3_f1.bin bin_sha256=1b2f01e1c8b51b0de433f72728e8f44799052b8d5d101c709ed4e3d75a336a6f vectors_sha256=7312c8f3b86b803d03eb2acfb712d8161548001708ea765038f561a4cdf971e1 host_sha256=c7675607bc3cfaf71be018ad23abf6420bdc6111f36f37911ad4bd3897c9d679
+{"id": "0x4a534331", "lat_net": 10, "arg_lat": 1, "depth_log2": 14, "n_core": 13, "lc": 3, "f_net_mhz": 300, "axi_div": 1, "ps_steps": 224, "status": "0x00000008", "mmcm_locked": true, "f_net_measured_mhz": 300.0}
+# STREAM params={"lat_net": 10, "arg_lat": 1, "depth_log2": 14, "n_core": 13, "lc": 3, "f_net_mhz": 300, "axi_div": 1, "ps_steps": 224} hashes={"jsc_golden_in.hex": "8905d5c06da65cde9e26a6b077f8e4f1f8228fb46e57fce19a0e0de7286a3986", "jsc_golden_out.hex": "383bdcdd1515bd42c467794e0d14cabce95fe424edc500f739868e1a97f88a34", "jsc_golden_argmax.hex": "493b9691ea42139eabb33adacc590ed928b3d6b2437334bda0682df661ed2fd1"}
+RESULT stream seed=0 run=1 vectors=166000 logit_mismatches=0 class_mismatches=0 stream_cyc_offset=16 seconds=0.2
+RESULT stream seed=0 run=2 vectors=166000 logit_mismatches=0 class_mismatches=0 stream_cyc_offset=16 seconds=0.2
+RESULT stream seed=1 run=1 vectors=166000 logit_mismatches=0 class_mismatches=0 stream_cyc_offset=16 seconds=0.3
+RESULT stream seed=1 run=2 vectors=166000 logit_mismatches=0 class_mismatches=0 stream_cyc_offset=16 seconds=0.3
+RESULT stream seed=2 run=1 vectors=166000 logit_mismatches=0 class_mismatches=0 stream_cyc_offset=16 seconds=0.3
+RESULT stream seed=2 run=2 vectors=166000 logit_mismatches=0 class_mismatches=0 stream_cyc_offset=16 seconds=0.3
+RESULT stream seed=3 run=1 vectors=166000 logit_mismatches=0 class_mismatches=0 stream_cyc_offset=16 seconds=0.3
+RESULT stream seed=3 run=2 vectors=166000 logit_mismatches=0 class_mismatches=0 stream_cyc_offset=16 seconds=0.3
+EXIT 0

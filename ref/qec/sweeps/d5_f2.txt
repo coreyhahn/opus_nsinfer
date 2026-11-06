@@ -1,0 +1,8 @@
+# d = 5 float64 baselines 2 (grumpy-calf), 2026-10-26: narrow / deep nets as warm-start sources for small cores.
+# Why: the 256x3-derived HGQ core at 3.58M EBOPs (~500k LUT) does not route at 161 MHz on the VU9P (q5), and
+# shrinking 256x3 by EBOPs pressure costs accuracy fast (1.21 at 1.9M). Depth helped at d = 5 (2-layer nets
+# plateaued at 1.38-1.42, 3-layer at 0.93-0.97), so try fewer weights with the same or more depth.
+float_d5_128x3       --d 5 --mode float --arch 128 128 128 --epochs 120 --steps-per-epoch 2000 --batch 8192 --lr 2e-3
+float_d5_128x4       --d 5 --mode float --arch 128 128 128 128 --epochs 120 --steps-per-epoch 2000 --batch 8192 --lr 2e-3
+float_d5_192_96_96   --d 5 --mode float --arch 192 96 96 --epochs 120 --steps-per-epoch 2000 --batch 8192 --lr 2e-3
+float_d5_64x4        --d 5 --mode float --arch 64 64 64 64 --epochs 120 --steps-per-epoch 2000 --batch 8192 --lr 2e-3

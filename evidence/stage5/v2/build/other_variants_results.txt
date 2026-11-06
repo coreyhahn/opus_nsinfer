@@ -1,0 +1,5 @@
+RESULT variant=AltSpreadLogic_high/AggressiveExplore/Explore post_route WNS=-0.031 WHS=-0.091
+RESULT variant=AltSpreadLogic_high/AggressiveExplore/Explore not closed, no bitstream
+RESULT variant=physopt_then_reroute WNS=0.011 WHS=0.003
+RESULT bitstream written
+Explore, ExtraTimingOpt: stopped 2026-11-03 12:10 (not needed; a closed image existed)

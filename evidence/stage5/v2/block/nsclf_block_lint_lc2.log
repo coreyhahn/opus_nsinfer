@@ -1,0 +1,509 @@
+# host=build-host date=2026-11-03T10:08:58-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1) uhd=a5d1b2e
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/noc_shell_nsclf.sv:157:71: Cell pin connected by name with empty reference: 'busy_a'
+  157 |     .clk_a(rfnoc_chdr_clk), .rst_a(1'b0), .pulse_a (rfnoc_chdr_rst), .busy_a (),
+      |                                                                       ^~~~~~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.020
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/noc_shell_nsclf.sv:196:6: Cell pin connected by name with empty reference: 'm_ctrlport_req_byte_en'
+  196 |     .m_ctrlport_req_byte_en    (),
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/noc_shell_nsclf.sv:197:6: Cell pin connected by name with empty reference: 'm_ctrlport_req_has_time'
+  197 |     .m_ctrlport_req_has_time   (),
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/noc_shell_nsclf.sv:198:6: Cell pin connected by name with empty reference: 'm_ctrlport_req_time'
+  198 |     .m_ctrlport_req_time       (),
+      |      ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/noc_shell_nsclf.sv:212:6: Cell pin connected by name with empty reference: 's_ctrlport_resp_ack'
+  212 |     .s_ctrlport_resp_ack       (),
+      |      ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/noc_shell_nsclf.sv:213:6: Cell pin connected by name with empty reference: 's_ctrlport_resp_status'
+  213 |     .s_ctrlport_resp_status    (),
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/noc_shell_nsclf.sv:214:6: Cell pin connected by name with empty reference: 's_ctrlport_resp_data'
+  214 |     .s_ctrlport_resp_data      ()
+      |      ^~~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/rfnoc_block_nsclf.sv:131:6: Cell pin connected by name with empty reference: 'rfnoc_chdr_rst'
+  131 |     .rfnoc_chdr_rst      (),
+      |      ^~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/rfnoc_block_nsclf.sv:132:6: Cell pin connected by name with empty reference: 'rfnoc_ctrl_rst'
+  132 |     .rfnoc_ctrl_rst      (),
+      |      ^~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/rtl/x310/rfnoc_block_nsclf.sv:133:6: Cell pin connected by name with empty reference: 'radio_rst'
+  133 |     .radio_rst           (),
+      |      ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:71:10: Cell pin connected by name with empty reference: 'space'
+   71 |         .space(), .occupied()
+      |          ^~~~~
+                          <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                          <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-PINCONNECTEMPTY: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:71:20: Cell pin connected by name with empty reference: 'occupied'
+   71 |         .space(), .occupied()
+      |                    ^~~~~~~~
+                          <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                          <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-PINCONNECTEMPTY: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:83:10: Cell pin connected by name with empty reference: 'space'
+   83 |         .space(), .occupied()
+      |          ^~~~~
+                          <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                          <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-PINCONNECTEMPTY: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:83:20: Cell pin connected by name with empty reference: 'occupied'
+   83 |         .space(), .occupied()
+      |                    ^~~~~~~~
+                          <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                          <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-TIMESCALEMOD: nsclf_lint_stubs.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    4 | module fifo_short_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |        ^~~~~~~~~~~~~~~
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: nsclf_lint_stubs.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module fifo_4k_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |        ^~~~~~~~~~~~
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: nsclf_lint_stubs.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module SRLC32E #(parameter [31:0] INIT = 32'h0) (output wire Q, output wire Q31, input wire [4:0] A,
+      |        ^~~~~~~
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/backend_iface.v:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module backend_iface #(
+      |        ^~~~~~~~~~~~~
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:135:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/pulse_synchronizer.v:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module pulse_synchronizer #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:158:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/pulse_stretch_min.v:38:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   38 | module pulse_stretch_min #(
+      |        ^~~~~~~~~~~~~~~~~
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:163:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:30:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   30 | module ctrlport_endpoint #(
+      |        ^~~~~~~~~~~~~~~~~
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:58:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   58 | module axis_data_to_chdr #(
+      |        ^~~~~~~~~~~~~~~~~
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/synchronizer.v:48:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   48 | module synchronizer #(
+      |        ^~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/backend_iface.v:83:1: ... note: In file included from 'backend_iface.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:135:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:34:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   34 | module axi_fifo #(
+      |        ^~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_2clk.v:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module axi_fifo_2clk #(
+      |        ^~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:118:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_demux.v:23:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   23 | module axi_demux #(
+      |        ^~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:159:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_mux.v:27:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   27 | module axi_mux #(
+      |        ^~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:174:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_master.v:30:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   30 | module axis_ctrl_master #(
+      |        ^~~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:222:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_slave.v:23:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   23 | module axis_ctrl_slave (
+      |        ^~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:264:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_width_conv.v:33:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   33 | module axis_width_conv #(
+      |        ^~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:343:1: ... note: In file included from 'axis_data_to_chdr.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:30:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   30 | module axis_packet_flush #(
+      |        ^~~~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/synchronizer_impl.v:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module synchronizer_impl #(
+      |        ^~~~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/control/synchronizer.v:65:1: ... note: In file included from 'synchronizer.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/backend_iface.v:83:1: ... note: In file included from 'backend_iface.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:135:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop.v:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module axi_fifo_flop
+      |        ^~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:67:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop2.v:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module axi_fifo_flop2 #(
+      |        ^~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:86:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_short.v:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module axi_fifo_short #(
+      |        ^~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:105:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module axi_fifo_bram
+      |        ^~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:125:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_packet_gate.v:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   29 | module axi_packet_gate #(
+      |        ^~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_slave.v:100:1: ... note: In file included from 'axis_ctrl_slave.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:264:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_upsizer.v:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module axis_upsizer #(
+      |        ^~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_width_conv.v:170:1: ... note: In file included from 'axis_width_conv.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:343:1: ... note: In file included from 'axis_data_to_chdr.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_downsizer.v:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module axis_downsizer #(
+      |        ^~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_width_conv.v:226:1: ... note: In file included from 'axis_width_conv.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:343:1: ... note: In file included from 'axis_data_to_chdr.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port_impl.vh:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module ram_2port_impl_auto #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port.v:23:1: ... note: In file included from 'ram_2port.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v:58:1: ... note: In file included from 'axi_fifo_bram.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:125:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port_impl.vh:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module ram_2port_impl_reg #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port.v:30:1: ... note: In file included from 'ram_2port.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v:58:1: ... note: In file included from 'axi_fifo_bram.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:125:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port_impl.vh:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module ram_2port_impl_lutram #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port.v:37:1: ... note: In file included from 'ram_2port.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v:58:1: ... note: In file included from 'axi_fifo_bram.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:125:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port_impl.vh:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module ram_2port_impl_bram #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port.v:44:1: ... note: In file included from 'ram_2port.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v:58:1: ... note: In file included from 'axi_fifo_bram.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:125:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port_impl.vh:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module ram_2port_impl_uram #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port.v:51:1: ... note: In file included from 'ram_2port.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v:58:1: ... note: In file included from 'axi_fifo_bram.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:125:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-TIMESCALEMOD: <repo>/.scratch/uhd/fpga/usrp3/lib/control/ram_2port.v:54:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   54 | module ram_2port #(
+      |        ^~~~~~~~~
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v:58:1: ... note: In file included from 'axi_fifo_bram.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/fifo/axi_fifo.v:125:1: ... note: In file included from 'axi_fifo.v'
+                       <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v:100:1: ... note: In file included from 'ctrlport_endpoint.v'
+                       <repo>/rtl/x310/noc_shell_nsclf.sv:181:1: ... note: In file included from 'noc_shell_nsclf.sv'
+                       <repo>/rtl/gen/x310_clf_lc2/src/static/binop.v:4:8: ... Location of module with timescale
+    4 | module binop #(
+      |        ^~~~~
+%Warning-GENUNNAMED: <repo>/.scratch/uhd/fpga/usrp3/lib/control/pulse_synchronizer.v:26:35: Unnamed generate block 'genblk1' (IEEE 1800-2017 27.6)
+                                                                                                                         : ... Suggest assign a label with 'begin : gen_<label_name>'
+   26 |   generate if (MODE == "POSEDGE") begin
+      |                                   ^~~~~
+                     <repo>/rtl/x310/noc_shell_nsclf.sv:158:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-GENUNNAMED: <repo>/.scratch/uhd/fpga/usrp3/lib/control/pulse_synchronizer.v:31:35: Unnamed generate block 'genblk1' (IEEE 1800-2017 27.6)
+                                                                                                                         : ... Suggest assign a label with 'begin : gen_<label_name>'
+   31 |   end else if (MODE == "NEGEDGE") begin
+      |                                   ^~~~~
+                     <repo>/rtl/x310/noc_shell_nsclf.sv:158:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-GENUNNAMED: <repo>/.scratch/uhd/fpga/usrp3/lib/control/pulse_synchronizer.v:36:12: Unnamed generate block 'genblk1' (IEEE 1800-2017 27.6)
+                                                                                                                         : ... Suggest assign a label with 'begin : gen_<label_name>'
+   36 |   end else begin
+      |            ^~~~~
+                     <repo>/rtl/x310/noc_shell_nsclf.sv:158:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-GENUNNAMED: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:66:50: Unnamed generate block 'genblk1' (IEEE 1800-2017 27.6)
+                                                                                                                    : ... Suggest assign a label with 'begin : gen_<label_name>'
+   66 |     if (PIPELINE == "IN" || PIPELINE == "INOUT") begin
+      |                                                  ^~~~~
+                     <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                     <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-GENUNNAMED: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:73:14: Unnamed generate block 'genblk1' (IEEE 1800-2017 27.6)
+                                                                                                                    : ... Suggest assign a label with 'begin : gen_<label_name>'
+   73 |     end else begin
+      |              ^~~~~
+                     <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                     <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-GENUNNAMED: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:78:51: Unnamed generate block 'genblk2' (IEEE 1800-2017 27.6)
+                                                                                                                    : ... Suggest assign a label with 'begin : gen_<label_name>'
+   78 |     if (PIPELINE == "OUT" || PIPELINE == "INOUT") begin
+      |                                                   ^~~~~
+                     <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                     <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-GENUNNAMED: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:85:14: Unnamed generate block 'genblk2' (IEEE 1800-2017 27.6)
+                                                                                                                    : ... Suggest assign a label with 'begin : gen_<label_name>'
+   85 |     end else begin
+      |              ^~~~~
+                     <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                     <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-WIDTHEXPAND: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:66:38: Operator EQ expects 40 bits on the LHS, but LHS's VARREF 'PIPELINE' generates 16 bits.
+                                                                                                                     : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.chdr_flusher_i'
+   66 |     if (PIPELINE == "IN" || PIPELINE == "INOUT") begin
+      |                                      ^~
+                      <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                      <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-WIDTHEXPAND: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:78:18: Operator EQ expects 24 bits on the LHS, but LHS's VARREF 'PIPELINE' generates 16 bits.
+                                                                                                                     : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.chdr_flusher_i'
+   78 |     if (PIPELINE == "OUT" || PIPELINE == "INOUT") begin
+      |                  ^~
+                      <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                      <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-WIDTHEXPAND: <repo>/.scratch/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v:78:39: Operator EQ expects 40 bits on the LHS, but LHS's VARREF 'PIPELINE' generates 16 bits.
+                                                                                                                     : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.chdr_flusher_i'
+   78 |     if (PIPELINE == "OUT" || PIPELINE == "INOUT") begin
+      |                                       ^~
+                      <repo>/.scratch/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v:556:1: ... note: In file included from 'axis_data_to_chdr.v'
+                      <repo>/rtl/x310/noc_shell_nsclf.sv:245:1: ... note: In file included from 'noc_shell_nsclf.sv'
+%Warning-ASCRANGE: <repo>/rtl/x310/noc_shell_nsclf.sv:58:15: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                          : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+   58 |   input  wire [(0)*CHDR_W-1:0] s_rfnoc_chdr_tdata,
+      |               ^
+%Warning-ASCRANGE: <repo>/rtl/x310/noc_shell_nsclf.sv:59:15: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                          : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+   59 |   input  wire [(0)-1:0]        s_rfnoc_chdr_tlast,
+      |               ^
+%Warning-ASCRANGE: <repo>/rtl/x310/noc_shell_nsclf.sv:60:15: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                          : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+   60 |   input  wire [(0)-1:0]        s_rfnoc_chdr_tvalid,
+      |               ^
+%Warning-ASCRANGE: <repo>/rtl/x310/noc_shell_nsclf.sv:61:15: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                          : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+   61 |   output wire [(0)-1:0]        s_rfnoc_chdr_tready,
+      |               ^
+%Warning-ASCRANGE: <repo>/rtl/x310/rfnoc_block_nsclf.sv:38:15: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                            : ... note: In instance 'rfnoc_block_nsclf'
+   38 |   input  wire [(0)*CHDR_W-1:0] s_rfnoc_chdr_tdata,
+      |               ^
+%Warning-ASCRANGE: <repo>/rtl/x310/rfnoc_block_nsclf.sv:39:15: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                            : ... note: In instance 'rfnoc_block_nsclf'
+   39 |   input  wire [(0)-1:0]        s_rfnoc_chdr_tlast,
+      |               ^
+%Warning-ASCRANGE: <repo>/rtl/x310/rfnoc_block_nsclf.sv:40:15: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                            : ... note: In instance 'rfnoc_block_nsclf'
+   40 |   input  wire [(0)-1:0]        s_rfnoc_chdr_tvalid,
+      |               ^
+%Warning-ASCRANGE: <repo>/rtl/x310/rfnoc_block_nsclf.sv:41:15: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                            : ... note: In instance 'rfnoc_block_nsclf'
+   41 |   output wire [(0)-1:0]        s_rfnoc_chdr_tready,
+      |               ^
+%Warning-UNUSEDSIGNAL: <repo>/rtl/x310/rfnoc_block_nsclf.sv:84:22: Signal is not used: 'ctrlport_clk'
+                                                                                                : ... note: In instance 'rfnoc_block_nsclf'
+   84 |   wire               ctrlport_clk;
+      |                      ^~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: <repo>/rtl/x310/rfnoc_block_nsclf.sv:86:22: Signal is not used: 'axis_data_clk'
+                                                                                                : ... note: In instance 'rfnoc_block_nsclf'
+   86 |   wire               axis_data_clk;
+      |                      ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: <repo>/rtl/x310/rfnoc_block_nsclf.sv:87:22: Signal is not used: 'axis_data_rst'
+                                                                                                : ... note: In instance 'rfnoc_block_nsclf'
+   87 |   wire               axis_data_rst;
+      |                      ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: <repo>/rtl/x310/noc_shell_nsclf.sv:58:32: Signal is not used: 's_rfnoc_chdr_tdata'
+                                                                                              : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+   58 |   input  wire [(0)*CHDR_W-1:0] s_rfnoc_chdr_tdata,
+      |                                ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: <repo>/rtl/x310/noc_shell_nsclf.sv:59:32: Signal is not used: 's_rfnoc_chdr_tlast'
+                                                                                              : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+   59 |   input  wire [(0)-1:0]        s_rfnoc_chdr_tlast,
+      |                                ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: <repo>/rtl/x310/noc_shell_nsclf.sv:60:32: Signal is not used: 's_rfnoc_chdr_tvalid'
+                                                                                              : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+   60 |   input  wire [(0)-1:0]        s_rfnoc_chdr_tvalid,
+      |                                ^~~~~~~~~~~~~~~~~~~
+%Warning-UNDRIVEN: <repo>/rtl/x310/noc_shell_nsclf.sv:61:32: Signal is not driven: 's_rfnoc_chdr_tready'
+                                                                                          : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+   61 |   output wire [(0)-1:0]        s_rfnoc_chdr_tready,
+      |                                ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: <repo>/rtl/x310/noc_shell_nsclf.sv:118:16: Signal is not used: 'data_i_flush_en'
+                                                                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+  118 |   wire         data_i_flush_en;
+      |                ^~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: <repo>/rtl/x310/noc_shell_nsclf.sv:119:16: Signal is not used: 'data_i_flush_timeout'
+                                                                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+  119 |   wire [31:0]  data_i_flush_timeout;
+      |                ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNDRIVEN: <repo>/rtl/x310/noc_shell_nsclf.sv:120:16: Signal is not driven: 'data_i_flush_active'
+                                                                                           : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+  120 |   wire [63:0]  data_i_flush_active;
+      |                ^~~~~~~~~~~~~~~~~~~
+%Warning-UNDRIVEN: <repo>/rtl/x310/noc_shell_nsclf.sv:121:16: Signal is not driven: 'data_i_flush_done'
+                                                                                           : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+  121 |   wire [63:0]  data_i_flush_done;
+      |                ^~~~~~~~~~~~~~~~~
+%Warning-UNDRIVEN: <repo>/rtl/x310/noc_shell_nsclf.sv:124:16: Bits of signal are not driven: 'data_o_flush_active'[63:1]
+                                                                                           : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+  124 |   wire [63:0]  data_o_flush_active;
+      |                ^~~~~~~~~~~~~~~~~~~
+%Warning-UNDRIVEN: <repo>/rtl/x310/noc_shell_nsclf.sv:125:16: Bits of signal are not driven: 'data_o_flush_done'[63:1]
+                                                                                           : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+  125 |   wire [63:0]  data_o_flush_done;
+      |                ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDGENVAR: <repo>/rtl/x310/noc_shell_nsclf.sv:221:10: Genvar is not used: 'i'
+                                                                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i'
+  221 |   genvar i;
+      |          ^
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:4:36: Signal is not used: 'rst'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.gen_async_info_fifo.pkt_info_fifo.fifo_section[1].genblk1.impl_srl_i'
+    4 | module fifo_short_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |                                    ^~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:4:52: Signal is not used: 'wr_clk'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.gen_async_info_fifo.pkt_info_fifo.fifo_section[1].genblk1.impl_srl_i'
+    4 | module fifo_short_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |                                                    ^~~~~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:4:78: Signal is not used: 'din'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.gen_async_info_fifo.pkt_info_fifo.fifo_section[1].genblk1.impl_srl_i'
+    4 | module fifo_short_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |                                                                              ^~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:4:94: Signal is not used: 'wr_en'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.gen_async_info_fifo.pkt_info_fifo.fifo_section[1].genblk1.impl_srl_i'
+    4 | module fifo_short_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |                                                                                              ^~~~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:5:65: Signal is not used: 'rd_clk'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.gen_async_info_fifo.pkt_info_fifo.fifo_section[1].genblk1.impl_srl_i'
+    5 |   output wire full, output wire [9:0] wr_data_count, input wire rd_clk, output wire [71:0] dout,
+      |                                                                 ^~~~~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:6:14: Signal is not used: 'rd_en'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.gen_async_info_fifo.pkt_info_fifo.fifo_section[1].genblk1.impl_srl_i'
+    6 |   input wire rd_en, output wire empty, output wire [9:0] rd_data_count);
+      |              ^~~~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:9:33: Signal is not used: 'rst'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.no_gen_axis_width_conv.gen_async_pyld_fifo.pyld_fifo.fifo_section[0].genblk1.impl_bram_i'
+    9 | module fifo_4k_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |                                 ^~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:9:49: Signal is not used: 'wr_clk'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.no_gen_axis_width_conv.gen_async_pyld_fifo.pyld_fifo.fifo_section[0].genblk1.impl_bram_i'
+    9 | module fifo_4k_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |                                                 ^~~~~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:9:75: Signal is not used: 'din'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.no_gen_axis_width_conv.gen_async_pyld_fifo.pyld_fifo.fifo_section[0].genblk1.impl_bram_i'
+    9 | module fifo_4k_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |                                                                           ^~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:9:91: Signal is not used: 'wr_en'
+                                               : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.no_gen_axis_width_conv.gen_async_pyld_fifo.pyld_fifo.fifo_section[0].genblk1.impl_bram_i'
+    9 | module fifo_4k_2clk (input wire rst, input wire wr_clk, input wire [71:0] din, input wire wr_en,
+      |                                                                                           ^~~~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:10:66: Signal is not used: 'rd_clk'
+                                                : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.no_gen_axis_width_conv.gen_async_pyld_fifo.pyld_fifo.fifo_section[0].genblk1.impl_bram_i'
+   10 |   output wire full, output wire [11:0] wr_data_count, input wire rd_clk, output wire [71:0] dout,
+      |                                                                  ^~~~~~
+%Warning-UNUSEDSIGNAL: nsclf_lint_stubs.sv:11:14: Signal is not used: 'rd_en'
+                                                : ... note: In instance 'rfnoc_block_nsclf.noc_shell_nsclf_i.axis_data_to_chdr_out_evt.no_gen_axis_width_conv.gen_async_pyld_fifo.pyld_fifo.fifo_section[0].genblk1.impl_bram_i'
+   11 |   input wire rd_en, output wire empty, output wire [11:0] rd_data_count);
+      |              ^~~~~
+verilator rc=0

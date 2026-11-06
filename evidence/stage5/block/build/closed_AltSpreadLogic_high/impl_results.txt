@@ -1,0 +1,3 @@
+1484:RESULT variant=AltSpreadLogic_high/AggressiveExplore/Explore post_route WNS=0.016 WHS=0.003
+1507:CRITICAL WARNING: [Vivado 12-1790] Evaluation License Warning: This design contains one or more evaluation cores that will cease to function after a certain period of time. This design should NOT
+1534:RESULT variant=AltSpreadLogic_high/AggressiveExplore/Explore bitstream written (check WPWS in the timing summary)

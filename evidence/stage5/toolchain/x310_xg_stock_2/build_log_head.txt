@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Oct 29 21:08:41 2026
+# Process ID         : 618459
+# Current directory  : <repo>/.scratch/s5_build/x310_xg_stock_2/build-usrp_x310_fpga_XG
+# Command line       : vivado -mode batch -source <repo>/.scratch/uhd/fpga/usrp3/top/x300/build_x300.tcl -log build.log -journal x300.jou
+# Log file           : <repo>/.scratch/s5_build/x310_xg_stock_2/build-usrp_x310_fpga_XG/build.log
+# Journal file       : <repo>/.scratch/s5_build/x310_xg_stock_2/build-usrp_x310_fpga_XG/x300.jou
+# Running On         : build-host
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz
+# CPU Frequency      : 2499.777 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 48
+# Host memory        : 265784 MB
+# Swap memory        : 137438 MB
+# Total Virtual      : 403223 MB
+# Available Virtual  : 163439 MB
+#-----------------------------------------------------------
+source <repo>/.scratch/uhd/fpga/usrp3/top/x300/build_x300.tcl
+# source $::env(VIV_TOOLS_DIR)/scripts/viv_utils.tcl
+## namespace eval ::vivado_utils {
+##     # Export commands
+##     namespace export \
+##         initialize_project \
+##         synthesize_design \
+##         export_synth_netlist \
+##         separate_encrypted \
+##         export_encrypted_netlist \
+##         check_design \
+##         generate_post_synth_reports \
+##         generate_post_place_reports \
+##         generate_post_route_reports \
+##         write_implementation_outputs \
+##         get_top_module \
+##         get_part_name \
+##         get_vivado_mode
+## 
+##     # Required environment variables
+##     variable g_tools_dir    $::env(VIV_TOOLS_DIR)
+##     variable g_top_module   $::env(VIV_TOP_MODULE)
+##     variable g_part_name    $::env(VIV_PART_NAME)
+##     variable g_output_dir   $::env(VIV_OUTPUT_DIR)
+##     variable g_source_files $::env(VIV_DESIGN_SRCS)
+##     variable g_vivado_mode  $::env(VIV_MODE)
+##     variable g_project_save $::env(VIV_PROJECT)
+##     variable g_secure_key   $::env(VIV_SECURE_KEY)
+## 
+##     # Optional environment variables
+##     variable g_verilog_defs ""
+##     if { [info exists ::env(VIV_VERILOG_DEFS) ] } {
+##         set g_verilog_defs  $::env(VIV_VERILOG_DEFS)
+##     }
+##     variable g_include_dirs ""
+##     if { [info exists ::env(VIV_INCLUDE_DIRS) ] } {
+##         set g_include_dirs  $::env(VIV_INCLUDE_DIRS)
+1133:Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
+1134:INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410t'
+1135:INFO: [Common 17-86] Your Synthesis license expires in 9 day(s)
+12781:Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
+12782:INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
+12783:INFO: [Common 17-86] Your Implementation license expires in 9 day(s)
+12932:Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
+12933:INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
+12934:INFO: [Common 17-86] Your Implementation license expires in 9 day(s)
+13228:Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
+13229:INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
+13230:INFO: [Common 17-86] Your Implementation license expires in 9 day(s)
+13545:Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
+13546:INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
+13547:INFO: [Common 17-86] Your Implementation license expires in 9 day(s)
+13756:Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
+13757:INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
+13758:INFO: [Common 17-86] Your Implementation license expires in 9 day(s)
+13890:Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
+13891:INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
+13892:INFO: [Common 17-86] Your Implementation license expires in 9 day(s)

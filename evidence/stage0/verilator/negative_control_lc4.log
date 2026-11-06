@@ -1,0 +1,10 @@
+# negative control: golden out vector 98765 bit 41 flipped; expect exactly 1 mismatch and nonzero exit
+# host=build-host date=2026-10-19T23:04:39-06:00
+LATENCY cycles=8 (input applied before edge 1, output valid after edge 8)
+MISMATCH vec=98765 got=fe59fe7a03e6fd5affcb exp=fe59fe7a01e6fd5affcb
+RESULT seed=2 vectors=166000 checked=166000 mismatches=1 latency=8 xor_signature=f82d0ee904a67115f121
+[830300000] %Fatal: tb_jsc.sv:95: Assertion failed in TOP.tb_jsc: FAIL: 1 mismatches
+%Error: tb_jsc.sv:95: Verilog $stop
+Aborting...
+bash: line 2: 710782 Aborted                 (core dumped) ./tb/obj_dir_jsc_lc4/Vtb_jsc +IN=$G/jsc_golden_in.hex +OUT=.scratch/corrupt_out_real.hex +SEED=2
+exit=134

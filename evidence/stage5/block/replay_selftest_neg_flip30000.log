@@ -1,0 +1,7 @@
+# 2026-10-30T01:46:57-06:00 host=desk-pc python3 sw/x310/nsclf_replay.py selftest --flip 30000 (negative control, must FAIL)
+NEGATIVE CONTROL: capture sample 30000 I bit 13 flipped (silicon values unchanged)
+MISMATCH window misr: silicon 0xb7761c4cde1360f3 sim 0xedc35c0b927f5884
+MISMATCH window hist: silicon [21961, 20217, 8423, 14872] sim [22011, 20218, 8392, 14852]
+REPLAY window count=65473 misr=0xedc35c0b927f5884 hist=[22011, 20218, 8392, 14852] events compared=264 errors=2 log=<repo>/.scratch/nsclf_replay/selftest_flip30000/replay.log
+FAIL
+rc=1

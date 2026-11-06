@@ -1,0 +1,51 @@
+{
+ "T_ns": 3.333333,
+ "steps_per_period": 224,
+ "step_ps": 14.880950892857143,
+ "n_core": 13,
+ "n_trials": 464,
+ "n_positions": 224,
+ "model_inputs": {
+  "d_H_ns": 0.7,
+  "d_G_ns": 1.1,
+  "dtout_ns": 0.0
+ },
+ "pin_B": {
+  "q_B_step": 170.5,
+  "q_H_step": 176.5,
+  "levels": [
+   1.0,
+   2.0
+  ],
+  "d_B_ns": 4.122618705357143,
+  "d_B_minus_d_H_ns": 3.4226187053571424
+ },
+ "pin_C": {
+  "q_D_step": 36.5,
+  "q_G_step": 73.5,
+  "levels": [
+   0.0,
+   1.0
+  ],
+  "d_C_ns": 3.882737816964286,
+  "d_C_minus_d_G_ns": 2.782737816964286,
+  "anchor_disagreement_ns": 0.0005950580357148016,
+  "measured_d_H_plus_d_G_ns": 1.8005950580357148
+ },
+ "launch_from_B_trials": 240,
+ "L_pp_ns": {
+  "min": 47.46338818080357,
+  "median": 49.12261420535714,
+  "max": 50.78184022991071,
+  "mean": 49.12261420535714,
+  "n_trials_one_period": 448,
+  "formula_min_NcoreT_plus_dB_plus_dtout": 47.45594770535714
+ },
+ "sim_check": {
+  "d_B_err_ps": -0.8382946428575622,
+  "d_C_err_ps": 6.194816964286254,
+  "L_pp_max_abs_err_ps": 2.52943080356971,
+  "tolerance_ps": 14.880950892857143,
+  "pass": true
+ }
+}

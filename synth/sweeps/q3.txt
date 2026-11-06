@@ -1,0 +1,9 @@
+# Stage 2 q3: highest closing clock per cutoff (q2 Fmax estimates 1/(T-WNS): lc5 275, lc3 396 MHz; lc2 closed 400)
+q3_vu9p_lc5_f260 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc5 xcvu9p-fsgd2104-2L-e 3.846 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q3_vu9p_lc5_f270 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc5 xcvu9p-fsgd2104-2L-e 3.704 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q3_vu9p_lc5_f280 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc5 xcvu9p-fsgd2104-2L-e 3.571 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q3_vu9p_lc3_f380 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc3 xcvu9p-fsgd2104-2L-e 2.632 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q3_vu9p_lc3_f390 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc3 xcvu9p-fsgd2104-2L-e 2.564 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q3_vu9p_lc2_f425 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc2 xcvu9p-fsgd2104-2L-e 2.353 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q3_vu9p_lc2_f450 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc2 xcvu9p-fsgd2104-2L-e 2.222 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q3_vu9p_lc5_f300_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc5 xcvu9p-fsgd2104-2L-e 3.333 retime qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1

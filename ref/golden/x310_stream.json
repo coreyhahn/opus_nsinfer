@@ -1,0 +1,32 @@
+{
+ "n_samples": 65536,
+ "n_windows": 65473,
+ "generator": "x310_data.make_stream(65536, seed=0)",
+ "sample_label_counts": [
+  20637,
+  17097,
+  8396,
+  19406
+ ],
+ "pure_windows": 54182,
+ "pure_window_accuracy": 0.8983057103835222,
+ "pure_window_accuracy_by_class": [
+  0.9887453383058071,
+  0.9819908316961362,
+  0.886412542268675,
+  0.7511788384128809
+ ],
+ "straddling_windows": 11291,
+ "decision_counts": [
+  17206,
+  21033,
+  10219,
+  17015
+ ],
+ "keras_vs_dais_interp_mismatching_vectors": 0,
+ "sha256": {
+  "x310_stream_in.hex": "40139a4e4ce4dbade7280e796d96f5251fc48ba8c46873299b1ba6ee87ce0afb",
+  "x310_stream_out.hex": "6a441fb5732a444abb2567e99b66d869c99111c729f59a59766f586e60ffde5e",
+  "x310_stream_dec.hex": "8275de3146a2206874072d8d4b7230a062569d17fcf95ef769d5adc563b7bb89"
+ }
+}

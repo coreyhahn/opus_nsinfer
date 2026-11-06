@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sub-microsecond NN loops measured on FPGA boards: a jet classifier on a ZCU102, a surface-code decoder loop on a BCU-1525 over GTY, a waveform classifier in a USRP X310.">
+<title>opus_nsinfer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,750&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a single lab-report column (max 1080px); each artifact is a section opened by its board and clock,
+   figures set in mono on a nanosecond ruler motif. */
+:root {
+  --bg: #f5f7f9;
+  --surface: #ffffff;
+  --ink: #0f1720;
+  --muted: #56606b;
+  --rule: #dce1e7;
+  --accent: #1f63b8;
+  --accent-soft: #e6eef9;
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --refline: #0f1720;
+  --ok: #1b7f3b;
+  --warn: #9a6200;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101419; --surface: #181d23; --ink: #e7ebef; --muted: #9ba6b2; --rule: #2a323b;
+    --accent: #6aa6ef; --accent-soft: #1b2a3d; --s1: #3987e5; --s2: #d95926; --refline: #e7ebef;
+    --ok: #5fc27e; --warn: #e0a640; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101419; --surface: #181d23; --ink: #e7ebef; --muted: #9ba6b2; --rule: #2a323b;
+  --accent: #6aa6ef; --accent-soft: #1b2a3d; --s1: #3987e5; --s2: #d95926; --refline: #e7ebef;
+  --ok: #5fc27e; --warn: #e0a640; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font: 15px/1.6 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 64px;
+}
+.wrap { max-width: 1080px; margin: 0 auto; display: grid; gap: 56px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 750; letter-spacing: -0.02em; }
+h2 { font-size: 26px; font-weight: 750; letter-spacing: -0.01em; }
+h3 { font-size: 17px; font-weight: 600; }
+p { margin: 0; max-width: 68ch; }
+a { color: var(--accent); }
+code, .mono { font-family: var(--f-mono); font-size: 0.86em; }
+.eyebrow { font: 600 12px/1.2 var(--f-mono); text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); }
+.stack { display: grid; gap: 16px; min-width: 0; }
+.lede { font-size: 18px; color: var(--muted); max-width: 62ch; }
+
+/* header ruler: a nanosecond scale, 0 to 1 us */
+.ruler { position: relative; height: 34px; border-bottom: 1px solid var(--ink); margin-top: 8px; }
+.ruler i { position: absolute; bottom: 0; width: 1px; background: var(--ink); }
+.ruler span { position: absolute; top: 0; font: 11px var(--f-mono); color: var(--muted); transform: translateX(-50%); }
+
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; display: grid; gap: 6px; align-content: start; }
+.tile .v { font: 600 28px/1.1 var(--f-mono); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.tile .k { font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+
+.tag { display: inline-block; font: 600 10.5px/1 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 4px 6px 3px; border-radius: 3px; border: 1px solid var(--rule); color: var(--muted); white-space: nowrap; vertical-align: 2px; }
+.tag.si { border-color: var(--accent); color: var(--accent); }
+
+.flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.flow b { font: 600 13px var(--f-mono); background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px; }
+.flow em { color: var(--muted); font-style: normal; }
+
+.ladder { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.step { display: grid; grid-template-columns: 44px 1fr auto; gap: 4px 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.step .n { font: 750 26px/1 var(--f-display); color: var(--accent); }
+.step .t { display: grid; gap: 2px; min-width: 0; }
+.step .t p { color: var(--muted); font-size: 14px; }
+.step .st { font: 600 12px var(--f-mono); color: var(--ok); white-space: nowrap; }
+.step .st.part { color: var(--warn); }
+@media (max-width: 560px) { .step { grid-template-columns: 36px 1fr; } .step .st { grid-column: 2; } }
+
+section { display: grid; gap: 20px; }
+.head { display: grid; gap: 6px; border-top: 2px solid var(--ink); padding-top: 14px; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+ul.facts { margin: 0; padding-left: 18px; display: grid; gap: 6px; max-width: 70ch; }
+ul.facts li::marker { color: var(--muted); }
+
+.tbl { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 11.5px var(--f-mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); background: var(--bg); }
+tr:last-child td { border-bottom: 0; }
+td.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td strong { font-weight: 600; }
+
+.method { font-size: 13.5px; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 12px; max-width: 76ch; display: grid; gap: 4px; }
+.method b { color: var(--ink); font-weight: 600; }
+
+/* chart */
+.chart { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px 18px 12px; display: grid; gap: 12px; position: relative; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.sw.ref { width: 2px; height: 14px; border-radius: 0; background: var(--refline); }
+.svgbox { overflow-x: auto; }
+svg text { font-family: var(--f-mono); }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font: 12px/1.45 var(--f-mono);
+  padding: 8px 10px; border-radius: 4px; max-width: 280px; z-index: 5; }
+.bar-hit { cursor: default; }
+.bar-hit:focus { outline: none; }
+.bar-hit:focus-visible rect.hl { stroke: var(--accent); stroke-width: 2; }
+
+.open { display: grid; gap: 10px; }
+.item { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+.item .who { font: 600 11.5px var(--f-mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); padding-top: 2px; }
+.item .who.ask { color: var(--warn); }
+@media (max-width: 560px) { .item { grid-template-columns: 1fr; gap: 4px; } }
+footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px; border-top: 1px solid var(--rule); padding-top: 16px; }
+@media (prefers-reduced-motion: no-preference) { .seg { transition: opacity .15s; } }
+</style>
+
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="stack">
+  <div class="eyebrow">FPGA programme · stages 0–6 passed · 2026-10-19 to 2026-11-06</div>
+  <h1>opus_nsinfer</h1>
+  <p class="lede">Sub-microsecond neural-network loops, built bit-exact through HGQ2 and da4ml and measured on three of the lab's boards: a jet tagger on a ZCU102, a surface-code decoder loop on a BCU-1525, and a waveform classifier inside a USRP X310.</p>
+  <div class="ruler" id="ruler" aria-hidden="true"></div>
+</header>
+
+<div class="tiles">
+  <div class="tile"><div class="v">47.6 ns</div><div class="k">JSC MLP on the ZCU102, input pad to decision pad, median at 300 MHz <span class="tag">derived</span></div></div>
+  <div class="tile"><div class="v">37.2 ns</div><div class="k">d = 3 surface-code decode on the VU9P, 6 cycles at 161 MHz <span class="tag si">silicon</span></div></div>
+  <div class="tile"><div class="v">117.9 ns</div><div class="k">d = 5 decode at one syndrome per cycle, 19 cycles <span class="tag si">silicon</span></div></div>
+  <div class="tile"><div class="v">292 / 416 ns</div><div class="k">decoder loop median, d = 3 / d = 5, over the thin GTY link (d = 5: 410–422 over 4 vector sets; Aurora: 770 / 850) <span class="tag si">silicon</span></div></div>
+  <div class="tile"><div class="v">155–330 ns</div><div class="k">X310: pulse onset to correct decision, median at SNR ≥ 10 dB <span class="tag si">silicon</span> + 22-cycle pipeline <span class="tag">sim</span></div></div>
+  <div class="tile"><div class="v">91.5 %</div><div class="k">X310 class-balanced accuracy on its own TX→RX loop, 23.8 M windows; 98.4 % at SNR ≥ 10 dB <span class="tag si">silicon</span></div></div>
+</div>
+
+<section>
+  <div class="head"><div class="eyebrow">The flow</div><h2>One set of vectors, from Keras to the board</h2></div>
+  <div class="flow" aria-label="Flow">
+    <b>HGQ2 model</b><em>→</em><b>da4ml RTL</b><em>→</em><b>Verilator, 0 mismatches</b><em>→</em><b>Vivado 2024.2</b><em>→</em><b>silicon, MISR = sim</b>
+  </div>
+  <p>Every stage reuses the same golden vectors. On the boards an on-chip signature (MISR) over every decision is compared with the Verilator signature, so a single wrong bit anywhere fails the run. Nothing was ever written to any board's flash: every bitstream is a volatile JTAG or fpga-manager load.</p>
+  <p class="method"><span>Every figure carries a label: <span class="tag si">silicon</span> measured on the board, <span class="tag">sim</span> Verilator, <span class="tag">model</span> Vivado timing or out-of-context place and route, <span class="tag">derived</span> computed from silicon counts with stated model terms. Every latency states its start event, stop event, instrument and exclusions.</span></p>
+</section>
+
+<section>
+  <div class="head"><div class="eyebrow">Acceptance ladder</div><h2>Seven stages, each gated before the next</h2></div>
+  <div class="ladder">
+    <div class="step"><div class="n">0</div><div class="t"><h3>Flow and budget, no board</h3><p>JSC MLP trained, exported, bit-exact in Verilator over the full 166,000-jet test set; OOC sweep on ZU9EG and VU9P.</p></div><div class="st">passed 10-20</div></div>
+    <div class="step"><div class="n">1</div><div class="t"><h3>Artifact A on the ZCU102</h3><p>Pin-to-pin latency at 200, 300 and 500 MHz; bit-exact on silicon.</p></div><div class="st">passed 10-20</div></div>
+    <div class="step"><div class="n">2</div><div class="t"><h3>Decoder in simulation</h3><p>d = 3 NN decoder against PyMatching on Stim syndromes; bit-exact over all 2<sup>24</sup> inputs.</p></div><div class="st">passed 10-20</div></div>
+    <div class="step"><div class="n">3</div><div class="t"><h3>d = 3 loop on the BCU-1525</h3><p>Syndromes out and corrections back over Aurora 64B/66B on a QSFP+ DAC.</p></div><div class="st">passed 10-23</div></div>
+    <div class="step"><div class="n">4</div><div class="t"><h3>d = 5 at II = 1, README, reproduce.sh</h3><p>27 of 27 silicon runs bit-exact over 4 vector sets.</p></div><div class="st">passed 10-29</div></div>
+    <div class="step"><div class="n">5</div><div class="t"><h3>Artifact C in the X310</h3><p>RFNoC block on the live 200 MS/s ADC stream; v2 retrained on the measured channel; event revision.</p></div><div class="st">passed 11-03</div></div>
+    <div class="step"><div class="n">6</div><div class="t"><h3>Stretch: a thin GTY link in place of Aurora</h3><p>d = 3 complete, then 25 ns more off each hop by bypassing the GTY TX buffer on the same clock; d = 5 bit-exact on all 4 vector sets (12 runs, medians 409.6–422.0 ns).</p></div><div class="st">passed 11-06</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="head"><div class="eyebrow">Artifact A · ZCU102 · xczu9eg-ffvb1156-2-i ES2</div><h2>Jet-substructure MLP, pin to pin</h2></div>
+  <p>HGQ2 JSC 16-64-32-32-5, 76.74 % test accuracy over the full 166,000-jet test set (float64 model 77.08 %), da4ml distributed-arithmetic RTL, 0 DSP.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Clock</th><th>OOC, network only <span class="tag">model</span></th><th>Pin to pin, median <span class="tag">derived</span></th><th>min … max</th><th>Bit-exact on silicon</th></tr></thead>
+    <tbody>
+      <tr><td class="num">200 MHz</td><td class="num">35.0 ns (7 cyc)</td><td class="num"><strong>55.2 ns</strong></td><td class="num">52.7 … 57.7 ns</td><td>166,000 × 4 orders × 2 runs, 0 mismatches</td></tr>
+      <tr><td class="num">300 MHz</td><td class="num">33.3 ns (10 cyc)</td><td class="num"><strong>47.6 ns</strong></td><td class="num">45.9 … 49.3 ns</td><td>same, plus 8 runs after a reprogram</td></tr>
+      <tr><td class="num">500 MHz</td><td class="num">54.0 ns (27 cyc)</td><td class="num"><strong>65.7 ns</strong></td><td class="num">64.7 … 66.7 ns</td><td>same</td></tr>
+    </tbody>
+  </table></div>
+  <div class="method">
+    <span><b>Start</b> IN_VALID rising at the package pad of PMOD pin A20. <b>Stop</b> DEC_VALID rising at the pad of pin D20.</span>
+    <span><b>Instrument</b> on-chip counters plus an MMCM phase sweep over one full period (12–15 ps steps), no oscilloscope; model terms bracketed by Vivado corners give ±0.35 ns.</span>
+    <span><b>Excluded</b> the 150-bit feature vector (staged on-chip; the ZCU102 has no free HP pins without an FMC card) and board traces beyond the pads.</span>
+    <span><b>Against the published figure</b> 76.9 %, 23.4 ns, 11,978 LUT on an XCVU9P is OOC only (register to register). Silicon adds about 14 ns at 300 MHz: I/O buffers (~2.7 ns), half a period waiting for the capturing edge, three harness cycles and the argmax.</span>
+  </div>
+</section>
+
+<section>
+  <div class="head"><div class="eyebrow">Artifact B · BCU-1525 · xcvu9p-fsgd2104-2L-e · 161.13 MHz GTY user clock</div><h2>Surface-code decoder in a real link loop</h2></div>
+  <p>The link was the loop. With Aurora, the round trip alone was 726–732 ns and the decoder added only 37–118 ns. A thin custom 64B/66B link on the GTYs, on one shared reference clock and one clock domain, cut the round trip to 292–298 ns and brought both loops under the published 550 ns.</p>
+
+  <figure class="chart" id="loopchart" style="margin:0">
+    <div>
+      <h3>Decoder loop median, ns</h3>
+      <div class="eyebrow" style="margin-top:4px">silicon · desk BCU-1525 over a QSFP+ DAC</div>
+    </div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--s1)"></i>link round trip (echo mode)</span>
+      <span><i class="sw" style="background:var(--s2)"></i>decoder and the rest (loop − echo)</span>
+      <span><i class="sw ref"></i>published d = 3 loop, 550 ns (Kintex-7, measured)</span>
+    </div>
+    <div class="svgbox"><svg id="loopsvg" role="img" aria-label="Decoder loop medians: d = 3 Aurora 769.6 ns, d = 3 thin link 335.1 ns, d = 3 thin link with TX buffer bypass 291.7 ns, d = 5 Aurora about 850 ns, d = 5 thin link 415.8 ns; published d = 3 loop 550 ns"></svg></div>
+    <div class="tip" id="tip" hidden></div>
+  </figure>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Loop</th><th>Link round trip</th><th>Loop median</th><th>Range</th><th>Bit-exact on silicon</th></tr></thead>
+    <tbody>
+      <tr><td>d = 3, Aurora (Stage 3)</td><td class="num">≈ 727 ns</td><td class="num"><strong>769.6 ns</strong></td><td class="num">726 … 807 ns</td><td>464,428 vectors, 10 decode runs, 3 builds</td></tr>
+      <tr><td>d = 3, thin link (Stage 6)</td><td class="num">291.7 ns</td><td class="num"><strong>335.1 ns</strong></td><td class="num">322.7 … 347.5 ns</td><td>464,428 vectors, 21 runs, 2 builds</td></tr>
+      <tr><td>d = 3, thin link, TX buffer bypassed</td><td class="num">242.0 ns</td><td class="num"><strong>285.5–291.7 ns</strong></td><td class="num">279.3 … 291.7 ns</td><td>464,428 vectors, 9 of 9 runs, load + 3 re-trains</td></tr>
+      <tr><td>d = 5, Aurora (Stage 4)</td><td class="num">726–732 ns</td><td class="num"><strong>844–856 ns</strong></td><td class="num">worst 943.3 ns</td><td>4 sets × 131,072, 27 of 27 runs</td></tr>
+      <tr><td>d = 5, thin link (Stage 6)</td><td class="num">291.7–304.1 ns</td><td class="num"><strong>409.6–422.0 ns</strong></td><td class="num">397.2 … 434.4 ns</td><td>4 sets × 131,072, 36 of 36 runs (12 runs × 3 modes)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="method">
+    <span><b>Start</b> TX accept of the syndrome word at side A. <b>Stop</b> the correction's RX register at side A. <b>Instrument</b> on-chip cycle counter, 1 cycle = 6.206 ns. <b>Excluded</b> syndrome generation and qubit-controller pins.</span>
+    <span><b>One way</b> (Stage 6 direct probe on the shared counter): 130.3–148.9 ns, under the ~156 ns published custom-link figure on every probe word, but not by much. That 156 ns figure is second-hand and its source was not read.</span>
+  </div>
+
+  <div class="cols">
+    <div class="stack">
+      <h3>The networks</h3>
+      <ul class="facts">
+        <li><strong>d = 3:</strong> 24-128-64-32-1, 30,258 EBOPs. Decode 6 cycles = 37.2 ns <span class="tag si">silicon</span>, 3.3× shorter than the published 124 ns (Kintex-7, measured).</li>
+        <li><strong>d = 5:</strong> 120-192-96-96-1, 933,465 EBOPs, one syndrome per cycle. Decode 19 cycles = 117.9 ns <span class="tag si">silicon</span>, still under the published d = 3 figure.</li>
+        <li>The most accurate d = 5 core (3.58 M EBOPs) does not route on the VU9P at 6.206 ns <span class="tag">model</span>. A register on each all-to-all layer input closed the smaller one.</li>
+      </ul>
+    </div>
+    <div class="stack">
+      <h3>Logical error rate, NN / PyMatching</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>p</th><th>d = 3 <span class="tag">sim</span></th><th>d = 5 <span class="tag">sim</span></th></tr></thead>
+        <tbody>
+          <tr><td class="num">0.1 %</td><td class="num">0.854</td><td class="num">0.986</td></tr>
+          <tr><td class="num">1 %</td><td class="num">1.000</td><td class="num">1.523</td></tr>
+        </tbody>
+      </table></div>
+      <p style="font-size:13.5px;color:var(--muted)">10<sup>7</sup> (d = 3) and 5×10<sup>6</sup> (d = 5) held-out shots per p. The hardware is bit-exact to the model, so these are the hardware LERs (derived). Below 1 the NN beats PyMatching.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="head"><div class="eyebrow">Artifact C · USRP X310 · XC7K410T · 200 MHz radio clock</div><h2>Waveform classifier on the live ADC stream</h2></div>
+  <p>A quantized classifier inside an RFNoC block, between the ADC front end and the stock radio block, labels every 200 MS/s sample's 64-sample window as noise, CW, LFM or BPSK. The X310 makes its own test signals: RF A TX/RX through 30 dB of attenuation into RF A RX2, at 1 GHz, on two UBX-160 boards.</p>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>Class-balanced</th><th>SNR ≥ 10 dB</th><th>Noise</th><th>CW</th><th>LFM</th><th>BPSK</th></tr></thead>
+    <tbody>
+      <tr><td><strong>v2 silicon</strong>, fresh TX seeds, 23.8 M windows</td><td class="num"><strong>91.5</strong></td><td class="num"><strong>98.4</strong></td><td class="num">98.3</td><td class="num">92.6</td><td class="num">86.9</td><td class="num"><strong>88.2</strong></td></tr>
+      <tr><td>v2 model, measured-channel test set</td><td class="num">91.1</td><td class="num">98.2</td><td class="num">97.1</td><td class="num">91.3</td><td class="num">88.3</td><td class="num">87.7</td></tr>
+      <tr><td>v1 silicon (Butterworth training channel)</td><td class="num">81.8</td><td class="num">97.4</td><td class="num">99.9</td><td class="num">84.5</td><td class="num">77.5</td><td class="num">65.5</td></tr>
+    </tbody>
+  </table></div>
+  <div class="cols">
+    <div class="stack">
+      <h3>What fixed BPSK</h3>
+      <p>v1 was trained through a ±20 MHz Butterworth low-pass with noise shaped by the same filter. The real path is flat to about ±80 MHz with white noise, which made rectangular BPSK look like noise. Simulating with the measured response and real noise reproduced v1's silicon numbers class by class (BPSK 65.2 against 65.1). v2 trains through the measured response and noise spectrum; same recipe, same selection rule.</p>
+    </div>
+    <div class="stack">
+      <h3>Latency and proof</h3>
+      <ul class="facts">
+        <li>Pipeline 22 cycles = 110 ns, newest sample in to decision out <span class="tag">sim</span>, read back from the block.</li>
+        <li>Onset at the classifier's input to its first correct decision, median at SNR ≥ 10 dB: BPSK 155, LFM 175, CW 330 ns; 100 % detected <span class="tag si">silicon</span>. About 160 ns more from the ADC input <span class="tag">derived</span>.</li>
+        <li>Bit-exact: 20 captures, 84 M decisions, MISR equal to a Verilator replay of the captured samples.</li>
+        <li>Event revision: up to 16 records per packet, events off at reset; 0 of 16 session starts failed; 40,567 of 40,567 dense events equal the replay.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="method"><span><b>Start</b> pulse onset at the classifier's tap (TX schedule plus the measured 133.70-sample delay). <b>Stop</b> the tap time of the first decision of the pulse's class, plus 22 cycles. <b>Instrument</b> the X310's own radio time, carried with every decision. <b>Excluded</b> the ~160 ns of ADC and radio front end before the tap.</span></div>
+</section>
+
+<section>
+  <div class="head"><div class="eyebrow">Comparison</div><h2>Against the published figures</h2></div>
+  <p>Every row is a different device and workload. "Measured" means on hardware; "OOC" means out-of-context place and route, register to register, no I/O.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>What</th><th>Published</th><th>Their device, status</th><th>Ours</th><th>Our device, label</th></tr></thead>
+    <tbody>
+      <tr><td>HGQ + DA JSC MLP</td><td class="num">23.4 ns, 76.9 %</td><td>XCVU9P, OOC only</td><td class="num">33.3 ns OOC; <strong>47.6 ns</strong> pin to pin</td><td>ZU9EG ES2, model / derived</td></tr>
+      <tr><td>NN decoder, decode</td><td class="num">124 ns, d = 3</td><td>Kintex-7 XC7K410T, measured</td><td class="num"><strong>37.2 ns</strong> d = 3; 117.9 ns d = 5</td><td>VU9P, silicon</td></tr>
+      <tr><td>NN decoder, loop</td><td class="num">550 ns, d = 3</td><td>Kintex-7, measured</td><td class="num"><strong>292 ns</strong> d = 3; 410–422 ns d = 5</td><td>VU9P over DAC, silicon</td></tr>
+      <tr><td>Custom link, one way</td><td class="num">~156 ns</td><td>second-hand (RISC-Q work)</td><td class="num">112–130 ns (TX buffer bypassed; 130–149 buffered)</td><td>VU9P GTY, silicon</td></tr>
+      <tr><td>Aurora 64B/66B, one way</td><td class="num">~450 ns</td><td>vendor / derived</td><td class="num">~363 ns</td><td>1- and 3-lane Aurora, silicon</td></tr>
+      <tr><td>RF classifier, sample to decision</td><td class="num">"hundreds of ns"</td><td>RFSoC, a requirement, not a measurement</td><td class="num">155–330 ns at the tap; ~315–490 ns from the ADC</td><td>XC7K410T, silicon + sim; ADC part derived</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="head"><div class="eyebrow">Open</div><h2>What is left</h2></div>
+  <div class="open">
+    <div class="item"><div class="who">Done</div><div><strong>Stage 6 d = 5, vector sets 1–3.</strong> One build per set (the shot ROM is fixed at build time), identical timing; 27 of 27 modes bit-exact, each set's signature equal to its simulation.</div></div>
+    <div class="item"><div class="who">Done</div><div><strong>GTY TX buffer bypass, d = 3.</strong> Same single clock (the wizard keeps the gearbox and takes TXOUTCLK from the shared refclk): one way 18–21 cycles = 111.7–130.3 ns (was 136.5–148.9), loop 46–47 cycles. Not yet built for d = 5.</div></div>
+    <div class="item"><div class="who">In simulation</div><div><strong>Link check blocks (CRC-32).</strong> Sent only in idle slots, so no data word waits; d = 3 loop sim passes with identical latencies and catches the injected corrupted word. d = 5 sim and a silicon build next.</div></div>
+    <div class="item"><div class="who ask">Needs approval</div><div><strong>A second clock for lower link latency:</strong> a 32-bit GT width (322 MHz user clock) or RX buffer bypass (recovered clock). Both break the single-clock rule.</div></div>
+    <div class="item"><div class="who">Optional</div><div><strong>Artifact A comparability:</strong> a smaller model near the published 76.9 % / 11,978 LUT point, through the unchanged Stage 1 flow. <strong>X310:</strong> noise-only false alarms rose from 0.14 % to 1.70 % of decisions in v2; a K ≥ 32 hysteresis removes them as events.</div></div>
+  </div>
+</section>
+
+<footer>
+  <span>Reproduce: <code>sw/reproduce.sh &lt;stage&gt;</code> (0–5, or <code>all</code>) regenerates the RTL byte-identical, reruns the Verilator gates and re-analyses the committed silicon logs. Evidence for every claim is under <code>evidence/&lt;stage&gt;/</code>; decisions in <code>docs/PLAN.md</code>; the brief in <code>CHARTER.md</code>.</span>
+  <span>Tools: Vivado 2024.2, Verilator 5.020, HGQ2 + da4ml, Stim + PyMatching, UHD 4.9. State as of 2026-11-06. Source, evidence and the full write-up: <a href="https://github.com/coreyhahn/opus_nsinfer">github.com/coreyhahn/opus_nsinfer</a>.</span>
+</footer>
+</div>
+
+<script>
+(function () {
+  // header ruler: 0 to 1000 ns, labelled every 200 ns
+  var r = document.getElementById('ruler');
+  for (var t = 0; t <= 1000; t += 50) {
+    var i = document.createElement('i');
+    i.style.left = (t / 10) + '%';
+    i.style.height = (t % 200 === 0 ? 14 : t % 100 === 0 ? 9 : 5) + 'px';
+    r.appendChild(i);
+    if (t % 200 === 0) {
+      var s = document.createElement('span');
+      s.textContent = t === 1000 ? '1 µs' : t + ' ns';
+      s.style.left = (t / 10) + '%';
+      if (t === 0) s.style.transform = 'none';
+      if (t === 1000) s.style.transform = 'translateX(-100%)';
+      r.appendChild(s);
+    }
+  }
+
+  // loop chart, stacked horizontal bars on one ns scale
+  var rows = [
+    { name: 'd = 3, Aurora', echo: 727, loop: 769.6, note: 'Stage 3; round trip about 727 ns' },
+    { name: 'd = 3, thin link', echo: 291.7, loop: 335.1, note: 'Stage 6' },
+    { name: 'd = 3, TX bypass', echo: 242.0, loop: 291.7, note: 'Stage 6, TX buffer bypassed; median 46–47 cycles over 3 runs' },
+    { name: 'd = 5, Aurora', echo: 729, loop: 850, note: 'Stage 4; loop 844–856, round trip 726–732 ns' },
+    { name: 'd = 5, thin link', echo: 297.9, loop: 415.8, note: 'Stage 6, set 0 (4 sets: 409.6–422.0)' }
+  ];
+  var svg = document.getElementById('loopsvg');
+  var tip = document.getElementById('tip');
+  var fig = document.getElementById('loopchart');
+  var NS = 'http://www.w3.org/2000/svg';
+  var W = 760, L = 140, R = 70, top = 22, band = 44, bh = 22, H = top + rows.length * band + 30;
+  var xmax = 1000, x = function (v) { return L + (W - L - R) * v / xmax; };
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  svg.setAttribute('width', W); svg.style.maxWidth = '100%'; svg.style.minWidth = '520px'; svg.style.height = 'auto';
+  function el(n, a, p) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); (p || svg).appendChild(e); return e; }
+  var axisY = top + rows.length * band;
+  for (var t = 0; t <= xmax; t += 200) {
+    el('line', { x1: x(t), x2: x(t), y1: top, y2: axisY, stroke: 'var(--rule)', 'stroke-width': 1 });
+    var tx = el('text', { x: x(t), y: axisY + 18, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--muted)' });
+    tx.textContent = t;
+  }
+  var unit = el('text', { x: W - R + 8, y: axisY + 18, 'font-size': 11, fill: 'var(--muted)' }); unit.textContent = 'ns';
+  function seg(g, x0, x1, y, fill, roundEnd) {
+    var w = Math.max(0, x1 - x0);
+    if (!roundEnd) return el('rect', { x: x0, y: y, width: w, height: bh, fill: fill, class: 'seg' }, g);
+    // square at the start, 4px round at the data end
+    var rr = Math.min(4, w), d = 'M' + x0 + ',' + y + 'H' + (x0 + w - rr) + 'q' + rr + ',0 ' + rr + ',' + rr +
+      'V' + (y + bh - rr) + 'q0,' + rr + ' -' + rr + ',' + rr + 'H' + x0 + 'Z';
+    return el('path', { d: d, fill: fill, class: 'seg' }, g);
+  }
+  rows.forEach(function (d, k) {
+    var y = top + k * band + (band - bh) / 2;
+    var g = el('g', { class: 'bar-hit', tabindex: 0, role: 'img',
+      'aria-label': d.name + ': loop ' + d.loop + ' ns, round trip ' + d.echo + ' ns' });
+    var lab = el('text', { x: L - 12, y: y + bh / 2 + 4, 'text-anchor': 'end', 'font-size': 12, fill: 'var(--ink)' }, g);
+    lab.textContent = d.name;
+    el('rect', { x: L - 128, y: top + k * band, width: W - L + 128, height: band, fill: 'transparent', class: 'hl' }, g);
+    seg(g, x(0), x(d.echo) - 1, y, 'var(--s1)', false);
+    seg(g, x(d.echo) + 1, x(d.loop), y, 'var(--s2)', true);
+    var v = el('text', { x: x(d.loop) + 8, y: y + bh / 2 + 4, 'font-size': 12, 'font-weight': 600, fill: 'var(--ink)' }, g);
+    v.textContent = (d.name === 'd = 5, Aurora' ? '≈ ' : '') + d.loop;
+    function show(ev) {
+      tip.hidden = false;
+      tip.innerHTML = '<b>' + d.name + '</b><br>loop median ' + d.loop + ' ns<br>link round trip ' + d.echo +
+        ' ns<br>decoder and the rest ' + (d.loop - d.echo).toFixed(1) + ' ns<br>' + d.note;
+      var fb = fig.getBoundingClientRect(), px, py;
+      if (ev && ev.clientX) { px = ev.clientX - fb.left + 14; py = ev.clientY - fb.top + 14; }
+      else { var gb = g.getBoundingClientRect(); px = gb.left - fb.left + 40; py = gb.bottom - fb.top + 4; }
+      px = Math.min(px, fb.width - tip.offsetWidth - 8);
+      tip.style.left = Math.max(8, px) + 'px'; tip.style.top = py + 'px';
+    }
+    function hide() { tip.hidden = true; }
+    g.addEventListener('mousemove', show); g.addEventListener('mouseleave', hide);
+    g.addEventListener('focus', show); g.addEventListener('blur', hide);
+  });
+  // published reference: 550 ns
+  el('line', { x1: x(550), x2: x(550), y1: top - 4, y2: axisY, stroke: 'var(--refline)', 'stroke-width': 2 });
+  var rl = el('text', { x: x(550) + 6, y: top - 8, 'font-size': 11, fill: 'var(--muted)' }); rl.textContent = '550 published';
+  el('line', { x1: L, x2: W - R, y1: axisY, y2: axisY, stroke: 'var(--muted)', 'stroke-width': 1 });
+})();
+</script>
+</body>
+</html>

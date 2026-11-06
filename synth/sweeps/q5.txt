@@ -1,0 +1,5 @@
+# Stage 4 q5: chosen d = 5 decoder (ref/qec/qec_d5_selection.json) OOC at the GTY user clock (161.1328125 MHz, 6.206 ns)
+# launch with OOC_INCLUDE=/home/cah/r2d2/code/fpga/opus_nsinfer/rtl (qec_d5_in_map.svh)
+q5_vu9p_lc3_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d5_lc3 xcvu9p-fsgd2104-2L-e 6.206 - qec_d5 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/d5/qec_d5_top.sv IN_W=120,OUT_W=21,LOGIT_SIGNED=1
+q5_vu9p_lc5_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d5_lc5 xcvu9p-fsgd2104-2L-e 6.206 - qec_d5 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/d5/qec_d5_top.sv IN_W=120,OUT_W=21,LOGIT_SIGNED=1
+q5_vu9p_lc8_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d5_lc8 xcvu9p-fsgd2104-2L-e 6.206 - qec_d5 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/d5/qec_d5_top.sv IN_W=120,OUT_W=21,LOGIT_SIGNED=1

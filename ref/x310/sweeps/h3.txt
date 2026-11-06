@@ -1,0 +1,7 @@
+# Stage 5 HGQ2 sweep 3 (grumpy-calf), 2026-10-29: W = 16 and 32 with the 128-64-32 arch (their best float
+# baselines, h1: 0.6631 / 0.7585 val) so each W has a quantized model on the rule's terms; warm starts as in h2.
+# These cannot change the W choice (neither W reaches 95 % at SNR >= 10 dB even in float).
+hgq_w32_128_64_32_b3e6      --w 32 --mode hgq --arch 128 64 32 --epochs 200 --beta-end 3e-6
+hgq_w32_128_64_32_ws_b3e6   --w 32 --mode hgq --arch 128 64 32 --epochs 300 --lr 1e-3 --beta-end 3e-6 --init-from ref/runs/x310/float_w32_128_64_32/best.keras
+hgq_w16_128_64_32_b3e6      --w 16 --mode hgq --arch 128 64 32 --epochs 200 --beta-end 3e-6
+hgq_w16_128_64_32_ws_b3e6   --w 16 --mode hgq --arch 128 64 32 --epochs 300 --lr 1e-3 --beta-end 3e-6 --init-from ref/runs/x310/float_w16_128_64_32/best.keras

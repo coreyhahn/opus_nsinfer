@@ -1,0 +1,6 @@
+`verilator_config
+// s3_top lint: the Vivado-generated IP stubs (empty port lists) and the lint-only primitive stand-ins
+// are not our code; every other file keeps -Wall.
+lint_off -file "*/rtl/ip/*_stub.v"
+lint_off -file "*/tb/s3_lint_stubs.v"
+lint_off -file "*/verilator_lib/primitives/*"

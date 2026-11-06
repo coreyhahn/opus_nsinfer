@@ -1,0 +1,8 @@
+REGS ok
+MISMATCH vec=421 got=00a70388ff467edafce7 exp=00a70388ff667edafce7
+CHUNK base=0 n=2000 stream_cyc=2015 mismatches_so_far=1
+RESULT stream seed=0 vectors=2000 checked=2000 logit_mismatches=1 class_mismatches=0 stream_cyc_offset=16
+[260599000000] %Fatal: tb_harness.sv:223: Assertion failed in TOP.tb_harness.stream_pass: FAIL stream
+%Error: tb_harness.sv:223: Verilog $stop
+Aborting...
+exit=134

@@ -1,0 +1,6 @@
+{"part": "xczu9eg-ffvb1156-2-i", "f_net_mhz": 300, "axi_div": 1, "lc": 3, "lat_net": 10, "arg_lat": 1, "depth_log2": 14,
+ "xbar": "smartconnect", "harness": ".scratch/stage1_stub/jsc_harness.sv",
+ "directives": {"place": "Explore", "phys": "Explore", "route": "Explore"},
+ "wns_ns": 0.191, "whs_ns": 0.016, "clocks": {"clk_net": {"clock": "clk0_o", "period_ns": 3.333, "wns_ns": 0.191, "tns_ns": 0.000, "whs_ns": 0.016, "ths_ns": 0.000}, "clk_ps": {"clock": "clk1_o", "period_ns": 3.333, "wns_ns": 0.913, "tns_ns": 0.000, "whs_ns": 0.045, "ths_ns": 0.000}, "clk_axi": {"clock": "clk0_o", "period_ns": 3.333, "wns_ns": 0.191, "tns_ns": 0.000, "whs_ns": 0.016, "ths_ns": 0.000}},
+ "lut": 766, "ff": 1047, "bram_tiles": 0, "dsp": 0,
+ "iob_check": "FAIL", "vivado": "2024.2", "date": "2026-10-20T05:43:52", "elapsed_s": 347}

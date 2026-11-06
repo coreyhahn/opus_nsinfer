@@ -1,0 +1,65 @@
+# host=build-host date=2026-10-21T09:22:46-06:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# design=<repo>/rtl/gen/qec_d3_lc8 rtl_sha256=4fa9b644a77d016714d28bcc9a088fb7c26411deac14f2a50467de216969aedf tb_sha256=8c2ed1199718f80bb4faf835bd39ec637b21876c94eeb9161fb900aa0a3148d8
+# in_hex_sha256=81976e9d532059f392ed384ed726e8a463fcb62c8ae835fb67cae55c75b5dc1f dec_hex_sha256=f98b7d20e5acd4e2909507f79563cd9aee24c8363843ee33e2f10e03ba862eb7 shot_mem_sha256=d79e7c55b75d3f0ee3483e6491f8595c9d7983b91a0b4949a7bea086421093f9 (<repo>/.scratch/s3_shots_n464428.hex, tb/s3_make_mem.py)
+# NVEC=464428 DEC_LAT=6 LINK_CYC=40 CC_PERIOD=1000 TIMEOUT=100000 TA_NS=6.206 TB_NS=6.207 clocks=spec
+CONFIG id=53330001 NVEC=464428 DEC_LAT=6 LINK_CYC=40 CC_PERIOD=1000 TIMEOUT=100000 TA_NS=6.2060 TB_NS=6.2070 (B/A-1 = 161.1 ppm) corrupt_seq=232231
+PATHS side B: RX register -> FIFO write = 7 edges (decode), 1 edge (echo); framing = 2 edges (RX register + FIFO entry)
+HIST dec_gap0 lat=90 n=2613
+HIST dec_gap0 lat=91 n=4628
+HIST dec_gap0 lat=92 n=6194
+HIST dec_gap0 lat=93 n=6355
+HIST dec_gap0 lat=94 n=6251
+HIST dec_gap0 lat=95 n=6175
+HIST dec_gap0 lat=96 n=6018
+HIST dec_gap0 lat=97 n=6200
+HIST dec_gap0 lat=98 n=6385
+HIST dec_gap0 lat=99 n=6221
+HIST dec_gap0 lat=100 n=6145
+HIST dec_gap0 lat=101 n=6048
+HIST dec_gap0 lat=102 n=6209
+HIST dec_gap0 lat=103 n=176317
+HIST dec_gap0 lat=104 n=188906
+HIST dec_gap0 lat=105 n=23701
+RESULT case=dec_gap0 mode=decode gap=0 nvec=464428 sent=464428 rx=464366 good=464366 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=90 lat_max=105 lat_mean=102.4327 expect=[89,94] b_rx=464428 b_tx=464366 b_dec=7..7/464428 b_echo=65535..0/0 b_fifo_max=16 b_ovf=62 b_collide=0 timeout=1 sig=7fd31fd8 sig_link=7fd31fd8 sig_exp=5e8e5270
+NOTE dec_gap0: GAP=0 with clk_a faster than clk_b, expected B FIFO backlog 74.8 words: overflow path checked
+LINKQ dec_gap0 a->b q_max=42 b->a q_max=42
+HIST dec_gap7 lat=90 n=460297
+HIST dec_gap7 lat=91 n=4127
+HIST dec_gap7 lat=92 n=4
+RESULT case=dec_gap7 mode=decode gap=7 nvec=464428 sent=464428 rx=464428 good=464428 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=90 lat_max=92 lat_mean=90.0089 expect=[89,92] b_rx=464428 b_tx=464428 b_dec=7..7/464428 b_echo=65535..0/0 b_fifo_max=1 b_ovf=0 b_collide=0 timeout=0 sig=5e8e5270 sig_link=5e8e5270 sig_exp=5e8e5270
+FLAGS dec_gap7 hierarchical=464428/464428 axi_reads=3000 ok
+LINKQ dec_gap7 a->b q_max=6 b->a q_max=6
+HIST echo_gap7 lat=84 n=460746
+HIST echo_gap7 lat=85 n=3679
+HIST echo_gap7 lat=86 n=3
+RESULT case=echo_gap7 mode=  echo gap=7 nvec=464428 sent=464428 rx=464428 good=464428 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=84 lat_max=86 lat_mean=84.0079 expect=[83,86] b_rx=464428 b_tx=464428 b_dec=65535..0/0 b_echo=1..1/464428 b_fifo_max=1 b_ovf=0 b_collide=0 timeout=0 sig=5f09efeb sig_link=5f09efeb sig_exp=5f09efeb
+FLAGS echo_gap7 hierarchical=464428/464428 axi_reads=3000 ok
+LINKQ echo_gap7 a->b q_max=6 b->a q_max=6
+HIST echo_gap0 lat=84 n=314
+HIST echo_gap0 lat=85 n=2327
+HIST echo_gap0 lat=86 n=6198
+HIST echo_gap0 lat=87 n=6200
+HIST echo_gap0 lat=88 n=6200
+HIST echo_gap0 lat=89 n=6282
+HIST echo_gap0 lat=90 n=6117
+HIST echo_gap0 lat=91 n=6200
+HIST echo_gap0 lat=92 n=6200
+HIST echo_gap0 lat=93 n=6200
+HIST echo_gap0 lat=94 n=6282
+HIST echo_gap0 lat=95 n=6117
+HIST echo_gap0 lat=96 n=6200
+HIST echo_gap0 lat=97 n=41635
+HIST echo_gap0 lat=98 n=317186
+HIST echo_gap0 lat=99 n=34708
+RESULT case=echo_gap0 mode=  echo gap=0 nvec=464428 sent=464428 rx=464366 good=464366 mism=0 first_mis=0/0 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=84 lat_max=99 lat_mean=96.8821 expect=[83,88] b_rx=464428 b_tx=464366 b_dec=65535..0/0 b_echo=1..1/464428 b_fifo_max=16 b_ovf=62 b_collide=0 timeout=1 sig=82d23071 sig_link=82d23071 sig_exp=5f09efeb
+NOTE echo_gap0: GAP=0 with clk_a faster than clk_b, expected B FIFO backlog 74.8 words: overflow path checked
+LINKQ echo_gap0 a->b q_max=42 b->a q_max=42
+HIST corrupt_gap1 lat=90 n=460289
+HIST corrupt_gap1 lat=91 n=4135
+HIST corrupt_gap1 lat=92 n=4
+RESULT case=corrupt_gap1 mode=decode gap=1 nvec=464428 sent=464428 rx=464428 good=464428 mism=1 first_mis=1/232231 err_tag=0 err_range=0 err_ovr=0 err_dup=0 err_echo=0 hist_under=0 hist_over=0 lat_min=90 lat_max=92 lat_mean=90.0089 expect=[89,92] b_rx=464428 b_tx=464428 b_dec=7..7/464428 b_echo=65535..0/0 b_fifo_max=1 b_ovf=0 b_collide=0 timeout=0 sig=faecb75f sig_link=faecb75f sig_exp=faecb75f
+FLAGS corrupt_gap1 hierarchical=464428/464428 axi_reads=3000 ok
+LINKQ corrupt_gap1 a->b q_max=21 b->a q_max=22
+RESULT s3_loop nvec=464428 dec_lat=6 link_cyc=40 ta_ns=6.2060 tb_ns=6.2070 gap7 decode=90..92 mean 90.0089 echo=84..86 mean 84.0079 decode_minus_echo min=6 max=6 mean=6.0010 fails=0
+PASS
+- tb_s3_loop.sv:346: Verilog $finish

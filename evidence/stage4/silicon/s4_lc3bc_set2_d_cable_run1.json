@@ -1,0 +1,232 @@
+[
+ {
+  "log": "evidence/stage4/silicon/s4_lc3bc_set2_d_cable_run1.log",
+  "run": "echo_gap63",
+  "mode": "echo",
+  "gap": 63,
+  "nvec": 131072,
+  "n_good": 131072,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "ebffc69c",
+  "sim_signature": "ebffc69c",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_a_period_ns": 6.206060606060606,
+  "freq_a_counts": 27033600,
+  "freq_b_counts": 27033611,
+  "b_ppm_vs_a": 0.4069010417495633,
+  "loop_cycles": {
+   "min": 114,
+   "p50": 119,
+   "p99": 125,
+   "max": 125,
+   "mean": 118.77823638916016
+  },
+  "b_decode_path_cycles": [
+   0,
+   65535
+  ],
+  "b_echo_path_cycles": [
+   1,
+   1
+  ],
+  "hist": {
+   "114": 11498,
+   "115": 8215,
+   "116": 11164,
+   "117": 7366,
+   "118": 25053,
+   "119": 16449,
+   "120": 14742,
+   "121": 8577,
+   "122": 14411,
+   "123": 9951,
+   "124": 2249,
+   "125": 1397
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true,
+  "loop_ns": {
+   "min": 707.4909090909091,
+   "p50": 738.5212121212121,
+   "p99": 775.7575757575758,
+   "max": 775.7575757575758,
+   "mean": 737.1449337121212
+  }
+ },
+ {
+  "log": "evidence/stage4/silicon/s4_lc3bc_set2_d_cable_run1.log",
+  "run": "decode_gap63",
+  "mode": "decode",
+  "gap": 63,
+  "nvec": 131072,
+  "n_good": 131072,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "bbf1d963",
+  "sim_signature": "bbf1d963",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_a_period_ns": 6.206060606060606,
+  "freq_a_counts": 27033600,
+  "freq_b_counts": 27033611,
+  "b_ppm_vs_a": 0.4069010417495633,
+  "loop_cycles": {
+   "min": 131,
+   "p50": 138,
+   "p99": 144,
+   "max": 144,
+   "mean": 137.7612762451172
+  },
+  "b_decode_path_cycles": [
+   20,
+   20
+  ],
+  "b_echo_path_cycles": [
+   1,
+   1
+  ],
+  "hist": {
+   "131": 1072,
+   "132": 1230,
+   "133": 6160,
+   "134": 5149,
+   "135": 16221,
+   "136": 10592,
+   "137": 22258,
+   "138": 14577,
+   "139": 19616,
+   "140": 12424,
+   "141": 11022,
+   "142": 6471,
+   "143": 1999,
+   "144": 2281
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true,
+  "loop_ns": {
+   "min": 812.9939393939394,
+   "p50": 856.4363636363636,
+   "p99": 893.6727272727272,
+   "max": 893.6727272727272,
+   "mean": 854.9548295454546
+  }
+ },
+ {
+  "log": "evidence/stage4/silicon/s4_lc3bc_set2_d_cable_run1.log",
+  "run": "decode_gap7",
+  "mode": "decode",
+  "gap": 7,
+  "nvec": 131072,
+  "n_good": 131072,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "bbf1d963",
+  "sim_signature": "bbf1d963",
+  "flips_checked": 8192,
+  "flip_mismatches": 0,
+  "clk_a_period_ns": 6.206060606060606,
+  "freq_a_counts": 27033600,
+  "freq_b_counts": 27033611,
+  "b_ppm_vs_a": 0.4069010417495633,
+  "loop_cycles": {
+   "min": 131,
+   "p50": 137,
+   "p99": 143,
+   "max": 150,
+   "mean": 137.3740692138672
+  },
+  "b_decode_path_cycles": [
+   20,
+   20
+  ],
+  "b_echo_path_cycles": [
+   1,
+   1
+  ],
+  "hist": {
+   "131": 9360,
+   "132": 15,
+   "133": 10,
+   "134": 2937,
+   "135": 38674,
+   "136": 955,
+   "137": 15300,
+   "138": 5237,
+   "139": 37583,
+   "140": 1840,
+   "141": 2413,
+   "142": 3825,
+   "143": 12886,
+   "144": 6,
+   "146": 6,
+   "147": 2,
+   "149": 12,
+   "150": 11
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true,
+  "loop_ns": {
+   "min": 812.9939393939394,
+   "p50": 850.230303030303,
+   "p99": 887.4666666666667,
+   "max": 930.9090909090909,
+   "mean": 852.5517992424243
+  }
+ }
+]

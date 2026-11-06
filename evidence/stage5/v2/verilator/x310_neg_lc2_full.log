@@ -1,0 +1,8 @@
+NEGATIVE CONTROL: expected logits of window 777 corrupted (bit 0 flipped)
+LATENCY cycles=20 (window applied before edge 1 -> logits and class valid; core 18, BFP_PIPE 1, argmax 1)
+MISMATCH vec=777 got=015020aef023280fe exp=015020aef023280ff
+RESULT seed=1 vectors=100000 checked=100000 mismatches=1 class_mismatches=0 gaps=14087 latency=20 class_hist=26796,25258,24572,23374 xor_signature=1c0fa0834e5090b33
+[571135000] %Fatal: tb_x310.sv:142: Assertion failed in TOP.tb_x310: FAIL: 1 logit, 0 class mismatches, 100000 of 100000 checked
+%Error: tb_x310.sv:142: Verilog $stop
+Aborting...
+Aborted (core dumped)

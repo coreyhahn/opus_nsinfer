@@ -1,0 +1,61 @@
+float baseline float_128_64_32: val geomean NN/PM 0.8436 -> limit 0.9436
+546 Pareto checkpoints, 21 pass
+    31516 geomean 0.9274 max 0.9978  ref/runs/qec/hgq_g2_128_64_32_f6_b6/pareto/e0118_r0.92739_ebops31516.keras
+    36872 geomean 0.9162 max 0.9914  ref/runs/qec/hgq_g2_128_64_f6_b6/pareto/e0098_r0.91620_ebops36872.keras
+    37662 geomean 0.9246 max 0.9951  ref/runs/qec/hgq_g2_128_64_32_f6_b6/pareto/e0108_r0.92459_ebops37662.keras
+    41321 geomean 0.9156 max 0.9847  ref/runs/qec/hgq_g2_128_64_32_f6_b6/pareto/e0102_r0.91559_ebops41321.keras
+    42406 geomean 0.9153 max 0.9895  ref/runs/qec/hgq_g2_128_64_f6_b6/pareto/e0088_r0.91534_ebops42406.keras
+    44619 geomean 0.9153 max 0.9871  ref/runs/qec/hgq_g2_128_64_32_f6_b6/pareto/e0098_r0.91530_ebops44619.keras
+    45068 geomean 0.9147 max 0.9895  ref/runs/qec/hgq_g2_128_64_f6_b6/pareto/e0086_r0.91467_ebops45068.keras
+    47940 geomean 0.9098 max 0.9861  ref/runs/qec/hgq_g2_128_64_f6_b6/pareto/e0082_r0.90978_ebops47940.keras
+    48894 geomean 0.9282 max 0.9971  ref/runs/qec/hgq_g1_128_64_b6/pareto/e0114_r0.92816_ebops48894.keras
+    56032 geomean 0.9149 max 0.9840  ref/runs/qec/hgq_g2_128_64_32_f6_b6/pareto/e0084_r0.91493_ebops56032.keras
+{
+ "rule": "lowest EBOPs with val geomean NN/PM <= best float + 0.1 and every val p <= 1.0",
+ "chosen": {
+  "file": "ref/runs/qec/hgq_g2_128_64_32_f6_b6/pareto/e0118_r0.92739_ebops31516.keras",
+  "size": 1116697,
+  "epoch": 118,
+  "ebops": 31516,
+  "val_geomean": 0.9273857979924253,
+  "val_max": 0.9978118864954166,
+  "val_ratio": {
+   "1e-3": 0.8653008962868117,
+   "2e-3": 0.8867437162632049,
+   "3e-3": 0.9092405719337825,
+   "5e-3": 0.9416993509828641,
+   "7e-3": 0.9704152681511757,
+   "10e-3": 0.9978118864954166
+  },
+  "test_geomean": 0.9278539184395975,
+  "test_ratio": {
+   "1e-3": 0.8545829573288642,
+   "2e-3": 0.8918954945347907,
+   "3e-3": 0.9107058590717428,
+   "5e-3": 0.9476827073643864,
+   "7e-3": 0.969527906470668,
+   "10e-3": 1.0004791412704863
+  }
+ },
+ "float_baseline": {
+  "run": "float_128_64_32",
+  "val_geomean": 0.8435559202967612,
+  "val_ratio": {
+   "1e-3": 0.7888604353393086,
+   "2e-3": 0.8107759048912143,
+   "3e-3": 0.8293954452608152,
+   "5e-3": 0.855272680580847,
+   "7e-3": 0.8777447019857074,
+   "10e-3": 0.9047900070513395
+  },
+  "test_geomean": 0.8452914019944282,
+  "test_ratio": {
+   "1e-3": 0.7888358901637231,
+   "2e-3": 0.8166822180751799,
+   "3e-3": 0.8307734461814805,
+   "5e-3": 0.8574976044125552,
+   "7e-3": 0.8783481614875882,
+   "10e-3": 0.9049336313151836
+  }
+ }
+}

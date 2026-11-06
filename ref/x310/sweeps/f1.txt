@@ -1,0 +1,10 @@
+# Stage 5 float64 baselines (grumpy-calf), 2026-10-29: MLPs per W on the BFP-shifted window, plus the
+# D-S5-BFP ablation (bfp0 = raw int16 / 2^15 input) at W = 32.
+float_w16_64_32        --w 16 --mode float --arch 64 32 --epochs 100
+float_w16_128_64       --w 16 --mode float --arch 128 64 --epochs 100
+float_w32_64_32        --w 32 --mode float --arch 64 32 --epochs 100
+float_w32_128_64       --w 32 --mode float --arch 128 64 --epochs 100
+float_w64_64_32        --w 64 --mode float --arch 64 32 --epochs 100
+float_w64_128_64       --w 64 --mode float --arch 128 64 --epochs 100
+float_w32_64_32_bfp0   --w 32 --bfp 0 --mode float --arch 64 32 --epochs 100
+float_w64_128_64_32    --w 64 --mode float --arch 128 64 32 --epochs 100

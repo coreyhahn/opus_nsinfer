@@ -1,0 +1,40 @@
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         si570
+Waveform(ns):       { 0.000 1.666 }
+Period(ns):         3.333
+Sources:            { si570_clk_p }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location   Pin
+Min Period        n/a     MMCME4_ADV/CLKIN1  n/a            1.071         3.333       2.262      MMCM_X0Y0  u_mmcm/CLKIN1
+Max Period        n/a     MMCME4_ADV/CLKIN1  n/a            100.000       3.333       96.667     MMCM_X0Y0  u_mmcm/CLKIN1
+Low Pulse Width   Slow    MMCME4_ADV/CLKIN1  n/a            1.167         1.667       0.500      MMCM_X0Y0  u_mmcm/CLKIN1
+Low Pulse Width   Fast    MMCME4_ADV/CLKIN1  n/a            1.167         1.666       0.500      MMCM_X0Y0  u_mmcm/CLKIN1
+High Pulse Width  Slow    MMCME4_ADV/CLKIN1  n/a            1.167         1.666       0.500      MMCM_X0Y0  u_mmcm/CLKIN1
+High Pulse Width  Fast    MMCME4_ADV/CLKIN1  n/a            1.167         1.667       0.500      MMCM_X0Y0  u_mmcm/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk0_o
+  To Clock:  clk0_o
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.191ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.016ns,  Total Violation        0.000ns
+PW    :            5  Failing Endpoints,  Worst Slack       -4.667ns,  Total Violation      -23.335ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.191ns  (required time - arrival time)
+  Source:                 <hidden>
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            u_ps/ps_bd_i/zynq_ps/inst/PS8_i/MAXIGP0RDATA[33]
+                            (rising edge-triggered cell PS8 clocked by clk0_o  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk0_o
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk0_o rise@3.333ns - clk0_o rise@0.000ns)
+  Data Path Delay:        1.993ns  (logic 0.129ns (6.474%)  route 1.864ns (93.526%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        -0.247ns (DCD - SCD + CPR)

@@ -1,0 +1,132 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Mon Oct 19 22:35:01 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -to [get_ports {hd_out hp_out}] -max_paths 2 -nworst 1 -delay_type max -file t_out_max.rpt
+| Design            : top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -2.602ns  (required time - arrival time)
+  Source:                 hd_r2_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            hd_out
+                            (output port clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk300
+  Path Type:              Max at Slow Process Corner
+  Requirement:            3.333ns  (clk300 rise@3.333ns - clk300 rise@0.000ns)
+  Data Path Delay:        2.944ns  (logic 2.941ns (99.898%)  route 0.003ns (0.102%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -2.956ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 3.333 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.956ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.957ns (routing 0.654ns, distribution 1.303ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk300 rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.100     0.100    ib/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.489     0.589 r  ib/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.639    ib/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  ib/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.332     0.971    clk_ibuf
+    BUFGCE_X0Y1          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.999 r  bg/O
+    X3Y0 (CLOCK_ROOT)    net (fo=4, routed)           1.957     2.956    clk
+    HDIOLOGIC_S_X0Y23    FDRE                                         r  hd_r2_reg/C
+  -------------------------------------------------------------------    -------------------
+    HDIOLOGIC_S_X0Y23    FDRE (Prop_OPFF_HDIOLOGIC_S_C_Q)
+                                                      0.359     3.315 r  hd_r2_reg/Q
+                         net (fo=1, routed)           0.003     3.318    hd_out_OBUF
+    A20                  OBUF (Prop_OUTBUF_HDIOB_S_I_O)
+                                                      2.582     5.900 r  hd_out_OBUF_inst/O
+                         net (fo=0)                   0.000     5.900    hd_out
+    A20                                                               r  hd_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk300 rise edge)     3.333     3.333 r  
+                         clock pessimism              0.000     3.333    
+                         clock uncertainty           -0.035     3.298    
+                         output delay                -0.000     3.298    
+  -------------------------------------------------------------------
+                         required time                          3.298    
+                         arrival time                          -5.900    
+  -------------------------------------------------------------------
+                         slack                                 -2.602    
+
+Slack (VIOLATED) :        -1.156ns  (required time - arrival time)
+  Source:                 hp_r2_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            hp_out
+                            (output port clocked by clk300  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk300
+  Path Type:              Max at Slow Process Corner
+  Requirement:            3.333ns  (clk300 rise@3.333ns - clk300 rise@0.000ns)
+  Data Path Delay:        1.432ns  (logic 1.178ns (82.264%)  route 0.254ns (17.736%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -3.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 3.333 - 3.333 ) 
+    Source Clock Delay      (SCD):    3.021ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.022ns (routing 0.654ns, distribution 1.368ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk300 rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.100     0.100    ib/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.489     0.589 r  ib/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.639    ib/OUT
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  ib/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.332     0.971    clk_ibuf
+    BUFGCE_X0Y1          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.999 r  bg/O
+    X3Y0 (CLOCK_ROOT)    net (fo=4, routed)           2.022     3.021    clk
+    BITSLICE_RX_TX_X0Y99 FDRE                                         r  hp_r2_reg/C
+  -------------------------------------------------------------------    -------------------
+    BITSLICE_RX_TX_X0Y99 FDRE (Prop_OUT_FF_BITSLICE_COMPONENT_RX_TX_C_Q)
+                                                      0.494     3.515 r  hp_r2_reg/Q
+                         net (fo=1, routed)           0.254     3.769    hp_out_OBUF
+    AD2                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.684     4.454 r  hp_out_OBUF_inst/O
+                         net (fo=0)                   0.000     4.454    hp_out
+    AD2                                                               r  hp_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk300 rise edge)     3.333     3.333 r  
+                         clock pessimism              0.000     3.333    
+                         clock uncertainty           -0.035     3.298    
+                         output delay                -0.000     3.298    
+  -------------------------------------------------------------------
+                         required time                          3.298    
+                         arrival time                          -4.454    
+  -------------------------------------------------------------------
+                         slack                                 -1.156    
+
+
+
+

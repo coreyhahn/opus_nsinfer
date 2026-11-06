@@ -1,0 +1,4 @@
+<repo>/synth/out_s6d5_lc3bc_set3/s3_shots.hex b66b9698b4dcac505250f6f4d79ed06486e32dd1efe0836485d63ea468761211
+b66b9698b4dcac505250f6f4d79ed06486e32dd1efe0836485d63ea468761211  <repo>/synth/out_s6d5_lc3bc_set3/s3_shots.hex
+4d62723bc2297a48bae6675584920e911b8f24f469f6806e3495ae7646ca5432  <repo>/.scratch/qec_d5_set3_in.hex
+db16c31e8128bbe3ce394b74243fa8d3962e4b322d04828a88f0e34fe427b967  <repo>/.scratch/qec_d5_set3_dec.hex

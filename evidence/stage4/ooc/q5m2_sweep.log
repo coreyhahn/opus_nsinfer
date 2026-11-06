@@ -1,0 +1,2 @@
+DONE q5m10_vu9p_lc3bc4_f161 {"part": "xcvu9p-fsgd2104-2L-e", "period_ns": 6.206, "wns_ns": 0.035, "whs_ns": 0.042, "lut": 148014, "ff": 76006, "dsp": 0, "retime": 0, "gen_dir": "<repo>/.scratch/d5n10/gen/qec_d5_lc3bc4", "top": "qec_d5_top", "vivado": "2024.2", "date": "2026-10-28T17:27:43"}
+SWEEP COMPLETE 2026-10-28T17:27:57-06:00

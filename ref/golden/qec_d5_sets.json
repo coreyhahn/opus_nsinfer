@@ -1,0 +1,32 @@
+{
+ "method": "Stage 4 silicon vector sets 1..3 (CHARTER rule (c): >= 4 vector sets, each run twice without reprogramming).",
+ "n_vectors": 131072,
+ "source": "ref/golden/qec_d5_full.json",
+ "full_sha256_in": "7c215a6484f454b0ce6de62c98d25434a9ab994fbc7b217e835df06ed8f686a9",
+ "sets": {
+  "1": {
+   "seed": 1,
+   "in": ".scratch/qec_d5_set1_in.hex",
+   "dec": ".scratch/qec_d5_set1_dec.hex",
+   "sha256_in": "90973feea4b14f5932c1a80da3f5f6029a49743223658447fae24ef3768ba643",
+   "sha256_dec": "a516ea9b86848c1dd35bff88dd093ddd09ac003157f07aa6843fcc6fddb0a0e2",
+   "flips": 37646
+  },
+  "2": {
+   "seed": 2,
+   "in": ".scratch/qec_d5_set2_in.hex",
+   "dec": ".scratch/qec_d5_set2_dec.hex",
+   "sha256_in": "c63356ad3fda4e3bb8efed40834d92b639bc2c4e77aac982560978b4b2ffcd9c",
+   "sha256_dec": "c515856793ca4b1b2ddb0fb5b7451d014366bc1c443339475978ce79450f7515",
+   "flips": 37909
+  },
+  "3": {
+   "seed": 3,
+   "in": ".scratch/qec_d5_set3_in.hex",
+   "dec": ".scratch/qec_d5_set3_dec.hex",
+   "sha256_in": "4d62723bc2297a48bae6675584920e911b8f24f469f6806e3495ae7646ca5432",
+   "sha256_dec": "db16c31e8128bbe3ce394b74243fa8d3962e4b322d04828a88f0e34fe427b967",
+   "flips": 37823
+  }
+ }
+}

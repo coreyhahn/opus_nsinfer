@@ -1,0 +1,12 @@
+# Stage 5 HGQ2 sweep 4 (grumpy-calf), 2026-10-29, W = 64, aimed at the amended D-S5-SEL resource bound
+# (da4ml core estimate <= 22k LUT). h1-h3: inside 22k the best is hgq_w64_128_64_32_b3e5 e0179 (val 0.805,
+# 0.956 at SNR >= 10 dB); warm starts from the float have the lowest LUT / EBOP (0.50: wider weights, fewer
+# nonzero terms), so: warm starts with stronger beta, longer from-scratch schedules, narrower nets.
+hgq_w64_128_64_32_ws_b3e5     --w 64 --mode hgq --arch 128 64 32 --epochs 300 --lr 1e-3 --beta-end 3e-5 --init-from ref/runs/x310/float_w64_128_64_32/best.keras
+hgq_w64_128_64_32_ws_b6e5     --w 64 --mode hgq --arch 128 64 32 --epochs 300 --lr 1e-3 --beta-end 6e-5 --init-from ref/runs/x310/float_w64_128_64_32/best.keras
+hgq_w64_128_64_ws_b3e5        --w 64 --mode hgq --arch 128 64 --epochs 300 --lr 1e-3 --beta-end 3e-5 --init-from ref/runs/x310/float_w64_128_64/best.keras
+hgq_w64_128_64_32_b2e5_e300   --w 64 --mode hgq --arch 128 64 32 --epochs 300 --beta-end 2e-5
+hgq_w64_128_64_32_b3e5_e300   --w 64 --mode hgq --arch 128 64 32 --epochs 300 --beta-end 3e-5
+hgq_w64_128_64_32_b3e5_s2     --w 64 --mode hgq --arch 128 64 32 --epochs 200 --beta-end 3e-5 --seed 2
+hgq_w64_96_48_24_b2e5_e300    --w 64 --mode hgq --arch 96 48 24 --epochs 300 --beta-end 2e-5
+hgq_w64_64_32_32_b1e5_e300    --w 64 --mode hgq --arch 64 32 32 --epochs 300 --beta-end 1e-5

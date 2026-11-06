@@ -1,0 +1,5 @@
+uhd 4.9.0.HEAD-0-a5d1b2ef
+evt_s100: 550 records; old check fails on rate-1.0 metadata for 550; ts_matches: raw1 550, tick(200e6) 550, off-by-one flagged 550
+evt_s100: recv calls of up to 64 records = ceil(550/64) = 9; capture json ts!=word0 count = 9
+evt_s101: 581 records; old check fails on rate-1.0 metadata for 581; ts_matches: raw1 581, tick(200e6) 581, off-by-one flagged 581
+evt_s101: recv calls of up to 64 records = ceil(581/64) = 10; capture json ts!=word0 count = 10

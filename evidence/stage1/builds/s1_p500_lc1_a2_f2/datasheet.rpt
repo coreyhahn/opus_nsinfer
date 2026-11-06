@@ -1,0 +1,82 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 08:01:25 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_datasheet -file <repo>/synth/out_s1_p500_lc1_a2_f2/datasheet.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Data Sheet Report
+
+Input Ports Setup/Hold
+
+----------+-------+---------+-------+---------------+---------+---------------+---------+----------+
+Reference | Input | IO Reg  | Delay |     Setup(ns) | Process |      Hold(ns) | Process | Internal |
+Clock     | Port  | Type    | Type  | to Clk (Edge) | Corner  | to Clk (Edge) | Corner  | Clock    |
+----------+-------+---------+-------+---------------+---------+---------------+---------+----------+
+si570     | pin_b | FDRE    | -     |     1.966 (r) | SLOW    |             - | -       | clk0_o   |
+si570     | pin_c | FDRE    | -     |     1.935 (r) | SLOW    |             - | -       | clk1_o   |
+----------+-------+---------+-------+---------------+---------+---------------+---------+----------+
+
+
+Output Ports Clock-to-out
+
+----------+------------+--------+-------+----------------+---------+----------------+---------+----------+
+Reference | Output     | IO Reg | Delay | Max Clk (Edge) | Process | Min Clk (Edge) | Process | Internal |
+Clock     | Port       | Type   | Type  |    to port(ns) | Corner  |    to port(ns) | Corner  | Clock    |
+----------+------------+--------+-------+----------------+---------+----------------+---------+----------+
+si570     | class_o[0] | FDRE   | -     |      3.872 (r) | SLOW    |      1.646 (r) | FAST    | clk0_o   |
+si570     | class_o[1] | FDRE   | -     |      4.016 (r) | SLOW    |      1.762 (r) | FAST    | clk0_o   |
+si570     | class_o[2] | FDRE   | -     |      3.744 (r) | SLOW    |      1.576 (r) | FAST    | clk0_o   |
+si570     | led[1]     | FDRE   | -     |      4.056 (r) | SLOW    |      1.792 (r) | FAST    | clk0_o   |
+si570     | pin_c      | FDRE   | -     |      3.271 (r) | SLOW    |              - | -       | clk0_o   |
+si570     | pin_b      | FDRE   | -     |      3.128 (r) | SLOW    |              - | -       | clk1_o   |
+----------+------------+--------+-------+----------------+---------+----------------+---------+----------+
+
+
+Setup between Clocks
+
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+Source | Destination |  Src:Rise     | Process |  Src:Rise     | Process |  Src:Fall     | Process |  Src:Fall     | Process |
+Clock  | Clock       | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  |
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+si570  | si570       |         3.884 | SLOW    |               |         |               |         |               |         |
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+
+
+Max / Min delays for output bus
+Clocked by: si570
+Bus Skew: 0.272 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+class_o[0]         |   3.872 (r) | SLOW    |   1.646 (r) | FAST    |    0.128 |
+class_o[1]         |   4.016 (r) | SLOW    |   1.762 (r) | FAST    |    0.272 |
+class_o[2]         |   3.744 (r) | SLOW    |   1.576 (r) | FAST    |    0.000 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   4.016 (r) | SLOW    |   1.576 (r) | FAST    |    0.272 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+
+Max / Min delays for output bus
+Clocked by: si570
+Bus Skew: 0.000 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+led[0]             |           - | -       |           - | -       |        - |
+led[1]             |   4.056 (r) | SLOW    |   1.792 (r) | FAST    |    0.000 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   4.056 (r) | SLOW    |   1.792 (r) | FAST    |    0.000 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+

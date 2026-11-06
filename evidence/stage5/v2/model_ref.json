@@ -1,0 +1,4 @@
+{"test_overall": 91.1, "test_snr_ge10": 98.2, "float_overall": 93.9, "float_snr_ge10": 99.2,
+ "per_class_overall": [97.1, 91.3, 88.3, 87.7], "per_class_snr_ge10": [97.1, 99.2, 98.5, 98.1],
+ "bins_2p5db": [56.5, 75.2, 87.0, 92.1, 96.0, 97.5, 97.7, 98.1, 98.5, 98.3, 98.2, 98.4],
+ "source": "evidence/stage5/accuracy_meas.md (v2: measured-channel model, exported = RTL, test set, 100,000 windows)"}

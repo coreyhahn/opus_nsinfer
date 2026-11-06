@@ -1,0 +1,30 @@
+# host=build-host date=2026-11-03T17:57:51-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# rtl_sha256=c6fb487f0fc4625f257c42cb242c4bbbe2d64bbd32d723fbc40dfcbc0a8e705e tb_sha256=abba9426306fa98bcc9380bb1f0d93a22648ea88e36c7b35663ba0355ff116a4 NL=3 TX_REG=1 RX_REG=1
+CONFIG tb_s6_link NL=3 TX_REG=1 RX_REG=1 T_NS=6.206 skew_ui=70 negscr=0 (wire latencies MODEL)
+LOCK initial after 2208 cycles: A lock=111 slips=112  B lock=111 slips=158
+TRAFFIC random mode=1 cycles=20000 words a->b=4993 b->a=6602 mismatches=0 extra=0
+TRAFFIC b2b mode=2 cycles=20000 words a->b=19394 b->a=19394 mismatches=0 extra=0
+REF descrambled 41258 blocks of A lane 0, 0 wrong
+LAT a->b one-way 16..18 cycles, b->a 16..18 cycles (TX accept edge -> next register edge; MODEL wire)
+HISTLAT 16 a->b 9528 b->a 6927
+HISTLAT 17 a->b 12220 b->a 13000
+HISTLAT 18 a->b 2639 b->a 6069
+MIS a->b cyc=47267 got=ecf0a72e1282fc695b19c48de57a56fffad939ed7aa51cd2 exp=ecf0a72e1282fc695b19c48de57a56fffed939ed7aa51cd2
+MIS a->b cyc=54117 got=dcf4da5eb6a69b7a32e2273891433b2b566ad43fcd67364a exp=dcf4da5eb6a69b7a32e2273891433b2b566ad43dcd67764a
+MIS a->b cyc=57560 got=55c0a031f7fb4d3ff2fee1bb482e1f3fe41ade20bb5317f6 exp=55c0a031f7fb4d3ff2fee1bb482e1f3fec1adf20bb5317f6
+MIS a->b cyc=58989 got=fd57bc2ec100453d23344334ba3aa2814cab00fb0ab63519 exp=fd57bc2ec100453d23344334ba3aa2814cab00fb0ab63599
+MIS a->b cyc=59059 got=000000000000000000000000000000000000000000800000 exp=000000000000000000000000000000000000000000000000
+BER injected 51 flips on A->B lane 0: B n_sh_bad=2 n_idle_bad=32 unlocks=0 scoreboard mismatches=11
+LOCK after BER after 0 cycles: A lock=111 slips=112  B lock=111 slips=158
+TRAFFIC after_ber mode=1 cycles=10000 words a->b=2457 b->a=3302 mismatches=0 extra=0
+LOCK after glitch after 0 cycles: A lock=111 slips=112  B lock=111 slips=159
+GLITCH B unlock 0 -> 1, lock 3 -> 4, slips 159
+GLITCH garbage words delivered while losing lock: 0
+TRAFFIC after_glitch mode=1 cycles=10000 words a->b=2468 b->a=3295 mismatches=0 extra=0
+LOCK after burst after 1407 cycles: A lock=111 slips=178  B lock=111 slips=159
+BURST A unlock 0 -> 1, lock 3 -> 4
+BURST garbage words delivered while losing lock: 0
+TRAFFIC after_burst mode=2 cycles=10000 words a->b=9696 b->a=9696 mismatches=0 extra=0
+RESULT tb_s6_link NL=3 TX_REG=1 RX_REG=1 words a->b=46460 b->a=52021 lat_ab=16..18 lat_ba=16..18 ref_blocks=104597 ref_bad=0 slips_a=178 slips_b=159 unlock_a=1 unlock_b=1 fails=0
+PASS
+- tb_s6_link.sv:283: Verilog $finish

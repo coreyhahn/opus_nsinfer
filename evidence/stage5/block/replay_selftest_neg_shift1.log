@@ -1,0 +1,10 @@
+# 2026-10-30T01:47:01-06:00 host=desk-pc python3 sw/x310/nsclf_replay.py selftest --shift 1 (negative control, must FAIL)
+NEGATIVE CONTROL: replay tap time shifted by 1 sample(s) against the silicon window
+MISMATCH window misr: silicon 0xb7761c4cde1360f3 sim 0x5b440f546f86b17a
+MISMATCH window count: silicon 0xffc1 sim 0xffc0
+MISMATCH window hist: silicon [21961, 20217, 8423, 14872] sim [21961, 20217, 8423, 14871]
+MISMATCH window tfirst: silicon 0x100003072 sim 0x100003073
+MISMATCH no common event between silicon and replay
+REPLAY window count=65472 misr=0x5b440f546f86b17a hist=[21961, 20217, 8423, 14871] events compared=0 errors=5 log=<repo>/.scratch/nsclf_replay/selftest_shift1/replay.log
+FAIL
+rc=1

@@ -1,0 +1,41 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Tue Oct 20 07:33:27 2026
+| Host         : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command      : report_drc -ruledecks bitstream_checks -file <repo>/synth/out_s1_p300_lc3_f1/drc_bitstream.rpt
+| Design       : zcu102_top
+| Device       : xczu9eg-ffvb1156-2-i
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: zcu102_top
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: bitstream_checks
+             Max checks: <unlimited>
+             Checks found: 1
++----------+----------+----------------------------+--------+
+| Rule     | Severity | Description                | Checks |
++----------+----------+----------------------------+--------+
+| PDRC-138 | Warning  | SLICE_PairEqSame_D6D5_WARN | 1      |
++----------+----------+----------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-138#1 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X57Y15 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+

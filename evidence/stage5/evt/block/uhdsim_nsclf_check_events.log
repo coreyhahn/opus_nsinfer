@@ -1,0 +1,3 @@
+PACKETS n=22 records=338 batch=16 flush=4096 full=21 partial=1 max=16 mean=15.36 pkts_reg=22
+EVENTS model=338 received=338 drop_reg=0 seq_reg=338 errors=0
+PASS

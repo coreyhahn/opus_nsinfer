@@ -1,0 +1,9 @@
+W=16 train: 800000 windows, 34 s, sha256 074bd1afe6ad135b
+W=16 val: 100000 windows, 4 s, sha256 9bd4088b8c5bfc88
+W=16 test: 100000 windows, 4 s, sha256 627e8d88d829171c
+W=32 train: 800000 windows, 38 s, sha256 e99cd5f5bc7676b9
+W=32 val: 100000 windows, 5 s, sha256 39aea7aab8cf6a55
+W=32 test: 100000 windows, 5 s, sha256 16f8eac908c1a415
+W=64 train: 800000 windows, 58 s, sha256 32fdd2b4c56bd458
+W=64 val: 100000 windows, 7 s, sha256 f4dad4b187582991
+W=64 test: 100000 windows, 7 s, sha256 c45f7380af1df914

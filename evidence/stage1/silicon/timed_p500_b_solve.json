@@ -1,0 +1,100 @@
+{
+ "T_ns": 2.0,
+ "steps_per_period": 168,
+ "step_ps": 11.904761904761903,
+ "n_core": 31,
+ "n_trials": 840,
+ "n_positions": 168,
+ "model_inputs": {
+  "d_H_ns": 0.692878984026043,
+  "d_G_ns": 0.7008284989671545,
+  "dtout_ns": 0.09999999999999999
+ },
+ "pin_B": {
+  "q_B_step": 113.5,
+  "q_H_step": 108.5,
+  "levels": [
+   0.0,
+   1.0
+  ],
+  "d_B_ns": 2.6333551745022334,
+  "d_B_minus_d_H_ns": 1.9404761904761905
+ },
+ "pin_C": {
+  "q_D_step": 98.66666666666667,
+  "q_G_step": 57.57142857142857,
+  "levels": [
+   1.0,
+   2.0
+  ],
+  "d_C_ns": 3.190057523910465,
+  "d_C_minus_d_G_ns": 2.4892290249433104,
+  "anchor_disagreement_ns": -1.1102230246251565e-16,
+  "measured_d_H_plus_d_G_ns": 1.3937074829931975
+ },
+ "launch_from_B_trials": 504,
+ "L_pp_ns": {
+  "min": 64.73930755545462,
+  "median": 65.73335517450224,
+  "max": 66.72740279354984,
+  "mean": 65.73335517450222,
+  "n_trials_one_period": 672,
+  "formula_min_NcoreT_plus_dB_plus_dtout": 64.73335517450222
+ },
+ "anchor_bracket": {
+  "model_corners_ns": {
+   "d_H": [
+    0.384,
+    1.007
+   ],
+   "d_G": [
+    0.386,
+    1.021
+   ]
+  },
+  "measured_d_H_plus_d_G_ns": 1.3937074829931975,
+  "corner_fraction": 0.4957929117592986,
+  "sum_inside_corners": true,
+  "d_H_ns": {
+   "lo": 0.384,
+   "est": 0.692878984026043,
+   "hi": 1.007
+  },
+  "L_pp_ns": {
+   "lo": {
+    "min": 64.43042857142856,
+    "median": 65.42447619047618,
+    "max": 66.4185238095238,
+    "mean": 65.42447619047618,
+    "n_trials_one_period": 672,
+    "formula_min_NcoreT_plus_dB_plus_dtout": 64.42447619047618
+   },
+   "hi": {
+    "min": 65.05342857142857,
+    "median": 66.04747619047619,
+    "max": 67.04152380952381,
+    "mean": 66.04747619047619,
+    "n_trials_one_period": 672,
+    "formula_min_NcoreT_plus_dB_plus_dtout": 65.04747619047619
+   },
+   "est": {
+    "min": 64.73930755545462,
+    "median": 65.73335517450224,
+    "max": 66.72740279354984,
+    "mean": 65.73335517450222,
+    "n_trials_one_period": 672,
+    "formula_min_NcoreT_plus_dB_plus_dtout": 64.73335517450222
+   }
+  },
+  "d_B_ns": {
+   "lo": 2.32447619047619,
+   "hi": 2.9474761904761904,
+   "est": 2.6333551745022334
+  },
+  "d_C_ns": {
+   "lo": 3.4989365079365085,
+   "hi": 2.8759365079365082,
+   "est": 3.190057523910465
+  }
+ }
+}

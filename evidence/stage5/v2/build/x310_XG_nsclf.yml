@@ -1,0 +1,99 @@
+# opus_nsinfer Stage 5: X310_XG image core with the nsclf classifier block (PLAN.md D-S5-TAP, D-S5-OUT).
+# Derived from UHD 4.9 (a5d1b2e) fpga/usrp3/top/x300/x310_XG_rfnoc_image_core.yml with
+# yaml_include/x3xx_radio_base.yml inlined (as in evidence/stage5/toolchain/tap_probe/, which the image
+# builder accepted). Differences from stock, each documented in evidence/stage5/block/README.md:
+#   1. nsclf0 between _device_.radio0 and radio0.radio (all radio0 io_port signals passed through as wires),
+#      with _device_.time and the radio clock domain;
+#   2. ep6: a data-only stream endpoint for nsclf0's event records (CHDR -> host);
+#   3. RF A RX: radio0.out_0 -> ep0 DIRECTLY (no DDC), so that the host receives exactly the samples the
+#      tap sees on channel 0 (the DDC's DDS multiply / clip / scale are not bit-transparent even at
+#      decimation 1 and 0 Hz); ddc0 has one port, on radio0.out_1 -> ep1. RF A TX and RF B are stock.
+schema: rfnoc_imagebuilder_args
+copyright: >-
+  Copyright 2023 Ettus Research, a National Instruments Brand
+license: >-
+  SPDX-License-Identifier: LGPL-3.0-or-later
+version: '1.0'
+chdr_width: 64
+device: 'x310'
+image_core_name: 'usrp_x310_fpga_XG_nsclf'
+default_target: 'X310_XG'
+
+stream_endpoints:
+  ep0: { ctrl: True,  data: True, buff_size: 65536 }
+  ep1: { ctrl: False, data: True, buff_size: 0 }
+  ep2: { ctrl: False, data: True, buff_size: 65536 }
+  ep3: { ctrl: False, data: True, buff_size: 0 }
+  ep4: { ctrl: False, data: True, buff_size: 4096 }
+  ep5: { ctrl: False, data: True, buff_size: 4096 }
+  ep6: { ctrl: False, data: True, buff_size: 0 }     # nsclf0 event records -> host
+
+noc_blocks:
+  duc0:  { block_desc: 'duc.yml',   parameters: { NUM_PORTS: 1 } }
+  ddc0:  { block_desc: 'ddc.yml',   parameters: { NUM_PORTS: 1 } }
+  radio0:
+    block_desc: 'radio.yml'
+    parameters: { NUM_PORTS: 2, EN_COMP_GAIN_TX: 1, EN_COMP_GAIN_RX: 1 }
+  duc1:  { block_desc: 'duc.yml',   parameters: { NUM_PORTS: 1 } }
+  ddc1:  { block_desc: 'ddc.yml',   parameters: { NUM_PORTS: 2 } }
+  radio1:
+    block_desc: 'radio.yml'
+    parameters: { NUM_PORTS: 2, EN_COMP_GAIN_TX: 1, EN_COMP_GAIN_RX: 1 }
+  replay0:
+    block_desc: 'replay.yml'
+    parameters: { NUM_PORTS: 2, MEM_DATA_W: 64, MEM_ADDR_W: 30 }
+    priority: 99
+  nsclf0:
+    block_desc: 'nsclf.yml'
+    # CORE_LAT / LC_X10 must match the core selected by NSCLF_LC (rfnoc/fpga/nsclf/Makefile.srcs, default 2);
+    # synth/scripts/launch_x310_nsclf.sh checks it against rtl/gen/x310_clf_lc<c>/metadata.json
+    parameters: { NUM_PORTS: 2, NIPC: 1, CORE_LAT: 18, LC_X10: 20, IN_REG: 1, K_DEFAULT: 16 }
+
+connections:
+  # RF A TX
+  - { srcblk: ep0,    srcport: out0,  dstblk: duc0,   dstport: in_0 }
+  - { srcblk: duc0,   srcport: out_0, dstblk: radio0, dstport: in_0 }
+  - { srcblk: _device_,  srcport: _none_, dstblk: radio0, dstport: in_1 }
+  # RF A RX: channel 0 raw (no DDC) for bit-exact captures of the tap's samples; channel 1 through ddc0
+  - { srcblk: radio0, srcport: out_0, dstblk: ep0,    dstport: in0  }
+  - { srcblk: radio0, srcport: out_1, dstblk: ddc0,   dstport: in_0 }
+  - { srcblk: ddc0,   srcport: out_0, dstblk: ep1,    dstport: in0  }
+  # RF B TX
+  - { srcblk: ep2,    srcport: out0,  dstblk: duc1,   dstport: in_0 }
+  - { srcblk: duc1,   srcport: out_0, dstblk: radio1, dstport: in_0 }
+  - { srcblk: _device_,  srcport: _none_, dstblk: radio1, dstport: in_1 }
+  # RF B RX
+  - { srcblk: radio1, srcport: out_0, dstblk: ddc1,   dstport: in_0 }
+  - { srcblk: ddc1,   srcport: out_0, dstblk: ep2,    dstport: in0  }
+  - { srcblk: radio1, srcport: out_1, dstblk: ddc1,   dstport: in_1 }
+  - { srcblk: ddc1,   srcport: out_1, dstblk: ep3,    dstport: in0  }
+  # Replay
+  - { srcblk: ep4,     srcport: out0,  dstblk: replay0, dstport: in_0 }
+  - { srcblk: replay0, srcport: out_0, dstblk: ep4,     dstport: in0  }
+  - { srcblk: ep5,     srcport: out0,  dstblk: replay0, dstport: in_1 }
+  - { srcblk: replay0, srcport: out_1, dstblk: ep5,     dstport: in0  }
+  # nsclf0 event records
+  - { srcblk: nsclf0,  srcport: evt,   dstblk: ep6,     dstport: in0  }
+  # BSP connections
+  - { srcblk: radio0,   srcport: ctrlport,  dstblk: _device_, dstport: ctrlport_radio0 }
+  - { srcblk: radio1,   srcport: ctrlport,  dstblk: _device_, dstport: ctrlport_radio1 }
+  # --- the tap (PLAN D-S5-TAP): device radio0 -> nsclf0 -> radio0 ---
+  - { srcblk: _device_, srcport: radio0,    dstblk: nsclf0,   dstport: radio_in  }
+  - { srcblk: nsclf0,   srcport: radio_out, dstblk: radio0,   dstport: radio     }
+  # ---
+  - { srcblk: _device_, srcport: radio1,    dstblk: radio1,   dstport: radio     }
+  - { srcblk: _device_, srcport: time,      dstblk: radio0,   dstport: time      }
+  - { srcblk: _device_, srcport: time,      dstblk: radio1,   dstport: time      }
+  - { srcblk: _device_, srcport: time,      dstblk: nsclf0,   dstport: time      }
+  - { srcblk: replay0,  srcport: axi_ram,   dstblk: _device_, dstport: dram      }
+  - { srcblk: _device_, srcport: _none_,    dstblk: _device_, dstport: fp_gpio   }
+
+clk_domains:
+  - { srcblk: _device_, srcport: radio, dstblk: radio0,  dstport: radio }
+  - { srcblk: _device_, srcport: ce,    dstblk: ddc0,    dstport: ce    }
+  - { srcblk: _device_, srcport: ce,    dstblk: duc0,    dstport: ce    }
+  - { srcblk: _device_, srcport: radio, dstblk: radio1,  dstport: radio }
+  - { srcblk: _device_, srcport: ce,    dstblk: ddc1,    dstport: ce    }
+  - { srcblk: _device_, srcport: ce,    dstblk: duc1,    dstport: ce    }
+  - { srcblk: _device_, srcport: dram,  dstblk: replay0, dstport: mem   }
+  - { srcblk: _device_, srcport: radio, dstblk: nsclf0,  dstport: radio }

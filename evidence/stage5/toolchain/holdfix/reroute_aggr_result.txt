@@ -1,0 +1,2 @@
+RESULT variant=reroute_aggr WNS=0.016 WHS=-0.112
+RESULT not closed, no bitstream

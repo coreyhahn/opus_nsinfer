@@ -1,0 +1,4 @@
+<repo>/synth/out_s4b_lc3bc_set2/s3_shots.hex 02ad625ddfad81a6b51ecf7c31fcee9fc32e90a51e9835787653bf4959f63416
+02ad625ddfad81a6b51ecf7c31fcee9fc32e90a51e9835787653bf4959f63416  <repo>/synth/out_s4b_lc3bc_set2/s3_shots.hex
+c63356ad3fda4e3bb8efed40834d92b639bc2c4e77aac982560978b4b2ffcd9c  <repo>/.scratch/qec_d5_set2_in.hex
+c515856793ca4b1b2ddb0fb5b7451d014366bc1c443339475978ce79450f7515  <repo>/.scratch/qec_d5_set2_dec.hex

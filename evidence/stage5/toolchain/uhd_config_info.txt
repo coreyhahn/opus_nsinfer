@@ -1,0 +1,16 @@
+UHD 4.9.0.HEAD-0-a5d1b2ef
+Build date: Fri, 30 Oct 2026 02:42:24
+C compiler: GNU 13.3.0
+C++ compiler: GNU 13.3.0
+C flags: -DBOOST_ASIO_HAS_STD_STRING_VIEW -DBOOST_ASIO_DISABLE_STD_EXPERIMENTAL_STRING_VIEW -DHAVE_CONFIG_H -DUHD_LOG_MIN_LEVEL=1 -DUHD_LOG_CONSOLE_LEVEL=2 -DUHD_LOG_FILE_LEVEL=2 -DUHD_LOG_CONSOLE_COLOR
+C++ flags: -DBOOST_ASIO_HAS_STD_STRING_VIEW -DBOOST_ASIO_DISABLE_STD_EXPERIMENTAL_STRING_VIEW -DHAVE_CONFIG_H -DUHD_LOG_MIN_LEVEL=1 -DUHD_LOG_CONSOLE_LEVEL=2 -DUHD_LOG_FILE_LEVEL=2 -DUHD_LOG_CONSOLE_COLOR -fvisibility=hidden -fvisibility-inlines-hidden
+Enabled components: LibUHD, LibUHD - C API, LibUHD - Python API, Examples, Utils, Python Module (Utils only), USB, B100, B200, USRP1, USRP2, X300, MPMD, SIM, N300, N320, E320, E300, X400, OctoClock
+Install prefix: <repo>/.scratch/uhd-install
+Boost version: 1.83
+DPDK version: N/A
+Libusb version: 1.0.28
+Library path: <repo>/.scratch/uhd-install/lib
+Package path: <repo>/.scratch/uhd-install
+Package data path: <repo>/.scratch/uhd-install/share/uhd
+Images directory: 
+ABI version string: 4.9.0

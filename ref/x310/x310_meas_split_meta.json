@@ -1,0 +1,147 @@
+{
+ "generator": "ref/x310/x310_data.py",
+ "base_seed": 20261029,
+ "seeding": "numpy default_rng([base_seed, W, split_id, class]); split_id train 1 val 2 test 3",
+ "classes": [
+  "noise",
+  "cw",
+  "lfm",
+  "bpsk"
+ ],
+ "windows_per_class": {
+  "train": 200000,
+  "val": 25000,
+  "test": 25000
+ },
+ "params": {
+  "fs_hz": 200000000.0,
+  "guard_samples": 32,
+  "s_max": 8,
+  "cw_f_mhz": [
+   -15.0,
+   15.0
+  ],
+  "lfm_span_mhz": [
+   5.0,
+   30.0
+  ],
+  "lfm_dur_us": [
+   0.5,
+   5.0
+  ],
+  "lfm_rate_min_mhz_per_us": 10.0,
+  "lfm_band_mhz": 15.0,
+  "bpsk_chip_rate_mchip": [
+   5.0,
+   20.0
+  ],
+  "bpsk_f_mhz": [
+   -10.0,
+   10.0
+  ],
+  "bpsk_barker_frac": 0.5,
+  "bpsk_filtered_frac": 0.5,
+  "bpsk_gauss_bt": [
+   0.8,
+   2.0
+  ],
+  "bpsk_edge_margin": "max(2, W // 8)",
+  "cfo_hz": [
+   2000.0,
+   100000.0
+  ],
+  "lpf": null,
+  "white_floor_db": null,
+  "snr_db": [
+   -5.0,
+   25.0
+  ],
+  "iq_gain_db": 0.5,
+  "iq_phase_deg": 2.0,
+  "dc_rel_noise_rms": [
+   0.0,
+   0.3
+  ],
+  "amp_dbfs": [
+   -54.0,
+   -12.0
+  ],
+  "full_scale": 32768,
+  "channel": "meas",
+  "analog": "ref/x310/x310_channel.json: h (signals, + fractional delay U(0, 1) sample), g (noise)",
+  "frac_delay_samples": [
+   0.0,
+   1.0
+  ]
+ },
+ "numpy": "2.5.4",
+ "files": {
+  "x310_w64_train.npz": {
+   "content_sha256": "6eb28535b2892d1c88c13298cdf579fd32edde6ab7610feb219060fdea9919cb",
+   "n": 800000,
+   "class_counts": [
+    200000,
+    200000,
+    200000,
+    200000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    3217,
+    71515,
+    114435,
+    114975,
+    114035,
+    115082,
+    114485,
+    111089,
+    41167
+   ]
+  },
+  "x310_w64_val.npz": {
+   "content_sha256": "37cb657abdafb18e6597a2471169a11b887c8a3d7c0ec6cb17c5c78e54aad4f8",
+   "n": 100000,
+   "class_counts": [
+    25000,
+    25000,
+    25000,
+    25000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    425,
+    8991,
+    14613,
+    14145,
+    14301,
+    14292,
+    14195,
+    13829,
+    5209
+   ]
+  },
+  "x310_w64_test.npz": {
+   "content_sha256": "27f0bf0a2ecc33b907b93f90949983c1736da65f1c436d3610b76717155cbb73",
+   "n": 100000,
+   "class_counts": [
+    25000,
+    25000,
+    25000,
+    25000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    404,
+    9041,
+    14456,
+    14144,
+    14519,
+    14061,
+    14370,
+    13854,
+    5151
+   ]
+  }
+ },
+ "scipy": "1.18.1"
+}

@@ -1,0 +1,12 @@
+[INFO] [UHD] linux; GNU C++ version 13.3.0; Boost_108300; UHD_4.9.0.HEAD-0-a5d1b2ef
+[INFO] [X300] X300 initialization sequence...
+[INFO] [X300] Maximum frame size: 8000 bytes.
+[INFO] [X300] Radio 1x clock: 200 MHz
+[WARNING] [RFNOC::BLOCK_FACTORY] Could not find block with Noc-ID 0x4e53c1f0, 0xffff
+[INFO] [0/Block#0] Setting default MTU forward policy.
+[WARNING] [0/Radio#0] Attempting to set tick rate to 0. Skipping.
+uploaded 1048576 samples (8.0 MiB fc32) in 0.0 s
+capture 1069056/1069056 first ticks 112373564 (requested 112373564) errors [] tx_async []
+window [112373621, +1068993): status {'armed': 0, 'active': 1, 'done': 1, 'late': 0, 'raw': 6} count 1068993 misr 0x9c2853407e6f67e2 hist [23831, 1044919, 184, 59]
+CAPTURE OK
+cal: on rms 1602.4 (-26.2 dBFS), off rms 21.9 (-63.5 dBFS), (S+N)/N 37.3 dB, max |I|,|Q| 1668,1680

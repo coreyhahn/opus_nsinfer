@@ -1,0 +1,32 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 08:01:27 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_clock_interaction -delay_type min_max -file <repo>/synth/out_s1_p500_lc1_a2_f2/clock_interaction.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                            WNS                            TNS Failing  TNS Total    WNS Path         WHS                            THS Failing  THS Total    WHS Path         Clock-Pair           Inter-Clock         
+From Clock    To Clock      Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Clock Edges  WHS(ns)  THS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints         
+------------  ------------  -----------  -------  -------  -----------  -----------  ---------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  ------------------  
+clk0_o        clk0_o        rise - rise     0.00     0.00            0        25067             2.00  rise - rise     0.01     0.00            0        25067             0.00  Clean                Timed               
+clk0_o        clk1_o        rise - rise     0.59     0.00            0            1             2.00  rise - rise     0.12     0.00            0            1             0.00  Clean                Timed               
+clk0_o        clk2_o        rise - rise     0.10     0.00            0           32             2.00  rise - rise     0.06     0.00            0           32             0.00  Clean                Timed               
+clk1_o        clk0_o        rise - rise     0.61     0.00            0            1             2.00  rise - rise     0.12     0.00            0            1             0.00  Clean                Timed               
+clk1_o        clk1_o        rise - rise     0.11     0.00            0          201             2.00  rise - rise     0.03     0.00            0          201             0.00  Clean                Timed               
+clk1_o        clk2_o                                                 0           32                                                            0           32                   Ignored              False Path          
+clk2_o        clk0_o        rise - rise     0.01     0.00            0         1720             2.00  rise - rise     0.05     0.00            0         1720             0.00  Clean                Timed               
+clk2_o        clk1_o                                                 0            1                                                            0            1                   Ignored              False Path          
+clk2_o        clk2_o        rise - rise     0.12     0.00            0         5401             4.00  rise - rise     0.02     0.00            0         5401             0.00  Clean                Partial False Path  
+
+

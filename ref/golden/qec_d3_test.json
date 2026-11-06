@@ -1,0 +1,184 @@
+{
+ "circuit": "surface_code:rotated_memory_z",
+ "distance": 3,
+ "rounds": 3,
+ "noise": "uniform circuit-level: after_clifford_depolarization = before_round_data_depolarization = before_measure_flip_probability = after_reset_flip_probability = p",
+ "stim": "1.16.0",
+ "pymatching": "2.4.0",
+ "seed_base": {
+  "train": 100000,
+  "val": 200000,
+  "test": 300000
+ },
+ "shots": {
+  "train": 100000000,
+  "val": 10000000,
+  "test": 10000000
+ },
+ "p": {
+  "1e-3": {
+   "num_detectors": 24,
+   "circuit_file": "ref/qec/circuits/d3_p1e-3.stim",
+   "circuit_sha256": "434e204bfbaaf708a0e174a7ab0963c21139601c3ec89f83475f05fc51e67e96",
+   "train": {
+    "seed": 100000,
+    "distinct": 36318,
+    "pm_errors": 77248,
+    "pm_ler": 0.00077248,
+    "table_mle_errors_in_sample": 58782
+   },
+   "val": {
+    "seed": 200000,
+    "distinct": 12495,
+    "pm_errors": 7810,
+    "pm_ler": 0.000781,
+    "table_mle_errors_in_sample": 5583
+   },
+   "test": {
+    "seed": 300000,
+    "distinct": 12470,
+    "pm_errors": 7757,
+    "pm_ler": 0.0007757,
+    "table_mle_errors_in_sample": 5519
+   },
+   "p": 0.001
+  },
+  "2e-3": {
+   "num_detectors": 24,
+   "circuit_file": "ref/qec/circuits/d3_p2e-3.stim",
+   "circuit_sha256": "972f3c9208604e125506ea11438c0c429c26a2b9b725c7a46631d8eb66245d1c",
+   "train": {
+    "seed": 100001,
+    "distinct": 97228,
+    "pm_errors": 300106,
+    "pm_ler": 0.00300106,
+    "table_mle_errors_in_sample": 233338
+   },
+   "val": {
+    "seed": 200001,
+    "distinct": 30510,
+    "pm_errors": 30197,
+    "pm_ler": 0.0030197,
+    "table_mle_errors_in_sample": 21993
+   },
+   "test": {
+    "seed": 300001,
+    "distinct": 30608,
+    "pm_errors": 30008,
+    "pm_ler": 0.0030008,
+    "table_mle_errors_in_sample": 22036
+   },
+   "p": 0.002
+  },
+  "3e-3": {
+   "num_detectors": 24,
+   "circuit_file": "ref/qec/circuits/d3_p3e-3.stim",
+   "circuit_sha256": "a74ee70bbaa6e5ec78b52caebc43b5433708f49b0a31ae1ae56d2ea34867ab61",
+   "train": {
+    "seed": 100002,
+    "distinct": 174241,
+    "pm_errors": 654060,
+    "pm_ler": 0.0065406,
+    "table_mle_errors_in_sample": 516722
+   },
+   "val": {
+    "seed": 200002,
+    "distinct": 56174,
+    "pm_errors": 65602,
+    "pm_ler": 0.0065602,
+    "table_mle_errors_in_sample": 48509
+   },
+   "test": {
+    "seed": 300002,
+    "distinct": 55899,
+    "pm_errors": 65693,
+    "pm_ler": 0.0065693,
+    "table_mle_errors_in_sample": 48651
+   },
+   "p": 0.003
+  },
+  "5e-3": {
+   "num_detectors": 24,
+   "circuit_file": "ref/qec/circuits/d3_p5e-3.stim",
+   "circuit_sha256": "0670b3c37962732e37e0765b2c3f564fd0bd4ae3dea45dd8cea08b65ef495f91",
+   "train": {
+    "seed": 100003,
+    "distinct": 386795,
+    "pm_errors": 1719288,
+    "pm_ler": 0.01719288,
+    "table_mle_errors_in_sample": 1389694
+   },
+   "val": {
+    "seed": 200003,
+    "distinct": 122681,
+    "pm_errors": 171336,
+    "pm_ler": 0.0171336,
+    "table_mle_errors_in_sample": 129225
+   },
+   "test": {
+    "seed": 300003,
+    "distinct": 122812,
+    "pm_errors": 171148,
+    "pm_ler": 0.0171148,
+    "table_mle_errors_in_sample": 129384
+   },
+   "p": 0.005
+  },
+  "7e-3": {
+   "num_detectors": 24,
+   "circuit_file": "ref/qec/circuits/d3_p7e-3.stim",
+   "circuit_sha256": "2b439b8672238cd4ed91356ae1c5162cd3e56fb0fe5870af64f26520dd85123b",
+   "train": {
+    "seed": 100004,
+    "distinct": 672296,
+    "pm_errors": 3171009,
+    "pm_ler": 0.03171009,
+    "table_mle_errors_in_sample": 2607326
+   },
+   "val": {
+    "seed": 200004,
+    "distinct": 210323,
+    "pm_errors": 316109,
+    "pm_ler": 0.0316109,
+    "table_mle_errors_in_sample": 240132
+   },
+   "test": {
+    "seed": 300004,
+    "distinct": 210843,
+    "pm_errors": 317077,
+    "pm_ler": 0.0317077,
+    "table_mle_errors_in_sample": 240954
+   },
+   "p": 0.007
+  },
+  "10e-3": {
+   "num_detectors": 24,
+   "circuit_file": "ref/qec/circuits/d3_p10e-3.stim",
+   "circuit_sha256": "0ce98c7da3f5cc62f8277bda02dfb065d78d418b5285df7bb9d14a5c7fd7dd99",
+   "train": {
+    "seed": 100005,
+    "distinct": 1220388,
+    "pm_errors": 5920139,
+    "pm_ler": 0.05920139,
+    "table_mle_errors_in_sample": 4945780
+   },
+   "val": {
+    "seed": 200005,
+    "distinct": 381854,
+    "pm_errors": 591377,
+    "pm_ler": 0.0591377,
+    "table_mle_errors_in_sample": 449464
+   },
+   "test": {
+    "seed": 300005,
+    "distinct": 381916,
+    "pm_errors": 590640,
+    "pm_ler": 0.059064,
+    "table_mle_errors_in_sample": 449596
+   },
+   "p": 0.01
+  }
+ },
+ "test_file": "ref/golden/qec_d3_test.npz",
+ "test_sha256": "cef4839bf40b4ca3d514f24ee847d7b50821266c89d574fa198417daaa74d0fd"
+}

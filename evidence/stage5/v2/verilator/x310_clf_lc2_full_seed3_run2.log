@@ -1,0 +1,7 @@
+# host=build-host date=2026-11-03T14:06:45-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# design=<repo>/rtl/gen/x310_clf_lc2 rtl_sha256=b983b4535be455c36a1d12da3da6061f42cc33b1a9160896d8a360d0926bfd67 x310 full vectors: sha256 match x310_full_in.hex=ac188dcced05 x310_full_out.hex=96af26b4ca8e x310_full_dec.hex=0a44f23d1694
+# W=64 OUT_W=65 CORE_LAT=18 BFP_PIPE=1 NVEC=100000 set=full seed=3 run=2
+LATENCY cycles=20 (window applied before edge 1 -> logits and class valid; core 18, BFP_PIPE 1, argmax 1)
+RESULT seed=3 vectors=100000 checked=100000 mismatches=0 class_mismatches=0 gaps=14239 latency=20 class_hist=26796,25258,24572,23374 xor_signature=1c0fa0834e5090b33
+PASS
+- tb_x310.sv:144: Verilog $finish

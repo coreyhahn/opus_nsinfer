@@ -1,0 +1,62 @@
+{
+ "float_best_val_accuracy": 0.7711596385542169,
+ "float_test_accuracy": 0.7707650602409638,
+ "margin_points": 0.3,
+ "threshold_val_accuracy": 0.7681596385542169,
+ "n_candidates": 129,
+ "chosen": "runs/hgq_b3e-5/pareto/e0445_acc0.76819_ebops21467.keras",
+ "chosen_val_accuracy": 0.76819,
+ "chosen_train_ebops": 21467,
+ "pareto_within_margin": [
+  [
+   21467,
+   0.76819,
+   "runs/hgq_b3e-5/pareto/e0445_acc0.76819_ebops21467.keras"
+  ],
+  [
+   24011,
+   0.76836,
+   "runs/hgq_b1e-5/pareto/e0490_acc0.76836_ebops24011.keras"
+  ],
+  [
+   27835,
+   0.76833,
+   "runs/hgq_b1e-4/pareto/e0339_acc0.76833_ebops27835.keras"
+  ],
+  [
+   29265,
+   0.76855,
+   "runs/hgq_b1e-5/pareto/e0433_acc0.76855_ebops29265.keras"
+  ],
+  [
+   30052,
+   0.76863,
+   "runs/hgq_b1e-5/pareto/e0427_acc0.76863_ebops30052.keras"
+  ],
+  [
+   31193,
+   0.7687,
+   "runs/hgq_b1e-5/pareto/e0416_acc0.76870_ebops31193.keras"
+  ],
+  [
+   31281,
+   0.76905,
+   "runs/hgq_b3e-5/pareto/e0366_acc0.76905_ebops31281.keras"
+  ],
+  [
+   34436,
+   0.76863,
+   "runs/hgq_b1e-4/pareto/e0300_acc0.76863_ebops34436.keras"
+  ],
+  [
+   34956,
+   0.76872,
+   "runs/hgq_b1e-4/pareto/e0302_acc0.76872_ebops34956.keras"
+  ],
+  [
+   36170,
+   0.7688,
+   "runs/hgq_b1e-5/pareto/e0378_acc0.76880_ebops36170.keras"
+  ]
+ ]
+}

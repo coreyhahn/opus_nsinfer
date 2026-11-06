@@ -1,0 +1,143 @@
+enp132s0f0       UP             10.0.10.1/24 10.0.40.1/24 fe80::b41:10b7:6bbe:3383/64 
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.680/0.879/1.078/0.199 ms
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 23.256/23.256/23.256/0.000 ms
+[INFO] [UHD] linux; GNU C++ version 13.3.0; Boost_108300; UHD_4.9.0.HEAD-0-a5d1b2ef
+[INFO] [X300] X300 initialization sequence...
+[INFO] [X300] Maximum frame size: 8000 bytes.
+[INFO] [GPS] No GPSDO found
+[INFO] [X300] Radio 1x clock: 200 MHz
+[WARNING] [RFNOC::BLOCK_FACTORY] Could not find block with Noc-ID 0x4e53c1f0, 0xffff
+[INFO] [0/Block#0] Setting default MTU forward policy.
+  _____________________________________________________
+ /
+|       Device: X-Series Device
+|     _____________________________________________________
+|    /
+|   |       Mboard: X310
+|   |   revision: 11
+|   |   revision_compat: 7
+|   |   product: 30818
+|   |   mac-addr0: 00:00:5e:00:53:00
+|   |   mac-addr1: 00:00:5e:00:53:00
+|   |   gateway: 10.0.10.1
+|   |   ip-addr0: 10.0.10.2
+|   |   subnet0: 255.255.255.0
+|   |   ip-addr1: 10.0.20.2
+|   |   subnet1: 255.255.255.0
+|   |   ip-addr2: 10.0.30.2
+|   |   subnet2: 255.255.255.0
+|   |   ip-addr3: 10.0.40.2
+|   |   subnet3: 255.255.255.0
+|   |   serial: X310-SERIAL
+|   |   FW Version: 6.1
+|   |   FPGA Version: 39.3
+|   |   FPGA git hash: a5d1b2e-dirty
+|   |   Device DNA: 00386C2810DB885C
+|   |   RFNoC capable: Yes
+|   |   
+|   |   Time sources:  internal, external, gpsdo
+|   |   Clock sources: internal, external, gpsdo
+|   |   Sensors: temp_fpga, ref_locked
+|     _____________________________________________________
+|    /
+|   |       RFNoC blocks on this device:
+|   |   
+|   |   * 0/Block#0
+|   |   * 0/DDC#0
+|   |   * 0/DDC#1
+|   |   * 0/DUC#0
+|   |   * 0/DUC#1
+|   |   * 0/Radio#0
+|   |   * 0/Radio#1
+|   |   * 0/Replay#0
+|     _____________________________________________________
+|    /
+|   |       Static connections on this device:
+|   |   
+|   |   * 0/SEP#0:0==>0/DUC#0:0
+|   |   * 0/DUC#0:0==>0/Radio#0:0
+|   |   * 0/Radio#0:0==>0/SEP#0:0
+|   |   * 0/Radio#0:1==>0/DDC#0:0
+|   |   * 0/DDC#0:0==>0/SEP#1:0
+|   |   * 0/SEP#2:0==>0/DUC#1:0
+|   |   * 0/DUC#1:0==>0/Radio#1:0
+|   |   * 0/Radio#1:0==>0/DDC#1:0
+|   |   * 0/DDC#1:0==>0/SEP#2:0
+|   |   * 0/Radio#1:1==>0/DDC#1:1
+|   |   * 0/DDC#1:1==>0/SEP#3:0
+|   |   * 0/SEP#4:0==>0/Replay#0:0
+|   |   * 0/Replay#0:0==>0/SEP#4:0
+|   |   * 0/SEP#5:0==>0/Replay#0:1
+|   |   * 0/Replay#0:1==>0/SEP#5:0
+|   |   * 0/Block#0:0==>0/SEP#6:0
+|     _____________________________________________________
+|    /
+|   |       TX Dboard: 0/Radio#0
+|   |   ID: UBX-160 v2 (0x007d)
+|   |   Serial: UBX-SERIAL-1
+|   |   Revision: 4
+|   |     _____________________________________________________
+|   |    /
+|   |   |       TX Frontend: 0
+|   |   |   Name: UBX TX
+|   |   |   Antennas: TX/RX, CAL
+|   |   |   Sensors: lo_locked
+|   |   |   Freq range: 10.000 to 6000.000 MHz
+|   |   |   Gain range PGA0: 0.0 to 31.5 step 0.5 dB
+|   |   |   Bandwidth range: 160000000.0 to 160000000.0 step 0.0 Hz
+|   |   |   Connection Type: QI
+|   |   |   Uses LO offset: No
+|     _____________________________________________________
+|    /
+|   |       RX Dboard: 0/Radio#0
+|   |   ID: UBX-160 v2 (0x007e)
+|   |   Serial: UBX-SERIAL-1
+|   |   Revision: 4
+|   |     _____________________________________________________
+|   |    /
+|   |   |       RX Frontend: 0
+|   |   |   Name: UBX RX
+|   |   |   Antennas: TX/RX, RX2, CAL
+|   |   |   Sensors: lo_locked
+|   |   |   Freq range: 10.000 to 6000.000 MHz
+|   |   |   Gain range PGA0: 0.0 to 31.5 step 0.5 dB
+|   |   |   Bandwidth range: 160000000.0 to 160000000.0 step 0.0 Hz
+|   |   |   Connection Type: IQ
+|   |   |   Uses LO offset: No
+|     _____________________________________________________
+|    /
+|   |       TX Dboard: 0/Radio#1
+|   |   ID: UBX-160 v2 (0x007d)
+|   |   Serial: UBX-SERIAL-2
+|   |   Revision: 4
+|   |     _____________________________________________________
+|   |    /
+|   |   |       TX Frontend: 0
+|   |   |   Name: UBX TX
+|   |   |   Antennas: TX/RX, CAL
+|   |   |   Sensors: lo_locked
+|   |   |   Freq range: 10.000 to 6000.000 MHz
+|   |   |   Gain range PGA0: 0.0 to 31.5 step 0.5 dB
+|   |   |   Bandwidth range: 160000000.0 to 160000000.0 step 0.0 Hz
+|   |   |   Connection Type: QI
+|   |   |   Uses LO offset: No
+|     _____________________________________________________
+|    /
+|   |       RX Dboard: 0/Radio#1
+|   |   ID: UBX-160 v2 (0x007e)
+|   |   Serial: UBX-SERIAL-2
+|   |   Revision: 4
+|   |     _____________________________________________________
+|   |    /
+|   |   |       RX Frontend: 0
+|   |   |   Name: UBX RX
+|   |   |   Antennas: TX/RX, RX2, CAL
+|   |   |   Sensors: lo_locked
+|   |   |   Freq range: 10.000 to 6000.000 MHz
+|   |   |   Gain range PGA0: 0.0 to 31.5 step 0.5 dB
+|   |   |   Bandwidth range: 160000000.0 to 160000000.0 step 0.0 Hz
+|   |   |   Connection Type: IQ
+|   |   |   Uses LO offset: No
+

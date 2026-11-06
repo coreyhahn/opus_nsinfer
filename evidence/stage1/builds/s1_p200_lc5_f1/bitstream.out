@@ -1,0 +1,107 @@
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Tue Oct 20 07:40:53 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ../scripts/stage1_bitstream.tcl
+# lassign $argv out_dir
+# set out_dir [file normalize $out_dir]
+# set fh [open $out_dir/iob_check.rpt r]
+# set iob [read $fh]
+# close $fh
+# if {![string match "*IOB_CHECK PASS*" $iob]} { puts "ERROR: $out_dir/iob_check.rpt is not PASS"; exit 1 }
+# set fh [open $out_dir/summary.json r]
+# set sj [read $fh]
+# close $fh
+# foreach k {wns_ns whs_ns wpws_ns} {
+#     if {![regexp "\"$k\": (-?\[0-9.\]+)" $sj -> v] || $v < 0} { puts "ERROR: summary.json $k is [expr {[info exists v] ? $v : {missing}}]; timing not signed off"; exit 1 }
+# }
+# set bit $out_dir/zcu102_top.bit
+# set bin $out_dir/zcu102_top.bin
+# if {[file exists $bit] || [file exists $bin]} { puts "ERROR: $bit or $bin exists; refusing to overwrite"; exit 1 }
+# open_checkpoint $out_dir/post_route.dcp
+Command: open_checkpoint <repo>/synth/out_s1_p200_lc5_f1/post_route.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1396.730 ; gain = 0.000 ; free physical = 80789 ; free virtual = 251296
+INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-i
+Netlist sorting complete. Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2483.141 ; gain = 0.000 ; free physical = 78464 ; free virtual = 249028
+INFO: [Netlist 29-17] Analyzing 2195 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2483.141 ; gain = 0.000 ; free physical = 78406 ; free virtual = 248971
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2839.020 ; gain = 0.000 ; free physical = 77863 ; free virtual = 248428
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2840.020 ; gain = 1.000 ; free physical = 77839 ; free virtual = 248404
+Read PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2865.363 ; gain = 22.961 ; free physical = 77768 ; free virtual = 248333
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2865.363 ; gain = 0.000 ; free physical = 77768 ; free virtual = 248333
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3308.988 ; gain = 443.625 ; free physical = 76742 ; free virtual = 247302
+Read Physdb Files: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 3308.988 ; gain = 469.969 ; free physical = 76734 ; free virtual = 247294
+Restored from archive | CPU: 15.170000 secs | Memory: 440.777031 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 3308.988 ; gain = 469.969 ; free physical = 76742 ; free virtual = 247302
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3308.988 ; gain = 0.000 ; free physical = 76729 ; free virtual = 247290
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2024.2 (64-bit) build 5239630
+open_checkpoint: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 3308.988 ; gain = 1912.258 ; free physical = 76737 ; free virtual = 247298
+# write_bitstream $bit
+Command: write_bitstream <repo>/synth/out_s1_p200_lc5_f1/zcu102_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xczu9eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu9eg'
+INFO: [Common 17-86] Your Implementation license expires in 18 day(s)
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '<xilinx-tools>/Vivado/2024.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 133555584 bits.
+Writing bitstream <repo>/synth/out_s1_p200_lc5_f1/zcu102_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:30 ; elapsed = 00:01:09 . Memory (MB): peak = 3927.215 ; gain = 618.227 ; free physical = 81234 ; free virtual = 251826
+# set bif $out_dir/zcu102_top.bif
+# set fh [open $bif w]
+# puts $fh "all:\n\{\n    \[destination_device = pl\] $bit\n\}"
+# close $fh
+# exec bootgen -image $bif -arch zynqmp -process_bitstream bin -w >@ stdout 2>@ stderr
+
+
+****** Bootgen v2024.2
+  **** Build date : Nov  8 2024-16:21:57
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+# file rename $bit.bin $bin
+# puts "BITSTREAM [file size $bit] B $bit; BIN [file size $bin] B $bin; [clock format [clock seconds] -format %Y-%m-%dT%H:%M:%S]"
+BITSTREAM 9816461 B <repo>/synth/out_s1_p200_lc5_f1/zcu102_top.bit; BIN 9816332 B <repo>/synth/out_s1_p200_lc5_f1/zcu102_top.bin; 2026-10-20T07:43:05
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 20 07:43:05 2026...

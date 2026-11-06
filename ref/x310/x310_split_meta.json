@@ -1,0 +1,273 @@
+{
+ "generator": "ref/x310/x310_data.py",
+ "base_seed": 20261029,
+ "seeding": "numpy default_rng([base_seed, W, split_id, class]); split_id train 1 val 2 test 3",
+ "classes": [
+  "noise",
+  "cw",
+  "lfm",
+  "bpsk"
+ ],
+ "windows_per_class": {
+  "train": 200000,
+  "val": 25000,
+  "test": 25000
+ },
+ "params": {
+  "fs_hz": 200000000.0,
+  "guard_samples": 32,
+  "s_max": 8,
+  "cw_f_mhz": [
+   -15.0,
+   15.0
+  ],
+  "lfm_span_mhz": [
+   5.0,
+   30.0
+  ],
+  "lfm_dur_us": [
+   0.5,
+   5.0
+  ],
+  "lfm_rate_min_mhz_per_us": 10.0,
+  "lfm_band_mhz": 15.0,
+  "bpsk_chip_rate_mchip": [
+   5.0,
+   20.0
+  ],
+  "bpsk_f_mhz": [
+   -10.0,
+   10.0
+  ],
+  "bpsk_barker_frac": 0.5,
+  "bpsk_filtered_frac": 0.5,
+  "bpsk_gauss_bt": [
+   0.8,
+   2.0
+  ],
+  "bpsk_edge_margin": "max(2, W // 8)",
+  "cfo_hz": [
+   2000.0,
+   100000.0
+  ],
+  "lpf": "butter(5, 20 MHz / (FS / 2)), sosfilt on I and Q",
+  "white_floor_db": -20.0,
+  "snr_db": [
+   -5.0,
+   25.0
+  ],
+  "iq_gain_db": 0.5,
+  "iq_phase_deg": 2.0,
+  "dc_rel_noise_rms": [
+   0.0,
+   0.3
+  ],
+  "amp_dbfs": [
+   -42.0,
+   -12.0
+  ],
+  "full_scale": 32768
+ },
+ "numpy": "2.5.4",
+ "files": {
+  "x310_w16_train.npz": {
+   "content_sha256": "074bd1afe6ad135b801bd1ea7d88f7622068a346941156e006e88e091c5a50ec",
+   "n": 800000,
+   "class_counts": [
+    200000,
+    200000,
+    200000,
+    200000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    722,
+    53617,
+    157633,
+    160625,
+    160475,
+    159340,
+    105046,
+    2539,
+    3
+   ]
+  },
+  "x310_w16_val.npz": {
+   "content_sha256": "9bd4088b8c5bfc884a41bd796c19c471b424875d9f6564dbcb6c5cb5443c23d4",
+   "n": 100000,
+   "class_counts": [
+    25000,
+    25000,
+    25000,
+    25000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    90,
+    6687,
+    19654,
+    20193,
+    19841,
+    20102,
+    13121,
+    312,
+    0
+   ]
+  },
+  "x310_w16_test.npz": {
+   "content_sha256": "627e8d88d829171c88ad6abf1f114e2647051bbd814ce49223be0815cb0d0896",
+   "n": 100000,
+   "class_counts": [
+    25000,
+    25000,
+    25000,
+    25000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    81,
+    6657,
+    19743,
+    19977,
+    20418,
+    19798,
+    12994,
+    331,
+    1
+   ]
+  },
+  "x310_w32_train.npz": {
+   "content_sha256": "e99cd5f5bc7676b9163e9024f3b6426eeb4d41c9be5517214c1496d542514047",
+   "n": 800000,
+   "class_counts": [
+    200000,
+    200000,
+    200000,
+    200000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    1374,
+    71400,
+    160453,
+    160619,
+    160565,
+    158802,
+    86530,
+    257,
+    0
+   ]
+  },
+  "x310_w32_val.npz": {
+   "content_sha256": "39aea7aab8cf6a5509c519eccef35520027845ce65adabae438592408176c547",
+   "n": 100000,
+   "class_counts": [
+    25000,
+    25000,
+    25000,
+    25000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    170,
+    8910,
+    19929,
+    20133,
+    20110,
+    19901,
+    10817,
+    30,
+    0
+   ]
+  },
+  "x310_w32_test.npz": {
+   "content_sha256": "16f8eac908c1a415e3da68d478fffc861679f6895851927753ae4f90b555ae17",
+   "n": 100000,
+   "class_counts": [
+    25000,
+    25000,
+    25000,
+    25000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    149,
+    8859,
+    20203,
+    20056,
+    20166,
+    19713,
+    10825,
+    29,
+    0
+   ]
+  },
+  "x310_w64_train.npz": {
+   "content_sha256": "32fdd2b4c56bd458817fb24f2d45c67cb88d6ce8495248c429694e8fd15ce8c0",
+   "n": 800000,
+   "class_counts": [
+    200000,
+    200000,
+    200000,
+    200000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    2573,
+    87434,
+    160290,
+    160782,
+    160840,
+    157496,
+    70570,
+    15,
+    0
+   ]
+  },
+  "x310_w64_val.npz": {
+   "content_sha256": "f4dad4b187582991ff9142708ccc10543f306934cead6dd76583fe899c947946",
+   "n": 100000,
+   "class_counts": [
+    25000,
+    25000,
+    25000,
+    25000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    343,
+    11067,
+    20317,
+    20053,
+    19877,
+    19540,
+    8801,
+    2,
+    0
+   ]
+  },
+  "x310_w64_test.npz": {
+   "content_sha256": "c45f7380af1df914f9320658ac432ee82113129a032bf560bbc9c5cf30b56704",
+   "n": 100000,
+   "class_counts": [
+    25000,
+    25000,
+    25000,
+    25000
+   ],
+   "mean_sat_frac": 0.0,
+   "bfp_shift_hist": [
+    329,
+    11075,
+    20162,
+    20186,
+    19898,
+    19515,
+    8832,
+    3,
+    0
+   ]
+  }
+ },
+ "scipy": "1.18.1"
+}

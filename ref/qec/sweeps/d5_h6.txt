@@ -1,0 +1,9 @@
+# d = 5 HGQ2 sweep 6 (grumpy-calf), 2026-10-27: narrow nets warm-started from the d5_f2 float baselines (SAT datalanes).
+# Why: the 256x3 core at 1.92M EBOPs (255k LUT) misses 6.206 ns by 3.48 ns at its best (lc3, OOC); the failing paths
+# are 2-4 LUTs with 96% route delay on stage registers of fanout 78-188 (all-to-all into a 256-wide layer), and
+# replication (max_fanout, forced phys_opt) only adds congestion. A 128-wide layer halves that fanout and the area;
+# float 128x4 reaches val NN/PM 1.12 (128x3 1.21, 192-96-96 1.17), better than 256x3 at 1.92M EBOPs (1.21).
+hgq_d5n_128x4_b9     --d 5 --mode hgq --arch 128 128 128 128 --init-from ref/runs/qec/float_d5_128x4/best.keras --epochs 60 --steps-per-epoch 2000 --batch 8192 --lr 5e-4 --beta-start 1e-11 --beta-end 1e-9 --input-f 6 --dl-overflow SAT
+hgq_d5n_128x4_b3e9   --d 5 --mode hgq --arch 128 128 128 128 --init-from ref/runs/qec/float_d5_128x4/best.keras --epochs 60 --steps-per-epoch 2000 --batch 8192 --lr 5e-4 --beta-start 1e-11 --beta-end 3e-9 --input-f 6 --dl-overflow SAT
+hgq_d5n_192_96_96_b9 --d 5 --mode hgq --arch 192 96 96 --init-from ref/runs/qec/float_d5_192_96_96/best.keras --epochs 60 --steps-per-epoch 2000 --batch 8192 --lr 5e-4 --beta-start 1e-11 --beta-end 1e-9 --input-f 6 --dl-overflow SAT
+hgq_d5n_128x3_b9     --d 5 --mode hgq --arch 128 128 128 --init-from ref/runs/qec/float_d5_128x3/best.keras --epochs 60 --steps-per-epoch 2000 --batch 8192 --lr 5e-4 --beta-start 1e-11 --beta-end 1e-9 --input-f 6 --dl-overflow SAT

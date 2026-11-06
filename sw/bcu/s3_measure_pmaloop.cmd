@@ -1,0 +1,53 @@
+# FALLBACK: near-end PMA loopback on both GTYs (no cable, no board trace): BOARD = 0x022
+w 0x020 0x122
+sleep 0.5
+w 0x020 0x022
+sleep 3
+# Stage 3 silicon run (sw/bcu/desk.sh run sw/bcu/s3_measure.cmd), register map rtl/s3/s3_regmap.md.
+# Order (docs/PLAN.md D-S3-MEAS): link status and clock counts -> echo mode (link alone) ->
+# decode mode (loop) at GAP 63 and 7, each on all 464,428 golden shots -> flag RAM sample.
+echo board
+r 0x000 ID
+r 0x0F0 NVEC
+r 0x0F4 DEC_LAT
+r 0x024 LINK
+r 0x028 FREQ_A
+r 0x02C FREQ_B
+wait 0x024 0x00000101 0x00000101 30
+r 0x024 LINK
+w 0x004 0x30
+w 0x004 0x00
+w 0x00C 0
+# ---- echo, GAP 63 ----
+echo run echo_gap63
+w 0x008 63
+w 0x004 0x02
+w 0x004 0x03
+wait 0x010 0x1 0x1 120
+@stats
+hist 256
+w 0x004 0x00
+wait 0x010 0x1 0x0 10
+# ---- decode, GAP 63 ----
+echo run decode_gap63
+w 0x008 63
+w 0x004 0x01
+wait 0x010 0x1 0x1 120
+@stats
+hist 256
+w 0x004 0x00
+wait 0x010 0x1 0x0 10
+# ---- decode, GAP 7 ----
+echo run decode_gap7
+w 0x008 7
+w 0x004 0x01
+wait 0x010 0x1 0x1 120
+@stats
+hist 256
+flips 0 4096
+flips 460332 4096
+w 0x004 0x00
+wait 0x010 0x1 0x0 10
+r 0x024 LINK
+r 0x028 FREQ_A
+r 0x02C FREQ_B

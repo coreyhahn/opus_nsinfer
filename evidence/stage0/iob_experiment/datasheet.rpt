@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Mon Oct 19 22:35:00 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_datasheet -file datasheet.rpt
+| Design            : top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Data Sheet Report
+
+Input Ports Setup/Hold
+
+----------+-------+-----------+-------+---------------+---------+---------------+---------+----------+
+Reference | Input | IO Reg    | Delay |     Setup(ns) | Process |      Hold(ns) | Process | Internal |
+Clock     | Port  | Type      | Type  | to Clk (Edge) | Corner  | to Clk (Edge) | Corner  | Clock    |
+----------+-------+-----------+-------+---------------+---------+---------------+---------+----------+
+clk300    | hd_in | FDRE (IO) | -     |     1.966 (r) | SLOW    |    -0.623 (r) | FAST    |          |
+clk300    | hp_in | FDRE (IO) | -     |    -0.988 (r) | FAST    |     2.640 (r) | SLOW    |          |
+----------+-------+-----------+-------+---------------+---------+---------------+---------+----------+
+
+
+Output Ports Clock-to-out
+
+----------+--------+-----------+-------+----------------+---------+----------------+---------+----------+
+Reference | Output | IO Reg    | Delay | Max Clk (Edge) | Process | Min Clk (Edge) | Process | Internal |
+Clock     | Port   | Type      | Type  |    to port(ns) | Corner  |    to port(ns) | Corner  | Clock    |
+----------+--------+-----------+-------+----------------+---------+----------------+---------+----------+
+clk300    | hd_out | FDRE (IO) | -     |      5.935 (r) | SLOW    |      3.108 (r) | FAST    |          |
+clk300    | hp_out | FDRE (IO) | -     |      4.489 (r) | SLOW    |      2.305 (r) | FAST    |          |
+----------+--------+-----------+-------+----------------+---------+----------------+---------+----------+
+
+
+Setup between Clocks
+
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+Source | Destination |  Src:Rise     | Process |  Src:Rise     | Process |  Src:Fall     | Process |  Src:Fall     | Process |
+Clock  | Clock       | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  |
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+clk300 | clk300      |         1.360 | SLOW    |               |         |               |         |               |         |
+-------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+
+

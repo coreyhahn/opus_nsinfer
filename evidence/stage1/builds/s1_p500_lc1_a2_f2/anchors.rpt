@@ -1,0 +1,412 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 08:01:57 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -of_objects [get_timing_paths -quiet -from [get_cells -quiet -hierarchical -filter {NAME =~ */l_tw_reg && IS_PRIMITIVE}] -to [get_cells -quiet -hierarchical -filter {NAME =~ */h_ff_reg && IS_PRIMITIVE}] -delay_type max -max_paths 1] -path_type full_clock_expanded -input_pins -append -file <repo>/synth/out_s1_p500_lc1_a2_f2/anchors.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.607ns  (required time - arrival time)
+  Source:                 u_harness/l_tw_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk1_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            u_harness/h_ff_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk0_o
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (clk0_o rise@2.000ns - clk1_o rise@0.000ns)
+  Data Path Delay:        1.164ns  (logic 0.211ns (18.127%)  route 0.953ns (81.873%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.084ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.376ns = ( 1.623 - 2.000 ) 
+    Source Clock Delay      (SCD):    -0.509ns
+    Clock Pessimism Removal (CPR):    -0.216ns
+  Clock Uncertainty:      0.169ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.069ns
+    Phase Error              (PE):    0.120ns
+  Clock Net Delay (Source):      1.838ns (routing 0.774ns, distribution 1.064ns)
+  Clock Net Delay (Destination): 1.794ns (routing 0.837ns, distribution 0.957ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk1_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11                                              r  u_ibufds/DIFFINBUF_INST/DIFF_IN_P
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.489     0.589 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.639    u_ibufds/OUT
+    AL8                                                               r  u_ibufds/IBUFCTRL_INST/I
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.397     1.036    clk_in
+    MMCM_X0Y0                                                         r  u_mmcm/CLKIN1
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT1)
+                                                     -3.661    -2.625 r  u_mmcm/CLKOUT1
+                         net (fo=1, routed)           0.250    -2.375    clk1_o
+    BUFGCE_X0Y21                                                      r  u_bufg_ps/I
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -2.347 r  u_bufg_ps/O
+    X3Y2 (CLOCK_ROOT)    net (fo=107, routed)         1.838    -0.509    u_harness/CLK
+    SLICE_X82Y119        FDRE                                         r  u_harness/l_tw_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X82Y119        FDRE (Prop_EFF_SLICEM_C_Q)
+                                                      0.076    -0.433 r  u_harness/l_tw_reg/Q
+                         net (fo=1, routed)           0.923     0.490    u_harness/l_tw
+    SLICE_X82Y119                                                     r  u_harness/l_tw_inst/I0
+    SLICE_X82Y119        LUT1 (Prop_D5LUT_SLICEM_I0_O)
+                                                      0.135     0.625 r  u_harness/l_tw_inst/O
+                         net (fo=1, routed)           0.030     0.655    u_harness/l_tw_a
+    SLICE_X82Y119        FDRE                                         r  u_harness/h_ff_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk0_o rise edge)     2.000     2.000 r  
+    AL8                                               0.000     2.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     2.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11                                              r  u_ibufds/DIFFINBUF_INST/DIFF_IN_P
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.394     2.472 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     2.512    u_ibufds/OUT
+    AL8                                                               r  u_ibufds/IBUFCTRL_INST/I
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     2.512 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.344     2.856    clk_in
+    MMCM_X0Y0                                                         r  u_mmcm/CLKIN1
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -3.265    -0.409 r  u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.214    -0.195    clk0_o
+    BUFGCE_X0Y2                                                       r  u_bufg_net/I
+    BUFGCE_X0Y2          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -0.171 r  u_bufg_net/O
+    X2Y1 (CLOCK_ROOT)    net (fo=21281, routed)       1.794     1.623    u_harness/clk_net
+    SLICE_X82Y119        FDRE                                         r  u_harness/h_ff_reg/C
+                         clock pessimism             -0.216     1.407    
+                         clock uncertainty           -0.169     1.238    
+    SLICE_X82Y119        FDRE (Setup_DFF2_SLICEM_C_D)
+                                                      0.025     1.263    u_harness/h_ff_reg
+  -------------------------------------------------------------------
+                         required time                          1.263    
+                         arrival time                          -0.655    
+  -------------------------------------------------------------------
+                         slack                                  0.607    
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 08:01:58 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -of_objects [get_timing_paths -quiet -from [get_cells -quiet -hierarchical -filter {NAME =~ */l_tw_reg && IS_PRIMITIVE}] -to [get_cells -quiet -hierarchical -filter {NAME =~ */h_ff_reg && IS_PRIMITIVE}] -delay_type min -max_paths 1] -path_type full_clock_expanded -input_pins -append -file <repo>/synth/out_s1_p500_lc1_a2_f2/anchors.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.120ns  (arrival time - required time)
+  Source:                 u_harness/l_tw_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk1_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            u_harness/h_ff_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk0_o
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk0_o rise@0.000ns - clk1_o rise@0.000ns)
+  Data Path Delay:        0.579ns  (logic 0.089ns (15.371%)  route 0.490ns (84.629%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.243ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.210ns
+    Source Clock Delay      (SCD):    -0.357ns
+    Clock Pessimism Removal (CPR):    -0.095ns
+  Clock Uncertainty:      0.169ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.069ns
+    Phase Error              (PE):    0.120ns
+  Clock Net Delay (Source):      1.019ns (routing 0.427ns, distribution 0.592ns)
+  Clock Net Delay (Destination): 1.244ns (routing 0.554ns, distribution 0.690ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk1_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11                                              r  u_ibufds/DIFFINBUF_INST/DIFF_IN_P
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    u_ibufds/OUT
+    AL8                                                               r  u_ibufds/IBUFCTRL_INST/I
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.203     0.571    clk_in
+    MMCM_X0Y0                                                         r  u_mmcm/CLKIN1
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT1)
+                                                     -2.113    -1.542 r  u_mmcm/CLKOUT1
+                         net (fo=1, routed)           0.149    -1.393    clk1_o
+    BUFGCE_X0Y21                                                      r  u_bufg_ps/I
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017    -1.376 r  u_bufg_ps/O
+    X3Y2 (CLOCK_ROOT)    net (fo=107, routed)         1.019    -0.357    u_harness/CLK
+    SLICE_X82Y119        FDRE                                         r  u_harness/l_tw_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X82Y119        FDRE (Prop_EFF_SLICEM_C_Q)
+                                                      0.038    -0.319 r  u_harness/l_tw_reg/Q
+                         net (fo=1, routed)           0.481     0.162    u_harness/l_tw
+    SLICE_X82Y119                                                     r  u_harness/l_tw_inst/I0
+    SLICE_X82Y119        LUT1 (Prop_D5LUT_SLICEM_I0_O)
+                                                      0.051     0.213 r  u_harness/l_tw_inst/O
+                         net (fo=1, routed)           0.009     0.222    u_harness/l_tw_a
+    SLICE_X82Y119        FDRE                                         r  u_harness/h_ff_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk0_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11                                              r  u_ibufds/DIFFINBUF_INST/DIFF_IN_P
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.346     0.446 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.496    u_ibufds/OUT
+    AL8                                                               r  u_ibufds/IBUFCTRL_INST/I
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.496 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.230     0.726    clk_in
+    MMCM_X0Y0                                                         r  u_mmcm/CLKIN1
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.364    -1.638 r  u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.165    -1.473    clk0_o
+    BUFGCE_X0Y2                                                       r  u_bufg_net/I
+    BUFGCE_X0Y2          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019    -1.454 r  u_bufg_net/O
+    X2Y1 (CLOCK_ROOT)    net (fo=21281, routed)       1.244    -0.210    u_harness/clk_net
+    SLICE_X82Y119        FDRE                                         r  u_harness/h_ff_reg/C
+                         clock pessimism              0.095    -0.114    
+                         clock uncertainty            0.169     0.055    
+    SLICE_X82Y119        FDRE (Hold_DFF2_SLICEM_C_D)
+                                                      0.047     0.102    u_harness/h_ff_reg
+  -------------------------------------------------------------------
+                         required time                         -0.102    
+                         arrival time                           0.222    
+  -------------------------------------------------------------------
+                         slack                                  0.120    
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 08:01:58 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -of_objects [get_timing_paths -quiet -from [get_cells -quiet -hierarchical -filter {NAME =~ */c_tw_reg && IS_PRIMITIVE}] -to [get_cells -quiet -hierarchical -filter {NAME =~ */g_ff_reg && IS_PRIMITIVE}] -delay_type max -max_paths 1] -path_type full_clock_expanded -input_pins -append -file <repo>/synth/out_s1_p500_lc1_a2_f2/anchors.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.594ns  (required time - arrival time)
+  Source:                 u_harness/c_tw_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            u_harness/g_ff_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk1_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk1_o
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (clk1_o rise@2.000ns - clk0_o rise@0.000ns)
+  Data Path Delay:        0.849ns  (logic 0.128ns (15.081%)  route 0.721ns (84.919%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.412ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.538ns = ( 1.462 - 2.000 ) 
+    Source Clock Delay      (SCD):    -0.342ns
+    Clock Pessimism Removal (CPR):    -0.216ns
+  Clock Uncertainty:      0.169ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.069ns
+    Phase Error              (PE):    0.120ns
+  Clock Net Delay (Source):      2.011ns (routing 0.917ns, distribution 1.094ns)
+  Clock Net Delay (Destination): 1.627ns (routing 0.703ns, distribution 0.924ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk0_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11                                              r  u_ibufds/DIFFINBUF_INST/DIFF_IN_P
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.489     0.589 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.639    u_ibufds/OUT
+    AL8                                                               r  u_ibufds/IBUFCTRL_INST/I
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.397     1.036    clk_in
+    MMCM_X0Y0                                                         r  u_mmcm/CLKIN1
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -3.661    -2.625 r  u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.244    -2.381    clk0_o
+    BUFGCE_X0Y2                                                       r  u_bufg_net/I
+    BUFGCE_X0Y2          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -2.353 r  u_bufg_net/O
+    X2Y1 (CLOCK_ROOT)    net (fo=21281, routed)       2.011    -0.342    u_harness/clk_net
+    SLICE_X82Y119        FDRE                                         r  u_harness/c_tw_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X82Y119        FDRE (Prop_AFF_SLICEM_C_Q)
+                                                      0.077    -0.265 r  u_harness/c_tw_reg/Q
+                         net (fo=1, routed)           0.151    -0.114    u_harness/c_tw
+    SLICE_X82Y119                                                     r  u_harness/c_tw_inst/I0
+    SLICE_X82Y119        LUT1 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.051    -0.063 r  u_harness/c_tw_inst/O
+                         net (fo=4, routed)           0.570     0.507    u_harness/c_tw_a
+    SLICE_X84Y102        FDRE                                         r  u_harness/g_ff_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk1_o rise edge)     2.000     2.000 r  
+    AL8                                               0.000     2.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     2.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11                                              r  u_ibufds/DIFFINBUF_INST/DIFF_IN_P
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.394     2.472 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     2.512    u_ibufds/OUT
+    AL8                                                               r  u_ibufds/IBUFCTRL_INST/I
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     2.512 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.344     2.856    clk_in
+    MMCM_X0Y0                                                         r  u_mmcm/CLKIN1
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT1)
+                                                     -3.265    -0.409 r  u_mmcm/CLKOUT1
+                         net (fo=1, routed)           0.220    -0.189    clk1_o
+    BUFGCE_X0Y21                                                      r  u_bufg_ps/I
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -0.165 r  u_bufg_ps/O
+    X3Y2 (CLOCK_ROOT)    net (fo=107, routed)         1.627     1.462    u_harness/CLK
+    SLICE_X84Y102        FDRE                                         r  u_harness/g_ff_reg/C
+                         clock pessimism             -0.216     1.246    
+                         clock uncertainty           -0.169     1.076    
+    SLICE_X84Y102        FDRE (Setup_EFF_SLICEL_C_D)
+                                                      0.025     1.101    u_harness/g_ff_reg
+  -------------------------------------------------------------------
+                         required time                          1.101    
+                         arrival time                          -0.507    
+  -------------------------------------------------------------------
+                         slack                                  0.594    
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Tue Oct 20 08:01:58 2026
+| Host              : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing -of_objects [get_timing_paths -quiet -from [get_cells -quiet -hierarchical -filter {NAME =~ */c_tw_reg && IS_PRIMITIVE}] -to [get_cells -quiet -hierarchical -filter {NAME =~ */g_ff_reg && IS_PRIMITIVE}] -delay_type min -max_paths 1] -path_type full_clock_expanded -input_pins -append -file <repo>/synth/out_s1_p500_lc1_a2_f2/anchors.rpt
+| Design            : zcu102_top
+| Device            : xczu9eg-ffvb1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.122ns  (arrival time - required time)
+  Source:                 u_harness/c_tw_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk0_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            u_harness/g_ff_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk1_o  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk1_o
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk1_o rise@0.000ns - clk0_o rise@0.000ns)
+  Data Path Delay:        0.408ns  (logic 0.060ns (14.693%)  route 0.348ns (85.307%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.071ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.297ns
+    Source Clock Delay      (SCD):    -0.273ns
+    Clock Pessimism Removal (CPR):    -0.095ns
+  Clock Uncertainty:      0.169ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.069ns
+    Phase Error              (PE):    0.120ns
+  Clock Net Delay (Source):      1.107ns (routing 0.500ns, distribution 0.607ns)
+  Clock Net Delay (Destination): 1.151ns (routing 0.477ns, distribution 0.674ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk0_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11                                              r  u_ibufds/DIFFINBUF_INST/DIFF_IN_P
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.249     0.328 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.368    u_ibufds/OUT
+    AL8                                                               r  u_ibufds/IBUFCTRL_INST/I
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.368 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.203     0.571    clk_in
+    MMCM_X0Y0                                                         r  u_mmcm/CLKIN1
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.113    -1.542 r  u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.145    -1.397    clk0_o
+    BUFGCE_X0Y2                                                       r  u_bufg_net/I
+    BUFGCE_X0Y2          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017    -1.380 r  u_bufg_net/O
+    X2Y1 (CLOCK_ROOT)    net (fo=21281, routed)       1.107    -0.273    u_harness/clk_net
+    SLICE_X82Y119        FDRE                                         r  u_harness/c_tw_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X82Y119        FDRE (Prop_AFF_SLICEM_C_Q)
+                                                      0.038    -0.235 r  u_harness/c_tw_reg/Q
+                         net (fo=1, routed)           0.079    -0.156    u_harness/c_tw
+    SLICE_X82Y119                                                     r  u_harness/c_tw_inst/I0
+    SLICE_X82Y119        LUT1 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.022    -0.134 r  u_harness/c_tw_inst/O
+                         net (fo=4, routed)           0.269     0.135    u_harness/c_tw_a
+    SLICE_X84Y102        FDRE                                         r  u_harness/g_ff_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk1_o rise edge)     0.000     0.000 r  
+    AL8                                               0.000     0.000 r  si570_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_ibufds/I
+    HPIOBDIFFINBUF_X0Y11                                              r  u_ibufds/DIFFINBUF_INST/DIFF_IN_P
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.346     0.446 r  u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.496    u_ibufds/OUT
+    AL8                                                               r  u_ibufds/IBUFCTRL_INST/I
+    AL8                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.496 r  u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.230     0.726    clk_in
+    MMCM_X0Y0                                                         r  u_mmcm/CLKIN1
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT1)
+                                                     -2.364    -1.638 r  u_mmcm/CLKOUT1
+                         net (fo=1, routed)           0.170    -1.468    clk1_o
+    BUFGCE_X0Y21                                                      r  u_bufg_ps/I
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019    -1.449 r  u_bufg_ps/O
+    X3Y2 (CLOCK_ROOT)    net (fo=107, routed)         1.151    -0.297    u_harness/CLK
+    SLICE_X84Y102        FDRE                                         r  u_harness/g_ff_reg/C
+                         clock pessimism              0.095    -0.202    
+                         clock uncertainty            0.169    -0.033    
+    SLICE_X84Y102        FDRE (Hold_EFF_SLICEL_C_D)
+                                                      0.046     0.013    u_harness/g_ff_reg
+  -------------------------------------------------------------------
+                         required time                         -0.013    
+                         arrival time                           0.135    
+  -------------------------------------------------------------------
+                         slack                                  0.122    
+
+
+
+
+
+TIMED clk_ps <-> clk_net/clk_axi crossings (2; expected 2: l_tw->h_ff, c_tw->g_ff):
+  u_harness/l_tw_reg/C -> u_harness/h_ff_reg/D slack=0.607
+  u_harness/c_tw_reg/C -> u_harness/g_ff_reg/D slack=0.594

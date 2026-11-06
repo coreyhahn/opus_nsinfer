@@ -1,0 +1,2 @@
+# measured-channel retrain, third seed of the chosen recipe (CPU slice freed by the float run)
+hgq_w64_96_48_24_b2e5_e300_s3 --w 64 --mode hgq --arch 96 48 24 --epochs 300 --beta-end 2e-5 --seed 3

@@ -1,0 +1,3 @@
+# Stage 4 q5n2: narrow-net probe d5n17 = hgq_d5n_128x4_b3e9 e0057 (1.71M EBOPs calibrated, da4ml est 278684 LUT,
+# keras vs DAIS mismatch 0) at lc3 (16 stages). Launch with OOC_INCLUDE=/home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/d5n17
+q5n17_vu9p_lc3_f161 /home/cah/r2d2/code/fpga/opus_nsinfer/.scratch/d5n17/gen/qec_d5_lc3 xcvu9p-fsgd2104-2L-e 6.206 - qec_d5 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/d5/qec_d5_top.sv IN_W=120,OUT_W=20,LOGIT_SIGNED=1

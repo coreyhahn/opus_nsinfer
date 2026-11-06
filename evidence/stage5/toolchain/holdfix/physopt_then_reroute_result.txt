@@ -1,0 +1,9 @@
+INFO: [Vivado_Tcl 4-2280] Estimated Timing Summary | WNS= 0.016 | TNS= 0.000 | WHS= -0.112 |
+Phase 2 Hold Fix Optimization
+Phase 2 Hold Fix Optimization | Checksum: 239ec8da4
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=0.016 | TNS=0.000 | WHS=0.003 | THS=0.000 |
+Summary of Hold Fix Optimizations
+|  LUT1 and ZHOLD Insertion   |          0.115  |          0.667  |          16  |          0  |              15  |           0  |           1  |  00:07:51  |
+INFO: [Route 35-61] The design met the timing requirement.
+RESULT variant=physopt_then_reroute WNS=0.016 WHS=0.003
+RESULT bitstream written

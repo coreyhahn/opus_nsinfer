@@ -1,0 +1,35 @@
+Setting up a 64-bit FPGA build environment for the USRP-X3x0...
+- Vivado: Found (<xilinx-tools>/Vivado/2024.2/bin)
+          Installed version is vivado v2024.2 (64-bit)
+
+Environment successfully initialized.
+START 2026-10-29T21:08:28-06:00 host=build-host args: -j 6 X310_XG BUILD_DIR=<repo>/.scratch/s5_build/x310_xg_stock_2/build-usrp_x310_fpga_XG IMAGE_CORE_NAME=usrp_x310_fpga_XG BUILD_OUTPUT_DIR=<repo>/.scratch/s5_build/x310_xg_stock_2/build BUILD_IP_DIR=<repo>/.scratch/s5_build/build-ip
+<xilinx-tools>/Vivado/2024.2/bin/vivado
+vivado v2024.2 (64-bit)
+Tool Version Limit: 2024.11
+SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+make -f Makefile.x300.inc viv_ip    NAME=X310_IP ARCH=kintex7 PART_ID=xc7k410t/ffg900/-2 BUILD_1G=1 BUILD_10G=1 SFP0_1GBE=1 SFP1_10GBE=1  BUILD_SEED=0 X310=1 TOP_MODULE=x300 EXTRA_DEFS="BUILD_1G=1 BUILD_10G=1 SFP0_1GBE=1 SFP1_10GBE=1  BUILD_SEED=0 X310=1"
+make[1]: Entering directory '<repo>/.scratch/uhd/fpga/usrp3/top/x300'
+...
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[5].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[6].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[7].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL u_ddr3_32bit/u_ddr3_32bit_mig/u_iodelay_ctrl/u_idelayctrl_200 has a clock period of 4.998 ns (frequency 200.080 Mhz) but IDELAYE2 u_ddr3_32bit/u_ddr3_32bit_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[8].iserdes_dq_.idelay_dq.idelaye2 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+ERROR: [Builder 0-0] The design did not satisfy timing constraints. (Implementation outputs were still generated)
+ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
+[01:40:08] Current task: Write Bitstream +++ Current Phase: Finished
+[01:40:08] Process terminated. Status: Failure
+
+========================================================
+Warnings:           1498
+Critical Warnings:  125
+Errors:             2
+
+make[1]: *** [Makefile.x300.inc:129: bin] Error 1
+make[1]: Leaving directory '<repo>/.scratch/uhd/fpga/usrp3/top/x300'
+make: *** [Makefile:145: X310_XG] Error 2
+
+real	100m15.107s
+user	197m15.640s
+sys	10m38.008s
+END 2026-10-29T22:48:46-06:00 rc=2

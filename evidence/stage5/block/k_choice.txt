@@ -1,0 +1,13 @@
+stream: 65536 samples, 65473 decisions, 54182 pure windows, 182 label changes, raw pure-window accuracy 0.7737 (model)
+  K  events events/true smoothed acc  added delay
+  1    8611       47.31       0.7737         0 ns
+  2    2948       16.20       0.7852         5 ns
+  4    1121        6.16       0.7965        15 ns
+  8     496        2.73       0.8117        35 ns
+ 12     342        1.88       0.8095        55 ns
+ 16     264        1.45       0.7962        75 ns
+ 24     192        1.05       0.7321       115 ns
+ 32     168        0.92       0.6647       155 ns
+ 48     129        0.71       0.6149       235 ns
+ 64      97        0.53       0.5727       315 ns
+K_DEFAULT = 16 (largest K with smoothed accuracy >= raw)

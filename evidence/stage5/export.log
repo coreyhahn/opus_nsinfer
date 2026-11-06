@@ -1,0 +1,78 @@
+{
+ "model_source": "<repo>/ref/runs/x310/chosen.keras",
+ "selection": "ref/x310/x310_selection.json",
+ "w": 64,
+ "bfp": 1,
+ "n_vectors": 8192,
+ "n_full": 100000,
+ "subset": "numpy default_rng(20261029).choice(n_full, 8192), sorted",
+ "decision_rule": "np.argmax over the logits (first maximum wins)",
+ "ebops_calibrated": 21439,
+ "ebops_train": 21747,
+ "in_kif": [
+  1,
+  0,
+  15
+ ],
+ "in_lanes": 128,
+ "in_width_bits": 2048,
+ "core_in_width_bits": 2032,
+ "pruned_input_lanes": [
+  4
+ ],
+ "out_width_bits": 62,
+ "out_lane_widths": [
+  15,
+  16,
+  16,
+  15
+ ],
+ "da4ml_comb_cost_lut_est": 21424.5,
+ "da4ml_comb_latency": [
+  27.0,
+  28.0
+ ],
+ "keras_vs_dais_interp_mismatching_vectors_full": 0,
+ "keras_vs_dais_interp_mismatching_vectors_stream": 0,
+ "test_accuracy_quantized_calibrated": 0.8153,
+ "test_accuracy_quantized_calibrated_snr_ge_10": 0.9604,
+ "golden_subset_accuracy": 0.818115234375,
+ "sha256": {
+  "x310_golden.npz": "393f4d1d7b18ae4a9af5b9a15fb70e54ebfaee49d92a6b64c333223c15527600",
+  "x310_golden_in.hex": "9c2541d344c1aa5fe965da2de876d776754befa935817bcb433f32c8c5103aec",
+  "x310_golden_out.hex": "a209139e2ebabfcf7da1dfe373b51b09b940653e5715d339c5a5c244c20ec4a5",
+  "x310_golden_dec.hex": "2b94016cd84083c0a570c1ba2e6f7b26eda28a39815e12638b48923ddc667eb2",
+  "x310_hgq.keras": "6a039e43ec834d4c75834c32f009fcb498094db36b8ba07456e2699377f28e65"
+ }
+}
+{
+ "n_samples": 65536,
+ "n_windows": 65473,
+ "generator": "x310_data.make_stream(65536, seed=0)",
+ "sample_label_counts": [
+  20637,
+  17097,
+  8396,
+  19406
+ ],
+ "pure_windows": 54182,
+ "pure_window_accuracy": 0.7737440478387656,
+ "pure_window_accuracy_by_class": [
+  0.9188199254128929,
+  0.8808775376555337,
+  0.6627728250845374,
+  0.5959171937895342
+ ],
+ "straddling_windows": 11291,
+ "decision_counts": [
+  21961,
+  20217,
+  8423,
+  14872
+ ],
+ "keras_vs_dais_interp_mismatching_vectors": 0
+}
+x310_clf_lc1.5: 19 stages, est 21424 LUT, 22180 FF
+x310_clf_lc2: 14 stages, est 21424 LUT, 16417 FF
+x310_clf_lc2.5: 12 stages, est 21424 LUT, 12904 FF
+x310_clf_lc3: 10 stages, est 21424 LUT, 11892 FF

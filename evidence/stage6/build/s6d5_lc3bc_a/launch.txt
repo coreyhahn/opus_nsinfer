@@ -1,0 +1,16 @@
+launch 2026-11-03T19:08:22-07:00 host=build-host git=4b3c907 d=5 lc=3bc directive=Default tx_reg=0 rx_reg=0
+7cd847c9b4f207aad44f2641e7c658d324e613358406ac1905fd1941224ced3c  <repo>/rtl/s6/s6_core.sv
+8f6280830eaf1b4f008ef5ce0da60db11fbfa4f19d0144e3b5e8237165ae6c01  <repo>/rtl/s6/s6_diag.sv
+10c1a0616acc9e83e6e846ad078e131654e3f5c00c10171355e8c48344b4d78c  <repo>/rtl/s6/s6_link.sv
+6c538a3bd84c446c1a84955fca1f37e86f3c97a5c4f4bcf8ec8550da79c2d20a  <repo>/rtl/s6/s6_pkg.sv
+69ba1c8781b032c9d5c4e37c96ca6388cb8601402d397952ffc524df24ffed0d  <repo>/rtl/s6/s6_probe.sv
+b80c7f48ea68d00812e73b7abe0a89e03a4d36842092820571ac09de1c32915c  <repo>/rtl/s6/s6_top.sv
+8e0ed5331a516dd5f0b6c86690b4cf8d08a1802873292c29620063bb050ebd6e  <repo>/rtl/s3/s3_freq.sv
+dfe3748ed3bc8f672d8d16850214467d7c08ae91969e19236859d9292072f3a9  <repo>/rtl/s3/s3_pkg.sv
+a17c8a6e69d242e9f8300dfd44e4301822b5f42999b85675a921a27ef665cd0f  <repo>/rtl/s3/s3_regs.sv
+958bfa111c082999908c3e4ed3d2320d29bb83f7a7b3f139e0e7554075a4e40e  <repo>/rtl/s3/s3_side_a.sv
+8e636ab2d38e693835b99f51e253a6dadee5c4c407738e4a61050a0c4e43ac76  <repo>/rtl/s3/s3_side_b.sv
+fbe99e1caa801b4edb25b123bb69768b8430ef2f12f8fb7819f1169a425f1a06  <repo>/rtl/s3/s3_top.sv
+36cbe10f24524c8ebf4e6dfe617ac2d9329cc38ee625262fcb74785b96942462  <repo>/synth/constraints/s6_bcu1525.xdc
+70bf00bbb5f003348a756a86c6c7cc52b381ebff97a8346db999e2155507d415  <repo>/rtl/ip/s6_gt3/s6_gt3.xci
+2d97b3826b88487e8e36146c25b27b47bccc9256c9acbd3ee690f7c57e6fc735  <repo>/rtl/ip/s6_gt/s6_gt.xci

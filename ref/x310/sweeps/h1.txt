@@ -1,0 +1,22 @@
+# Stage 5 HGQ2 sweep 1 (grumpy-calf), 2026-10-29. Float baselines (f1, val acc at epoch 100): W=16 ~0.66,
+# W=32 ~0.75, W=64 0.857 (128-64-32). Budget < ~25k LUT => EBOPs ~<= 30-40k (LUT ~ 0.5-0.75 x EBOPs at
+# Stages 0/2). Beta ends 3e-6 / 1e-5 / 3e-5 so the Pareto fronts reach well below that.
+hgq_w64_64_32_b3e6       --w 64 --mode hgq --arch 64 32 --epochs 200 --beta-end 3e-6
+hgq_w64_64_32_b1e5       --w 64 --mode hgq --arch 64 32 --epochs 200 --beta-end 1e-5
+hgq_w64_64_32_b3e5       --w 64 --mode hgq --arch 64 32 --epochs 200 --beta-end 3e-5
+hgq_w64_128_64_b3e6      --w 64 --mode hgq --arch 128 64 --epochs 200 --beta-end 3e-6
+hgq_w64_128_64_b1e5      --w 64 --mode hgq --arch 128 64 --epochs 200 --beta-end 1e-5
+hgq_w64_128_64_b3e5      --w 64 --mode hgq --arch 128 64 --epochs 200 --beta-end 3e-5
+hgq_w64_128_64_32_b3e6   --w 64 --mode hgq --arch 128 64 32 --epochs 200 --beta-end 3e-6
+hgq_w64_128_64_32_b1e5   --w 64 --mode hgq --arch 128 64 32 --epochs 200 --beta-end 1e-5
+hgq_w64_128_64_32_b3e5   --w 64 --mode hgq --arch 128 64 32 --epochs 200 --beta-end 3e-5
+hgq_w32_64_32_b3e6       --w 32 --mode hgq --arch 64 32 --epochs 200 --beta-end 3e-6
+hgq_w32_64_32_b1e5       --w 32 --mode hgq --arch 64 32 --epochs 200 --beta-end 1e-5
+hgq_w32_128_64_b3e6      --w 32 --mode hgq --arch 128 64 --epochs 200 --beta-end 3e-6
+hgq_w32_128_64_b1e5      --w 32 --mode hgq --arch 128 64 --epochs 200 --beta-end 1e-5
+hgq_w16_64_32_b3e6       --w 16 --mode hgq --arch 64 32 --epochs 200 --beta-end 3e-6
+hgq_w16_64_32_b1e5       --w 16 --mode hgq --arch 64 32 --epochs 200 --beta-end 1e-5
+hgq_w16_128_64_b3e6      --w 16 --mode hgq --arch 128 64 --epochs 200 --beta-end 3e-6
+hgq_w16_128_64_b1e5      --w 16 --mode hgq --arch 128 64 --epochs 200 --beta-end 1e-5
+float_w32_128_64_32      --w 32 --mode float --arch 128 64 32 --epochs 100
+float_w16_128_64_32      --w 16 --mode float --arch 128 64 32 --epochs 100

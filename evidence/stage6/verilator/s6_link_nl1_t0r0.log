@@ -1,0 +1,30 @@
+# host=build-host date=2026-11-03T17:57:09-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# rtl_sha256=c6fb487f0fc4625f257c42cb242c4bbbe2d64bbd32d723fbc40dfcbc0a8e705e tb_sha256=abba9426306fa98bcc9380bb1f0d93a22648ea88e36c7b35663ba0355ff116a4 NL=1 TX_REG=0 RX_REG=0
+CONFIG tb_s6_link NL=1 TX_REG=0 RX_REG=0 T_NS=6.206 skew_ui=70 negscr=0 (wire latencies MODEL)
+LOCK initial after 2227 cycles: A lock=001 slips=26  B lock=001 slips=77
+TRAFFIC random mode=1 cycles=20000 words a->b=4978 b->a=6637 mismatches=0 extra=0
+TRAFFIC b2b mode=2 cycles=20000 words a->b=19394 b->a=19394 mismatches=0 extra=0
+REF descrambled 41277 blocks of A lane 0, 0 wrong
+LAT a->b one-way 12..13 cycles, b->a 12..14 cycles (TX accept edge -> next register edge; MODEL wire)
+HISTLAT 12 a->b 12192 b->a 9794
+HISTLAT 13 a->b 12180 b->a 12970
+HISTLAT 14 a->b 0 b->a 3267
+MIS a->b cyc=45943 got=02d7c97646abf3de exp=02d7c97666abf3de
+MIS a->b cyc=46108 got=85cbfdbaa64363e5 exp=85cbfdbaae4363e5
+MIS a->b cyc=59075 got=aaef241b012b7c68 exp=aaef241b01ab7c68
+MIS a->b cyc=59076 got=962722a64f4290cb exp=962622a66f4290cb
+MIS a->b cyc=61465 got=ac8d4f26b2891913 exp=ac8d4f26b2891b13
+BER injected 51 flips on A->B lane 0: B n_sh_bad=1 n_idle_bad=31 unlocks=0 scoreboard mismatches=12
+LOCK after BER after 0 cycles: A lock=001 slips=26  B lock=001 slips=77
+TRAFFIC after_ber mode=1 cycles=10000 words a->b=2461 b->a=3326 mismatches=0 extra=0
+LOCK after glitch after 0 cycles: A lock=001 slips=26  B lock=001 slips=78
+GLITCH B unlock 0 -> 1, lock 1 -> 2, slips 78
+GLITCH garbage words delivered while losing lock: 11
+TRAFFIC after_glitch mode=1 cycles=10000 words a->b=2481 b->a=3260 mismatches=0 extra=0
+LOCK after burst after 1393 cycles: A lock=001 slips=92  B lock=001 slips=78
+BURST A unlock 0 -> 1, lock 1 -> 2
+BURST garbage words delivered while losing lock: 2
+TRAFFIC after_burst mode=2 cycles=10000 words a->b=9696 b->a=9696 mismatches=0 extra=0
+RESULT tb_s6_link NL=1 TX_REG=0 RX_REG=0 words a->b=46364 b->a=52139 lat_ab=12..13 lat_ba=12..14 ref_blocks=104602 ref_bad=0 slips_a=92 slips_b=78 unlock_a=1 unlock_b=1 fails=0
+PASS
+- tb_s6_link.sv:283: Verilog $finish

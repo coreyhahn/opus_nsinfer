@@ -1,0 +1,6 @@
+# d = 5 HGQ2 sweep 5 (grumpy-calf), 2026-10-24: continue the d5_h4 SAT runs (--resume: weights and bit widths)
+# with stronger EBOPs pressure. d5_h4 ended at geomean 1.048 / 3.61M EBOPs (b9) and 1.081 / 3.11M (b3e9);
+# EBOPs were still falling at the end of the ramp. Target is ~2M EBOPs (5.3M EBOPs estimated 704k LUT).
+hgq_d5r_b9_to1e8     --d 5 --mode hgq --resume ref/runs/qec/hgq_d5s_256x3_b9/last.keras --epochs 40 --steps-per-epoch 2000 --batch 8192 --lr 2e-4 --beta-start 1e-9 --beta-end 1e-8
+hgq_d5r_b3e9_to3e8   --d 5 --mode hgq --resume ref/runs/qec/hgq_d5s_256x3_b3e9/last.keras --epochs 40 --steps-per-epoch 2000 --batch 8192 --lr 2e-4 --beta-start 3e-9 --beta-end 3e-8
+hgq_d5r_b9_c2e9      --d 5 --mode hgq --resume ref/runs/qec/hgq_d5s_256x3_b9/last.keras --epochs 40 --steps-per-epoch 2000 --batch 8192 --lr 2e-4 --beta-start 2e-9 --beta-end 2e-9

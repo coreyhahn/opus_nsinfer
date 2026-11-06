@@ -1,0 +1,10 @@
+# Stage 2 q1: d = 3 NN decoder (qec_d3_top: input map + da4ml core + flip register) OOC on the VU9P, cutoffs 2/3/5 at 240/300/400 MHz
+q1_vu9p_lc2_f240 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc2 xcvu9p-fsgd2104-2L-e 4.167 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q1_vu9p_lc2_f300 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc2 xcvu9p-fsgd2104-2L-e 3.333 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q1_vu9p_lc2_f400 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc2 xcvu9p-fsgd2104-2L-e 2.5 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q1_vu9p_lc3_f240 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc3 xcvu9p-fsgd2104-2L-e 4.167 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q1_vu9p_lc3_f300 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc3 xcvu9p-fsgd2104-2L-e 3.333 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q1_vu9p_lc3_f400 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc3 xcvu9p-fsgd2104-2L-e 2.5 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q1_vu9p_lc5_f240 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc5 xcvu9p-fsgd2104-2L-e 4.167 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q1_vu9p_lc5_f300 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc5 xcvu9p-fsgd2104-2L-e 3.333 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1
+q1_vu9p_lc5_f400 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/qec_d3_lc5 xcvu9p-fsgd2104-2L-e 2.5 - qec_d3 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/qec_d3_top.sv IN_W=24,OUT_W=18,LOGIT_SIGNED=1

@@ -1,0 +1,65 @@
+{
+ "model_source": "/home/cah/r2d2/code/fpga/opus_nsinfer/ref/runs/x310_meas/chosen.keras",
+ "selection": "ref/x310/x310_meas_selection.json",
+ "w": 64,
+ "bfp": 1,
+ "n_vectors": 8192,
+ "n_full": 100000,
+ "subset": "numpy default_rng(20261029).choice(n_full, 8192), sorted",
+ "decision_rule": "np.argmax over the logits (first maximum wins)",
+ "ebops_calibrated": 22121,
+ "ebops_train": 22727,
+ "in_kif": [
+  1,
+  0,
+  15
+ ],
+ "in_lanes": 128,
+ "in_width_bits": 2048,
+ "core_in_width_bits": 2048,
+ "pruned_input_lanes": [],
+ "out_width_bits": 65,
+ "out_lane_widths": [
+  15,
+  17,
+  17,
+  16
+ ],
+ "out_kif": [
+  [
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   8,
+   9,
+   9,
+   8
+  ],
+  [
+   6,
+   7,
+   7,
+   7
+  ]
+ ],
+ "da4ml_comb_cost_lut_est": 21363.0,
+ "da4ml_comb_latency": [
+  33.0,
+  34.0
+ ],
+ "keras_vs_dais_interp_mismatching_vectors_full": 0,
+ "keras_vs_dais_interp_mismatching_vectors_stream": 0,
+ "test_accuracy_quantized_calibrated": 0.91109,
+ "test_accuracy_quantized_calibrated_snr_ge_10": 0.98212,
+ "golden_subset_accuracy": 0.909912109375,
+ "sha256": {
+  "x310_golden.npz": "4b931b402d798a6bfc1bad6c83803caa611e07d3e1f60866b44955ec50adab1d",
+  "x310_golden_in.hex": "1f0af188ef15cea1067ea107943b3061db84563fae1168415fae145221366ee0",
+  "x310_golden_out.hex": "dc755910c671c228b49ff2f66f4f4a16da7280f52d8b75c6696e7127794b1b36",
+  "x310_golden_dec.hex": "4fb310c953c009eedb8cae0e5a0554e6ec5246eb3fc9f09c6d860909ebe5dcb4",
+  "x310_hgq.keras": "f91a108df4a9319bc24109ffd5b7ab32d281d78d6d9886d36cc6d858f9315f2a"
+ }
+}

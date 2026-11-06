@@ -1,0 +1,1 @@
+{"part": "xc7k410tffg900-2", "period_ns": 5.0, "wns_ns": -0.715, "whs_ns": 0.089, "lut": 52440, "ff": 26244, "dsp": 0, "retime": 0, "gen_dir": "<repo>/.scratch/x310/rule1/gen/x310_clf_lc3", "top": "x310_stream", "vivado": "2024.2", "date": "2026-10-29T23:12:11"}

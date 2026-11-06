@@ -1,0 +1,1370 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Fri Oct 30 04:29:39 2026
+| Host         : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command      : report_timing -max_paths 20 -nworst 1 -to [get_cells -hier -filter {NAME =~ x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/* && IS_SEQUENTIAL}] -file <repo>/.scratch/s5_build/x310_xg_nsclf_lc2_1_impl_AltSpreadLogic_high/report_fresh/nsclf_setup_paths.rpt
+| Design       : x300
+| Device       : 7k410t-ffg900
+| Speed File   : -2  PRODUCTION 1.12 2017-02-17
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.373ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1854]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.657ns  (logic 0.591ns (12.691%)  route 4.066ns (87.309%))
+  Logic Levels:           2  (CARRY4=1 LUT5=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.143ns = ( 4.857 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.729ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.509    -0.729    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X35Y289        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y289        FDRE (Prop_fdre_C_Q)         0.204    -0.525 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/Q
+                         net (fo=63, routed)          4.066     3.541    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/stage1_inp[1]
+    SLICE_X8Y346         LUT5 (Prop_lut5_I3_O)        0.126     3.667 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry__0_i_4__3/O
+                         net (fo=1, routed)           0.000     3.667    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry__0_i_4__3_n_0
+    SLICE_X8Y346         CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.261     3.928 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry__0/O[2]
+                         net (fo=1, routed)           0.000     3.928    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_out[1854]
+    SLICE_X8Y346         FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1854]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.478     4.857    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X8Y346         FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1854]/C
+                         clock pessimism             -0.573     4.283    
+                         clock uncertainty           -0.058     4.225    
+    SLICE_X8Y346         FDRE (Setup_fdre_C_D)        0.076     4.301    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1854]
+  -------------------------------------------------------------------
+                         required time                          4.301    
+                         arrival time                          -3.928    
+  -------------------------------------------------------------------
+                         slack                                  0.373    
+
+Slack (MET) :             0.403ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[60]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.594ns  (logic 0.223ns (4.854%)  route 4.371ns (95.146%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.063ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.357ns = ( 4.643 - 5.000 ) 
+    Source Clock Delay      (SCD):    -1.024ns
+    Clock Pessimism Removal (CPR):    -0.603ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.214    -1.024    x300_core/bus_int_i/timekeeper_i/CLK_OUT1
+    SLICE_X91Y207        FDRE                                         r  x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[60]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y207        FDRE (Prop_fdre_C_Q)         0.223    -0.801 r  x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[60]/Q
+                         net (fo=26, routed)          4.371     3.571    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/D[58]
+    SLICE_X148Y275       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.264     4.643    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/CLK_OUT1
+    SLICE_X148Y275       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[28]/C
+                         clock pessimism             -0.603     4.039    
+                         clock uncertainty           -0.058     3.981    
+    SLICE_X148Y275       FDRE (Setup_fdre_C_D)       -0.007     3.974    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[28]
+  -------------------------------------------------------------------
+                         required time                          3.974    
+                         arrival time                          -3.571    
+  -------------------------------------------------------------------
+                         slack                                  0.403    
+
+Slack (MET) :             0.409ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1853]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.621ns  (logic 0.675ns (14.607%)  route 3.946ns (85.393%))
+  Logic Levels:           3  (CARRY4=2 LUT5=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.143ns = ( 4.857 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.729ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.509    -0.729    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X35Y289        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y289        FDRE (Prop_fdre_C_Q)         0.204    -0.525 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/Q
+                         net (fo=63, routed)          3.946     3.421    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/stage1_inp[1]
+    SLICE_X8Y345         LUT5 (Prop_lut5_I0_O)        0.126     3.547 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry_i_1__7/O
+                         net (fo=1, routed)           0.000     3.547    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry_i_1__7_n_0
+    SLICE_X8Y345         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.180     3.727 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.727    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry_n_0
+    SLICE_X8Y346         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.165     3.892 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry__0/O[1]
+                         net (fo=1, routed)           0.000     3.892    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_out[1853]
+    SLICE_X8Y346         FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1853]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.478     4.857    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X8Y346         FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1853]/C
+                         clock pessimism             -0.573     4.283    
+                         clock uncertainty           -0.058     4.225    
+    SLICE_X8Y346         FDRE (Setup_fdre_C_D)        0.076     4.301    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1853]
+  -------------------------------------------------------------------
+                         required time                          4.301    
+                         arrival time                          -3.892    
+  -------------------------------------------------------------------
+                         slack                                  0.409    
+
+Slack (MET) :             0.411ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[33]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.600ns  (logic 0.223ns (4.848%)  route 4.377ns (95.152%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.076ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.343ns = ( 4.657 - 5.000 ) 
+    Source Clock Delay      (SCD):    -1.023ns
+    Clock Pessimism Removal (CPR):    -0.603ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.215    -1.023    x300_core/bus_int_i/timekeeper_i/CLK_OUT1
+    SLICE_X91Y200        FDRE                                         r  x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[33]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y200        FDRE (Prop_fdre_C_Q)         0.223    -0.800 r  x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[33]/Q
+                         net (fo=26, routed)          4.377     3.577    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/D[31]
+    SLICE_X148Y293       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.278     4.657    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/CLK_OUT1
+    SLICE_X148Y293       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[1]/C
+                         clock pessimism             -0.603     4.053    
+                         clock uncertainty           -0.058     3.995    
+    SLICE_X148Y293       FDRE (Setup_fdre_C_D)       -0.007     3.988    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[1]
+  -------------------------------------------------------------------
+                         required time                          3.988    
+                         arrival time                          -3.577    
+  -------------------------------------------------------------------
+                         slack                                  0.411    
+
+Slack (MET) :             0.421ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[34]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.575ns  (logic 0.223ns (4.875%)  route 4.352ns (95.125%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.073ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.346ns = ( 4.654 - 5.000 ) 
+    Source Clock Delay      (SCD):    -1.023ns
+    Clock Pessimism Removal (CPR):    -0.603ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.215    -1.023    x300_core/bus_int_i/timekeeper_i/CLK_OUT1
+    SLICE_X91Y200        FDRE                                         r  x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[34]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y200        FDRE (Prop_fdre_C_Q)         0.223    -0.800 r  x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[34]/Q
+                         net (fo=26, routed)          4.352     3.552    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/D[32]
+    SLICE_X149Y287       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.275     4.654    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/CLK_OUT1
+    SLICE_X149Y287       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[2]/C
+                         clock pessimism             -0.603     4.050    
+                         clock uncertainty           -0.058     3.992    
+    SLICE_X149Y287       FDRE (Setup_fdre_C_D)       -0.019     3.973    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[2]
+  -------------------------------------------------------------------
+                         required time                          3.973    
+                         arrival time                          -3.552    
+  -------------------------------------------------------------------
+                         slack                                  0.421    
+
+Slack (MET) :             0.431ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[215]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1462]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.382ns  (logic 0.700ns (15.976%)  route 3.682ns (84.024%))
+  Logic Levels:           4  (CARRY4=1 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.178ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.282ns = ( 4.718 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.648ns
+    Clock Pessimism Removal (CPR):    -0.543ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.590    -0.648    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X70Y336        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[215]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X70Y336        FDRE (Prop_fdre_C_Q)         0.259    -0.389 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[215]/Q
+                         net (fo=31, routed)          2.248     1.859    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_9[215]
+    SLICE_X150Y346       LUT6 (Prop_lut6_I2_O)        0.043     1.902 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/accum__18_carry__0_i_5__4/O
+                         net (fo=2, routed)           0.244     2.147    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/accum__18_carry__0_i_5__4_n_0
+    SLICE_X150Y346       LUT4 (Prop_lut4_I2_O)        0.043     2.190 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/accum__18_carry__0_i_3__8/O
+                         net (fo=4, routed)           1.189     3.379    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_617/stage5_inp_reg[1462]_1
+    SLICE_X109Y345       LUT2 (Prop_lut2_I0_O)        0.043     3.422 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_617/accum__18_carry__0_i_1__9/O
+                         net (fo=1, routed)           0.000     3.422    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_617/accum__18_carry__0_i_1__9_n_0
+    SLICE_X109Y345       CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.312     3.734 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_617/accum__18_carry__0/O[3]
+                         net (fo=1, routed)           0.000     3.734    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_out[1462]
+    SLICE_X109Y345       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1462]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.339     4.718    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X109Y345       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1462]/C
+                         clock pessimism             -0.543     4.174    
+                         clock uncertainty           -0.058     4.116    
+    SLICE_X109Y345       FDRE (Setup_fdre_C_D)        0.049     4.165    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1462]
+  -------------------------------------------------------------------
+                         required time                          4.165    
+                         arrival time                          -3.734    
+  -------------------------------------------------------------------
+                         slack                                  0.431    
+
+Slack (MET) :             0.434ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[2878]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.260ns  (logic 0.682ns (16.008%)  route 3.578ns (83.992%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        -0.296ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.296ns = ( 4.704 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.574ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.664    -0.574    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X15Y327        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y327        FDRE (Prop_fdre_C_Q)         0.223    -0.351 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[11]/Q
+                         net (fo=113, routed)         3.206     2.855    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1266/stage1_inp[0]
+    SLICE_X34Y272        LUT3 (Prop_lut3_I2_O)        0.043     2.898 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1266/accum__15_carry_i_3__0/O
+                         net (fo=1, routed)           0.373     3.271    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1266/accum__15_carry_i_3__0_n_0
+    SLICE_X35Y272        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     3.521 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1266/accum__15_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.521    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1266/accum__15_carry_n_0
+    SLICE_X35Y273        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.166     3.687 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1266/accum__15_carry__0/O[1]
+                         net (fo=1, routed)           0.000     3.687    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_out[2878]
+    SLICE_X35Y273        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[2878]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.325     4.704    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X35Y273        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[2878]/C
+                         clock pessimism             -0.573     4.130    
+                         clock uncertainty           -0.058     4.072    
+    SLICE_X35Y273        FDRE (Setup_fdre_C_D)        0.049     4.121    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[2878]
+  -------------------------------------------------------------------
+                         required time                          4.121    
+                         arrival time                          -3.687    
+  -------------------------------------------------------------------
+                         slack                                  0.434    
+
+Slack (MET) :             0.437ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[255]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1919]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.467ns  (logic 0.610ns (13.655%)  route 3.857ns (86.345%))
+  Logic Levels:           2  (CARRY4=1 LUT4=1)
+  Clock Path Skew:        -0.113ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.213ns = ( 4.787 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.644ns
+    Clock Pessimism Removal (CPR):    -0.543ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.594    -0.644    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X66Y309        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[255]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X66Y309        FDRE (Prop_fdre_C_Q)         0.259    -0.385 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[255]/Q
+                         net (fo=39, routed)          3.857     3.473    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_9[255]
+    SLICE_X142Y345       LUT4 (Prop_lut4_I1_O)        0.043     3.516 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/accum_carry__0_i_4__246/O
+                         net (fo=1, routed)           0.000     3.516    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_584/stage5_inp_reg[1919]_0[1]
+    SLICE_X142Y345       CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.308     3.824 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_584/accum_carry__0/O[3]
+                         net (fo=1, routed)           0.000     3.824    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_out[1919]
+    SLICE_X142Y345       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1919]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.408     4.787    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X142Y345       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1919]/C
+                         clock pessimism             -0.543     4.243    
+                         clock uncertainty           -0.058     4.185    
+    SLICE_X142Y345       FDRE (Setup_fdre_C_D)        0.076     4.261    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1919]
+  -------------------------------------------------------------------
+                         required time                          4.261    
+                         arrival time                          -3.824    
+  -------------------------------------------------------------------
+                         slack                                  0.437    
+
+Slack (MET) :             0.438ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/g_inreg.s_vld_reg_replica_10/R
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        3.739ns  (logic 0.204ns (5.456%)  route 3.535ns (94.544%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.380ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.435ns = ( 4.565 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.629ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.609    -0.629    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/CLK_OUT1
+    SLICE_X155Y310       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X155Y310       FDRE (Prop_fdre_C_Q)         0.204    -0.425 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/Q
+                         net (fo=504, routed)         3.535     3.111    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/SR[0]
+    SLICE_X99Y274        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/g_inreg.s_vld_reg_replica_10/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.186     4.565    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/CLK_OUT1
+    SLICE_X99Y274        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/g_inreg.s_vld_reg_replica_10/C
+                         clock pessimism             -0.573     3.991    
+                         clock uncertainty           -0.058     3.933    
+    SLICE_X99Y274        FDRE (Setup_fdre_C_R)       -0.384     3.549    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/g_inreg.s_vld_reg_replica_10
+  -------------------------------------------------------------------
+                         required time                          3.549    
+                         arrival time                          -3.111    
+  -------------------------------------------------------------------
+                         slack                                  0.438    
+
+Slack (MET) :             0.440ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[118]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[670]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.352ns  (logic 0.642ns (14.750%)  route 3.710ns (85.250%))
+  Logic Levels:           2  (CARRY4=1 LUT4=1)
+  Clock Path Skew:        -0.198ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.237ns = ( 4.763 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.583ns
+    Clock Pessimism Removal (CPR):    -0.543ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.655    -0.583    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X38Y329        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[118]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y329        FDRE (Prop_fdre_C_Q)         0.236    -0.347 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[118]/Q
+                         net (fo=44, routed)          3.710     3.364    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_9[118]
+    SLICE_X127Y327       LUT4 (Prop_lut4_I1_O)        0.124     3.488 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/op_520/stage5_inp[670]_i_4/O
+                         net (fo=1, routed)           0.000     3.488    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/op_520/stage5_inp[670]_i_4_n_0
+    SLICE_X127Y327       CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.282     3.770 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[670]_i_1/O[2]
+                         net (fo=1, routed)           0.000     3.770    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_out[670]
+    SLICE_X127Y327       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[670]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.384     4.763    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X127Y327       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[670]/C
+                         clock pessimism             -0.543     4.219    
+                         clock uncertainty           -0.058     4.161    
+    SLICE_X127Y327       FDRE (Setup_fdre_C_D)        0.049     4.210    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[670]
+  -------------------------------------------------------------------
+                         required time                          4.210    
+                         arrival time                          -3.770    
+  -------------------------------------------------------------------
+                         slack                                  0.440    
+
+Slack (MET) :             0.442ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[118]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[450]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.366ns  (logic 0.719ns (16.468%)  route 3.647ns (83.532%))
+  Logic Levels:           3  (CARRY4=2 LUT4=1)
+  Clock Path Skew:        -0.183ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.222ns = ( 4.778 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.583ns
+    Clock Pessimism Removal (CPR):    -0.543ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.655    -0.583    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X38Y329        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[118]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y329        FDRE (Prop_fdre_C_Q)         0.236    -0.347 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[118]/Q
+                         net (fo=44, routed)          3.647     3.301    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_494/stage4_inp[3]
+    SLICE_X133Y340       LUT4 (Prop_lut4_I0_O)        0.124     3.425 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_494/accum_carry_i_5__338/O
+                         net (fo=1, routed)           0.000     3.425    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_494/accum_carry_i_5__338_n_0
+    SLICE_X133Y340       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.193     3.618 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_494/accum_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.618    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_494/accum_carry_n_0
+    SLICE_X133Y341       CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.166     3.784 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_494/accum_carry__0/O[1]
+                         net (fo=1, routed)           0.000     3.784    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_out[450]
+    SLICE_X133Y341       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[450]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.399     4.778    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X133Y341       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[450]/C
+                         clock pessimism             -0.543     4.234    
+                         clock uncertainty           -0.058     4.176    
+    SLICE_X133Y341       FDRE (Setup_fdre_C_D)        0.049     4.225    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[450]
+  -------------------------------------------------------------------
+                         required time                          4.225    
+                         arrival time                          -3.784    
+  -------------------------------------------------------------------
+                         slack                                  0.442    
+
+Slack (MET) :             0.450ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[2086]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.258ns  (logic 0.699ns (16.417%)  route 3.559ns (83.583%))
+  Logic Levels:           3  (CARRY4=2 LUT5=1)
+  Clock Path Skew:        -0.283ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.283ns = ( 4.717 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.574ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.664    -0.574    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X15Y327        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y327        FDRE (Prop_fdre_C_Q)         0.223    -0.351 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[11]/Q
+                         net (fo=113, routed)         3.559     3.208    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1139/stage1_inp[0]
+    SLICE_X17Y279        LUT5 (Prop_lut5_I2_O)        0.043     3.251 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1139/accum_carry_i_6__79/O
+                         net (fo=1, routed)           0.000     3.251    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1139/accum_carry_i_6__79_n_0
+    SLICE_X17Y279        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.267     3.518 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1139/accum_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.518    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1139/accum_carry_n_0
+    SLICE_X17Y280        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.166     3.684 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1139/accum_carry__0/O[1]
+                         net (fo=1, routed)           0.000     3.684    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_out[2086]
+    SLICE_X17Y280        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[2086]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.338     4.717    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X17Y280        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[2086]/C
+                         clock pessimism             -0.573     4.143    
+                         clock uncertainty           -0.058     4.085    
+    SLICE_X17Y280        FDRE (Setup_fdre_C_D)        0.049     4.134    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[2086]
+  -------------------------------------------------------------------
+                         required time                          4.134    
+                         arrival time                          -3.684    
+  -------------------------------------------------------------------
+                         slack                                  0.450    
+
+Slack (MET) :             0.458ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1015]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[299]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.382ns  (logic 1.299ns (29.643%)  route 3.083ns (70.357%))
+  Logic Levels:           7  (CARRY4=4 LUT2=2 LUT5=1)
+  Clock Path Skew:        -0.134ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.289ns = ( 4.711 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.729ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.509    -0.729    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X31Y287        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1015]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y287        FDRE (Prop_fdre_C_Q)         0.223    -0.506 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1015]/Q
+                         net (fo=2, routed)           0.739     0.234    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/stage3_inp[925]
+    SLICE_X38Y299        LUT2 (Prop_lut2_I0_O)        0.043     0.277 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/i___161/O
+                         net (fo=1, routed)           0.000     0.277    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320/S[1]
+    SLICE_X38Y299        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.256     0.533 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320/accum_carry/CO[3]
+                         net (fo=1, routed)           0.001     0.533    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320/accum_carry_n_0
+    SLICE_X38Y300        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.165     0.698 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320/accum_carry__0/O[1]
+                         net (fo=2, routed)           0.383     1.081    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320_n_6
+    SLICE_X38Y305        LUT2 (Prop_lut2_I0_O)        0.125     1.206 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/i___382/O
+                         net (fo=1, routed)           0.000     1.206    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/stage4_inp_reg[300]_0[1]
+    SLICE_X38Y305        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.256     1.462 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/accum_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     1.462    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/accum_carry__0_n_0
+    SLICE_X38Y306        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.108     1.570 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/accum_carry__1/O[0]
+                         net (fo=4, routed)           1.961     3.531    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/in0__35[9]
+    SLICE_X119Y331       LUT5 (Prop_lut5_I0_O)        0.123     3.654 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/stage4_inp[299]_i_1/O
+                         net (fo=1, routed)           0.000     3.654    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_out[299]
+    SLICE_X119Y331       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[299]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.332     4.711    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X119Y331       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[299]/C
+                         clock pessimism             -0.573     4.137    
+                         clock uncertainty           -0.058     4.079    
+    SLICE_X119Y331       FDRE (Setup_fdre_C_D)        0.033     4.112    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[299]
+  -------------------------------------------------------------------
+                         required time                          4.112    
+                         arrival time                          -3.654    
+  -------------------------------------------------------------------
+                         slack                                  0.458    
+
+Slack (MET) :             0.459ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1015]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[297]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.382ns  (logic 1.299ns (29.643%)  route 3.083ns (70.357%))
+  Logic Levels:           7  (CARRY4=4 LUT2=2 LUT5=1)
+  Clock Path Skew:        -0.134ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.289ns = ( 4.711 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.729ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.509    -0.729    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X31Y287        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1015]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y287        FDRE (Prop_fdre_C_Q)         0.223    -0.506 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1015]/Q
+                         net (fo=2, routed)           0.739     0.234    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/stage3_inp[925]
+    SLICE_X38Y299        LUT2 (Prop_lut2_I0_O)        0.043     0.277 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/i___161/O
+                         net (fo=1, routed)           0.000     0.277    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320/S[1]
+    SLICE_X38Y299        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.256     0.533 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320/accum_carry/CO[3]
+                         net (fo=1, routed)           0.001     0.533    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320/accum_carry_n_0
+    SLICE_X38Y300        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.165     0.698 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320/accum_carry__0/O[1]
+                         net (fo=2, routed)           0.383     1.081    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_320_n_6
+    SLICE_X38Y305        LUT2 (Prop_lut2_I0_O)        0.125     1.206 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/i___382/O
+                         net (fo=1, routed)           0.000     1.206    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/stage4_inp_reg[300]_0[1]
+    SLICE_X38Y305        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.256     1.462 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/accum_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     1.462    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/accum_carry__0_n_0
+    SLICE_X38Y306        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.108     1.570 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/accum_carry__1/O[0]
+                         net (fo=4, routed)           1.961     3.531    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/in0__35[9]
+    SLICE_X119Y331       LUT5 (Prop_lut5_I0_O)        0.123     3.654 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_615/stage4_inp[297]_i_1/O
+                         net (fo=1, routed)           0.000     3.654    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_out[297]
+    SLICE_X119Y331       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[297]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.332     4.711    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X119Y331       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[297]/C
+                         clock pessimism             -0.573     4.137    
+                         clock uncertainty           -0.058     4.079    
+    SLICE_X119Y331       FDRE (Setup_fdre_C_D)        0.034     4.113    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[297]
+  -------------------------------------------------------------------
+                         required time                          4.113    
+                         arrival time                          -3.654    
+  -------------------------------------------------------------------
+                         slack                                  0.459    
+
+Slack (MET) :             0.461ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[215]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1461]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.352ns  (logic 0.670ns (15.397%)  route 3.682ns (84.603%))
+  Logic Levels:           4  (CARRY4=1 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.178ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.282ns = ( 4.718 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.648ns
+    Clock Pessimism Removal (CPR):    -0.543ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.590    -0.648    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X70Y336        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[215]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X70Y336        FDRE (Prop_fdre_C_Q)         0.259    -0.389 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[215]/Q
+                         net (fo=31, routed)          2.248     1.859    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_9[215]
+    SLICE_X150Y346       LUT6 (Prop_lut6_I2_O)        0.043     1.902 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/accum__18_carry__0_i_5__4/O
+                         net (fo=2, routed)           0.244     2.147    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/accum__18_carry__0_i_5__4_n_0
+    SLICE_X150Y346       LUT4 (Prop_lut4_I2_O)        0.043     2.190 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/accum__18_carry__0_i_3__8/O
+                         net (fo=4, routed)           1.189     3.379    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_617/stage5_inp_reg[1462]_1
+    SLICE_X109Y345       LUT2 (Prop_lut2_I0_O)        0.043     3.422 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_617/accum__18_carry__0_i_1__9/O
+                         net (fo=1, routed)           0.000     3.422    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_617/accum__18_carry__0_i_1__9_n_0
+    SLICE_X109Y345       CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.282     3.704 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4/op_617/accum__18_carry__0/O[2]
+                         net (fo=1, routed)           0.000     3.704    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_out[1461]
+    SLICE_X109Y345       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1461]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.339     4.718    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X109Y345       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1461]/C
+                         clock pessimism             -0.543     4.174    
+                         clock uncertainty           -0.058     4.116    
+    SLICE_X109Y345       FDRE (Setup_fdre_C_D)        0.049     4.165    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage5_inp_reg[1461]
+  -------------------------------------------------------------------
+                         required time                          4.165    
+                         arrival time                          -3.704    
+  -------------------------------------------------------------------
+                         slack                                  0.461    
+
+Slack (MET) :             0.464ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1480]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[786]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.295ns  (logic 0.266ns (6.193%)  route 4.029ns (93.807%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.246ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.280ns = ( 4.720 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.578ns
+    Clock Pessimism Removal (CPR):    -0.543ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.660    -0.578    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X49Y338        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1480]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y338        FDRE (Prop_fdre_C_Q)         0.223    -0.355 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_inp_reg[1480]/Q
+                         net (fo=34, routed)          4.029     3.675    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_64/stage4_inp_reg[784][4]
+    SLICE_X122Y347       LUT6 (Prop_lut6_I1_O)        0.043     3.718 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3/op_64/stage4_inp[786]_i_1/O
+                         net (fo=1, routed)           0.000     3.718    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage3_out[786]
+    SLICE_X122Y347       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[786]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.341     4.720    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X122Y347       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[786]/C
+                         clock pessimism             -0.543     4.176    
+                         clock uncertainty           -0.058     4.118    
+    SLICE_X122Y347       FDRE (Setup_fdre_C_D)        0.064     4.182    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage4_inp_reg[786]
+  -------------------------------------------------------------------
+                         required time                          4.182    
+                         arrival time                          -3.718    
+  -------------------------------------------------------------------
+                         slack                                  0.464    
+
+Slack (MET) :             0.465ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[50]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.540ns  (logic 0.223ns (4.912%)  route 4.317ns (95.088%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.073ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.346ns = ( 4.654 - 5.000 ) 
+    Source Clock Delay      (SCD):    -1.023ns
+    Clock Pessimism Removal (CPR):    -0.603ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.215    -1.023    x300_core/bus_int_i/timekeeper_i/CLK_OUT1
+    SLICE_X91Y204        FDRE                                         r  x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[50]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y204        FDRE (Prop_fdre_C_Q)         0.223    -0.800 r  x300_core/bus_int_i/timekeeper_i/tb_timestamp_reg[50]/Q
+                         net (fo=26, routed)          4.317     3.517    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/D[48]
+    SLICE_X148Y286       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.275     4.654    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/CLK_OUT1
+    SLICE_X148Y286       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[18]/C
+                         clock pessimism             -0.603     4.050    
+                         clock uncertainty           -0.058     3.992    
+    SLICE_X148Y286       FDRE (Setup_fdre_C_D)       -0.010     3.982    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/time_hi_sh_reg[18]
+  -------------------------------------------------------------------
+                         required time                          3.982    
+                         arrival time                          -3.517    
+  -------------------------------------------------------------------
+                         slack                                  0.465    
+
+Slack (MET) :             0.465ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/full_reg/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.207ns  (logic 0.327ns (7.772%)  route 3.880ns (92.228%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        -0.303ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.358ns = ( 4.642 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.629ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.609    -0.629    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/CLK_OUT1
+    SLICE_X155Y310       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X155Y310       FDRE (Prop_fdre_C_Q)         0.204    -0.425 f  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/Q
+                         net (fo=504, routed)         3.880     3.456    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/SR[0]
+    SLICE_X127Y262       LUT5 (Prop_lut5_I4_O)        0.123     3.579 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/i___20/O
+                         net (fo=1, routed)           0.000     3.579    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/full_reg_1
+    SLICE_X127Y262       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/full_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.263     4.642    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/CLK_OUT1
+    SLICE_X127Y262       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/full_reg/C
+                         clock pessimism             -0.573     4.068    
+                         clock uncertainty           -0.058     4.010    
+    SLICE_X127Y262       FDRE (Setup_fdre_C_D)        0.034     4.044    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/full_reg
+  -------------------------------------------------------------------
+                         required time                          4.044    
+                         arrival time                          -3.579    
+  -------------------------------------------------------------------
+                         slack                                  0.465    
+
+Slack (MET) :             0.466ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1852]/D
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        4.564ns  (logic 0.618ns (13.541%)  route 3.946ns (86.459%))
+  Logic Levels:           3  (CARRY4=2 LUT5=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.143ns = ( 4.857 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.729ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.509    -0.729    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X35Y289        FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y289        FDRE (Prop_fdre_C_Q)         0.204    -0.525 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_inp_reg[93]/Q
+                         net (fo=63, routed)          3.946     3.421    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/stage1_inp[1]
+    SLICE_X8Y345         LUT5 (Prop_lut5_I0_O)        0.126     3.547 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry_i_1__7/O
+                         net (fo=1, routed)           0.000     3.547    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry_i_1__7_n_0
+    SLICE_X8Y345         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.180     3.727 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.727    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry_n_0
+    SLICE_X8Y346         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.108     3.835 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1/op_1101/accum__17_carry__0/O[0]
+                         net (fo=1, routed)           0.000     3.835    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage1_out[1852]
+    SLICE_X8Y346         FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1852]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.478     4.857    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/CLK_OUT1
+    SLICE_X8Y346         FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1852]/C
+                         clock pessimism             -0.573     4.283    
+                         clock uncertainty           -0.058     4.225    
+    SLICE_X8Y346         FDRE (Setup_fdre_C_D)        0.076     4.301    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/nsclf_user_i/u_core/u_stream/u_clf/u_core/stage2_inp_reg[1852]
+  -------------------------------------------------------------------
+                         required time                          4.301    
+                         arrival time                          -3.835    
+  -------------------------------------------------------------------
+                         slack                                  0.466    
+
+Slack (MET) :             0.466ns  (required time - arrival time)
+  Source:                 x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/a_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by radio_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             radio_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (radio_clk rise@5.000ns - radio_clk rise@0.000ns)
+  Data Path Delay:        3.801ns  (logic 0.204ns (5.367%)  route 3.597ns (94.633%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.290ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.345ns = ( 4.655 - 5.000 ) 
+    Source Clock Delay      (SCD):    -0.629ns
+    Clock Pessimism Removal (CPR):    -0.573ns
+  Clock Uncertainty:      0.058ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.093ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock radio_clk rise edge)
+                                                      0.000     0.000 r  
+                         clock source latency         1.595     1.595    
+    AF22                                              0.000     1.595 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     1.595    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.754     2.349 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.081     3.430    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -8.315    -4.885 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.554    -2.331    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.093    -2.238 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.609    -0.629    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/CLK_OUT1
+    SLICE_X155Y310       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X155Y310       FDRE (Prop_fdre_C_Q)         0.204    -0.425 r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/pulse_stretch_min_radio/state_reg/Q
+                         net (fo=504, routed)         3.597     3.173    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/a_reg[0]_1
+    SLICE_X141Y259       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/a_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock radio_clk rise edge)
+                                                      5.000     5.000 r  
+                         clock source latency         1.495     6.495    
+    AF22                                              0.000     6.495 r  FPGA_CLK_p (IN)
+                         net (fo=0)                   0.000     6.495    radio_clk_gen/inst/clk_in1_p
+    AF22                 IBUFDS (Prop_ibufds_I_O)     0.678     7.173 r  radio_clk_gen/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           0.986     8.159    radio_clk_gen/inst/clk_in1_radio_clk_gen
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.280     0.879 r  radio_clk_gen/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.417     3.296    radio_clk_gen/inst/CLK_OUT1_radio_clk_gen
+    BUFGCTRL_X0Y8        BUFG (Prop_bufg_I_O)         0.083     3.379 r  radio_clk_gen/inst/clkout1_buf/O
+                         net (fo=53463, routed)       1.276     4.655    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/CLK_OUT1
+    SLICE_X141Y259       FDRE                                         r  x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/a_reg[0]/C
+                         clock pessimism             -0.573     4.081    
+                         clock uncertainty           -0.058     4.023    
+    SLICE_X141Y259       FDRE (Setup_fdre_C_R)       -0.384     3.639    x300_core/bus_int_i/rfnoc_sandbox_i/b_nsclf0_6/noc_shell_nsclf_i/ctrlport_endpoint_i/gen_ctrl_slave.slv_fifo_i/gen_fifo_short.fifo_short/a_reg[0]
+  -------------------------------------------------------------------
+                         required time                          3.639    
+                         arrival time                          -3.173    
+  -------------------------------------------------------------------
+                         slack                                  0.466    
+
+
+
+

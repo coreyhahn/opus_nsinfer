@@ -1,0 +1,10 @@
+enp132s0f0       UP             10.0.10.1/24 fe80::b41:10b7:6bbe:3383/64 
+9000
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+[INFO] [UHD] linux; GNU C++ version 13.3.0; Boost_108300; UHD_4.9.0.HEAD-0-a5d1b2ef
+Error: LookupError: KeyError: No devices found for ----->
+Device Address:
+    addr: 10.0.10.2
+

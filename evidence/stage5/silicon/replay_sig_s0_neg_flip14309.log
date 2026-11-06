@@ -1,0 +1,11 @@
+CAPTURE sig_s0: 4210688 samples, T=114973719 tap0=114973713 (offset 6, extra 0) K=60000 window t_start=114973776 n=4210625 silicon misr=0xa597d04a0f7d5a82 count=4210625 hist=[1529396, 1287772, 588326, 805131] status={'armed': 0, 'active': 1, 'done': 1, 'late': 0, 'raw': 6} errors=[] tx={'seed': 0, 'n_tx': 4194304, 'amp': 0.05, 'att_db': 30.0, 'gap_us': [0.2, 2.0], 'n_pulses': 5902}
+NEGATIVE CONTROL: capture sample 14309 I bit 13 flipped (-394 -> -8586)
+TB # host=build-host date=2026-11-03T06:27:18-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1) replay stim=<repo>/.scratch/nsclf_replay/sig_s0_neg_flip14309 T0=6da5c11 K=60000
+TB RESULT seed=0 chan=0 K=60000 ready=0 samples=4210688 decisions=4210625/4210625 mismatches=0 tau_mismatches=0 latency_mismatches=0 passthrough_mismatches=0 windows=1/1 events_received=0 axis_errors=0 reg_errors=0 cycles=4211433
+DUMP decisions=4210625 tau0=114973776 misr(recomputed from dump)=0x4e10a09f18e71110 count=4210625 hist=[1529405, 1287757, 588332, 805131] -> DIFFERS FROM the silicon read-back; saved <repo>/.scratch/nsclf_replay/sig_s0_neg_flip14309/decisions.npz
+MISMATCH window misr: silicon 0xa597d04a0f7d5a82 sim 0x4e10a09f18e71110
+MISMATCH window hist: silicon [1529396, 1287772, 588326, 805131] sim [1529405, 1287757, 588332, 805131]
+MISMATCH dump-recomputed window misr: dump 5625172539763790096 silicon 11932234754247449218
+MISMATCH dump-recomputed window hist: dump [1529405, 1287757, 588332, 805131] silicon [1529396, 1287772, 588326, 805131]
+REPLAY window count=4210625 misr=0x4e10a09f18e71110 hist=[1529405, 1287757, 588332, 805131] events compared=0 errors=4 log=<repo>/.scratch/nsclf_replay/sig_s0_neg_flip14309/replay.log
+FAIL

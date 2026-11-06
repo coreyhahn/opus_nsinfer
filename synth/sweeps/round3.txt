@@ -1,0 +1,15 @@
+# round 3: intermediate depth lc5 at 200 MHz; max-clock refinement at 1.9 ns;
+# synth_design -retiming on the near-misses (retimed netlists are not re-simulated)
+r3_zu9e_lc5_p5.0 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc5 xczu9eg-ffvb1156-2-i 5.0
+r3_vu9p_lc5_p5.0 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc5 xcvu9p-fsgd2104-2L-e 5.0
+r3_zu9e_lc1_p1.9 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc1 xczu9eg-ffvb1156-2-i 1.9
+r3_vu9p_lc1_p1.9 /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc1 xcvu9p-fsgd2104-2L-e 1.9
+r3_zu9e_lc6_p5.0_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc6 xczu9eg-ffvb1156-2-i 5.0 retime
+r3_zu9e_lc8_p5.0_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc8 xczu9eg-ffvb1156-2-i 5.0 retime
+r3_zu9e_lc4_p3.333_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc4 xczu9eg-ffvb1156-2-i 3.333 retime
+r3_zu9e_lc3_p2.5_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc3 xczu9eg-ffvb1156-2-i 2.5 retime
+r3_zu9e_lc1_p1.8_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc1 xczu9eg-ffvb1156-2-i 1.8 retime
+r3_vu9p_lc6_p5.0_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc6 xcvu9p-fsgd2104-2L-e 5.0 retime
+r3_vu9p_lc3_p2.5_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc3 xcvu9p-fsgd2104-2L-e 2.5 retime
+r3_vu9p_lc1_p1.8_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc1 xcvu9p-fsgd2104-2L-e 1.8 retime
+r3_zu9e_lc5_p5.0_rt /home/cah/r2d2/code/fpga/opus_nsinfer/rtl/gen/jsc_lc5 xczu9eg-ffvb1156-2-i 5.0 retime

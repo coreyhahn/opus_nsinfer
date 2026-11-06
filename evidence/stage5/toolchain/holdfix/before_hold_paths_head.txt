@@ -1,0 +1,120 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Thu Oct 29 22:56:01 2026
+| Host         : build-host running 64-bit Ubuntu 24.04.5 LTS
+| Command      : report_timing -hold -max_paths 20 -nworst 1 -file ./before_hold_paths.rpt
+| Design       : x300
+| Device       : 7k410t-ffg900
+| Speed File   : -2  PRODUCTION 1.12 2017-02-17
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -0.112ns  (arrival time - required time)
+  Source:                 <hidden>
+                            (rising edge-triggered cell FDRE clocked by XG_CLK  {rise@0.000ns fall@3.200ns period=6.400ns})
+  Destination:            <hidden>
+                            (rising edge-triggered cell FDRE clocked by XG_CLK  {rise@0.000ns fall@3.200ns period=6.400ns})
+  Path Group:             XG_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (XG_CLK rise@0.000ns - XG_CLK rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.128ns (52.812%)  route 0.114ns (47.188%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.072ns
+    Source Clock Delay      (SCD):    1.466ns
+    Clock Pessimism Removal (CPR):    0.339ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock XG_CLK rise edge)     0.000     0.000 r  
+    R8                                                0.000     0.000 r  XG_CLK_p (IN)
+                         net (fo=0)                   0.000     0.000    XG_CLK_p
+    R8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  XG_CLK_p_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    xgige_clk_gen_i/refclk_p
+    IBUFDS_GTE2_X0Y0     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.441     0.441 r  xgige_clk_gen_i/ibufds_inst/O
+                         net (fo=3, routed)           0.377     0.818    xgige_clk_gen_i/refclk
+    BUFGCTRL_X0Y14       BUFG (Prop_bufg_I_O)         0.026     0.844 r  xgige_clk_gen_i/clk156_bufg_inst/O
+                         net (fo=6759, routed)        0.622     1.466    <hidden>
+    SLICE_X173Y151       FDRE                                         r  <hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X173Y151       FDRE (Prop_fdre_C_Q)         0.100     1.566 r  <hidden>
+                         net (fo=3, routed)           0.114     1.680    <hidden>
+    SLICE_X172Y149       LUT4 (Prop_lut4_I3_O)        0.028     1.708 r  <hidden>
+                         net (fo=1, routed)           0.000     1.708    <hidden>
+    SLICE_X172Y149       FDRE                                         r  <hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock XG_CLK rise edge)     0.000     0.000 r  
+    R8                                                0.000     0.000 r  XG_CLK_p (IN)
+                         net (fo=0)                   0.000     0.000    XG_CLK_p
+    R8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  XG_CLK_p_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    xgige_clk_gen_i/refclk_p
+    IBUFDS_GTE2_X0Y0     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.732     0.732 r  xgige_clk_gen_i/ibufds_inst/O
+                         net (fo=3, routed)           0.413     1.145    xgige_clk_gen_i/refclk
+    BUFGCTRL_X0Y14       BUFG (Prop_bufg_I_O)         0.030     1.175 r  xgige_clk_gen_i/clk156_bufg_inst/O
+                         net (fo=6759, routed)        0.897     2.072    <hidden>
+    SLICE_X172Y149       FDRE                                         r  <hidden>
+                         clock pessimism             -0.339     1.733    
+    SLICE_X172Y149       FDRE (Hold_fdre_C_D)         0.087     1.820    <hidden>
+  -------------------------------------------------------------------
+                         required time                         -1.820    
+                         arrival time                           1.708    
+  -------------------------------------------------------------------
+                         slack                                 -0.112    
+
+Slack (VIOLATED) :        -0.071ns  (arrival time - required time)
+  Source:                 <hidden>
+                            (rising edge-triggered cell FDRE clocked by XG_CLK  {rise@0.000ns fall@3.200ns period=6.400ns})
+  Destination:            <hidden>
+                            (rising edge-triggered cell FDRE clocked by XG_CLK  {rise@0.000ns fall@3.200ns period=6.400ns})
+  Path Group:             XG_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (XG_CLK rise@0.000ns - XG_CLK rise@0.000ns)
+  Data Path Delay:        0.283ns  (logic 0.128ns (45.302%)  route 0.155ns (54.698%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.072ns
+    Source Clock Delay      (SCD):    1.466ns
+    Clock Pessimism Removal (CPR):    0.339ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock XG_CLK rise edge)     0.000     0.000 r  
+    R8                                                0.000     0.000 r  XG_CLK_p (IN)
+                         net (fo=0)                   0.000     0.000    XG_CLK_p
+    R8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  XG_CLK_p_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    xgige_clk_gen_i/refclk_p
+    IBUFDS_GTE2_X0Y0     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.441     0.441 r  xgige_clk_gen_i/ibufds_inst/O
+                         net (fo=3, routed)           0.377     0.818    xgige_clk_gen_i/refclk
+    BUFGCTRL_X0Y14       BUFG (Prop_bufg_I_O)         0.026     0.844 r  xgige_clk_gen_i/clk156_bufg_inst/O
+                         net (fo=6759, routed)        0.622     1.466    <hidden>
+    SLICE_X173Y150       FDRE                                         r  <hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X173Y150       FDRE (Prop_fdre_C_Q)         0.100     1.566 r  <hidden>
+                         net (fo=3, routed)           0.155     1.720    <hidden>
+    SLICE_X172Y147       LUT4 (Prop_lut4_I3_O)        0.028     1.748 r  <hidden>
+                         net (fo=1, routed)           0.000     1.748    <hidden>
+    SLICE_X172Y147       FDRE                                         r  <hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock XG_CLK rise edge)     0.000     0.000 r  
+    R8                                                0.000     0.000 r  XG_CLK_p (IN)
+                         net (fo=0)                   0.000     0.000    XG_CLK_p
+    R8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  XG_CLK_p_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    xgige_clk_gen_i/refclk_p
+    IBUFDS_GTE2_X0Y0     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.732     0.732 r  xgige_clk_gen_i/ibufds_inst/O
+                         net (fo=3, routed)           0.413     1.145    xgige_clk_gen_i/refclk
+    BUFGCTRL_X0Y14       BUFG (Prop_bufg_I_O)         0.030     1.175 r  xgige_clk_gen_i/clk156_bufg_inst/O
+                         net (fo=6759, routed)        0.897     2.072    <hidden>
+    SLICE_X172Y147       FDRE                                         r  <hidden>
+                         clock pessimism             -0.339     1.733    
+    SLICE_X172Y147       FDRE (Hold_fdre_C_D)         0.087     1.820    <hidden>
+  -------------------------------------------------------------------
+                         required time                         -1.820    

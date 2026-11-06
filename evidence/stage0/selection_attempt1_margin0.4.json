@@ -1,0 +1,62 @@
+{
+ "float_best_val_accuracy": 0.7711596385542169,
+ "float_test_accuracy": 0.7707650602409638,
+ "margin_points": 0.4,
+ "threshold_val_accuracy": 0.7671596385542169,
+ "n_candidates": 129,
+ "chosen": "runs/hgq_b1e-5/pareto/e0631_acc0.76721_ebops15274.keras",
+ "chosen_val_accuracy": 0.76721,
+ "chosen_train_ebops": 15274,
+ "pareto_within_margin": [
+  [
+   15274,
+   0.76721,
+   "runs/hgq_b1e-5/pareto/e0631_acc0.76721_ebops15274.keras"
+  ],
+  [
+   16321,
+   0.76729,
+   "runs/hgq_b1e-5/pareto/e0616_acc0.76729_ebops16321.keras"
+  ],
+  [
+   16652,
+   0.76789,
+   "runs/hgq_b1e-5/pareto/e0612_acc0.76789_ebops16652.keras"
+  ],
+  [
+   16900,
+   0.76724,
+   "runs/hgq_b1e-4/pareto/e0426_acc0.76724_ebops16900.keras"
+  ],
+  [
+   17229,
+   0.76738,
+   "runs/hgq_b3e-5/pareto/e0490_acc0.76738_ebops17229.keras"
+  ],
+  [
+   17613,
+   0.76739,
+   "runs/hgq_b3e-5/pareto/e0487_acc0.76739_ebops17613.keras"
+  ],
+  [
+   17870,
+   0.7681,
+   "runs/hgq_b1e-5/pareto/e0584_acc0.76810_ebops17870.keras"
+  ],
+  [
+   18531,
+   0.76806,
+   "runs/hgq_b1e-4/pareto/e0408_acc0.76806_ebops18531.keras"
+  ],
+  [
+   21467,
+   0.76819,
+   "runs/hgq_b3e-5/pareto/e0445_acc0.76819_ebops21467.keras"
+  ],
+  [
+   23082,
+   0.7681,
+   "runs/hgq_b1e-5/pareto/e0497_acc0.76810_ebops23082.keras"
+  ]
+ ]
+}

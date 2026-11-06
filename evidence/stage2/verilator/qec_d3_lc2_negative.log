@@ -1,0 +1,18 @@
+# host=build-host date=2026-10-20T21:42:36-06:00 negative controls: neg_out = expected logit of vector 421 bit 5 flipped; neg_dec = expected flip of vector 777 inverted; each must report a mismatch and exit non-zero
+# neg_out_sha256=feccaca81f00d9b3990e7c730ccb9b4b996013a4161ef40172ebb7da8c4d478a neg_dec_sha256=222deef9440a8eb8ce4b3efe7c00b5619c8a83d2c8cbb6cf3ed145a72b317641
+LATENCY cycles=16 logit, 17 flip (vector 1; input applied before edge 1)
+MISMATCH vec=421 got=3e3b2 exp=3e392
+RESULT seed=0 vectors=464428 checked=464428 mismatches=1 flip_checked=464428 flip_mismatches=0 flips=120246 latency=16 xor_signature=3b712
+[1393611000] %Fatal: tb_qec.sv:107: Assertion failed in TOP.tb_qec: FAIL: 1 logit, 0 flip mismatches
+%Error: tb_qec.sv:107: Verilog $stop
+Aborting...
+tb/run_qec_stage2.sh: line 26: 1358576 Aborted                 (core dumped) "$B" +IN=$G/qec_d3_golden_in.hex +OUT=$NEG/neg_out.hex +DEC=$G/qec_d3_golden_dec.hex +SEED=0
+EXIT 134
+LATENCY cycles=16 logit, 17 flip (vector 173829; input applied before edge 1)
+FLIP_MISMATCH vec=777 got=0 exp=1
+RESULT seed=1 vectors=464428 checked=464428 mismatches=0 flip_checked=464428 flip_mismatches=1 flips=120246 latency=16 xor_signature=3b712
+[1393611000] %Fatal: tb_qec.sv:107: Assertion failed in TOP.tb_qec: FAIL: 0 logit, 1 flip mismatches
+%Error: tb_qec.sv:107: Verilog $stop
+Aborting...
+tb/run_qec_stage2.sh: line 26: 1359006 Aborted                 (core dumped) "$B" +IN=$G/qec_d3_golden_in.hex +OUT=$G/qec_d3_golden_out.hex +DEC=$NEG/neg_dec.hex +SEED=1
+EXIT 134

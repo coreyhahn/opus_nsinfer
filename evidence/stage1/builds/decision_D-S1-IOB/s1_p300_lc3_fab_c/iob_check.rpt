@@ -1,0 +1,13 @@
+IOB packing check (iob=fabric: pad flops must be in fabric) 2026-10-20T07:16:08 (2024.2, xczu9eg-ffvb1156-2-i)
+pin_b out want=opff_l PASS cell=u_harness/opff_l_reg bel=SLICEM.AFF site=SLICE_X85Y237 clk=u_harness/CLK
+u_iob_b/O in want=ipff_b PASS cell=u_harness/ipff_b_reg bel=SLICEM.EFF site=SLICE_X85Y238 clk=u_harness/clk_net
+pin_c out want=opff_c PASS cell=u_harness/opff_c_reg bel=SLICEM.AFF2 site=SLICE_X85Y218 clk=u_harness/clk_net
+u_iob_c/O in want=ipff_d PASS cell=u_harness/ipff_d_reg bel=SLICEM.EFF site=SLICE_X85Y218 clk=u_harness/CLK
+class_o[0] out want=class PASS cell=u_harness/class_q_reg[0] bel=SLICEM.EFF site=SLICE_X52Y150 clk=u_harness/clk_net
+class_o[1] out want=class PASS cell=u_harness/class_q_reg[1] bel=SLICEM.EFF2 site=SLICE_X52Y150 clk=u_harness/clk_net
+class_o[2] out want=class PASS cell=u_harness/class_q_reg[2] bel=SLICEM.FFF site=SLICE_X52Y150 clk=u_harness/clk_net
+l_tw fabric PASS cell=u_harness/l_tw_reg bel=SLICEM.AFF site=SLICE_X53Y122 clk=u_harness/CLK
+c_tw fabric PASS cell=u_harness/c_tw_reg bel=SLICEM.EFF site=SLICE_X49Y122 clk=u_harness/clk_net
+h_ff fabric PASS cell=u_harness/h_ff_reg bel=SLICEM.HFF2 site=SLICE_X53Y122 clk=u_harness/clk_net
+g_ff fabric PASS cell=u_harness/g_ff_reg bel=SLICEM.EFF site=SLICE_X49Y124 clk=u_harness/CLK
+IOB_CHECK PASS

@@ -1,0 +1,162 @@
+{
+ "model_source": "ref/runs/qec/chosen.keras",
+ "test_source": "ref/golden/qec_d3_test.npz",
+ "test_sha256": "cef4839bf40b4ca3d514f24ee847d7b50821266c89d574fa198417daaa74d0fd",
+ "n_vectors": 464428,
+ "vectors": "distinct detection-event vectors of the test multisets (all p) + all-zero",
+ "decision_rule": "flip = logit > 0 (strict)",
+ "ebops": 30258,
+ "det_bits": 24,
+ "in_width_bits": 48,
+ "out_width_bits": 18,
+ "in_lane_widths": [
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2
+ ],
+ "in_value_of_one": [
+  2.0,
+  1.0,
+  1.0,
+  1.0,
+  2.0,
+  1.0,
+  2.0,
+  1.0,
+  1.0,
+  2.0,
+  1.0,
+  2.0,
+  2.0,
+  1.0,
+  2.0,
+  1.0,
+  1.0,
+  2.0,
+  1.0,
+  2.0,
+  1.0,
+  1.0,
+  2.0,
+  1.0
+ ],
+ "pruned_detectors": [],
+ "da4ml_comb_cost_lut_est": 18043.5,
+ "da4ml_comb_latency": [
+  29.0,
+  29.0
+ ],
+ "keras_vs_dais_interp_mismatching_vectors": 0,
+ "ler": {
+  "1e-3": {
+   "p": 0.001,
+   "shots": 10000000,
+   "nn_errors": 6625,
+   "pm_errors": 7757,
+   "nn_ler": 0.0006625,
+   "pm_ler": 0.0007757,
+   "nn_over_pm": 0.8540672940569808,
+   "nn_ler_per_round": 0.00022093093991543133,
+   "pm_ler_per_round": 0.00025870049547432883,
+   "disagree_shots": 3388
+  },
+  "2e-3": {
+   "p": 0.002,
+   "shots": 10000000,
+   "nn_errors": 26759,
+   "pm_errors": 30008,
+   "nn_ler": 0.0026759,
+   "pm_ler": 0.0030008,
+   "nn_over_pm": 0.8917288723007198,
+   "nn_ler_per_round": 0.0008935626236998839,
+   "pm_ler_per_round": 0.0010022744322901733,
+   "disagree_shots": 13505
+  },
+  "3e-3": {
+   "p": 0.003,
+   "shots": 10000000,
+   "nn_errors": 59818,
+   "pm_errors": 65693,
+   "nn_ler": 0.0059818,
+   "pm_ler": 0.0065693,
+   "nn_over_pm": 0.9105688581736258,
+   "nn_ler_per_round": 0.002001938148325666,
+   "pm_ler_per_round": 0.002199427442565405,
+   "disagree_shots": 30771
+  },
+  "5e-3": {
+   "p": 0.005,
+   "shots": 10000000,
+   "nn_errors": 162146,
+   "pm_errors": 171148,
+   "nn_ler": 0.0162146,
+   "pm_ler": 0.0171148,
+   "nn_over_pm": 0.9474022483464604,
+   "nn_ler_per_round": 0.005464367746706333,
+   "pm_ler_per_round": 0.005771292665840644,
+   "disagree_shots": 84286
+  },
+  "7e-3": {
+   "p": 0.007,
+   "shots": 10000000,
+   "nn_errors": 307377,
+   "pm_errors": 317077,
+   "nn_ler": 0.0307377,
+   "pm_ler": 0.0317077,
+   "nn_over_pm": 0.9694080617641772,
+   "nn_ler_per_round": 0.010463335387564776,
+   "pm_ler_per_round": 0.01080087093694948,
+   "disagree_shots": 162508
+  },
+  "10e-3": {
+   "p": 0.01,
+   "shots": 10000000,
+   "nn_errors": 590842,
+   "pm_errors": 590640,
+   "nn_ler": 0.0590842,
+   "pm_ler": 0.059064,
+   "nn_over_pm": 1.0003420018962481,
+   "nn_ler_per_round": 0.02052582175648804,
+   "pm_ler_per_round": 0.02051849970051839,
+   "disagree_shots": 321204
+  }
+ },
+ "sha256": {
+  "qec_d3_golden.npz": "5ebe60368f706ce2b49c93f95292d912e3d8d5fade161baacd0e95559cb12ef0",
+  "qec_d3_golden_in.hex": "81976e9d532059f392ed384ed726e8a463fcb62c8ae835fb67cae55c75b5dc1f",
+  "qec_d3_golden_out.hex": "afe58a028adac07bf63fc965e0173158b33817169aabf3e94278a85b95f6731c",
+  "qec_d3_golden_dec.hex": "f98b7d20e5acd4e2909507f79563cd9aee24c8363843ee33e2f10e03ba862eb7",
+  "qec_d3_hgq.keras": "79eb378d9eabf79be662f3a3b3209c01b4a4cdffa50559339cb4c4a50ee9c23e"
+ }
+}
+{
+ "n": 16777216,
+ "model_sha256": "79eb378d9eabf79be662f3a3b3209c01b4a4cdffa50559339cb4c4a50ee9c23e",
+ "in_sha256": "c814528d94b7e6732fdf69d891993f2173e3af22c509226d3664cd89e5cf56d2",
+ "out_sha256": "35f09cb61e5e00b9a110783aeae83d7d4832e9cdd9ed3b95f26d1f19a9020031",
+ "out_hex_digits": 5
+}
+qec_d3_lc2: 15 stages, est 18044 LUT, 13775 FF
+qec_d3_lc3: 10 stages, est 18044 LUT, 9079 FF
+qec_d3_lc5: 6 stages, est 18044 LUT, 4699 FF

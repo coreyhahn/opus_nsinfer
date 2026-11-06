@@ -1,0 +1,1 @@
+{"part": "xc7k410tffg900-2", "period_ns": 5.0, "wns_ns": 0.303, "whs_ns": 0.081, "lut": 22463, "ff": 23507, "dsp": 0, "retime": 0, "gen_dir": "<repo>/rtl/gen/x310_clf_lc1.5", "top": "x310_stream", "vivado": "2024.2", "date": "2026-10-30T00:34:47"}
