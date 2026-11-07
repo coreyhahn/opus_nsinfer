@@ -24,6 +24,10 @@ Bit-exact on the 131,072 golden-set vectors in 9 of 9 runs (3 runs x 3 modes, 2 
 s6bp_lc8_a): **one way 18-21 cycles = 111.7-130.3 ns** (was 136.5-148.9 ns), **decode loop median 46-47 cycles = 285.5-291.7 ns**
 (was 335.1 ns), bit-exact on all 464,428 vectors in 9 of 9 runs (3 runs x 3 modes, a load and 3 re-trains).
 
+**Link check blocks (CRC-32), d = 3 with TX bypass: PASS (2026-11-06), silicon** (§6b). Build s6chk_lc8_a: a check block in idle
+slots only, so no data word waits: decode loop median 46 cycles = 285.5 ns in 3 of 3 runs (= s6bp_lc8_a), 9 of 9 modes
+bit-exact, about 9.8e8 checks verified per end with 0 bad.
+
 Labels as CLAUDE.md: **silicon** (on-chip counters on the board), **sim** (Verilator), **model** (the Verilator GT model or
 second-hand numbers), **derived** (arithmetic on the others). One cycle = 6.20606 ns (FREQ_A = 27,033,600 per 2^24 cycles of
 the 100 MHz init clock, silicon, every run).
@@ -34,7 +38,7 @@ the 100 MHz init clock, silicon, every run).
   except RX/TXSYNC_MULTILANE), TX and RX buffers on, 10.3125 Gb/s, one lane per direction on the same QSFP+ DAC. One 66-bit
   block per s3 word: header 01 = data, 10 = idle; x^58 + x^39 + 1 self-synchronous scrambler; UG578 Fig. 4-54 block sync with
   RXGEARBOXSLIP; TXSEQUENCE counter with tready low in the 2 cycles of 66 the gearbox pauses. No fabric register between the
-  s3 sides and the GT in either direction (TX_REG = RX_REG = 0). No CRC (Aurora had none either); errors reach the s3 checks.
+  s3 sides and the GT in either direction (TX_REG = RX_REG = 0). No CRC in the builds of §2-5 and §7 (Aurora had none either); errors reach the s3 checks. Check blocks (CRC-32) since §6b.
 - **Clocking (D-S6-CLK):** QSFP0's MGTREFCLK1 (K11/K10) drives the QPLL1 of both quads (quad 230 through the south-bound refclk
   routing, UG578 v1.4 p. 24 / 34). TXOUTCLK of channel X1Y48 through one BUFG_GT is TXUSRCLK/TXUSRCLK2 and RXUSRCLK/RXUSRCLK2
   of both channels (UG578 p. 102, 106, 321; Table 4-38) and the fabric clock of the whole loop. The build checks it on the routed
@@ -181,6 +185,46 @@ buffer error during the runs (`silicon/s6bp_lc8_a_cable_run{1,2,3}.{log,json}`, 
   phase); TX phase alignment adds no spread that the runs can see.
 - **Not done:** bypass at d = 5 (3 lanes over two quads, multi-lane alignment across 6 channels): one more core and build.
   RX buffer bypass would put RXUSRCLK on the recovered clock (a second clock): needs the user's approval.
+
+## 6b. Link check blocks (CRC-32), 2026-11-06
+Plan: `docs/superpowers/plans/2026-11-06-stage6-next.md` Tasks 5-6; decision D-S6-CHK in `docs/PLAN.md`.
+- **Design (`rtl/s6/s6_link.sv`, `s6_pkg.sv`):** each lane keeps a CRC-32 (reflected 0xEDB88320, init all ones, over each
+  64-bit data word as 8 little-endian bytes: = zlib.crc32) and a 24-bit word count. When the lane has no data word to send
+  (`!s_tvalid`) and words were sent since the last check, it sends a control block (header 10) `{0xD2, n[23:0], ~crc[31:0]}`
+  instead of IDLE, then restarts both. A data word never waits for a check, so the latency cannot change. The receiver keeps
+  the same CRC and count per lane, compares at each check block (`n_chk_ok` / `n_chk_bad`, regs 11/12 at end A, 27/28 at
+  end B, `rtl/s6/s6_regmap.md`), and ignores the first check after lock (its window started before lock). Errors are counted,
+  not acted on: the s3 checks still own the data.
+- **Sim (`verilator/s6_link_*.log`, branch s6-crc 34f08f9, merged bb4d32f):** the link tests check the CRC against zlib's
+  known answer (0x1a972b44 over [0, 0x0123456789ABCDEF, all ones]) and against a reference CRC in the testbench on every
+  check block; clean phases end with 0 bad checks; a data word stalls only in the gearbox pause cycles; random bit errors
+  give bad checks; after a glitch or burst and re-lock the next checks are good again. 4 of 4 link logs PASS, the scrambler
+  negative control FAILS as it must. Loop sims (`verilator/s6_loop_lc8_*`, `s6d5_loop_lc3bc_n131072_*`): every RESULT line
+  identical to the logs without checks, and the injected corrupted word gives exactly 1 bad check at end A (d = 3: A ok =
+  1,351,570, B ok = 1,365,641; d = 5: A ok = 1,133,504 / 1,133,510, B ok = 1,157,334, B bad = 0).
+- **Build s6chk_lc8_a** (TX bypass + checks, `S6_TXBYP=1 launch_s6.sh s6chk_lc8_a 8 Default 3 0 0`, built in the s6-crc worktree
+  at 34f08f9 and moved to `synth/out_s6chk_lc8_a`, `build/s6chk_lc8_a/MOVED.txt`; its RTL = master's after the merge): WNS +0.080 /
+  WHS +0.011 / WPWS +0.441 ns, single clock PASS, 22,727 LUT / 15,314 FF / 408 BRAM tiles (s6bp_lc8_a: 21,648 LUT), bitstream
+  `e756b38f…` gated by `s6_bitstream.tcl` on the two d = 3 loop logs with checks.
+- **Silicon (`silicon/*s6chk_lc8_a*`, `summary_chk_lc8_a.json`, run by `sw/bcu/s6_chk_silicon.sh`):** LINK `0x011c7373` (TX
+  bypass done, no error) on the load and after the re-train; runs 1-2 on the load, a re-train, run 3; analysis
+  `s6_analyze.py --lc 8 --chk`.
+
+| Run | Bring-up | Echo GAP 63 | Decode GAP 63 | Decode GAP 7 | Probe A->B p0 (mean) | Probe B->A p0 (mean) | p63 A->B / B->A | PMA loop A->A p0 | PCS loop A->A p0 | Checks per end (all windows) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | load | 40 (40 ... 42) | 46 (46 ... 48) | 46 (46 ... 48) | 19 (19 ... 19) 19.00 | 19 (19 ... 21) 19.25 | 19 / 19 | 16 (16 ... 18) | 15 (15 ... 15) | 328,553,722 ok, 0 bad |
+| 2 | load | 40 (38 ... 42) | 46 (44 ... 48) | 46 (44 ... 48) | 20 (18 ... 20) 19.06 | 20 (18 ... 20) 19.00 | 18 / 18 | 16 (16 ... 18) | 15 (15 ... 15) | 325,666,036 ok, 0 bad |
+| 3 | re-train | 40 (38 ... 40) | 46 (44 ... 46) | 46 (44 ... 46) | 19 (17 ... 19) 18.75 | 19 (17 ... 19) 18.88 | 17 / 17 | 16 (16 ... 18) | 15 (15 ... 15) | 325,638,779 ok, 0 bad |
+
+(silicon; median (min ... max) cycles of 6.20606 ns; definitions as §4.) Every run: n_good = 464,428, every error counter 0,
+signatures `5e8e5270` / `5f09efeb` (= sim, = every d = 3 build), 8,192 decisions = Keras, every probe word received.
+- **Latency unchanged by the checks:** decode loop median 46 cycles = 285.5 ns in all three runs (s6bp_lc8_a: 46-47); one way
+  17-21 cycles = 105.5-130.3 ns over every probe word (s6bp_lc8_a 18-21); PCS / PMA near-end loopback 15 / 16, as s6bp_lc8_a.
+- **Checks:** 979,858,537 good checks at each end over the three runs (8 counter windows per run), 0 bad. A and B count the same
+  in every window because the traffic is symmetric (both ends send the same probe stream; `n_data` is equal at A and B too,
+  e.g. 0x04c5c624 in run 1's p0 window) and an isolated data word is followed by one check.
+- **Not shown on silicon:** a bad check. The board has no error injection; detection is shown in sim only (bit errors, the
+  corrupted word). Not built at d = 5 (same RTL, NL = 3 in sim).
 
 ## 7. d = 5 (3 lanes, DW = 192)
 - **Design:** `s6_link` with NL = 3 (D-S6-D5): every lane carries 64 bits of the Stage 4 192-bit word, all lanes on one

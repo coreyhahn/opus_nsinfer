@@ -1,0 +1,8 @@
+SIM_PASS <repo>/.scratch/wt_crc/evidence/stage6/verilator/s6_loop_lc8_n464428_t0r0_lat640_s0.log
+SIM_PASS <repo>/.scratch/wt_crc/evidence/stage6/verilator/s6_loop_lc8_n464428_t0r0_lat701_s1.log
+RECHECK wns=0.080 whs=0.011 usrclk_nets=1 ibufds_gte4=1 channels=2
+Attempting to get a license for feature 'Implementation' and/or device 'xcvu9p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcvu9p'
+INFO: [Common 17-86] Your Implementation license expires in 20 day(s)
+INFO: [Common 17-83] Releasing license: Implementation
+BITSTREAM 80159219 B <repo>/.scratch/wt_crc/synth/out_s6chk_lc8_a/s6_top.bit 2026-11-06T13:23:41

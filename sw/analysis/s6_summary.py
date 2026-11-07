@@ -24,6 +24,8 @@ def main():
                 r['loop'][x['run']] = {'cycles': x['loop_cycles'], 'ns': x['loop_ns'], 'pass': x['pass'],
                                        'signature': x['signature']}
                 r['clk_period_ns'] = x['clk_period_ns']
+            elif x['kind'] == 'chk':
+                r['chk'] = {k: v for k, v in x.items() if k not in ('log', 'kind')}
             else:
                 for d, v in x['dirs'].items():
                     r['probe'][f"{x['probe']}:{d}"] = {'cycles': v['cycles'], 'ns': v['ns'], 'pass': v['pass'],

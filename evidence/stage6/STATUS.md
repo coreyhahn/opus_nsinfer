@@ -14,14 +14,15 @@
 
 - **TX buffer bypass at d = 3: passed on silicon (2026-11-06)** (README §6, PLAN D-S6-TXBYP): build s6bp_lc8_a, one way 18-21
   cycles = 111.7-130.3 ns, decode loop median 46-47 cycles = 285.5-291.7 ns, 9/9 modes bit-exact over a load and 3 re-trains.
-- **In progress 2026-11-06:** link check blocks (CRC-32) on branch
-  `s6-crc` (worktree `.scratch/wt_crc`, link tests PASS, loop sim running). Plan: `docs/superpowers/plans/2026-11-06-stage6-next.md`.
+- **Link check blocks (CRC-32): passed on silicon (2026-11-06)** (README §6b, PLAN D-S6-CHK): merged bb4d32f (sim PASS at
+  d = 3 and d = 5, RESULT lines unchanged); build s6chk_lc8_a (TX bypass + checks, WNS +0.080, single clock PASS): 3 runs,
+  9/9 modes bit-exact, decode loop median 46 = 285.5 ns, 979,858,537 good checks per end, 0 bad.
+  Plan `docs/superpowers/plans/2026-11-06-stage6-next.md`: Tasks 1-6 done.
 
 ## State left
-- Desk card: build **s6d5_lc3bc_set3** loaded (volatile, `synth/out_s6d5_lc3bc_set3/s6_top.bit`, sha256 `f1290662…`), link up;
+- Desk card: build **s6chk_lc8_a** loaded (volatile, `synth/out_s6chk_lc8_a/s6_top.bit`, sha256 `e756b38f…`), link up;
   desk lock not held. Nothing of mine is running on build-host (no Vivado, no Verilator).
-- Uncommitted since 9521ca1: `synth/scripts/s6_bitstream.tcl` (checkpoint re-check), the d = 5 build / silicon evidence, README,
-  PLAN.md, BRINGUP.md, this file.
+- Everything committed.
 
 ## Open problems / doubts (unchanged from 11-03 unless noted)
 - Margin to 156 ns is thin (worst probe word 148.9 ns on the final builds, 155.2 ns once on the first d = 3 build after a re-train).
@@ -29,7 +30,8 @@
   alike). Lower needs a clocking change (32-bit internal width = a 322 MHz TXUSRCLK net; RX buffer bypass = recovered clock), i.e.
   the user's approval under the single-clock rule. TX-only buffer bypass might stay one clock; not tried.
 - The 156 ns figure is from a secondary report ("measured in the RISC-Q work", arXiv 2603.16203); the paper was not read.
-- No CRC: misaligned blocks can be delivered before lock is lost (sim); the s3 checks catch them.
+- Check blocks (CRC-32, 2026-11-06, README §6b) now count bad blocks per lane (0 on silicon, detection shown in sim); they
+  report, they do not drop data: misaligned blocks can still be delivered before lock is lost; the s3 checks catch them.
 
 ## Commands used for sets 1-3 (2026-11-06)
 ```

@@ -16,6 +16,11 @@
 //   glitch one extra bit on the A -> B wire: B must lose lock (n_unlock + 1), slip, and lock again; traffic after
 //         re-lock is clean.
 //   burst 300 random blocks on B -> A: A loses lock and finds it again.
+//   chk   check blocks (s6_pkg CHK_TYPE): crc32_d64 against a zlib known answer; the reference descrambler also
+//         recomputes, with its own bit-serial CRC-32, the count and CRC of every check block A sends; the clean phases
+//         end with good checks at both ends and no bad one; the bit errors give bad checks at B; after each re-lock
+//         (glitch, burst) no bad check (the first check after lock is skipped); in back-to-back traffic the user
+//         stalls only in the gearbox pause cycles (a check block never takes a data word's cycle).
 `timescale 1ns / 1fs
 
 module tb_s6_link
@@ -97,6 +102,21 @@ module tb_s6_link
   longint      n_ref = 0;
   bit          negscr = 0;
   logic [DW-1:0] q_ref[$];
+  // reference CRC-32 for the check blocks: bit-serial, reflected 0xEDB88320, written here (not s6_pkg)
+  logic [31:0] ref_crc = '1;
+  int unsigned ref_n = 0;
+  bit          ref_arm = 0;
+  longint      n_ref_chk = 0, n_stall = 0, n_pause = 0;
+  function automatic logic [31:0] tb_crc(input logic [31:0] c, input logic [63:0] d);
+    logic fb;
+    for (int b = 0; b < 8; b++)
+      for (int i = 0; i < 8; i++) begin
+        fb = c[0] ^ d[8 * b + i];
+        c  = {1'b0, c[31:1]};
+        if (fb) c = c ^ 32'hEDB8_8320;
+      end
+    return c;
+  endfunction
 
   // stimulus at negedge + 0.75 ns (before the models act at + 1.5 ns), sampling at negedge + 2.25 ns (after)
   bit a_acc = 1'b0, b_acc = 1'b0;      // a handshake seen at the last negedge (it happened at the posedge since)
@@ -111,6 +131,8 @@ module tb_s6_link
     // tvalid / tready are now stable until the next posedge, where the transfer happens
     a_acc = a_sv && a_sr;
     b_acc = b_sv && b_sr;
+    if (!rst_tx && a_sv && !a_sr) n_stall++;
+    if (!rst_tx && !u_a.slot) n_pause++;
     if (a_acc) begin q_ab.push_back(a_sd); t_ab.push_back(cyc + 1); if (ref_skip == 0) q_ref.push_back(a_sd); end
     if (b_acc) begin q_ba.push_back(b_sd); t_ba.push_back(cyc + 1); end
   end
@@ -134,8 +156,14 @@ module tb_s6_link
         if (a_txh[1:0] == HDR_DATA) begin
           if (q_ref.size() == 0 || clr64 != q_ref[0][63:0]) n_ref_bad++;
           if (q_ref.size() != 0) void'(q_ref.pop_front());
+          ref_crc = tb_crc(ref_crc, clr64); ref_n++;
         end else if (a_txh[1:0] == HDR_CTRL) begin
-          if (clr64 != IDLE_BLK) n_ref_bad++;
+          if (clr64[63:56] == CHK_TYPE) begin
+            // the first check seen only starts the reference's window (it began before ref_skip ran out)
+            if (ref_arm && (clr64[55:32] != 24'(ref_n) || clr64[31:0] != ~ref_crc)) n_ref_bad++;
+            if (ref_arm) n_ref_chk++;
+            ref_crc = '1; ref_n = 0; ref_arm = 1;
+          end else if (clr64 != IDLE_BLK) n_ref_bad++;
         end else n_ref_bad++;
       end
     end
@@ -205,8 +233,22 @@ module tb_s6_link
   endtask
 
   initial begin
-    int skew, unl0, lk0, e0;
+    int skew, unl0, lk0, e0, cb0, cba0;
+    logic [31:0] kat;
     negscr = $test$plusargs("NEGSCR");
+    // CRC-32 known answer: python3 -c "import zlib; print(hex(zlib.crc32(b''.join(w.to_bytes(8, 'little') for w in
+    //   [0, 0x0123456789ABCDEF, 0xFFFFFFFFFFFFFFFF]))))"  ->  0x1a972b44
+    kat = '1;
+    kat = crc32_d64(kat, 64'h0);
+    kat = crc32_d64(kat, 64'h0123_4567_89AB_CDEF);
+    kat = crc32_d64(kat, 64'hFFFF_FFFF_FFFF_FFFF);
+    $display("CRC KAT s6_pkg::crc32_d64 = %h (zlib 1a972b44)", ~kat);
+    if (~kat != 32'h1A97_2B44) $fatal(1, "CRC KAT: crc32_d64 != zlib.crc32");
+    kat = '1;
+    kat = tb_crc(kat, 64'h0);
+    kat = tb_crc(kat, 64'h0123_4567_89AB_CDEF);
+    kat = tb_crc(kat, 64'hFFFF_FFFF_FFFF_FFFF);
+    if (~kat != 32'h1A97_2B44) $fatal(1, "CRC KAT: the testbench's reference CRC != zlib.crc32");
     if (!$value$plusargs("SKEW=%d", skew)) skew = 70;
     // wire latency per lane (MODEL): set in g_ch (A -> B lane l: 640 + l*SKEW UI, B -> A: 655 + ((l*2) % 3)*SKEW UI)
     $display("CONFIG tb_s6_link NL=%0d TX_REG=%0d RX_REG=%0d T_NS=%.3f skew_ui=%0d negscr=%0d (wire latencies MODEL)", NL, TX_REG,
@@ -220,8 +262,14 @@ module tb_s6_link
     // ---- clean traffic ----
     traffic_phase("random", 1, 20000);
     traffic_phase("b2b", 2, 20000);
-    $display("REF descrambled %0d blocks of A lane 0, %0d wrong", n_ref, n_ref_bad);
+    $display("REF descrambled %0d blocks of A lane 0, %0d wrong, %0d check blocks recomputed", n_ref, n_ref_bad, n_ref_chk);
     if (n_ref < 30000) $fatal(1, "reference descrambler saw too few blocks");
+    if (n_ref_chk == 0) $fatal(1, "REF: no check block seen");
+    $display("CHK clean: A ok=%0d bad=%0d  B ok=%0d bad=%0d; user stalls %0d in %0d gearbox pause cycles", a_st.n_chk_ok,
+             a_st.n_chk_bad, b_st.n_chk_ok, b_st.n_chk_bad, n_stall, n_pause);
+    if (a_st.n_chk_ok == 0 || b_st.n_chk_ok == 0) $fatal(1, "CHK: no good check block at an end");
+    if (a_st.n_chk_bad != 0 || b_st.n_chk_bad != 0) $fatal(1, "CHK: bad check blocks on a clean link");
+    if (n_stall > n_pause) $fatal(1, "CHK: the user was stalled outside the gearbox pause cycles");
     if (n_ref_bad != 0) $fatal(1, "REF: independent descrambler disagrees on %0d blocks", n_ref_bad);
     if (a_st.n_unlock != 0 || b_st.n_unlock != 0 || a_st.n_sh_bad != 0 || b_st.n_sh_bad != 0 || a_st.n_idle_bad != 0 ||
         b_st.n_idle_bad != 0 || a_st.n_dsk_ovf != 0 || b_st.n_dsk_ovf != 0 || a_st.n_hv_dv != 0 || b_st.n_hv_dv != 0)
@@ -232,6 +280,7 @@ module tb_s6_link
 
     // ---- bit errors A -> B (negative control: they must be seen) ----
     e0 = b_st.n_sh_bad + b_st.n_idle_bad;
+    cb0 = b_st.n_chk_bad;
     for (int l = 0; l < NL; l++) begin
       case (l) 0: g_ch[0].u_ab.ber_blk = 500; default: ; endcase
     end
@@ -244,6 +293,8 @@ module tb_s6_link
              g_ch[0].u_ab.n_flip, b_st.n_sh_bad, b_st.n_idle_bad, b_st.n_unlock, n_mis);
     if (g_ch[0].u_ab.n_flip == 0) $fatal(1, "BER: nothing injected");
     if (b_st.n_sh_bad + b_st.n_idle_bad == e0 && n_mis == 0) $fatal(1, "BER: bit errors passed undetected");
+    $display("CHK BER: B bad checks %0d -> %0d (ok %0d)", cb0, b_st.n_chk_bad, b_st.n_chk_ok);
+    if (b_st.n_chk_bad == cb0) $fatal(1, "CHK BER: bit errors gave no bad check block");
     q_ab.delete(); t_ab.delete(); q_ba.delete(); t_ba.delete(); n_mis = 0; n_extra = 0;
     wait_lock("after BER");
     traffic_phase("after_ber", 1, 10000);
@@ -259,9 +310,13 @@ module tb_s6_link
     if (b_st.n_unlock == unl0 || b_st.n_lock == lk0) $fatal(1, "GLITCH: lock was not lost and found again");
     // between the misalignment and the loss of lock, misaligned blocks whose 2 header bits happen to read 01 are
     // delivered as (garbage) words: a property of 64B/66B block sync without a CRC; counted, then cleared
-    $display("GLITCH garbage words delivered while losing lock: %0d", n_extra);
+    $display("GLITCH garbage words delivered while losing lock: %0d; B bad checks so far %0d", n_extra, b_st.n_chk_bad);
     q_ab.delete(); t_ab.delete(); q_ba.delete(); t_ba.delete(); n_mis = 0; n_extra = 0;
+    cb0 = b_st.n_chk_bad; cba0 = b_st.n_chk_ok;
     traffic_phase("after_glitch", 1, 10000);
+    $display("CHK after re-lock (glitch): B ok %0d -> %0d, bad %0d -> %0d", cba0, b_st.n_chk_ok, cb0, b_st.n_chk_bad);
+    if (b_st.n_chk_bad != cb0) $fatal(1, "CHK: bad check after re-lock (the first check after lock must be skipped)");
+    if (b_st.n_chk_ok == cba0) $fatal(1, "CHK: no good check after re-lock");
 
     // ---- burst: 300 random blocks B -> A ----
     unl0 = a_st.n_unlock; lk0 = a_st.n_lock;
@@ -272,13 +327,19 @@ module tb_s6_link
     wait_lock("after burst");
     $display("BURST A unlock %0d -> %0d, lock %0d -> %0d", unl0, a_st.n_unlock, lk0, a_st.n_lock);
     if (a_st.n_unlock == unl0 || a_st.n_lock == lk0) $fatal(1, "BURST: lock was not lost and found again");
-    $display("BURST garbage words delivered while losing lock: %0d", n_extra);
+    $display("BURST garbage words delivered while losing lock: %0d; A bad checks so far %0d", n_extra, a_st.n_chk_bad);
     q_ab.delete(); t_ab.delete(); q_ba.delete(); t_ba.delete(); n_mis = 0; n_extra = 0;
+    cb0 = a_st.n_chk_bad; cba0 = a_st.n_chk_ok;
     traffic_phase("after_burst", 2, 10000);
+    traffic_phase("after_burst_rnd", 1, 2000);   // back to back has one check (at the drain), skipped after lock
+    $display("CHK after re-lock (burst): A ok %0d -> %0d, bad %0d -> %0d", cba0, a_st.n_chk_ok, cb0, a_st.n_chk_bad);
+    if (a_st.n_chk_bad != cb0) $fatal(1, "CHK: bad check after re-lock (the first check after lock must be skipped)");
+    if (a_st.n_chk_ok == cba0) $fatal(1, "CHK: no good check after re-lock");
 
-    $display("RESULT tb_s6_link NL=%0d TX_REG=%0d RX_REG=%0d words a->b=%0d b->a=%0d lat_ab=%0d..%0d lat_ba=%0d..%0d ref_blocks=%0d ref_bad=%0d slips_a=%0d slips_b=%0d unlock_a=%0d unlock_b=%0d fails=0",
+    $display("RESULT tb_s6_link NL=%0d TX_REG=%0d RX_REG=%0d words a->b=%0d b->a=%0d lat_ab=%0d..%0d lat_ba=%0d..%0d ref_blocks=%0d ref_bad=%0d slips_a=%0d slips_b=%0d unlock_a=%0d unlock_b=%0d chk_ok_a=%0d chk_ok_b=%0d chk_bad_a=%0d chk_bad_b=%0d ref_chk=%0d fails=0",
              NL, TX_REG, RX_REG, n_ok_ab, n_ok_ba, lat_ab_min, lat_ab_max, lat_ba_min, lat_ba_max, n_ref, n_ref_bad,
-             a_st.n_slip, b_st.n_slip, a_st.n_unlock, b_st.n_unlock);
+             a_st.n_slip, b_st.n_slip, a_st.n_unlock, b_st.n_unlock, a_st.n_chk_ok, b_st.n_chk_ok, a_st.n_chk_bad,
+             b_st.n_chk_bad, n_ref_chk);
     $display("PASS");
     $finish;
   end

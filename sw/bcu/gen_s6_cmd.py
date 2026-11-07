@@ -18,9 +18,9 @@ HERE = Path(__file__).resolve().parent
 DIAG = 0x1000
 LIVE = DIAG + 0x400
 NAMES = {0: 'a_lock', 1: 'a_n_lock', 2: 'a_n_unlock', 3: 'a_n_slip', 4: 'a_n_sh_bad', 5: 'a_n_idle_bad', 6: 'a_n_data',
-         7: 'a_n_dsk_ovf', 8: 'a_n_hv_dv', 9: 'a_n_bufrst', 10: 'a_bufstat',
+         7: 'a_n_dsk_ovf', 8: 'a_n_hv_dv', 9: 'a_n_bufrst', 10: 'a_bufstat', 11: 'a_n_chk_ok', 12: 'a_n_chk_bad',
          16: 'b_lock', 17: 'b_n_lock', 18: 'b_n_unlock', 19: 'b_n_slip', 20: 'b_n_sh_bad', 21: 'b_n_idle_bad', 22: 'b_n_data',
-         23: 'b_n_dsk_ovf', 24: 'b_n_hv_dv', 25: 'b_n_bufrst', 26: 'b_bufstat',
+         23: 'b_n_dsk_ovf', 24: 'b_n_hv_dv', 25: 'b_n_bufrst', 26: 'b_bufstat', 27: 'b_n_chk_ok', 28: 'b_n_chk_bad',
          32: 'pa_n_tx', 33: 'pa_n_rx', 34: 'pa_n_bad', 35: 'pa_lat_min', 36: 'pa_lat_max', 37: 'pa_lat_sum_lo', 38: 'pa_lat_sum_hi',
          40: 'pb_n_tx', 41: 'pb_n_rx', 42: 'pb_n_bad', 43: 'pb_lat_min', 44: 'pb_lat_max', 45: 'pb_lat_sum_lo', 46: 'pb_lat_sum_hi',
          48: 'tsc'}

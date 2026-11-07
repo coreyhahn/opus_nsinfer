@@ -379,6 +379,12 @@ the TX buffer must be bypassed").
   re-trains, all bit-exact: one-way probe 18-21 cycles = 111.7-130.3 ns (was 22-24), decode loop median 46-47 cycles =
   285.5-291.7 ns (was 54 = 335.1 ns), PCS near-end loopback 15 (was 17-19). Adopted for d = 3 (`s6_top` TXBYP = 1,
   `S6_TXBYP=1 launch_s6.sh`). Not yet built for d = 5. `evidence/stage6/README.md` §6.
+- **D-S6-CHK (2026-11-06, silicon, d = 3):** link check blocks: per lane a CRC-32 (= zlib.crc32 over the data words) and a
+  word count, sent as a control block `{0xD2, n, ~crc}` only in a slot with no data word (so no data word waits), checked
+  and counted at the receiver (regs 11/12, 27/28), first check after lock ignored. Report only: the s3 checks still own
+  the data. Sim: link tests + both loops, RESULT lines unchanged, bit errors and the corrupted word caught. Silicon (build
+  s6chk_lc8_a = TX bypass + checks): 9/9 modes bit-exact, loop median 46 = 285.5 ns (= s6bp_lc8_a), 979,858,537 good
+  checks per end, 0 bad. Kept in the RTL for every build from now on. `evidence/stage6/README.md` §6b.
 
 ## C. Artifact C — X310 waveform classifier (Stage 5, gate passed 2026-11-03)
 The X310 was reached on 2026-11-03 (two UBX-160, 10G to build-host, JTAG on build-host; CLAUDE.md lab facts). The
@@ -534,4 +540,4 @@ Vivado 2021.1 is not used (D-S5-TOOL). Volatile JTAG loads only; never `uhd_imag
 | 3 | d = 3 loop on BCU-1525 | **gate passed 2026-10-23** (`evidence/stage3/README.md`): decode 37.2 ns, loop median 769.6 ns (silicon, desk card) |
 | 4 | d = 5, README, reproduce.sh | **gate passed 2026-10-29** (`evidence/stage4/README.md`, `reproduce4.log`) |
 | 5 | X310 | pre-hardware flow done 2026-10-30 (§C.1, `evidence/stage5/README.md`: W = 64, 96.0 % at SNR >= 10 dB (model), bit-exact in Verilator, 22.4k LUT, closes 5.0 ns on the K7); RFNoC block + X310_XG image done 2026-10-30 (D-S5-BLOCK, `evidence/stage5/block/`); **gate passed 2026-11-03** (§C.2, `evidence/stage5/silicon/README.md`: bit-exact on silicon over 84 M decisions; 81.8 % / 97.4 % at SNR >= 10 dB on the X310's TX->RX loop; onset -> valid decision median 150-225 ns at SNR >= 10 dB); **v2 2026-11-03** (D-S5-CH, `evidence/stage5/v2/README.md`: measured-channel model, BPSK 65.5 -> 88.2 %, 91.5 % / 98.4 % at SNR >= 10 dB on fresh TX seeds, bit-exact on silicon; L 22 cycles) |
-| 6 | thin GTY link (stretch) | **d = 3 gate passed 2026-11-03** (§B.5, `evidence/stage6/README.md`): one-way 136.5-148.9 ns (silicon probe; < 156 ns), loop 335.1 ns median (was 769.6 ns); **d = 5 passed 2026-11-05** (vector set 0, 9/9 runs bit-exact): decode loop 415.8 ns median (Aurora 850-856 ns); **sets 1-3 passed 2026-11-06** (27/27 modes bit-exact, medians 409.6-422.0 ns); **TX buffer bypass at d = 3 2026-11-06**: loop 285.5-291.7 ns |
+| 6 | thin GTY link (stretch) | **d = 3 gate passed 2026-11-03** (§B.5, `evidence/stage6/README.md`): one-way 136.5-148.9 ns (silicon probe; < 156 ns), loop 335.1 ns median (was 769.6 ns); **d = 5 passed 2026-11-05** (vector set 0, 9/9 runs bit-exact): decode loop 415.8 ns median (Aurora 850-856 ns); **sets 1-3 passed 2026-11-06** (27/27 modes bit-exact, medians 409.6-422.0 ns); **TX buffer bypass at d = 3 2026-11-06**: loop 285.5-291.7 ns; **link check blocks (CRC-32) 2026-11-06**: 0 bad in 9.8e8, loop unchanged |

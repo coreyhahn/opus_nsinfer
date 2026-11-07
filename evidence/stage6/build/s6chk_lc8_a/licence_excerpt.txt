@@ -1,0 +1,8 @@
+Attempting to get a license for feature 'Implementation' and/or device 'xcvu9p'
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvu9p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcvu9p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu9p'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [Common 17-83] Releasing license: Synthesis
+INFO: [Common 17-86] Your Implementation license expires in 20 day(s)
+INFO: [Common 17-86] Your Synthesis license expires in 20 day(s)

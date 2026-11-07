@@ -218,10 +218,12 @@ module s6_core
     live[4]  = la_stat.n_sh_bad; live[5] = la_stat.n_idle_bad; live[6] = la_stat.n_data; live[7] = la_stat.n_dsk_ovf;
     live[8]  = la_stat.n_hv_dv;  live[9] = a_bufrst_n;
     live[10] = bufword(9'(a_rxbufstatus), 6'(a_txbufstatus), 3'(a_rxerr_s), 3'(a_txerr_s));
+    live[11] = la_stat.n_chk_ok; live[12] = la_stat.n_chk_bad;
     live[16] = {29'b0, lb_stat.lock};  live[17] = lb_stat.n_lock; live[18] = lb_stat.n_unlock; live[19] = lb_stat.n_slip;
     live[20] = lb_stat.n_sh_bad; live[21] = lb_stat.n_idle_bad; live[22] = lb_stat.n_data; live[23] = lb_stat.n_dsk_ovf;
     live[24] = lb_stat.n_hv_dv;  live[25] = b_bufrst_n;
     live[26] = bufword(9'(b_rxbufstatus), 6'(b_txbufstatus), 3'(b_rxerr_s), 3'(b_txerr_s));
+    live[27] = lb_stat.n_chk_ok; live[28] = lb_stat.n_chk_bad;
     // probe at end A: n_tx = A -> B words sent, n_rx / latency = B -> A; probe at end B: the reverse
     live[32] = pa_stat.n_tx; live[33] = pa_stat.n_rx; live[34] = pa_stat.n_bad; live[35] = pa_stat.lat_min;
     live[36] = pa_stat.lat_max; live[37] = pa_stat.lat_sum[31:0]; live[38] = {16'b0, pa_stat.lat_sum[47:32]};

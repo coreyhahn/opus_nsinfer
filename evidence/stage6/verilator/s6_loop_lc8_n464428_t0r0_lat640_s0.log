@@ -1,6 +1,6 @@
-# host=build-host date=2026-11-03T19:08:37-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
-# design=<repo>/rtl/gen/qec_d3_lc8 rtl_sha256=26894cb4e111b91baf818aee7555f2aeae6e27d08678ae06ca29b6a54b31b0cd tb_sha256=72f6c2821e61d23e3191b976c8acfdbc58bf7cbe50e6157f0f0b444b1899903a
-# in_hex_sha256=81976e9d532059f392ed384ed726e8a463fcb62c8ae835fb67cae55c75b5dc1f dec_hex_sha256=f98b7d20e5acd4e2909507f79563cd9aee24c8363843ee33e2f10e03ba862eb7 shot_mem_sha256=d79e7c55b75d3f0ee3483e6491f8595c9d7983b91a0b4949a7bea086421093f9 (<repo>/.scratch/s3_shots_n464428.hex, tb/s3_make_mem.py)
+# host=build-host date=2026-11-06T09:19:23-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# design=<repo>/.scratch/wt_crc/rtl/gen/qec_d3_lc8 rtl_sha256=3a55c8481fa5cdc5b24e774db2c4540f1d5e6cc163c19cbd24c48a6a016c36b1 tb_sha256=21e5e027361f67a4449014f07df4cc86d86d438de3bb56514026e0afabd4b737
+# in_hex_sha256=81976e9d532059f392ed384ed726e8a463fcb62c8ae835fb67cae55c75b5dc1f dec_hex_sha256=f98b7d20e5acd4e2909507f79563cd9aee24c8363843ee33e2f10e03ba862eb7 shot_mem_sha256=d79e7c55b75d3f0ee3483e6491f8595c9d7983b91a0b4949a7bea086421093f9 (<repo>/.scratch/wt_crc/.scratch/s3_shots_n464428.hex, tb/s3_make_mem.py)
 # NVEC=464428 DEC_LAT=6 TX_REG=0 RX_REG=0 TIMEOUT=100000 LAT_UI=640 SEED=0
 CONFIG id=53330001 diag=53360001 params=00000001 NVEC=464428 DEC_LAT=6 N_DET=24 DW=64 NL=1 TX_REG=0 RX_REG=0 LAT_UI=640 SEED=0 (MODEL wire) TIMEOUT=100000 T_NS=6.2060 corrupt_seq=232231
 LINK 01007373 after 4 polls (lock A, B)
@@ -66,6 +66,7 @@ RESULT case=corrupt_gap1 mode=decode gap=1 nvec=464428 sent=464428 rx=464428 goo
 FLAGS corrupt_gap1 hierarchical=464428/464428 axi_reads=3000 ok
 CONFIG N_DET=24 DW=64
 LINKSTAT A lock=00000001 locks=0 unlocks=0 slips=0 sh_bad=0 idle_bad=0 data=2322643 dsk_ovf=0 hv_dv=0 | B lock=00000001 locks=0 unlocks=0 slips=0 sh_bad=0 idle_bad=0 data=2322643 dsk_ovf=0 hv_dv=0 | LINK=01007373
+CHK A ok=1351570 bad=1 | B ok=1365641 bad=0
 RESULT s6_loop nvec=464428 dec_lat=6 nl=1 tx_reg=0 rx_reg=0 lat_ui=640 seed=0 t_ns=6.2060 oneway_ab=12..13 mean 12.4911 oneway_ba=12..14 mean 12.6143 gap7 decode=32..35 mean 33.1515 echo=26..29 mean 27.1515 decode_minus_echo min=6 max=6 mean=6.0000 fails=0
 PASS
-- tb_s6_loop.sv:375: Verilog $finish
+- tb_s6_loop.sv:381: Verilog $finish

@@ -38,6 +38,8 @@ loop; side A's and side B's counters are both in it (s3_regs' `clk_a` = `clk_b` 
 | 8 / 24 | cycles with RXHEADERVALID != RXDATAVALID on a lane |
 | 9 / 25 | RX buffer resets issued (RXBUFSTATUS[2]) |
 | 10 / 26 | [8:0] RXBUFSTATUS (3 bits per lane, live), [15:10] TXBUFSTATUS (2 per lane, live), [18:16] RX buffer error seen per lane (sticky), [22:20] TX buffer error seen |
+| 11 / 27 | check blocks that matched (count and CRC-32 of the data blocks since the last check; summed over lanes; the first after lock is not counted) |
+| 12 / 28 | check blocks that did not match |
 | 32..38 | probe at end A: [32] words A sent, [33] words received at A (from B, or from A itself in PMA loopback), [34] bad words / sequence gaps, [35] min, [36] max, [37] sum[31:0], [38] sum[47:32] of the one-way latency into A |
 | 40..46 | probe at end B: the same, latency A -> B |
 | 48 | the shared timestamp counter |

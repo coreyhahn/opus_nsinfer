@@ -282,7 +282,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px; border-t
       <tr><td>HGQ + DA JSC MLP</td><td class="num">23.4 ns, 76.9 %</td><td>XCVU9P, OOC only</td><td class="num">33.3 ns OOC; <strong>47.6 ns</strong> pin to pin</td><td>ZU9EG ES2, model / derived</td></tr>
       <tr><td>NN decoder, decode</td><td class="num">124 ns, d = 3</td><td>Kintex-7 XC7K410T, measured</td><td class="num"><strong>37.2 ns</strong> d = 3; 117.9 ns d = 5</td><td>VU9P, silicon</td></tr>
       <tr><td>NN decoder, loop</td><td class="num">550 ns, d = 3</td><td>Kintex-7, measured</td><td class="num"><strong>292 ns</strong> d = 3; 410–422 ns d = 5</td><td>VU9P over DAC, silicon</td></tr>
-      <tr><td>Custom link, one way</td><td class="num">~156 ns</td><td>second-hand (RISC-Q work)</td><td class="num">112–130 ns (TX buffer bypassed; 130–149 buffered)</td><td>VU9P GTY, silicon</td></tr>
+      <tr><td>Custom link, one way</td><td class="num">~156 ns</td><td>second-hand (RISC-Q work)</td><td class="num">105–130 ns (TX buffer bypassed; 124–155 buffered)</td><td>VU9P GTY, silicon</td></tr>
       <tr><td>Aurora 64B/66B, one way</td><td class="num">~450 ns</td><td>vendor / derived</td><td class="num">~363 ns</td><td>1- and 3-lane Aurora, silicon</td></tr>
       <tr><td>RF classifier, sample to decision</td><td class="num">"hundreds of ns"</td><td>RFSoC, a requirement, not a measurement</td><td class="num">155–330 ns at the tap; ~315–490 ns from the ADC</td><td>XC7K410T, silicon + sim; ADC part derived</td></tr>
     </tbody>
@@ -294,7 +294,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px; border-t
   <div class="open">
     <div class="item"><div class="who">Done</div><div><strong>Stage 6 d = 5, vector sets 1–3.</strong> One build per set (the shot ROM is fixed at build time), identical timing; 27 of 27 modes bit-exact, each set's signature equal to its simulation.</div></div>
     <div class="item"><div class="who">Done</div><div><strong>GTY TX buffer bypass, d = 3.</strong> Same single clock (the wizard keeps the gearbox and takes TXOUTCLK from the shared refclk): one way 18–21 cycles = 111.7–130.3 ns (was 136.5–148.9), loop 46–47 cycles. Not yet built for d = 5.</div></div>
-    <div class="item"><div class="who">In simulation</div><div><strong>Link check blocks (CRC-32).</strong> Sent only in idle slots, so no data word waits; d = 3 loop sim passes with identical latencies and catches the injected corrupted word. d = 5 sim and a silicon build next.</div></div>
+    <div class="item"><div class="who">Done</div><div><strong>Link check blocks (CRC-32).</strong> Sent only in idle slots, so no data word waits. On silicon with the TX bypass (d = 3): loop median still 285.5 ns, 979.9 M good checks per end over 3 runs, 0 bad; detection of bit errors and a corrupted word shown in simulation.</div></div>
     <div class="item"><div class="who ask">Needs approval</div><div><strong>A second clock for lower link latency:</strong> a 32-bit GT width (322 MHz user clock) or RX buffer bypass (recovered clock). Both break the single-clock rule.</div></div>
     <div class="item"><div class="who">Optional</div><div><strong>Artifact A comparability:</strong> a smaller model near the published 76.9 % / 11,978 LUT point, through the unchanged Stage 1 flow. <strong>X310:</strong> noise-only false alarms rose from 0.14 % to 1.70 % of decisions in v2; a K ≥ 32 hysteresis removes them as events.</div></div>
   </div>

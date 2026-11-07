@@ -1,0 +1,17 @@
+launch 2026-11-06T12:49:31-07:00 host=build-host git=34f08f9 d=3 lc=8 directive=Default tx_reg=0 rx_reg=0 txbyp=1
+e7169a56b077df00b6b76d60cfb931446f9c30782eeab2f4cb5419c66f40dac1  <repo>/.scratch/wt_crc/rtl/s6/s6_core.sv
+8f6280830eaf1b4f008ef5ce0da60db11fbfa4f19d0144e3b5e8237165ae6c01  <repo>/.scratch/wt_crc/rtl/s6/s6_diag.sv
+c86b273c430b2590317c66e02dca3a59a3d24b908c3ab4dc49adf4cd4f6317fc  <repo>/.scratch/wt_crc/rtl/s6/s6_link.sv
+50b36e62b98d0e0b42f1d8bff3a38daa4ecf7e1aca4b2136ba2090d9f66963a2  <repo>/.scratch/wt_crc/rtl/s6/s6_pkg.sv
+69ba1c8781b032c9d5c4e37c96ca6388cb8601402d397952ffc524df24ffed0d  <repo>/.scratch/wt_crc/rtl/s6/s6_probe.sv
+1e6485eb01ded9b09ad24146915b96bdccb81a4e5ab77d16bd89e5547b0a4f93  <repo>/.scratch/wt_crc/rtl/s6/s6_top.sv
+8e0ed5331a516dd5f0b6c86690b4cf8d08a1802873292c29620063bb050ebd6e  <repo>/.scratch/wt_crc/rtl/s3/s3_freq.sv
+dfe3748ed3bc8f672d8d16850214467d7c08ae91969e19236859d9292072f3a9  <repo>/.scratch/wt_crc/rtl/s3/s3_pkg.sv
+a17c8a6e69d242e9f8300dfd44e4301822b5f42999b85675a921a27ef665cd0f  <repo>/.scratch/wt_crc/rtl/s3/s3_regs.sv
+958bfa111c082999908c3e4ed3d2320d29bb83f7a7b3f139e0e7554075a4e40e  <repo>/.scratch/wt_crc/rtl/s3/s3_side_a.sv
+8e636ab2d38e693835b99f51e253a6dadee5c4c407738e4a61050a0c4e43ac76  <repo>/.scratch/wt_crc/rtl/s3/s3_side_b.sv
+fbe99e1caa801b4edb25b123bb69768b8430ef2f12f8fb7819f1169a425f1a06  <repo>/.scratch/wt_crc/rtl/s3/s3_top.sv
+36cbe10f24524c8ebf4e6dfe617ac2d9329cc38ee625262fcb74785b96942462  <repo>/.scratch/wt_crc/synth/constraints/s6_bcu1525.xdc
+70bf00bbb5f003348a756a86c6c7cc52b381ebff97a8346db999e2155507d415  <repo>/.scratch/wt_crc/rtl/ip/s6_gt3/s6_gt3.xci
+de35023d6f450e76b8444396659a4b648bc77a78a98fb11115999cb6a1d5735e  <repo>/.scratch/wt_crc/rtl/ip/s6_gt_bp/s6_gt_bp.xci
+2d97b3826b88487e8e36146c25b27b47bccc9256c9acbd3ee690f7c57e6fc735  <repo>/.scratch/wt_crc/rtl/ip/s6_gt/s6_gt.xci

@@ -6,8 +6,10 @@
 //   * external sequence counter (UG578 v1.4 p. 117-122, Table 3-10: 8-byte interface on the 8-byte internal
 //     datapath): 0..32, incremented every second cycle; the GT ignores TXDATA/TXHEADER while TXSEQUENCE = 32
 //     (two cycles in 66), so s_tready is low in exactly those cycles.
-//   * block = s_tvalid ? {HDR_DATA, word} : {HDR_CTRL, IDLE_BLK}; payload scrambled (s6_pkg::scramble), the
-//     scrambler advancing on every block the GT takes.
+//   * block = s_tvalid ? {HDR_DATA, word} : {HDR_CTRL, CHK or IDLE_BLK}; payload scrambled (s6_pkg::scramble), the
+//     scrambler advancing on every block the GT takes. Check block (s6_pkg): in a slot where the user has no word
+//     and at least one data block went out since the last check, every lane sends {CHK_TYPE, n, ~crc} instead of
+//     IDLE (n, crc over that lane's data payloads, registered state); data blocks and s_tready are unchanged.
 //   * TX_REG = 0: TXDATA / TXHEADER / TXSEQUENCE are combinational from the user's registers and the counter: the
 //     user's accept edge (s_tvalid & s_tready) is the edge at which the GT captures the block. TX_REG = 1 adds one
 //     register stage (+1 cycle) for timing.
@@ -19,7 +21,9 @@
 //   * descrambler advances on every RXDATAVALID cycle; the header type comes from the same cycle's RXHEADER (or
 //     the last valid one when RXHEADERVALID and RXDATAVALID differ: counted in n_hv_dv, not expected).
 //   * a data block on a locked lane is a lane word; control blocks are dropped (checked against IDLE_BLK: a
-//     bit-error monitor).
+//     bit-error monitor). Check blocks: the lane's running count and CRC-32 of the data blocks it delivered since
+//     the last check are compared with the block's (n_chk_ok / n_chk_bad) and restarted; the first check after
+//     lock (or after rst_rx) only restarts them, since its window began before the lane was locked.
 //   * NL = 1: m_tdata / m_tvalid are combinational from the (registered) GT outputs: the next register is the
 //     user's RX register. NL > 1: per-lane deskew FIFO (DSK_DEPTH, show-ahead with bypass): every lane's k-th data
 //     block belongs to word k (all lanes transmit their data blocks in the same cycle), so a word is out when every
@@ -82,19 +86,33 @@ module s6_link
   logic [57:0]   tx_st [NL];
   logic [57:0]   tx_stn[NL];
   logic [63:0]   tx_o  [NL];
+  logic [31:0]   tx_crc[NL];
+  logic [23:0]   tx_n;               // data blocks since the last check block (all lanes send together)
   logic [DW-1:0] txd_c;
   logic [2*NL-1:0] txh_c;
+  wire           tx_chk = !s_tvalid && (tx_n != '0);
   always_comb begin
     for (int l = 0; l < NL; l++) begin
-      {tx_stn[l], tx_o[l]} = scramble(s_tvalid ? s_tdata[64*l +: 64] : IDLE_BLK, tx_st[l]);
+      {tx_stn[l], tx_o[l]} = scramble(s_tvalid ? s_tdata[64*l +: 64] : tx_chk ? {CHK_TYPE, tx_n, ~tx_crc[l]} : IDLE_BLK,
+                                      tx_st[l]);
       txd_c[64*l +: 64]  = tx_o[l];
       txh_c[2*l +: 2]    = s_tvalid ? HDR_DATA : HDR_CTRL;
     end
   end
   always_ff @(posedge clk) begin
     for (int l = 0; l < NL; l++) begin
-      if (rst_tx) tx_st[l] <= 58'h155_5555_5555_5555;
-      else if (slot) tx_st[l] <= tx_stn[l];
+      if (rst_tx) begin
+        tx_st[l] <= 58'h155_5555_5555_5555; tx_crc[l] <= '1;
+      end else if (slot) begin
+        tx_st[l] <= tx_stn[l];
+        if (s_tvalid)    tx_crc[l] <= crc32_d64(tx_crc[l], s_tdata[64*l +: 64]);
+        else if (tx_chk) tx_crc[l] <= '1;
+      end
+    end
+    if (rst_tx) tx_n <= '0;
+    else if (slot) begin
+      if (s_tvalid)    tx_n <= tx_n + 1'b1;
+      else if (tx_chk) tx_n <= '0;
     end
   end
   if (TX_REG != 0) begin : g_txr
@@ -125,7 +143,9 @@ module s6_link
   localparam int CW = $clog2(SH_CNT_MAX + 1);
   localparam int IW = $clog2(SH_INV_MAX + 1);
   localparam int WW = $clog2(SLIP_WAIT + 1);
-  logic [NL-1:0]   lock, slip, lane_v, ctl_v, idle_bad, sh_bad;
+  logic [NL-1:0]   lock, slip, lane_v, ctl_v, idle_bad, sh_bad, chk_v, chk_ok, chk_bad, chk_arm;
+  logic [31:0]     rx_crc[NL];
+  logic [23:0]     rx_n  [NL];
   logic [63:0]     lane_d[NL];
   logic [57:0]     rx_st [NL];
   logic [57:0]     rx_stn[NL];
@@ -140,7 +160,10 @@ module s6_link
       hdr_e[l]    = rhv[l] ? rh[2*l +: 2] : hdr_q[l];
       lane_v[l]   = rdv[l] && lock[l] && (hdr_e[l] == HDR_DATA) && !rst_rx;
       ctl_v[l]    = rdv[l] && lock[l] && (hdr_e[l] == HDR_CTRL) && !rst_rx;
-      idle_bad[l] = ctl_v[l] && (lane_d[l] != IDLE_BLK);
+      chk_v[l]    = ctl_v[l] && (lane_d[l][63:56] == CHK_TYPE);
+      chk_ok[l]   = chk_v[l] && chk_arm[l] && (lane_d[l][55:32] == rx_n[l]) && (lane_d[l][31:0] == ~rx_crc[l]);
+      chk_bad[l]  = chk_v[l] && chk_arm[l] && !chk_ok[l];
+      idle_bad[l] = ctl_v[l] && !chk_v[l] && (lane_d[l] != IDLE_BLK);
       sh_bad[l]   = rhv[l] && lock[l] && !(rh[2*l +: 2] == HDR_DATA || rh[2*l +: 2] == HDR_CTRL);
     end
   end
@@ -164,6 +187,17 @@ module s6_link
           sh_cnt[l] <= sh_cnt[l] + 1'b1;
           if (!(rh[2*l +: 2] == HDR_DATA || rh[2*l +: 2] == HDR_CTRL)) inv_cnt[l] <= inv_cnt[l] + 1'b1;
         end
+      end
+    end
+  end
+  always_ff @(posedge clk) begin
+    for (int l = 0; l < NL; l++) begin
+      if (rst_rx || !lock[l]) begin
+        rx_crc[l] <= '1; rx_n[l] <= '0; chk_arm[l] <= 1'b0;
+      end else if (lane_v[l]) begin
+        rx_crc[l] <= crc32_d64(rx_crc[l], lane_d[l]); rx_n[l] <= rx_n[l] + 1'b1;
+      end else if (chk_v[l]) begin
+        rx_crc[l] <= '1; rx_n[l] <= '0; chk_arm[l] <= 1'b1;
       end
     end
   end
@@ -211,11 +245,12 @@ module s6_link
 
   // ---------------- status ----------------
   logic [NL-1:0] lock_d;
-  logic [31:0] c_lock, c_unlock, c_slip, c_shbad, c_idlebad, c_data, c_ovf, c_hvdv;
+  logic [31:0] c_lock, c_unlock, c_slip, c_shbad, c_idlebad, c_data, c_ovf, c_hvdv, c_chkok, c_chkbad;
   always_ff @(posedge clk) begin
     lock_d <= lock;
     if (clr) begin
       c_lock <= '0; c_unlock <= '0; c_slip <= '0; c_shbad <= '0; c_idlebad <= '0; c_data <= '0; c_ovf <= '0; c_hvdv <= '0;
+      c_chkok <= '0; c_chkbad <= '0;
     end else begin
       if (|(lock & ~lock_d)) c_lock    <= c_lock + 1'b1;
       if (|(~lock & lock_d)) c_unlock  <= c_unlock + 1'b1;
@@ -225,6 +260,8 @@ module s6_link
       if (m_tvalid)          c_data    <= c_data + 1'b1;
       if (dsk_ovf)           c_ovf     <= c_ovf + 1'b1;
       if (|(rhv ^ rdv))      c_hvdv    <= c_hvdv + 1'b1;
+      c_chkok  <= c_chkok + 32'($countones(chk_ok));
+      c_chkbad <= c_chkbad + 32'($countones(chk_bad));
     end
   end
   always_comb begin
@@ -232,5 +269,6 @@ module s6_link
     stat.lock[NL-1:0] = lock;
     stat.n_lock = c_lock; stat.n_unlock = c_unlock; stat.n_slip = c_slip; stat.n_sh_bad = c_shbad;
     stat.n_idle_bad = c_idlebad; stat.n_data = c_data; stat.n_dsk_ovf = c_ovf; stat.n_hv_dv = c_hvdv;
+    stat.n_chk_ok = c_chkok; stat.n_chk_bad = c_chkbad;
   end
 endmodule

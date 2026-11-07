@@ -1,0 +1,613 @@
+[
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "cable_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 2468840,
+    "received": 2468840,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "18": 2468827,
+     "20": 13
+    },
+    "cycles": {
+     "min": 18,
+     "p50": 18,
+     "p90": 18,
+     "max": 20,
+     "mean": 18.000010531261644
+    },
+    "ns": {
+     "min": 111.7090909090909,
+     "p50": 111.7090909090909,
+     "p90": 111.7090909090909,
+     "max": 124.12121212121212,
+     "mean": 111.70915626673893
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 2468840,
+    "received": 2468840,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "18": 2468829,
+     "20": 11
+    },
+    "cycles": {
+     "min": 18,
+     "p50": 18,
+     "p90": 18,
+     "max": 20,
+     "mean": 18.000008911067546
+    },
+    "ns": {
+     "min": 111.7090909090909,
+     "p50": 111.7090909090909,
+     "p90": 111.7090909090909,
+     "max": 124.12121212121212,
+     "mean": 111.70914621171616
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0,
+   "a_n_chk_bad": 0,
+   "b_n_chk_bad": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "cable_p63_b32",
+  "period": 63,
+  "hbase": 32,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 2454247,
+    "received": 2454247,
+    "bad": 0,
+    "hist_complete": false,
+    "hist": {},
+    "cycles": {
+     "min": 18,
+     "p50": null,
+     "p90": null,
+     "max": 18,
+     "mean": 18.0
+    },
+    "ns": {
+     "min": 111.7090909090909,
+     "p50": null,
+     "p90": null,
+     "max": 111.7090909090909,
+     "mean": 111.7090909090909
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 2454247,
+    "received": 2454247,
+    "bad": 0,
+    "hist_complete": false,
+    "hist": {},
+    "cycles": {
+     "min": 18,
+     "p50": null,
+     "p90": null,
+     "max": 18,
+     "mean": 18.0
+    },
+    "ns": {
+     "min": 111.7090909090909,
+     "p50": null,
+     "p90": null,
+     "max": 111.7090909090909,
+     "mean": 111.7090909090909
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0,
+   "a_n_chk_bad": 0,
+   "b_n_chk_bad": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "cable_p0_b0",
+  "period": 0,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_b": {
+    "sent": 78534201,
+    "received": 78534201,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "18": 36812903,
+     "20": 41721298
+    },
+    "cycles": {
+     "min": 18,
+     "p50": 20,
+     "p90": 20,
+     "max": 20,
+     "mean": 19.062500094703964
+    },
+    "ns": {
+     "min": 111.7090909090909,
+     "p50": 124.12121212121212,
+     "p90": 124.12121212121212,
+     "max": 124.12121212121212,
+     "mean": 118.30303089076884
+    },
+    "pass": true
+   },
+   "b_to_a": {
+    "sent": 78534201,
+    "received": 78534201,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "18": 39267097,
+     "20": 39267104
+    },
+    "cycles": {
+     "min": 18,
+     "p50": 20,
+     "p90": 20,
+     "max": 20,
+     "mean": 19.00000008913314
+    },
+    "ns": {
+     "min": 111.7090909090909,
+     "p50": 124.12121212121212,
+     "p90": 124.12121212121212,
+     "max": 124.12121212121212,
+     "mean": 117.9151520683172
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0,
+   "a_n_chk_bad": 0,
+   "b_n_chk_bad": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "run",
+  "run": "echo_gap63",
+  "mode": "echo",
+  "gap": 63,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5f09efeb",
+  "sim_signature": "5f09efeb",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 38,
+   "p50": 40,
+   "p90": 42,
+   "p99": 42,
+   "max": 42,
+   "mean": 40.00002583823542
+  },
+  "loop_ns": {
+   "min": 235.83030303030304,
+   "p50": 248.24242424242425,
+   "p90": 260.6545454545454,
+   "p99": 260.6545454545454,
+   "max": 260.6545454545454,
+   "mean": 248.24258459607924
+  },
+  "b_decode_path_cycles": [
+   0,
+   65535
+  ],
+  "link": 18641779,
+  "hist": {
+   "38": 98512,
+   "40": 267398,
+   "42": 98518
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "run",
+  "run": "decode_gap63",
+  "mode": "decode",
+  "gap": 63,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5e8e5270",
+  "sim_signature": "5e8e5270",
+  "flips_checked": 0,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 44,
+   "p50": 46,
+   "p90": 48,
+   "p99": 48,
+   "max": 48,
+   "mean": 45.99998708088229
+  },
+  "loop_ns": {
+   "min": 273.06666666666666,
+   "p50": 285.4787878787879,
+   "p90": 297.8909090909091,
+   "p99": 297.8909090909091,
+   "max": 297.8909090909091,
+   "mean": 285.4787077019604
+  },
+  "b_decode_path_cycles": [
+   7,
+   7
+  ],
+  "link": 18641779,
+  "hist": {
+   "44": 56296,
+   "46": 351839,
+   "48": 56293
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "run",
+  "run": "decode_gap7",
+  "mode": "decode",
+  "gap": 7,
+  "nvec": 464428,
+  "n_good": 464428,
+  "errors": {
+   "mism": 0,
+   "err_tag": 0,
+   "err_range": 0,
+   "err_overrun": 0,
+   "err_dup": 0,
+   "err_echo": 0,
+   "hist_under": 0,
+   "hist_over": 0,
+   "b_err_tag": 0,
+   "b_fifo_ovf": 0,
+   "b_collide": 0
+  },
+  "signature": "5e8e5270",
+  "sim_signature": "5e8e5270",
+  "flips_checked": 8192,
+  "flip_mismatches": 0,
+  "clk_period_ns": 6.206060606060606,
+  "loop_cycles": {
+   "min": 44,
+   "p50": 46,
+   "p90": 48,
+   "p99": 48,
+   "max": 48,
+   "mean": 46.0
+  },
+  "loop_ns": {
+   "min": 273.06666666666666,
+   "p50": 285.4787878787879,
+   "p90": 297.8909090909091,
+   "p99": 297.8909090909091,
+   "max": 297.8909090909091,
+   "mean": 285.4787878787879
+  },
+  "b_decode_path_cycles": [
+   7,
+   7
+  ],
+  "link": 18641779,
+  "hist": {
+   "44": 56294,
+   "46": 351840,
+   "48": 56294
+  },
+  "checks": {
+   "all_good": true,
+   "errors_zero": true,
+   "hist_total": true,
+   "signature_eq_sim": true,
+   "flip_sample_eq_golden": true,
+   "b_decode_path_const": true
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "chk",
+  "a_n_chk_ok": 79927484,
+  "a_n_chk_bad": 0,
+  "b_n_chk_ok": 79927484,
+  "b_n_chk_bad": 0,
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "pmaloop_a_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pma_loopback": {
+    "sent": 2456814,
+    "received": 2456814,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "16": 2456814
+    },
+    "cycles": {
+     "min": 16,
+     "p50": 16,
+     "p90": 16,
+     "max": 16,
+     "mean": 16.0
+    },
+    "ns": {
+     "min": 99.2969696969697,
+     "p50": 99.2969696969697,
+     "p90": 99.2969696969697,
+     "max": 99.2969696969697,
+     "mean": 99.2969696969697
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0,
+   "a_n_chk_bad": 0,
+   "b_n_chk_bad": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "pmaloop_a_p0_b0",
+  "period": 0,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pma_loopback": {
+    "sent": 78727138,
+    "received": 78727138,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "16": 66426022,
+     "18": 12301116
+    },
+    "cycles": {
+     "min": 16,
+     "p50": 16,
+     "p90": 18,
+     "max": 18,
+     "mean": 16.31250001746539
+    },
+    "ns": {
+     "min": 99.2969696969697,
+     "p50": 99.2969696969697,
+     "p90": 111.7090909090909,
+     "max": 111.7090909090909,
+     "mean": 101.2363637447549
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0,
+   "a_n_chk_bad": 0,
+   "b_n_chk_bad": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "pcsloop_a_p63_b0",
+  "period": 63,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pcs_loopback": {
+    "sent": 2453879,
+    "received": 2453879,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "15": 2453879
+    },
+    "cycles": {
+     "min": 15,
+     "p50": 15,
+     "p90": 15,
+     "max": 15,
+     "mean": 15.0
+    },
+    "ns": {
+     "min": 93.0909090909091,
+     "p50": 93.0909090909091,
+     "p90": 93.0909090909091,
+     "max": 93.0909090909091,
+     "mean": 93.0909090909091
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0,
+   "a_n_chk_bad": 0,
+   "b_n_chk_bad": 0
+  },
+  "pass": true
+ },
+ {
+  "log": "evidence/stage6/silicon/s6chk_lc8_a_cable_run2.log",
+  "kind": "probe",
+  "probe": "pcsloop_a_p0_b0",
+  "period": 0,
+  "hbase": 0,
+  "clk_period_ns": 6.206060606060606,
+  "dirs": {
+   "a_to_a_pcs_loopback": {
+    "sent": 78643439,
+    "received": 78643439,
+    "bad": 0,
+    "hist_complete": true,
+    "hist": {
+     "15": 78643439
+    },
+    "cycles": {
+     "min": 15,
+     "p50": 15,
+     "p90": 15,
+     "max": 15,
+     "mean": 15.0
+    },
+    "ns": {
+     "min": 93.0909090909091,
+     "p50": 93.0909090909091,
+     "p90": 93.0909090909091,
+     "max": 93.0909090909091,
+     "mean": 93.0909090909091
+    },
+    "pass": true
+   }
+  },
+  "link_errors": {
+   "a_n_unlock": 0,
+   "a_n_sh_bad": 0,
+   "a_n_idle_bad": 0,
+   "b_n_unlock": 0,
+   "b_n_sh_bad": 0,
+   "b_n_idle_bad": 0,
+   "a_n_bufrst": 0,
+   "b_n_bufrst": 0,
+   "a_bufstat": 0,
+   "b_bufstat": 0,
+   "a_n_chk_bad": 0,
+   "b_n_chk_bad": 0
+  },
+  "pass": true
+ }
+]

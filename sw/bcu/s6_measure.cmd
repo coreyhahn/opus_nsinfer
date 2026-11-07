@@ -42,6 +42,8 @@ r 0x141c a_n_dsk_ovf
 r 0x1420 a_n_hv_dv
 r 0x1424 a_n_bufrst
 r 0x1428 a_bufstat
+r 0x142c a_n_chk_ok
+r 0x1430 a_n_chk_bad
 r 0x1440 b_lock
 r 0x1444 b_n_lock
 r 0x1448 b_n_unlock
@@ -53,6 +55,8 @@ r 0x145c b_n_dsk_ovf
 r 0x1460 b_n_hv_dv
 r 0x1464 b_n_bufrst
 r 0x1468 b_bufstat
+r 0x146c b_n_chk_ok
+r 0x1470 b_n_chk_bad
 r 0x1480 pa_n_tx
 r 0x1484 pa_n_rx
 r 0x1488 pa_n_bad
@@ -157,6 +161,8 @@ r 0x141c a_n_dsk_ovf
 r 0x1420 a_n_hv_dv
 r 0x1424 a_n_bufrst
 r 0x1428 a_bufstat
+r 0x142c a_n_chk_ok
+r 0x1430 a_n_chk_bad
 r 0x1440 b_lock
 r 0x1444 b_n_lock
 r 0x1448 b_n_unlock
@@ -168,6 +174,8 @@ r 0x145c b_n_dsk_ovf
 r 0x1460 b_n_hv_dv
 r 0x1464 b_n_bufrst
 r 0x1468 b_bufstat
+r 0x146c b_n_chk_ok
+r 0x1470 b_n_chk_bad
 r 0x1480 pa_n_tx
 r 0x1484 pa_n_rx
 r 0x1488 pa_n_bad
@@ -272,6 +280,8 @@ r 0x141c a_n_dsk_ovf
 r 0x1420 a_n_hv_dv
 r 0x1424 a_n_bufrst
 r 0x1428 a_bufstat
+r 0x142c a_n_chk_ok
+r 0x1430 a_n_chk_bad
 r 0x1440 b_lock
 r 0x1444 b_n_lock
 r 0x1448 b_n_unlock
@@ -283,6 +293,8 @@ r 0x145c b_n_dsk_ovf
 r 0x1460 b_n_hv_dv
 r 0x1464 b_n_bufrst
 r 0x1468 b_bufstat
+r 0x146c b_n_chk_ok
+r 0x1470 b_n_chk_bad
 r 0x1480 pa_n_tx
 r 0x1484 pa_n_rx
 r 0x1488 pa_n_bad
@@ -413,6 +425,8 @@ r 0x141c a_n_dsk_ovf
 r 0x1420 a_n_hv_dv
 r 0x1424 a_n_bufrst
 r 0x1428 a_bufstat
+r 0x142c a_n_chk_ok
+r 0x1430 a_n_chk_bad
 r 0x1440 b_lock
 r 0x1444 b_n_lock
 r 0x1448 b_n_unlock
@@ -424,6 +438,8 @@ r 0x145c b_n_dsk_ovf
 r 0x1460 b_n_hv_dv
 r 0x1464 b_n_bufrst
 r 0x1468 b_bufstat
+r 0x146c b_n_chk_ok
+r 0x1470 b_n_chk_bad
 r 0x1480 pa_n_tx
 r 0x1484 pa_n_rx
 r 0x1488 pa_n_bad
@@ -470,6 +486,8 @@ r 0x141c a_n_dsk_ovf
 r 0x1420 a_n_hv_dv
 r 0x1424 a_n_bufrst
 r 0x1428 a_bufstat
+r 0x142c a_n_chk_ok
+r 0x1430 a_n_chk_bad
 r 0x1440 b_lock
 r 0x1444 b_n_lock
 r 0x1448 b_n_unlock
@@ -481,6 +499,8 @@ r 0x145c b_n_dsk_ovf
 r 0x1460 b_n_hv_dv
 r 0x1464 b_n_bufrst
 r 0x1468 b_bufstat
+r 0x146c b_n_chk_ok
+r 0x1470 b_n_chk_bad
 r 0x1480 pa_n_tx
 r 0x1484 pa_n_rx
 r 0x1488 pa_n_bad
@@ -585,6 +605,8 @@ r 0x141c a_n_dsk_ovf
 r 0x1420 a_n_hv_dv
 r 0x1424 a_n_bufrst
 r 0x1428 a_bufstat
+r 0x142c a_n_chk_ok
+r 0x1430 a_n_chk_bad
 r 0x1440 b_lock
 r 0x1444 b_n_lock
 r 0x1448 b_n_unlock
@@ -596,6 +618,8 @@ r 0x145c b_n_dsk_ovf
 r 0x1460 b_n_hv_dv
 r 0x1464 b_n_bufrst
 r 0x1468 b_bufstat
+r 0x146c b_n_chk_ok
+r 0x1470 b_n_chk_bad
 r 0x1480 pa_n_tx
 r 0x1484 pa_n_rx
 r 0x1488 pa_n_bad
@@ -707,6 +731,8 @@ r 0x141c a_n_dsk_ovf
 r 0x1420 a_n_hv_dv
 r 0x1424 a_n_bufrst
 r 0x1428 a_bufstat
+r 0x142c a_n_chk_ok
+r 0x1430 a_n_chk_bad
 r 0x1440 b_lock
 r 0x1444 b_n_lock
 r 0x1448 b_n_unlock
@@ -718,6 +744,8 @@ r 0x145c b_n_dsk_ovf
 r 0x1460 b_n_hv_dv
 r 0x1464 b_n_bufrst
 r 0x1468 b_bufstat
+r 0x146c b_n_chk_ok
+r 0x1470 b_n_chk_bad
 r 0x1480 pa_n_tx
 r 0x1484 pa_n_rx
 r 0x1488 pa_n_bad
@@ -822,6 +850,8 @@ r 0x141c a_n_dsk_ovf
 r 0x1420 a_n_hv_dv
 r 0x1424 a_n_bufrst
 r 0x1428 a_bufstat
+r 0x142c a_n_chk_ok
+r 0x1430 a_n_chk_bad
 r 0x1440 b_lock
 r 0x1444 b_n_lock
 r 0x1448 b_n_unlock
@@ -833,6 +863,8 @@ r 0x145c b_n_dsk_ovf
 r 0x1460 b_n_hv_dv
 r 0x1464 b_n_bufrst
 r 0x1468 b_bufstat
+r 0x146c b_n_chk_ok
+r 0x1470 b_n_chk_bad
 r 0x1480 pa_n_tx
 r 0x1484 pa_n_rx
 r 0x1488 pa_n_bad

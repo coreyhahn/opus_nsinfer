@@ -12,7 +12,10 @@ Two kinds of section:
     TX accept edge, read at end B's RX register edge, same counter), pa_* = B -> A (or A -> A in near-end PMA
     loopback). 32-bin histogram from the section's hbase.
 
-  python3 sw/analysis/s6_analyze.py [--lc 8] [--d 3] evidence/stage6/silicon/<run>.log [...] --json out.json
+  * `ECHO after_runs` (--chk, builds with link check blocks): the snapshot after the loop runs must show good check
+    blocks at both ends (a_n_chk_ok, b_n_chk_ok > 0) and no bad one (a_n_chk_bad = b_n_chk_bad = 0).
+
+  python3 sw/analysis/s6_analyze.py [--lc 8] [--d 3] [--chk] evidence/stage6/silicon/<run>.log [...] --json out.json
 """
 
 import argparse
@@ -121,7 +124,8 @@ def probe_row(log, r, t_ns):
             'cycles': cyc, 'ns': {k: (None if v is None else v * t_ns) for k, v in cyc.items()},
             'pass': n > 0 and n == sent and g[f'{p}_n_bad'] == 0}
     out['link_errors'] = {k: g.get(k) for k in ('a_n_unlock', 'a_n_sh_bad', 'a_n_idle_bad', 'b_n_unlock', 'b_n_sh_bad',
-                                                 'b_n_idle_bad', 'a_n_bufrst', 'b_n_bufrst', 'a_bufstat', 'b_bufstat')}
+                                                 'b_n_idle_bad', 'a_n_bufrst', 'b_n_bufrst', 'a_bufstat', 'b_bufstat',
+                                                 'a_n_chk_bad', 'b_n_chk_bad')}
     out['pass'] = all(d['pass'] for d in out['dirs'].values())
     return out
 
@@ -133,6 +137,7 @@ def main():
     ap.add_argument('--lc', default='8')
     ap.add_argument('--d', type=int, choices=(3, 5), default=3)
     ap.add_argument('--dec', type=Path)
+    ap.add_argument('--chk', action='store_true', help='the build has link check blocks: require them good after the runs')
     a = ap.parse_args()
     dec = [int(x, 16) for x in (a.dec or ROOT / f'ref/golden/qec_d{a.d}_golden_dec.hex').read_text().split()]
     rows = []
@@ -155,6 +160,14 @@ def main():
                     print(f"{Path(log).name:30s} probe {r['name']:18s} {name:20s} sent={dd['sent']} rx={dd['received']} bad={dd['bad']}"
                           f" cyc min/p50/p90/max {c['min']}/{c['p50']}/{c['p90']}/{c['max']} mean {c['mean'] if c['mean'] is None else round(c['mean'], 3)}"
                           f" {'PASS' if dd['pass'] else 'FAIL'}")
+            elif a.chk and r['name'] == 'after_runs':
+                g = r['reg']
+                row = {'log': str(log), 'kind': 'chk', **{k: g.get(k) for k in ('a_n_chk_ok', 'a_n_chk_bad', 'b_n_chk_ok',
+                                                                                 'b_n_chk_bad')}}
+                row['pass'] = bool(g.get('a_n_chk_ok') and g.get('b_n_chk_ok')) and g.get('a_n_chk_bad') == 0 \
+                    and g.get('b_n_chk_bad') == 0
+                print(f"{Path(log).name:30s} check blocks after the runs: A ok={row['a_n_chk_ok']} bad={row['a_n_chk_bad']}"
+                      f" B ok={row['b_n_chk_ok']} bad={row['b_n_chk_bad']} {'PASS' if row['pass'] else 'FAIL'}")
             else:
                 continue
             rows.append(row)

@@ -1,30 +1,36 @@
-# host=build-host date=2026-11-03T17:57:40-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
-# rtl_sha256=c6fb487f0fc4625f257c42cb242c4bbbe2d64bbd32d723fbc40dfcbc0a8e705e tb_sha256=abba9426306fa98bcc9380bb1f0d93a22648ea88e36c7b35663ba0355ff116a4 NL=1 TX_REG=1 RX_REG=1
+# host=build-host date=2026-11-06T08:10:36-07:00 verilator=Verilator 5.020 2024-01-01 rev (Debian 5.020-1)
+# rtl_sha256=47d0e438d6909cce3acf24703eb177b8b53d9743f4bcf1d36bb4c0ddc47904e9 tb_sha256=0c98a3087250b6b0479460dca5ee846a871b7804fc96474235c8e5958ab498e5 NL=1 TX_REG=1 RX_REG=1
+CRC KAT s6_pkg::crc32_d64 = 1a972b44 (zlib 1a972b44)
 CONFIG tb_s6_link NL=1 TX_REG=1 RX_REG=1 T_NS=6.206 skew_ui=70 negscr=0 (wire latencies MODEL)
 LOCK initial after 2208 cycles: A lock=001 slips=26  B lock=001 slips=77
 TRAFFIC random mode=1 cycles=20000 words a->b=4969 b->a=6635 mismatches=0 extra=0
 TRAFFIC b2b mode=2 cycles=20000 words a->b=19394 b->a=19394 mismatches=0 extra=0
-REF descrambled 41258 blocks of A lane 0, 0 wrong
+REF descrambled 41258 blocks of A lane 0, 0 wrong, 3689 check blocks recomputed
+CHK clean: A ok=4376 bad=0  B ok=3689 bad=0; user stalls 832 in 1290 gearbox pause cycles
 LAT a->b one-way 14..16 cycles, b->a 14..16 cycles (TX accept edge -> next register edge; MODEL wire)
 HISTLAT 14 a->b 11815 b->a 9443
 HISTLAT 15 a->b 12163 b->a 12940
 HISTLAT 16 a->b 385 b->a 3646
-MIS a->b cyc=46091 got=052b61db3a7956af exp=053b61d93a7956af
-MIS a->b cyc=57070 got=cf6a67d97be6411b exp=cb6a67d97be6411b
-MIS a->b cyc=59129 got=5905051e26702d31 exp=5905071e26702d35
-MIS a->b cyc=61061 got=4cb7479546319ff0 exp=4cb747b546359ff0
-MIS a->b cyc=61447 got=0000000000000200 exp=0000000000000000
-BER injected 51 flips on A->B lane 0: B n_sh_bad=0 n_idle_bad=28 unlocks=0 scoreboard mismatches=9
+MIS a->b cyc=46956 got=91e4cda5e5870b71 exp=91c4cda5e5874b71
+MIS a->b cyc=51009 got=a7f2814cd924372c exp=3fe3bbcc8951e862
+MIS a->b cyc=51010 got=1ffc2fea441f4c63 exp=a7f2814cd924372c
+MIS a->b cyc=51012 got=eb4a3155801e696c exp=1ffc2fea441f4c63
+MIS a->b cyc=51014 got=5a753f5b1ef61622 exp=eb4a3155801e696c
+BER injected 51 flips on A->B lane 0: B n_sh_bad=1 n_idle_bad=28 unlocks=0 scoreboard mismatches=5377
+CHK BER: B bad checks 0 -> 16 (ok 9162)
 LOCK after BER after 0 cycles: A lock=001 slips=26  B lock=001 slips=77
 TRAFFIC after_ber mode=1 cycles=10000 words a->b=2456 b->a=3324 mismatches=0 extra=0
 LOCK after glitch after 0 cycles: A lock=001 slips=26  B lock=001 slips=78
 GLITCH B unlock 0 -> 1, lock 1 -> 2, slips 78
-GLITCH garbage words delivered while losing lock: 11
+GLITCH garbage words delivered while losing lock: 13; B bad checks so far 16
 TRAFFIC after_glitch mode=1 cycles=10000 words a->b=2484 b->a=3264 mismatches=0 extra=0
-LOCK after burst after 1429 cycles: A lock=001 slips=92  B lock=001 slips=78
+CHK after re-lock (glitch): B ok 10999 -> 12851, bad 16 -> 16
+LOCK after burst after 1428 cycles: A lock=001 slips=92  B lock=001 slips=78
 BURST A unlock 0 -> 1, lock 1 -> 2
-BURST garbage words delivered while losing lock: 12
+BURST garbage words delivered while losing lock: 12; A bad checks so far 0
 TRAFFIC after_burst mode=2 cycles=10000 words a->b=9698 b->a=9698 mismatches=0 extra=0
-RESULT tb_s6_link NL=1 TX_REG=1 RX_REG=1 words a->b=46355 b->a=52140 lat_ab=14..16 lat_ba=14..16 ref_blocks=104619 ref_bad=0 slips_a=92 slips_b=78 unlock_a=1 unlock_b=1 fails=0
+TRAFFIC after_burst_rnd mode=1 cycles=2000 words a->b=492 b->a=681 mismatches=0 extra=0
+CHK after re-lock (burst): A ok 15264 -> 15710, bad 0 -> 0
+RESULT tb_s6_link NL=1 TX_REG=1 RX_REG=1 words a->b=41478 b->a=52821 lat_ab=14..46 lat_ba=14..16 ref_blocks=106752 ref_bad=0 slips_a=92 slips_b=78 unlock_a=1 unlock_b=1 chk_ok_a=15710 chk_ok_b=13237 chk_bad_a=0 chk_bad_b=16 ref_chk=13256 fails=0
 PASS
-- tb_s6_link.sv:283: Verilog $finish
+- tb_s6_link.sv:344: Verilog $finish

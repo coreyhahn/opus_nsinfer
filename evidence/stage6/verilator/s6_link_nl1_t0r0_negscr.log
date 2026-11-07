@@ -1,11 +1,13 @@
-# host=build-host date=2026-11-03T17:57:58-07:00 NEGATIVE CONTROL: +NEGSCR (reference descrambler with the x^38 tap) must FAIL
+# host=build-host date=2026-11-06T08:11:08-07:00 NEGATIVE CONTROL: +NEGSCR (reference descrambler with the x^38 tap) must FAIL
+CRC KAT s6_pkg::crc32_d64 = 1a972b44 (zlib 1a972b44)
 CONFIG tb_s6_link NL=1 TX_REG=0 RX_REG=0 T_NS=6.206 skew_ui=70 negscr=1 (wire latencies MODEL)
 LOCK initial after 2227 cycles: A lock=001 slips=26  B lock=001 slips=77
 TRAFFIC random mode=1 cycles=20000 words a->b=4978 b->a=6637 mismatches=0 extra=0
 TRAFFIC b2b mode=2 cycles=20000 words a->b=19394 b->a=19394 mismatches=0 extra=0
-REF descrambled 41277 blocks of A lane 0, 41277 wrong
-[267795000000] %Fatal: tb_s6_link.sv:225: Assertion failed in TOP.tb_s6_link.unnamedblk7: REF: independent descrambler disagrees on 41277 blocks
-%Error: tb_s6_link.sv:225: Verilog $stop
+REF descrambled 41277 blocks of A lane 0, 41276 wrong, 64 check blocks recomputed
+CHK clean: A ok=4365 bad=0  B ok=3687 bad=0; user stalls 822 in 1290 gearbox pause cycles
+[267795000000] %Fatal: tb_s6_link.sv:273: Assertion failed in TOP.tb_s6_link.unnamedblk9: REF: independent descrambler disagrees on 41276 blocks
+%Error: tb_s6_link.sv:273: Verilog $stop
 Aborting...
 Aborted (core dumped)
 exit=134

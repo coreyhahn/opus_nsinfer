@@ -362,6 +362,12 @@ module tb_s6_loop
     chk(ls[2] == 0 && ls[18] == 0 && ls[4] == 0 && ls[20] == 0 && ls[5] == 0 && ls[21] == 0 && ls[7] == 0 && ls[23] == 0,
         "link errors during the run");
     chk(lk[2] == 1'b0 && lk[3] == 1'b0 && lk[10] == 1'b0 && lk[11] == 1'b0, "LINK stickies set");
+    // check blocks (s6_pkg CHK_TYPE): the corrupt case's model inverts one returned data word on B -> A lane 0 after
+    // descrambling and re-scrambles it, so the link itself is clean but A's CRC must catch exactly that word
+    $display("CHK A ok=%0d bad=%0d | B ok=%0d bad=%0d", ls[11], ls[12], ls[27], ls[28]);
+    chk(ls[11] != 0 && ls[27] != 0, "no good check block at an end");
+    chk(ls[28] == 0, "bad check blocks at B");
+    chk(ls[12] == 1, $sformatf("A: %0d bad check blocks, want exactly 1 (the corrupted word)", ls[12]));
 
     chk(dec7_min - echo7_min >= DEC_LAT - 1 && dec7_min - echo7_min <= DEC_LAT + 1, "decode - echo (min) != DEC_LAT +- 1");
     chk(dec7_max - echo7_max >= DEC_LAT - 1 && dec7_max - echo7_max <= DEC_LAT + 1, "decode - echo (max) != DEC_LAT +- 1");
